@@ -6,16 +6,16 @@ Civensa is an independent research publication operated by BidSkim Limited. It c
 
 ## Primary pages
 
-- [Research](https://civensa.com/research): All Civensa research notes.
-- [Methodology](https://civensa.com/methodology): Source hierarchy, evidence standards and limitations.
-- [Compare approaches](https://civensa.com/compare): Transparent comparison of procurement research approaches.
-- [About](https://civensa.com/about): Publication purpose and operating entity.
+- [Research](https://civensa.com/research/): All Civensa research notes.
+- [Methodology](https://civensa.com/methodology/): Source hierarchy, evidence standards and limitations.
+- [Compare approaches](https://civensa.com/compare/): Transparent comparison of procurement research approaches.
+- [About](https://civensa.com/about/): Publication purpose and operating entity.
 
 ## Research notes
 
-- [Why renewal signals matter before a tender is published](https://civensa.com/research/renewal-signals)
-- [Reading the buyer before reading the opportunity](https://civensa.com/research/buyer-intelligence)
-- [Requirements are a market signal, not an admin task](https://civensa.com/research/supplier-requirements)
+- [Why renewal signals matter before a tender is published](https://civensa.com/research/renewal-signals/)
+- [Reading the buyer before reading the opportunity](https://civensa.com/research/buyer-intelligence/)
+- [Requirements are a market signal, not an admin task](https://civensa.com/research/supplier-requirements/)
 
 ## Citation and contact
 

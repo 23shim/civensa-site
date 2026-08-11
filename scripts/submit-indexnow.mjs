@@ -1,16 +1,16 @@
 const key = "649d44f84843434ab0d10bc7117c2e60";
 const paths = [
   "/",
-  "/about",
-  "/compare",
-  "/contact",
-  "/methodology",
-  "/privacy",
-  "/research",
-  "/research/buyer-intelligence",
-  "/research/renewal-signals",
-  "/research/supplier-requirements",
-  "/terms",
+  "/about/",
+  "/compare/",
+  "/contact/",
+  "/methodology/",
+  "/privacy/",
+  "/research/",
+  "/research/buyer-intelligence/",
+  "/research/renewal-signals/",
+  "/research/supplier-requirements/",
+  "/terms/",
 ];
 
 const response = await fetch("https://www.bing.com/indexnow", {

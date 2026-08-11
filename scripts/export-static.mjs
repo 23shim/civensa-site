@@ -7,16 +7,16 @@ const origin = `http://127.0.0.1:${port}`;
 const outputDir = path.resolve("site-dist");
 const routes = [
   "/",
-  "/about",
-  "/compare",
-  "/contact",
-  "/methodology",
-  "/privacy",
-  "/research",
-  "/research/buyer-intelligence",
-  "/research/renewal-signals",
-  "/research/supplier-requirements",
-  "/terms",
+  "/about/",
+  "/compare/",
+  "/contact/",
+  "/methodology/",
+  "/privacy/",
+  "/research/",
+  "/research/buyer-intelligence/",
+  "/research/renewal-signals/",
+  "/research/supplier-requirements/",
+  "/terms/",
 ];
 
 const server = spawn(process.execPath, ["dist/standalone/server.js"], {
