@@ -14,6 +14,8 @@ export function PageIntro({ kicker, title, lead }: { kicker: string; title: stri
   return <section className="page-intro shell"><div className="eyebrow"><span /> {kicker}</div><h1>{title}</h1><p>{lead}</p></section>;
 }
 
-export function ArticleLayout({ kicker, title, standfirst, date, children }: { kicker: string; title: string; standfirst: string; date: string; children: React.ReactNode }) {
-  return <main><SiteHeader /><article><header className="article-head shell"><Link className="back-link" href="/research">← All research</Link><div className="eyebrow"><span /> {kicker}</div><h1>{title}</h1><p>{standfirst}</p><div className="article-byline"><span>Civensa Research</span><time>{date}</time><span>8 min read</span></div></header><div className="article-body shell">{children}</div></article><SiteFooter /></main>;
+export function ArticleLayout({ kicker, title, standfirst, date, datePublished, path, children }: { kicker: string; title: string; standfirst: string; date: string; datePublished: string; path: string; children: React.ReactNode }) {
+  const url = `https://civensa.com${path}`;
+  const schema = { "@context": "https://schema.org", "@type": "Article", headline: title, description: standfirst, datePublished, dateModified: datePublished, mainEntityOfPage: url, author: { "@type": "Organization", name: "Civensa Research", url: "https://civensa.com/about" }, publisher: { "@id": "https://civensa.com/#organization" }, image: "https://civensa.com/og.png", inLanguage: "en-GB" };
+  return <main><SiteHeader /><article><header className="article-head shell"><Link className="back-link" href="/research">← All research</Link><div className="eyebrow"><span /> {kicker}</div><h1>{title}</h1><p>{standfirst}</p><div className="article-byline"><span>Civensa Research</span><time dateTime={datePublished}>{date}</time><span>8 min read</span></div></header><div className="article-body shell">{children}</div></article><SiteFooter /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></main>;
 }

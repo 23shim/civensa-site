@@ -1,4 +1,97 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "../../_components/site-chrome";
-export const metadata: Metadata={title:"Reading the buyer before reading the opportunity",description:"A practical approach to public-sector buyer intelligence using plans, awards, documents and evaluation evidence.",alternates:{canonical:"/research/buyer-intelligence"}};
-export default function Page(){return <ArticleLayout kicker="Buyer intelligence" title="Reading the buyer before reading the opportunity" standfirst="The procurement notice explains what is being bought. The buyer’s wider record often explains why, how and what a credible answer must demonstrate." date="7 August 2026"><h2>Start with the institution</h2><p>Public buyers do not procure in isolation. Their decisions sit inside policy commitments, service pressures, governance rules, budgets and prior delivery experience. Reading only the opportunity can hide the forces that shaped it.</p><p>Buyer intelligence is the disciplined assembly of that context. It is not a dossier of trivia. Each piece of evidence should help a supplier understand likely needs, prepare relevant proof or ask a sharper question.</p><h2>A useful source hierarchy</h2><ol><li><strong>Formal procurement records:</strong> notices, awards, modifications and transparency publications.</li><li><strong>Institutional documents:</strong> strategies, annual plans, committee papers, budgets and performance reports.</li><li><strong>Requirement evidence:</strong> specifications, evaluation criteria, clarifications and published feedback.</li><li><strong>Market evidence:</strong> supplier relationships, framework participation and comparable buying activity.</li></ol><p>Sources differ in authority and age. Every material conclusion should retain the document, publication date and the reasoning connecting it to the conclusion.</p><aside>The goal is not to collect the most documents. It is to preserve the shortest credible chain from evidence to action.</aside><h2>Look for continuity and change</h2><p>Continuity helps identify durable priorities: repeated social-value themes, common compliance gates, persistent service outcomes or a stable route to market. Change can be even more valuable. A new strategy, leadership structure, budget pressure or delivery problem may indicate that the next requirement will not resemble the last one.</p><p>Compare sources over time instead of flattening them into one profile. A buyer’s current position is a moving picture.</p><h2>Turn findings into bid preparation</h2><ul><li>Translate stated outcomes into an evidence plan, not decorative language.</li><li>Identify claims that require measurable proof, references or partner capability.</li><li>Separate buyer-wide priorities from opportunity-specific scored criteria.</li><li>Record uncertainty where evidence is old, incomplete or contradictory.</li><li>Recheck decisive facts when a live procurement begins.</li></ul><p>Good buyer intelligence makes a response more specific. Responsible buyer intelligence also makes its limits visible.</p></ArticleLayout>}
+export const metadata: Metadata = {
+  title: "Reading the buyer before reading the opportunity",
+  description:
+    "A practical approach to public-sector buyer intelligence using plans, awards, documents and evaluation evidence.",
+  alternates: { canonical: "/research/buyer-intelligence" },
+};
+export default function Page() {
+  return (
+    <ArticleLayout
+      kicker="Buyer intelligence"
+      title="Reading the buyer before reading the opportunity"
+      standfirst="The procurement notice explains what is being bought. The buyer’s wider record often explains why, how and what a credible answer must demonstrate."
+      date="7 August 2026"
+      datePublished="2026-08-07"
+      path="/research/buyer-intelligence"
+    >
+      <h2>Start with the institution</h2>
+      <p>
+        Public buyers do not procure in isolation. Their decisions sit inside
+        policy commitments, service pressures, governance rules, budgets and
+        prior delivery experience. Reading only the opportunity can hide the
+        forces that shaped it.
+      </p>
+      <p>
+        Buyer intelligence is the disciplined assembly of that context. It is
+        not a dossier of trivia. Each piece of evidence should help a supplier
+        understand likely needs, prepare relevant proof or ask a sharper
+        question.
+      </p>
+      <h2>A useful source hierarchy</h2>
+      <ol>
+        <li>
+          <strong>Formal procurement records:</strong> notices, awards,
+          modifications and transparency publications.
+        </li>
+        <li>
+          <strong>Institutional documents:</strong> strategies, annual plans,
+          committee papers, budgets and performance reports.
+        </li>
+        <li>
+          <strong>Requirement evidence:</strong> specifications, evaluation
+          criteria, clarifications and published feedback.
+        </li>
+        <li>
+          <strong>Market evidence:</strong> supplier relationships, framework
+          participation and comparable buying activity.
+        </li>
+      </ol>
+      <p>
+        Sources differ in authority and age. Every material conclusion should
+        retain the document, publication date and the reasoning connecting it to
+        the conclusion.
+      </p>
+      <aside>
+        The goal is not to collect the most documents. It is to preserve the
+        shortest credible chain from evidence to action.
+      </aside>
+      <h2>Look for continuity and change</h2>
+      <p>
+        Continuity helps identify durable priorities: repeated social-value
+        themes, common compliance gates, persistent service outcomes or a stable
+        route to market. Change can be even more valuable. A new strategy,
+        leadership structure, budget pressure or delivery problem may indicate
+        that the next requirement will not resemble the last one.
+      </p>
+      <p>
+        Compare sources over time instead of flattening them into one profile. A
+        buyer’s current position is a moving picture.
+      </p>
+      <h2>Turn findings into bid preparation</h2>
+      <ul>
+        <li>
+          Translate stated outcomes into an evidence plan, not decorative
+          language.
+        </li>
+        <li>
+          Identify claims that require measurable proof, references or partner
+          capability.
+        </li>
+        <li>
+          Separate buyer-wide priorities from opportunity-specific scored
+          criteria.
+        </li>
+        <li>
+          Record uncertainty where evidence is old, incomplete or contradictory.
+        </li>
+        <li>Recheck decisive facts when a live procurement begins.</li>
+      </ul>
+      <p>
+        Good buyer intelligence makes a response more specific. Responsible
+        buyer intelligence also makes its limits visible.
+      </p>
+    </ArticleLayout>
+  );
+}

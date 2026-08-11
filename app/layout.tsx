@@ -14,6 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const schema = { "@context": "https://schema.org", "@type": "Organization", name: "Civensa", url: "https://civensa.com", description: "A procurement research publication operated by BidSkim Limited." };
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://civensa.com/#organization", name: "Civensa", url: "https://civensa.com", description: "A procurement research publication operated by BidSkim Limited." },
+      { "@type": "WebSite", "@id": "https://civensa.com/#website", name: "Civensa", url: "https://civensa.com", publisher: { "@id": "https://civensa.com/#organization" }, inLanguage: "en-GB" },
+    ],
+  };
   return <html lang="en"><body>{children}<AnalyticsConsent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></body></html>;
 }
