@@ -62,7 +62,7 @@ h1,h2,h3,p { margin-top:0; }
 .note-card { min-height:420px; padding:24px 32px 24px 0; border-right:1px solid var(--line); position:relative; }
 .note-card:not(:first-child) { padding-left:32px; }.note-card:last-child { border-right:0; }
 .note-meta { display:flex; justify-content:space-between; gap:12px; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
-.note-meta span { color:#52685f; }.note-number { font:italic 42px Georgia,serif; color:var(--rust); margin:58px 0 35px; }
+.note-meta span { color:#52685f; }.note-number { font:italic 42px Georgia,serif; color:#c55334; margin:58px 0 35px; }
 .note-card h3 { font:500 29px/1.16 Georgia,serif; letter-spacing:-.025em; }
 .note-card h3 a:hover { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:5px; }
 .note-card p { color:#51615b; font-size:14px; line-height:1.65; padding-right:10px; }

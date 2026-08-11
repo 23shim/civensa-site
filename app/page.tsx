@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./_components/site-chrome";
 
 const signals = [
@@ -25,8 +24,8 @@ export default function Home() {
             <h1>See the market<br />before it moves.</h1>
             <p className="hero-copy">Civensa connects buyer intent, contract cycles and supplier requirements—so public-sector markets are easier to understand before the tender lands.</p>
             <div className="hero-actions">
-              <Link className="button button-dark" href="/research">Explore the research <span aria-hidden="true">↗</span></Link>
-              <Link className="text-link" href="/methodology">How we work <span aria-hidden="true">→</span></Link>
+              <a className="button button-dark" href="/research">Explore the research <span aria-hidden="true">↗</span></a>
+              <a className="text-link" href="/methodology">How we work <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div className="signal-map" aria-label="Procurement signal map">
@@ -69,15 +68,15 @@ export default function Home() {
       <section className="section shell">
         <div className="section-heading ink">
           <div><div className="section-kicker">Field notes</div><h2>Research for the<br />long procurement cycle.</h2></div>
-          <Link className="text-link" href="/research">View all research <span aria-hidden="true">→</span></Link>
+          <a className="text-link" href="/research">View all research <span aria-hidden="true">→</span></a>
         </div>
         <div className="notes-grid">
-          {notes.map((note, index) => <article className="note-card" key={note.title}><div className="note-meta"><span>{note.tag}</span><time>{note.date}</time></div><div className="note-number">0{index + 1}</div><h3><Link href={note.href}>{note.title}</Link></h3><p>{note.copy}</p><Link className="note-arrow" href={note.href} aria-label={`Read ${note.title}`}>↗</Link></article>)}
+          {notes.map((note, index) => <article className="note-card" key={note.title}><div className="note-meta"><span>{note.tag}</span><time>{note.date}</time></div><div className="note-number">0{index + 1}</div><h3><a href={note.href}>{note.title}</a></h3><p>{note.copy}</p><a className="note-arrow" href={note.href} aria-label={`Read ${note.title}`}>↗</a></article>)}
         </div>
       </section>
 
       <section className="manifesto">
-        <div className="shell manifesto-grid"><div className="monogram">C</div><div><div className="section-kicker light">Our standard</div><blockquote>“Useful procurement intelligence should show its sources, its assumptions and its limits.”</blockquote><Link className="button button-light" href="/methodology">Read our methodology <span aria-hidden="true">↗</span></Link></div></div>
+        <div className="shell manifesto-grid"><div className="monogram">C</div><div><div className="section-kicker light">Our standard</div><blockquote>“Useful procurement intelligence should show its sources, its assumptions and its limits.”</blockquote><a className="button button-light" href="/methodology">Read our methodology <span aria-hidden="true">↗</span></a></div></div>
       </section>
       <SiteFooter />
     </main>
