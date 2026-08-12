@@ -41,3 +41,13 @@ test("publishes complete discovery files", async () => {
   }
   assert.match(feed, /Civensa Research/);
 });
+
+test("unknown legacy URLs return a non-indexable branded 404", async () => {
+  const response = await render("/2023/legacy-spam-page/");
+  assert.equal(response.status, 404);
+  const html = await response.text();
+  assert.match(html, /<title>Page not found — Civensa<\/title>/i);
+  assert.match(html, /name="robots" content="noindex, follow"/i);
+  assert.match(html, /This page is not on the map/);
+  assert.doesNotMatch(html, /rel="canonical"/i);
+});

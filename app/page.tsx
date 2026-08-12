@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "./_components/site-chrome";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
+};
 
 const signals = [
   { value: "01", label: "Buyer intent", copy: "Strategies, plans and published priorities translated into practical signals." },

@@ -66,6 +66,12 @@ try {
     await writeFile(path.join(targetDir, "index.html"), await response.text());
   }
 
+  const notFoundResponse = await fetch(`${origin}/__civensa_not_found__`);
+  if (notFoundResponse.status !== 404) {
+    throw new Error(`Failed to render the custom 404 page: HTTP ${notFoundResponse.status}`);
+  }
+  await writeFile(path.join(outputDir, "404.html"), await notFoundResponse.text());
+
   await writeFile(path.join(outputDir, ".nojekyll"), "");
   await writeFile(path.join(outputDir, "CNAME"), "civensa.com\n");
   console.log(`Exported ${routes.length} routes to ${outputDir}`);
