@@ -9,6 +9,16 @@ async function render(path = "/") {
   return worker.fetch(new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
+function articleText(html) {
+  const body = html.match(/<div class="article-body shell">(.*?)<\/div><\/article>/s)?.[1] ?? "";
+  return body
+    .replace(/<script.*?<\/script>/gs, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&(?:nbsp|amp|quot|#x27|#39);/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 test("server-renders the Civensa publication", async () => {
   const response = await render();
   assert.equal(response.status, 200);
@@ -30,6 +40,22 @@ test("renders the procurement authority cluster with structured data", async () 
     assert.match(html, /"@type":"FAQPage"/, slug);
     assert.match(html, /Primary sources/, slug);
     assert.match(html, new RegExp(`canonical[^>]+https://civensa\\.com/research/${slug}/`, "i"), slug);
+  }
+});
+
+test("authority articles meet the editorial depth and anti-slop gate", async () => {
+  const slugs = ["uk-public-procurement-intelligence", "find-government-contracts-before-tender", "pipeline-notices", "preliminary-market-engagement", "planned-procurement-notices", "contract-award-notices", "contract-performance-notices", "frameworks-vs-dynamic-markets", "public-sector-buyer-profile", "bid-readiness-checklist"];
+  const banned = /\b(?:delve|foster|leverage|utilize|facilitate|empower|streamline|robust|cutting-edge|paradigm|tapestry|realm|beacon|multifaceted|meticulous|intricate|paramount|transformative|elevate|embark|supercharge|harness|ever-evolving)\b/i;
+  for (const slug of slugs) {
+    const response = await render(`/research/${slug}/`);
+    const html = await response.text();
+    const text = articleText(html);
+    const words = text.match(/\b[\p{L}\p{N}][\p{L}\p{N}'-]*\b/gu) ?? [];
+    assert.ok(words.length >= 1_000, `${slug}: expected at least 1,000 rendered words`);
+    assert.ok((html.match(/<section id="section-/g) ?? []).length >= 8, `${slug}: expected at least 8 research sections`);
+    assert.ok((html.match(/class="source-kind"/g) ?? []).length >= 8, `${slug}: expected at least 8 named sources`);
+    assert.doesNotMatch(text, banned, `${slug}: contains banned AI-style language`);
+    assert.doesNotMatch(text, /—|–|\s--\s/, `${slug}: contains humanizer-prohibited dash punctuation`);
   }
 });
 

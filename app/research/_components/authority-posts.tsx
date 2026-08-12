@@ -1,211 +1,13 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "../../_components/site-chrome";
+import { authorityPosts, type AuthorityPost } from "./authority-content";
 
-type Section = { heading: string; paragraphs: string[]; bullets?: string[]; note?: string };
-type Source = { label: string; url: string };
-type Faq = { question: string; answer: string };
+export type { AuthorityPost } from "./authority-content";
+export { authorityPosts } from "./authority-content";
 
-export type AuthorityPost = {
-  slug: string;
-  kicker: string;
-  title: string;
-  description: string;
-  standfirst: string;
-  readTime: string;
-  sections: Section[];
-  sources: Source[];
-  faqs: Faq[];
-  related: string[];
-};
-
-const govCollection = "https://www.gov.uk/government/collections/procurement-act-2023-guidance-documents";
-const findTender = "https://www.gov.uk/find-tender";
-const supplierGuide = "https://www.gov.uk/tendering-for-public-sector-contracts";
-
-export const authorityPosts: AuthorityPost[] = [
-  {
-    slug: "uk-public-procurement-intelligence",
-    kicker: "Definitive guide",
-    title: "UK public procurement intelligence: a practical guide for suppliers",
-    description: "Learn how to connect UK procurement notices, buyer plans, contracts, suppliers and performance records into useful public-sector market intelligence.",
-    standfirst: "Public procurement intelligence is not a longer tender list. It is the disciplined work of connecting buyers, notices, contracts, suppliers, requirements and time so that a commercial decision can be made earlier and with better evidence.",
-    readTime: "10 min read",
-    sections: [
-      { heading: "What procurement intelligence means", paragraphs: ["A procurement notice records an event. Intelligence explains the event in context. That context may include the buyer’s published strategy, earlier awards, the incumbent supplier, contract dates, future pipelines, preliminary market engagement and the requirements that repeatedly appear across a market.", "For suppliers, the useful question is rarely simply ‘what is open today?’ It is ‘where is demand forming, which buyers should we understand, when might the market move and what must we prepare before a formal competition begins?’"], note: "The strongest procurement intelligence keeps the source, observation and interpretation visibly separate." },
-      { heading: "The five connected layers", paragraphs: ["A durable research model joins five layers rather than treating each record as an isolated search result."], bullets: ["Buyer: the contracting authority, its objectives, budgets, plans and buying behaviour.", "Opportunity: pipeline, engagement, planned procurement and tender notices that reveal movement through the commercial cycle.", "Contract: award, contract detail, modification, performance and termination records.", "Supplier: incumbents, challengers, partners and the markets in which they appear.", "Requirement: conditions of participation, technical specifications, certifications, evidence and evaluation criteria." ] },
-      { heading: "Know which regime you are reading", paragraphs: ["The Procurement Act 2023 regime came into force on 24 February 2025, but transitional arrangements mean older procurements can continue under the previous rules. Scotland also has its own devolved procurement legislation for many procurements. A sound dataset therefore records the jurisdiction, publication system, notice type and applicable regime instead of assuming every record follows one template.", "Find a Tender is the central place to search high-value UK public-sector opportunities and notices, while Contracts Finder and devolved services remain relevant in defined circumstances. Always follow a record back to the official source before acting on it." ] },
-      { heading: "Turn records into decisions", paragraphs: ["Start with a decision, not a database. An account team deciding whether to invest in a buyer needs a different view from a compliance lead planning certifications or a sales director estimating market size.", "For every material claim, retain a source URL, publication date, organisation identity and confidence label. Observed contract dates should not be mixed with calculated expiry dates. A plausible rebid window should never be presented as a guaranteed tender."], bullets: ["Use pipelines and market engagement to discover early demand.", "Use award and contract records to map incumbency and contract shape.", "Use performance, modification and termination notices to monitor delivery and change.", "Use buyer documents to explain why the requirement exists.", "Use recurring conditions and specifications to build a readiness plan." ] },
-      { heading: "A weekly intelligence rhythm", paragraphs: ["A practical operating rhythm combines broad monitoring with selective depth. Review new notices and material contract changes weekly. Revisit priority buyer plans and pipelines monthly. Refresh important contract milestones when new evidence appears.", "The output should be a short list of actions: investigate an account, contact a buyer during legitimate engagement, prepare evidence, identify a partner, monitor a contract window or deliberately decline the pursuit. Research that does not change a decision is information storage, not intelligence." ] }
-    ],
-    sources: [{label:"Procurement Act 2023 guidance collection",url:govCollection},{label:"Find a Tender",url:findTender},{label:"Tendering for public-sector contracts",url:supplierGuide}],
-    faqs: [{question:"What is public procurement intelligence?",answer:"It is evidence-led analysis that connects public notices with buyers, contracts, suppliers, requirements and timelines to support earlier commercial decisions."},{question:"Is Find a Tender the only source suppliers need?",answer:"No. It is an essential official source, but buyer publications, Contracts Finder, devolved portals and the underlying procurement documents can all add necessary context."},{question:"Can contract expiry dates predict future tenders?",answer:"Not on their own. They are useful investigation triggers, but extensions, direct awards, changed delivery models and cancelled requirements can alter the outcome."}],
-    related:["find-government-contracts-before-tender","public-sector-buyer-profile","bid-readiness-checklist"]
-  },
-  {
-    slug: "find-government-contracts-before-tender",
-    kicker: "Early opportunity discovery",
-    title: "How to find government contracts before the tender is published",
-    description: "A supplier-focused method for finding UK government contract opportunities early using pipelines, market engagement, awards, budgets and renewal signals.",
-    standfirst: "Finding an opportunity early does not mean guessing. It means following legitimate public evidence before a tender notice concentrates the market’s attention.",
-    readTime: "9 min read",
-    sections: [
-      {heading:"Why tender alerts arrive late",paragraphs:["A tender notice is designed to begin or advertise a formal competition. Before that point, a buyer may have identified the need, secured internal support, assessed routes to market, spoken to the market and drafted the requirement.","A supplier that starts only when the tender appears must perform account research, partnering, qualification and evidence preparation inside the response period. Earlier public signals create time to make a calmer bid/no-bid decision."],note:"Early intelligence should improve preparation, never seek private or unfair access to a competition."},
-      {heading:"Start with published forward signals",paragraphs:["Pipeline notices, commercial pipelines and procurement plans can reveal future activity well before tender. Preliminary market engagement notices show that a buyer is testing assumptions or seeking market input. Planned procurement notices can provide advance information and, where the statutory conditions are met, may support a shorter tendering period.","Track the buyer, expected timing, estimated value, category and stated route to market. Treat all forward dates as changeable until a formal notice confirms them."]},
-      {heading:"Work backwards from existing contracts",paragraphs:["Award and contract detail notices establish who won, what was bought, the value, the term and sometimes extension options. These facts can create a review window for future research.","Do not turn a calculated end date into a promised rebid. Check for modifications, extensions, replacement programmes, insourcing decisions, framework options and evidence that the underlying need still exists."],bullets:["Record the authoritative award or contract record.","Calculate milestones transparently and label them as calculated.","Look for extension options and later modifications.","Check current budgets, strategy and service plans.","Increase monitoring as the decision window approaches."]},
-      {heading:"Read the buyer’s wider evidence",paragraphs:["Committee papers, cabinet reports, budget books, digital strategies, estates plans and transformation programmes can reveal why a future procurement might exist. Search the buyer’s own website as well as procurement portals.","The aim is not to collect every document. Extract the objective, responsible function, expected timetable, dependencies and any language that recurs across later notices."]},
-      {heading:"Build an ethical early-opportunity workflow",paragraphs:["Maintain a sourced account list with a next-review date. Separate public facts from analyst judgement, and record what evidence would disprove the current hypothesis.","When a buyer formally invites market engagement, respond through the stated channel and within the published timetable. When it does not, use the evidence for internal planning rather than representing speculation as buyer intent."]}
-    ],
-    sources:[{label:"Find a Tender",url:findTender},{label:"Procurement Act guidance: plan phase",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-plan-phase"},{label:"Procurement Act guidance: define phase",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase"}],
-    faqs:[{question:"How early can suppliers see a government opportunity?",answer:"It varies. Pipelines and market engagement can appear months before a tender, while some needs may have little or no public forward signal."},{question:"Does an expiring public contract always go back to market?",answer:"No. The buyer may extend, change scope, use another route, bring work in-house or stop the requirement."},{question:"Can suppliers contact buyers before tender?",answer:"Suppliers should use legitimate published engagement routes and respect procurement rules. Public early intelligence is primarily a planning tool, not permission to seek preferential treatment."}],
-    related:["pipeline-notices","preliminary-market-engagement","contract-award-notices"]
-  },
-  {
-    slug:"pipeline-notices",
-    kicker:"Notice guide",
-    title:"Pipeline notices explained: how suppliers can read future demand",
-    description:"Understand UK Procurement Act pipeline notices, what they contain, their limitations and how suppliers can turn them into an evidence-led market view.",
-    standfirst:"A pipeline notice is a portfolio-level view of anticipated procurement activity. For suppliers, its value lies in prioritisation—not certainty.",
-    readTime:"7 min read",
-    sections:[
-      {heading:"What a pipeline notice is",paragraphs:["Under the Procurement Act regime, certain contracting authorities publish pipeline notices setting out specified planned procurements over a forward period. The official guidance explains the applicable value and timing rules; suppliers should check the current guidance rather than rely on a simplified threshold copied elsewhere.","Unlike a tender notice, a pipeline notice does not start a competition. It is an early transparency record and its entries may change." ]},
-      {heading:"Fields that matter to suppliers",paragraphs:["A useful pipeline record normally begins with the buyer, description, estimated value and expected timetable. Classification and location can help category teams decide whether the entry belongs in their market."],bullets:["Contracting authority and buying organisation.","Description and likely scope of the procurement.","Estimated value or value range.","Expected tender publication and contract dates.","Relevant classification codes and delivery geography." ]},
-      {heading:"Treat dates as planning assumptions",paragraphs:["Pipeline entries are forecasts made before the procurement is complete. Business cases, budgets, scope and routes to market can change. Record the publication date and compare later versions or downstream notices rather than silently overwriting the original record.","A useful confidence label might distinguish a single early pipeline entry from an entry supported by a market engagement notice, a current budget and an expiring incumbent contract."],note:"Pipeline means anticipated activity, not guaranteed opportunity."},
-      {heading:"Connect the entry to the lifecycle",paragraphs:["The strongest workflow watches for a chain: pipeline entry, preliminary market engagement, planned procurement notice, tender notice, award and contract details. Not every procurement will publish every notice, but each link increases context.","Resolve changes in buyer names and descriptions carefully. Similar wording is not enough to merge two procurements when scope, value or responsible authority differs." ]},
-      {heading:"Actions a pipeline can support",paragraphs:["Use the pipeline to prioritise buyer research, partner conversations, capability development and evidence gathering. Rank entries by strategic fit, timing, confidence and the effort required to become ready.","Avoid inflating the sales forecast with the full pipeline value. Estimated procurement value is not addressable revenue, and a supplier may be eligible for only one lot or a small part of the eventual scope." ]}
-    ],
-    sources:[{label:"Official guidance: pipeline notices",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-plan-phase/guidance-pipeline-notice-html"},{label:"Procurement Act guidance collection",url:govCollection},{label:"Find a Tender",url:findTender}],
-    faqs:[{question:"Is a pipeline notice a live tender?",answer:"No. It describes anticipated procurement activity and does not itself invite tenders."},{question:"Are pipeline notice dates guaranteed?",answer:"No. They are forward-looking and can change as the buyer develops its plans."},{question:"How should sales teams value pipeline entries?",answer:"Use them for prioritisation and planning. Do not treat the full estimated contract value as weighted sales revenue without further qualification."}],
-    related:["planned-procurement-notices","preliminary-market-engagement","find-government-contracts-before-tender"]
-  },
-  {
-    slug:"preliminary-market-engagement",
-    kicker:"Market engagement",
-    title:"Preliminary market engagement: a supplier’s practical guide",
-    description:"Learn what preliminary market engagement notices mean, how UK suppliers can respond and how to use engagement evidence without overreading buyer intent.",
-    standfirst:"Preliminary market engagement is one of the clearest legitimate opportunities to help a buyer understand capability, feasibility and market conditions before a competition is finalised.",
-    readTime:"8 min read",
-    sections:[
-      {heading:"What the buyer is trying to learn",paragraphs:["A buyer may engage the market to develop requirements, test commercial models, understand capacity, identify risks or prepare the tender. Engagement can take the form of questionnaires, supplier days, demonstrations, one-to-one sessions or published requests for information.","The purpose is discovery, not supplier selection. Participating does not guarantee a future opportunity or advantage in the competition." ]},
-      {heading:"Read the notice precisely",paragraphs:["Identify the engagement objective, scope, response method, deadline and any limits on participation. Note whether the buyer asks for pricing ranges, delivery models, technical feasibility, lotting views or barriers faced by smaller suppliers.","Keep the notice and response together in the account record. Later tender documents can then be compared with the questions the buyer originally explored." ]},
-      {heading:"Prepare an evidence-led response",paragraphs:["Answer the question asked and distinguish proven capability from aspiration. Explain trade-offs, implementation constraints and dependencies in language the buyer can use. Where commercial information is sensitive, follow the stated process and label it appropriately."],bullets:["Lead with the buyer’s decision, not a product brochure.","Quantify delivery evidence where it is genuinely comparable.","Make assumptions explicit.","Identify risks early and propose workable mitigations.","Avoid drafting specifications that unfairly lock out the wider market." ]},
-      {heading:"Protect fairness and your own position",paragraphs:["The Procurement Act framework contains duties and safeguards around preliminary market engagement. Buyers must avoid creating an unfair advantage and may need to address information asymmetry in the later competition.","Suppliers should retain what was submitted, avoid seeking confidential competitor information and assume material information may need to be reflected in the formal procurement documents."],note:"Useful engagement improves the procurement; it does not create a private route around it."},
-      {heading:"Use engagement as a signal",paragraphs:["A preliminary market engagement notice is strong evidence that the buyer is actively defining a requirement, but timing and scope can still change. Connect it to pipelines, current contracts, strategies and later notices.","After responding, set review dates around the indicative timetable. If no tender follows, look for a revised engagement, cancellation, direct award justification or a changed route to market rather than assuming silence means loss." ]}
-    ],
-    sources:[{label:"Official guidance: preliminary market engagement",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-preliminary-market-engagement-html"},{label:"Procurement Act guidance: define phase",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase"}],
-    faqs:[{question:"Does taking part improve a supplier’s tender score?",answer:"Not automatically. Engagement is separate from the later evaluation and buyers must preserve fairness."},{question:"Should suppliers disclose pricing during engagement?",answer:"Respond to the buyer’s stated request and process. Use clear assumptions and handle commercially sensitive information carefully."},{question:"What if a supplier misses the engagement?",answer:"Missing engagement does not normally mean automatic exclusion from a later open competition, but always check the eventual tender documents."}],
-    related:["planned-procurement-notices","pipeline-notices","bid-readiness-checklist"]
-  },
-  {
-    slug:"planned-procurement-notices",
-    kicker:"Notice guide",
-    title:"Planned procurement notices: what suppliers need to know",
-    description:"A clear guide to planned procurement notices under the UK Procurement Act, including timing, shortened tender periods and supplier actions.",
-    standfirst:"A planned procurement notice is more specific than a broad pipeline entry and can be a valuable preparation signal, but suppliers must still wait for and verify the formal tender notice.",
-    readTime:"7 min read",
-    sections:[
-      {heading:"Where the notice fits",paragraphs:["The planned procurement notice sits before the tender notice. It gives advance information about an intended procurement and may, when the statutory requirements are satisfied, allow the contracting authority to use a shorter tendering period later.","That makes its timing commercially important: a supplier that waits for the tender may have less response time than expected." ]},
-      {heading:"What to extract",paragraphs:["Capture the authority, subject matter, estimated value, likely procedure, expected tender date and contract timetable. Check whether lots, participation conditions or other scope signals are included.","Record the exact publication date because the legal effect of the notice depends on timing and content. Use the official guidance for the current conditions." ]},
-      {heading:"How it differs from a pipeline entry",paragraphs:["A pipeline notice provides an aggregated forward view of anticipated procurements. A planned procurement notice relates to a more specific procurement and is tied more closely to the tendering phase.","Both can change. Neither is an invitation to submit a competitive tender. The tender notice and associated documents remain the authoritative source for participation." ]},
-      {heading:"Supplier preparation window",paragraphs:["Use the advance notice to complete high-friction tasks: partner selection, evidence mapping, reference permissions, security or quality documentation and internal capacity decisions."],bullets:["Create an account brief and validate strategic fit.","Map likely conditions of participation against current evidence.","Identify long-lead certifications or partner gaps.","Review prior awards and incumbent contract evidence.","Set monitoring for the expected tender window." ]},
-      {heading:"When the timetable slips",paragraphs:["Do not assume the opportunity has vanished when the expected tender date passes. Search for a revised planned notice, market engagement, procurement termination or a new route.","Preserve the earlier notice so changes in scope, value and timing are visible. Those changes can explain the buyer’s evolving requirement and improve future qualification." ]}
-    ],
-    sources:[{label:"Official guidance: planned procurement notices",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-planned-procurement-notice-html"},{label:"Official guidance: time periods",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/time-periods-html"}],
-    faqs:[{question:"Is a planned procurement notice a tender?",answer:"No. It is advance information; suppliers must use the later tender notice and procurement documents to participate."},{question:"Can it shorten the tender response period?",answer:"It can support a shorter tendering period when the Procurement Act requirements on content and timing are met."},{question:"Should suppliers begin bid preparation?",answer:"They can prepare reusable evidence and qualification work, but should avoid drafting against assumptions that the formal documents may change."}],
-    related:["pipeline-notices","preliminary-market-engagement","bid-readiness-checklist"]
-  },
-  {
-    slug:"contract-award-notices",
-    kicker:"Award intelligence",
-    title:"How to use contract award notices for public-sector market intelligence",
-    description:"Learn how to read UK contract award and contract details notices to identify incumbents, contract shape, market movement and future review points.",
-    standfirst:"Awards are more than historical results. Read carefully, they establish the supplier, buyer, value, route and timing needed to understand a market and investigate future change.",
-    readTime:"8 min read",
-    sections:[
-      {heading:"Award does not always mean signed contract",paragraphs:["Under the Procurement Act notice sequence, a contract award notice communicates the intention to enter into a public contract and precedes the standstill period where one applies. A contract details notice follows after the contract is entered into.","That distinction matters when building data. Do not assign a confirmed contract start or term from an intention-stage record when a later contract record is available." ]},
-      {heading:"Fields worth normalising",paragraphs:["Extract the buyer, supplier, procurement identifier, lot, value, dates, procedure and route to market. Retain the original record because values may be estimates, totals or lot-specific amounts.","Resolve supplier identities using company numbers, addresses and other identifiers where available. Name similarity alone can merge unrelated businesses or split one supplier across spelling variants."],bullets:["Winning supplier and identifier.","Awarded lot or scope.","Contract value and whether VAT is included.","Contract and extension dates.","Procedure, framework or dynamic market used.","Linked tender and earlier notices." ]},
-      {heading:"Build an incumbency view",paragraphs:["A single award proves only that a supplier won a specified contract or lot. Repeated awards across a buyer, category or region may indicate a stronger relationship, but should still be described as observed award history rather than preference.","Compare the contract scope and time period before counting repeat wins. Framework appointments do not prove call-off revenue, and multi-supplier arrangements should not be presented as exclusive incumbency." ]},
-      {heading:"Create future review points",paragraphs:["Contract terms and extension options can support calculated milestones. Label the source date, calculation and uncertainty. Monitor for modifications, performance notices, termination and replacement activity.","The purpose of the review point is to trigger new research—not to promise a rebid date to a sales forecast."],note:"Observed award + calculated milestone + current buyer evidence is stronger than any one field alone."},
-      {heading:"Use losses as market evidence",paragraphs:["An award can explain which capability, route or partner configuration the market accepted. Where assessment summaries or lawful feedback are available to the supplier, keep them private unless rights and confidentiality permit wider use.","Public award data supports market analysis; it does not justify claims about a competitor’s confidential pricing, margin or delivery quality." ]}
-    ],
-    sources:[{label:"Official guidance: contract award notices and standstill",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/guidance-contract-award-notices-and-standstill-html"},{label:"Official guidance: contract details notices",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/guidance-contract-details-notices-html"},{label:"Find a Tender",url:findTender}],
-    faqs:[{question:"What is the difference between a contract award notice and a contract details notice?",answer:"Under the Procurement Act sequence, the award notice precedes contract entry; the contract details notice is published after the contract is entered into."},{question:"Does a framework award prove revenue?",answer:"No. Appointment to a framework does not by itself prove that call-off work was awarded."},{question:"Can award values be compared directly?",answer:"Only after checking scope, lots, VAT treatment, duration and whether the value is estimated or contracted."}],
-    related:["contract-performance-notices","frameworks-vs-dynamic-markets","renewal-signals"]
-  },
-  {
-    slug:"contract-performance-notices",
-    kicker:"Contract management",
-    title:"Contract performance notices: a new layer of supplier intelligence",
-    description:"Understand UK contract performance notices, KPI reporting and how suppliers can use public performance evidence responsibly for account and market research.",
-    standfirst:"Performance notices extend procurement transparency beyond the award. They can reveal delivery evidence and material failure, but context and precise attribution are essential.",
-    readTime:"8 min read",
-    sections:[
-      {heading:"What performance notices add",paragraphs:["Award data identifies who won. Contract performance information can show what happened during delivery. The Procurement Act framework includes publication requirements connected with specified key performance indicators and certain poor-performance events for relevant public contracts.","Coverage is not universal, and absence of a notice is not proof of excellent or poor delivery. Check the statutory scope and current official guidance." ]},
-      {heading:"Separate periodic KPI reporting from failure events",paragraphs:["A periodic KPI assessment and a notice connected to breach or poor performance are different signals. Record the notice type, assessment period, contract, KPI and stated outcome.","Do not compress nuanced performance into an unsupported league table. A missed KPI can reflect a narrow measure, a disputed event or circumstances that require the underlying notice and contract context." ]},
-      {heading:"Resolve contract and supplier carefully",paragraphs:["Link performance information to the exact contract, lot and supplier identified in the notice. Consortiums, subcontracting chains and novations can complicate attribution.","Preserve buyer-authored wording and dates. If Civensa or an analyst adds interpretation, label it separately and provide the source link."],note:"Performance data is decision support, not a licence for reputational shorthand."},
-      {heading:"Use cases for suppliers",paragraphs:["Incumbents can monitor their public delivery record and correct internal account data. Challengers can identify buyer priorities and recurring delivery risks without turning a notice into an attack line. Partners can assess whether a market repeatedly struggles with mobilisation, service levels or reporting."],bullets:["Account reviews grounded in published evidence.","Bid evidence aligned with KPIs buyers actually monitor.","Early identification of delivery themes across a category.","More informed partner and subcontractor due diligence.","Research triggers for a future contract review." ]},
-      {heading:"A responsible interpretation standard",paragraphs:["Quote sparingly, link to the complete official record and state the period covered. Check for later notices, remediation, modifications or termination information that changes the picture.","Never infer misconduct, financial weakness or general supplier quality from a limited operational measure. Strong market intelligence makes the evidence easier to inspect and the uncertainty harder to ignore." ]}
-    ],
-    sources:[{label:"Official guidance: contract performance notices",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-manage-phase/guidance-contract-performance-notices-html"},{label:"Official guidance: key performance indicators",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-manage-phase/guidance-key-performance-indicators-html"}],
-    faqs:[{question:"Do all public contracts have performance notices?",answer:"No. Requirements depend on the contract and statutory scope, and publication coverage will vary."},{question:"Does no notice mean good performance?",answer:"No. Absence of a public notice is not evidence of a positive or negative outcome."},{question:"Can suppliers use notices in competitor research?",answer:"They can use public facts responsibly, with source links and context, but should not exaggerate a narrow event into a general allegation."}],
-    related:["contract-award-notices","public-sector-buyer-profile","uk-public-procurement-intelligence"]
-  },
-  {
-    slug:"frameworks-vs-dynamic-markets",
-    kicker:"Routes to market",
-    title:"Frameworks vs dynamic markets: a practical supplier comparison",
-    description:"Compare public procurement frameworks and dynamic markets under the Procurement Act, including access, competition, award evidence and supplier planning.",
-    standfirst:"Frameworks and dynamic markets can both organise repeated public purchasing, but they create different entry points and commercial implications for suppliers.",
-    readTime:"8 min read",
-    sections:[
-      {heading:"The commercial question behind the labels",paragraphs:["For a supplier, the practical questions are: can we join, when can we join, how will contracts be awarded, which buyers can use the arrangement and what evidence is needed to remain eligible?","The title of an arrangement is not enough. Read the establishing notice, tender documents, supplier list, scope, lot structure and call-off rules." ]},
-      {heading:"Frameworks",paragraphs:["A framework establishes terms for future contracts awarded during its life. Suppliers typically compete for a place when the framework is established, and later contracts are awarded in accordance with its terms.","A place on a framework is market access, not guaranteed work. Revenue depends on actual call-offs, buyer use, lot fit and the supplier’s performance in any further competition." ]},
-      {heading:"Dynamic markets",paragraphs:["Dynamic markets are designed as a flexible route through which eligible suppliers can join while the market remains open, subject to the relevant conditions. They can therefore offer later entry opportunities that a closed framework may not.","Admission still does not guarantee a contract. Suppliers must monitor opportunities run through the market and maintain the evidence needed to meet participation conditions." ]},
-      {heading:"Compare the evidence",paragraphs:["Build a route-to-market record that separates establishment, supplier admission and actual contract award. Avoid treating a long supplier list as proof of active competition or buyer demand."],bullets:["Eligible buyers and geographic scope.","Categories, lots and maximum value.","Opening, closing and refresh dates.","Admission and removal conditions.","Direct award and further-competition rules.","Published call-offs or contracts actually awarded." ]},
-      {heading:"Portfolio strategy for suppliers",paragraphs:["Prioritise arrangements where buyer usage, scope and timing match the commercial plan. Assign owners for renewals, evidence and monitoring; otherwise framework places become inactive badges.","Balance access routes with open-market monitoring. A strong public-sector strategy understands how buyers purchase in the category rather than assuming one framework or dynamic market covers all demand."],note:"Access is valuable only when it connects to real buyer demand and an executable pursuit plan."}
-    ],
-    sources:[{label:"Official guidance: frameworks",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-frameworks-html"},{label:"Official guidance: dynamic markets",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-dynamic-markets-html"}],
-    faqs:[{question:"Can suppliers join a framework after it is awarded?",answer:"Generally the supplier pool is established through the framework procurement; read the specific framework and current rules for the exact position."},{question:"Can suppliers join a dynamic market later?",answer:"Dynamic markets are intended to allow eligible suppliers to apply while the market operates, subject to its conditions."},{question:"Does joining either route guarantee work?",answer:"No. Admission and actual contract award are separate events."}],
-    related:["contract-award-notices","bid-readiness-checklist","find-government-contracts-before-tender"]
-  },
-  {
-    slug:"public-sector-buyer-profile",
-    kicker:"Buyer intelligence",
-    title:"How to build a public-sector buyer profile from open evidence",
-    description:"A step-by-step method for building evidence-led UK public-sector buyer profiles using strategies, pipelines, notices, awards, suppliers and requirements.",
-    standfirst:"A useful buyer profile is not a directory entry. It explains what the organisation is trying to achieve, how it buys, where contracts sit and what evidence would change the account plan.",
-    readTime:"9 min read",
-    sections:[
-      {heading:"Define the decision first",paragraphs:["A profile built for account selection needs market size, fit and timing. A pursuit profile needs stakeholders, requirement history, incumbency and evaluation evidence. A compliance profile needs recurring conditions and standards.","State the decision at the top. This prevents the profile becoming a scrapbook of facts that nobody uses." ]},
-      {heading:"Resolve the organisation",paragraphs:["Public bodies can publish under departments, trading names, shared services, subsidiaries and predecessor organisations. Record authoritative identifiers, domains, addresses and parent relationships before aggregating spend or notices.","Keep ambiguous entities separate. A smaller accurate profile is more useful than an inflated view built from false matches."],note:"Entity resolution is the foundation of credible buyer intelligence."},
-      {heading:"Build the evidence stack",paragraphs:["Start with the buyer’s own strategy, budget, annual plan and relevant committee papers. Add pipelines and procurement notices, then awards, contracts, modifications and performance records."],bullets:["Mandate, objectives and current strategic priorities.","Commercial pipeline and expected procurement activity.","Historic awards, suppliers and routes to market.","Current contract dates and qualified renewal windows.","Recurring requirements, evaluation themes and delivery KPIs.","Evidence gaps and the next date each source should be reviewed." ]},
-      {heading:"Separate recurrence from preference",paragraphs:["A buyer that repeatedly awards within a category has an observable pattern. That does not prove an undisclosed preference. Describe the record, sample period and limitations.","Likewise, published strategy language is evidence of organisational intent, but not proof that a particular procurement will proceed or carry a specific weighting." ]},
-      {heading:"Keep the profile alive",paragraphs:["Date every section and set review triggers. A new budget, pipeline, market engagement or award should update the relevant part without erasing the previous state.","End with actions and disconfirming evidence: what should the account team do next, and what new fact would cause it to deprioritise the buyer? That turns a profile into a managed research asset." ]}
-    ],
-    sources:[{label:"Procurement Act guidance collection",url:govCollection},{label:"Find a Tender",url:findTender},{label:"Tendering for public-sector contracts",url:supplierGuide}],
-    faqs:[{question:"What should a public-sector buyer profile include?",answer:"It should include verified identity, objectives, pipeline, award and contract history, suppliers, routes to market, recurring requirements, timelines and evidence gaps."},{question:"How often should it be updated?",answer:"Update it when material notices or buyer documents appear, with scheduled reviews for priority accounts."},{question:"Can award history prove buyer preference?",answer:"No. It can show observed purchasing patterns, but claims of preference require stronger evidence and careful wording."}],
-    related:["uk-public-procurement-intelligence","contract-award-notices","pipeline-notices"]
-  },
-  {
-    slug:"bid-readiness-checklist",
-    kicker:"Supplier readiness",
-    title:"Public-sector bid readiness checklist: prepare before the tender",
-    description:"A practical UK public-sector bid readiness checklist covering supplier information, exclusions, financial standing, policies, certifications, evidence and partners.",
-    standfirst:"Bid readiness is the work that should happen before a response window opens: prove the organisation, organise reusable evidence and expose gaps while there is still time to fix them.",
-    readTime:"9 min read",
-    sections:[
-      {heading:"Begin with reusable supplier information",paragraphs:["Keep legal entity details, ownership information, accounts, insurance, policies, accreditations and standard declarations current and controlled. Under the Procurement Act regime, suppliers use the central digital platform for specified supplier information, but procurement-specific documents and portal steps still require attention.","Assign an owner and expiry date to every item. A shared folder without accountability is not a readiness system." ]},
-      {heading:"Map conditions of participation",paragraphs:["Conditions of participation test whether a supplier has the legal and financial capacity or technical ability to perform the contract. They are distinct from the award criteria used to assess the tender itself.","Review recurring requirements across the target market. Do not assume every buyer will request the same evidence or that a generic policy proves operational practice." ]},
-      {heading:"Build an evidence library",paragraphs:["Strong evidence describes the situation, action, result and relevance to the new contract. Obtain customer permissions where needed and remove confidential information that cannot lawfully be reused."],bullets:["Current case studies with quantified, attributable outcomes.","Reference contacts and permission status.","Mobilisation, risk and governance examples.","Security, quality, environmental and social-value evidence.","CVs, partner commitments and supply-chain controls.","Lessons learned and corrective actions, not only success stories." ]},
-      {heading:"Check exclusions and counterparties",paragraphs:["Understand the mandatory and discretionary exclusion framework and keep required declarations accurate. Perform proportionate checks on consortium members, key subcontractors and connected entities where the procurement requires them.","If a serious issue exists, take legal advice early. A tender deadline is the wrong moment to discover that ownership, debarment or disclosure information is unresolved." ]},
-      {heading:"Run a quarterly readiness review",paragraphs:["Score each target market against evidence strength, expiry risk and lead time. Turn gaps into owned tasks with dates. A certification that takes six months cannot be solved by better writing in a four-week tender.","Finish with a rapid-response pack, but keep judgement outside the template. Every live procurement still requires verification against the official notice, conditions, specifications and evaluation model."],note:"Readiness reduces avoidable failure; it does not replace procurement-specific qualification."}
-    ],
-    sources:[{label:"Official guidance: central digital platform and supplier information",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/guidance-central-digital-platform-and-publication-of-information-html"},{label:"Official guidance: conditions of participation",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/guidance-conditions-of-participation-html"},{label:"Official guidance: exclusions",url:"https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-procure-phase/guidance-exclusions-html"}],
-    faqs:[{question:"What should be ready before a public-sector tender?",answer:"Core supplier information, current policies, financial and insurance evidence, declarations, case studies, references, accreditations, partner commitments and named owners for gaps."},{question:"Are conditions of participation the same as award criteria?",answer:"No. Participation conditions assess capacity or ability to perform; award criteria assess the competitive tender under the stated methodology."},{question:"Does the central digital platform remove all portal work?",answer:"No. It supports specified supplier information, but suppliers must still follow each procurement’s official notice, documents and submission process."}],
-    related:["preliminary-market-engagement","frameworks-vs-dynamic-markets","supplier-requirements"]
-  }
-];
-
-export const postBySlug = Object.fromEntries(authorityPosts.map((post) => [post.slug, post])) as Record<string, AuthorityPost>;
+export const postBySlug = Object.fromEntries(
+  authorityPosts.map((post) => [post.slug, post]),
+) as Record<string, AuthorityPost>;
 
 export function metadataFor(slug: string): Metadata {
   const post = postBySlug[slug];
@@ -214,21 +16,153 @@ export function metadataFor(slug: string): Metadata {
     description: post.description,
     keywords: [post.kicker, "UK public procurement", "procurement intelligence", "government contracts"],
     alternates: { canonical: `/research/${post.slug}` },
-    openGraph: { title: post.title, description: post.description, type: "article", url: `https://civensa.com/research/${post.slug}/` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: `https://civensa.com/research/${post.slug}/`,
+    },
   };
 }
 
 export function AuthorityPostPage({ slug }: { slug: string }) {
   const post = postBySlug[slug];
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: post.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
-  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Civensa", item: "https://civensa.com/" }, { "@type": "ListItem", position: 2, name: "Research", item: "https://civensa.com/research/" }, { "@type": "ListItem", position: 3, name: post.title, item: `https://civensa.com/research/${post.slug}/` }] };
-  return <ArticleLayout kicker={post.kicker} title={post.title} standfirst={post.standfirst} date="12 August 2026" datePublished="2026-08-12" path={`/research/${post.slug}`} readTime={post.readTime}>
-    <nav className="article-toc" aria-label="Article contents"><strong>In this guide</strong><ol>{post.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ol></nav>
-    {post.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}{section.note && <aside>{section.note}</aside>}</section>)}
-    <section className="article-faq"><h2>Frequently asked questions</h2>{post.faqs.map((faq) => <div key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>
-    <section className="article-sources"><h2>Primary sources</h2><p>This guide is general information. Check the live procurement and current official guidance before making a decision.</p><ul>{post.sources.map((source) => <li key={source.url}><a href={source.url} rel="external">{source.label} ↗</a></li>)}</ul></section>
-    <section className="related-research"><h2>Continue the research</h2><div>{post.related.map((relatedSlug) => { const related = postBySlug[relatedSlug]; return related ? <a key={relatedSlug} href={`/research/${relatedSlug}/`}>{related.title}<span>Read guide →</span></a> : <a key={relatedSlug} href={`/research/${relatedSlug}/`}>{relatedSlug.replaceAll("-", " ")}<span>Read guide →</span></a>; })}</div></section>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}} />
-  </ArticleLayout>;
+  const sourceById = Object.fromEntries(post.sources.map((source) => [source.id, source]));
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Civensa", item: "https://civensa.com/" },
+      { "@type": "ListItem", position: 2, name: "Research", item: "https://civensa.com/research/" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://civensa.com/research/${post.slug}/`,
+      },
+    ],
+  };
+
+  return (
+    <ArticleLayout
+      kicker={post.kicker}
+      title={post.title}
+      standfirst={post.standfirst}
+      date="12 August 2026"
+      datePublished="2026-08-12"
+      path={`/research/${post.slug}`}
+      readTime={post.readTime}
+    >
+      <aside className="research-method">
+        <strong>Research note</strong>
+        <p>
+          Checked 12 August 2026. Current opportunities and dates can change. Civensa separates
+          official facts, analyst interpretation and forecasts, and links the evidence used below.
+        </p>
+      </aside>
+      <nav className="article-toc" aria-label="Article contents">
+        <strong>In this guide</strong>
+        <ol>
+          {post.sections.map((section, index) => (
+            <li key={section.heading}>
+              <a href={`#section-${index + 1}`}>{section.heading}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      {post.sections.map((section, index) => (
+        <section key={section.heading} id={`section-${index + 1}`}>
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {section.bullets && (
+            <ul>
+              {section.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          )}
+          {section.note && <aside>{section.note}</aside>}
+          {section.evidence && (
+            <p className="section-evidence">
+              <span>Evidence for this section:</span>{" "}
+              {section.evidence.map((sourceId, sourceIndex) => {
+                const source = sourceById[sourceId];
+                if (!source) return null;
+                return (
+                  <span key={source.id}>
+                    {sourceIndex > 0 ? " · " : ""}
+                    <a href={source.url} rel="external">
+                      {source.label}
+                    </a>
+                  </span>
+                );
+              })}
+            </p>
+          )}
+        </section>
+      ))}
+      <section className="article-faq">
+        <h2>Frequently asked questions</h2>
+        {post.faqs.map((faq) => (
+          <div key={faq.question}>
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </div>
+        ))}
+      </section>
+      <section className="article-sources">
+        <h2>Primary sources, reading and listening</h2>
+        <p>
+          We use official material for legal rules and live dates. Reports, books and podcasts add
+          context. Follow the live notice and current guidance before making a commercial decision.
+        </p>
+        <ul>
+          {post.sources.map((source) => (
+            <li key={source.id}>
+              <span className="source-kind">{source.kind}</span>{" "}
+              <a href={source.url} rel="external">
+                {source.label} ↗
+              </a>
+              {source.note && <small>{source.note}</small>}
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="related-research">
+        <h2>Continue the research</h2>
+        <div>
+          {post.related.map((relatedSlug) => {
+            const related = postBySlug[relatedSlug];
+            return related ? (
+              <a key={relatedSlug} href={`/research/${relatedSlug}/`}>
+                {related.title}
+                <span>Read guide →</span>
+              </a>
+            ) : (
+              <a key={relatedSlug} href={`/research/${relatedSlug}/`}>
+                {relatedSlug.replaceAll("-", " ")}
+                <span>Read guide →</span>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+    </ArticleLayout>
+  );
 }
