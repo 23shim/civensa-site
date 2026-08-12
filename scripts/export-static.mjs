@@ -16,6 +16,16 @@ const routes = [
   "/research/buyer-intelligence/",
   "/research/renewal-signals/",
   "/research/supplier-requirements/",
+  "/research/uk-public-procurement-intelligence/",
+  "/research/find-government-contracts-before-tender/",
+  "/research/pipeline-notices/",
+  "/research/preliminary-market-engagement/",
+  "/research/planned-procurement-notices/",
+  "/research/contract-award-notices/",
+  "/research/contract-performance-notices/",
+  "/research/frameworks-vs-dynamic-markets/",
+  "/research/public-sector-buyer-profile/",
+  "/research/bid-readiness-checklist/",
   "/terms/",
 ];
 
@@ -29,7 +39,9 @@ async function waitForServer() {
     try {
       const response = await fetch(origin);
       if (response.ok) return;
-    } catch {}
+    } catch {
+      // The production server may still be starting.
+    }
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
   throw new Error("Timed out waiting for the standalone server");

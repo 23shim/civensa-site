@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Civensa Research</title>
+    <link>https://civensa.com/research/</link>
+    <description>Evidence-led research on UK public procurement intelligence.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 12 Aug 2026 09:00:00 GMT</lastBuildDate>
+    <atom:link href="https://civensa.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item><title>UK public procurement intelligence: a practical guide for suppliers</title><link>https://civensa.com/research/uk-public-procurement-intelligence/</link><guid>https://civensa.com/research/uk-public-procurement-intelligence/</guid><pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate><description>How to connect buyers, notices, contracts, suppliers and requirements into useful market intelligence.</description></item>
+    <item><title>How to find government contracts before the tender is published</title><link>https://civensa.com/research/find-government-contracts-before-tender/</link><guid>https://civensa.com/research/find-government-contracts-before-tender/</guid><pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate><description>An evidence-led method for early public-sector opportunity discovery.</description></item>
+    <item><title>Pipeline notices explained</title><link>https://civensa.com/research/pipeline-notices/</link><guid>https://civensa.com/research/pipeline-notices/</guid><pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate><description>How suppliers can read anticipated procurement activity without treating it as certainty.</description></item>
+    <item><title>Preliminary market engagement: a supplier&apos;s practical guide</title><link>https://civensa.com/research/preliminary-market-engagement/</link><guid>https://civensa.com/research/preliminary-market-engagement/</guid><pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate><description>How to respond to legitimate buyer engagement before a competition.</description></item>
+    <item><title>Planned procurement notices: what suppliers need to know</title><link>https://civensa.com/research/planned-procurement-notices/</link><guid>https://civensa.com/research/planned-procurement-notices/</guid><pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate><description>Advance notice, supplier preparation and shortened tender periods explained.</description></item>
+  </channel>
+</rss>

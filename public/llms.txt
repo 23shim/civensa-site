@@ -13,6 +13,16 @@ Civensa is an independent research publication operated by BidSkim Limited. It c
 
 ## Research notes
 
+- [UK public procurement intelligence: a practical guide for suppliers](https://civensa.com/research/uk-public-procurement-intelligence/)
+- [How to find government contracts before the tender is published](https://civensa.com/research/find-government-contracts-before-tender/)
+- [Pipeline notices explained](https://civensa.com/research/pipeline-notices/)
+- [Preliminary market engagement: a supplier's practical guide](https://civensa.com/research/preliminary-market-engagement/)
+- [Planned procurement notices: what suppliers need to know](https://civensa.com/research/planned-procurement-notices/)
+- [How to use contract award notices for market intelligence](https://civensa.com/research/contract-award-notices/)
+- [Contract performance notices: a new layer of supplier intelligence](https://civensa.com/research/contract-performance-notices/)
+- [Frameworks vs dynamic markets](https://civensa.com/research/frameworks-vs-dynamic-markets/)
+- [How to build a public-sector buyer profile](https://civensa.com/research/public-sector-buyer-profile/)
+- [Public-sector bid readiness checklist](https://civensa.com/research/bid-readiness-checklist/)
 - [Why renewal signals matter before a tender is published](https://civensa.com/research/renewal-signals/)
 - [Reading the buyer before reading the opportunity](https://civensa.com/research/buyer-intelligence/)
 - [Requirements are a market signal, not an admin task](https://civensa.com/research/supplier-requirements/)

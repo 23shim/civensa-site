@@ -10,6 +10,16 @@ const paths = [
   "/research/buyer-intelligence/",
   "/research/renewal-signals/",
   "/research/supplier-requirements/",
+  "/research/uk-public-procurement-intelligence/",
+  "/research/find-government-contracts-before-tender/",
+  "/research/pipeline-notices/",
+  "/research/preliminary-market-engagement/",
+  "/research/planned-procurement-notices/",
+  "/research/contract-award-notices/",
+  "/research/contract-performance-notices/",
+  "/research/frameworks-vs-dynamic-markets/",
+  "/research/public-sector-buyer-profile/",
+  "/research/bid-readiness-checklist/",
   "/terms/",
 ];
 

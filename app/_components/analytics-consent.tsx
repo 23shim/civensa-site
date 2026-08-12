@@ -9,7 +9,9 @@ export function AnalyticsConsent() {
 
   useEffect(() => {
     const saved = window.localStorage.getItem("civensa-analytics-consent");
-    if (saved === "granted" || saved === "denied") setChoice(saved);
+    if (saved !== "granted" && saved !== "denied") return;
+    const timer = window.setTimeout(() => setChoice(saved), 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
