@@ -17,3 +17,14 @@ The publication connects public evidence across buyer plans, procurement notices
 Research links material claims to primary sources where practicable and states the publication date, assumptions and limitations. Civensa is not affiliated with the UK Government or any public authority.
 
 See the [research methodology](https://civensa.com/methodology/) or email [research@civensa.com](mailto:research@civensa.com).
+
+## Procurement tools directory
+
+- [Tender alert software](https://civensa.com/tools/tender-alerts/)
+- [Procurement intelligence platforms](https://civensa.com/tools/procurement-intelligence/)
+- [Bid-writing software](https://civensa.com/tools/bid-writing-software/)
+- [Bid-writing services](https://civensa.com/tools/bid-writing-services/)
+- [Official tender portals](https://civensa.com/tools/official-portals/)
+- [Directory methodology](https://civensa.com/tools/methodology/)
+
+The directory uses official provider pages, visible checked dates and correction links. It has no affiliate links or paid rankings. Civensa discloses that it is operated by BidSkim Limited wherever BidSkim appears.

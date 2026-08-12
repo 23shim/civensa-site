@@ -2,13 +2,15 @@
 
 > Evidence-led research on UK public procurement: buyer intent, contract renewals, supplier requirements and market structure.
 
-Civensa is an independent research publication operated by BidSkim Limited. It connects public procurement evidence across buyer plans, contract cycles, supplier requirements and market structure. Analysis distinguishes published facts, calculated milestones and qualified interpretation.
+Civensa is a research publication operated by BidSkim Limited. It connects public procurement evidence across buyer plans, contract cycles, supplier requirements and market structure. Analysis distinguishes published facts, calculated milestones and qualified interpretation. Civensa does not present itself as an independent reviewer of BidSkim.
 
 ## Primary pages
 
 - [Research](https://civensa.com/research/): All Civensa research notes.
 - [Methodology](https://civensa.com/methodology/): Source hierarchy, evidence standards and limitations.
 - [Compare approaches](https://civensa.com/compare/): Transparent comparison of procurement research approaches.
+- [Procurement tools directory](https://civensa.com/tools/): Dated, source-linked records for tender alerts, procurement intelligence, bid-writing software, services and official portals.
+- [Tools directory methodology](https://civensa.com/tools/methodology/): Inclusion rules, evidence labels, ownership disclosure, pricing checks and corrections.
 - [About](https://civensa.com/about/): Publication purpose and operating entity.
 
 ## Research notes

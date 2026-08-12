@@ -18,6 +18,12 @@ const notes = [
   { tag: "Bid readiness", date: "31 Jul 2026", title: "Requirements are a market signal, not an admin task", copy: "A field guide to spotting recurring certifications and planning the evidence base ahead of time.", href: "/research/supplier-requirements" },
 ];
 
+const marketCategories = [
+  { tag: "Find opportunities", title: "Tender alerts and official portals", copy: "Compare free source portals with paid alert services by coverage, matching method, alert frequency and current price.", href: "/tools/tender-alerts/" },
+  { tag: "Understand the market", title: "Procurement intelligence platforms", copy: "Research tools for buyers, suppliers, awards, incumbents, frameworks, spend, contacts and contract renewals.", href: "/tools/procurement-intelligence/" },
+  { tag: "Prepare the response", title: "Bid-writing software and services", copy: "Separate document analysis, response libraries and drafting software from consultancies, freelance support and training.", href: "/tools/bid-writing-software/" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -27,7 +33,7 @@ export default function Home() {
         <div className="hero-grid">
           <div>
             <h1>See the market<br />before it moves.</h1>
-            <p className="hero-copy">Civensa connects buyer intent, contract cycles and supplier requirements—so public-sector markets are easier to understand before the tender lands.</p>
+            <p className="hero-copy">Civensa connects buyer intent, contract cycles and supplier requirements, so public-sector markets are easier to understand before the tender lands.</p>
             <div className="hero-actions">
               <a className="button button-dark" href="/research">Explore the research <span aria-hidden="true">↗</span></a>
               <a className="text-link" href="/methodology">How we work <span aria-hidden="true">→</span></a>
@@ -53,9 +59,20 @@ export default function Home() {
           <h2>A tender is the end of a story, not the beginning.</h2>
           <div>
             <p>Most opportunity tools begin when a notice appears. Civensa studies the evidence that accumulates before that moment: expiring contracts, buyer plans, incumbent relationships, evaluation patterns and the requirements that shape who can compete.</p>
-            <p>Our work is designed for suppliers, advisers and market teams who need a wider field of view—not more alerts.</p>
+            <p>Our work is designed for suppliers, advisers and market teams who need a wider field of view, not more alerts.</p>
           </div>
         </div>
+      </section>
+
+      <section className="content-section shell">
+        <div className="research-section-head">
+          <div><div className="section-kicker">Procurement market guide</div><h2>Compare the tools around the tender.</h2></div>
+          <p>Current provider records, official evidence, visible limitations and no affiliate rankings.</p>
+        </div>
+        <div className="category-grid">
+          {marketCategories.map((category) => <article className="category-card" key={category.href}><small>{category.tag}</small><h2>{category.title}</h2><p>{category.copy}</p><a href={category.href}>Explore the category →</a></article>)}
+        </div>
+        <div className="hero-actions"><a className="button button-dark" href="/tools/">Browse the full tools directory <span aria-hidden="true">↗</span></a><a className="text-link" href="/tools/methodology/">How products are checked <span aria-hidden="true">→</span></a></div>
       </section>
 
       <section className="signal-section section">

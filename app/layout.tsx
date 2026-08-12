@@ -4,12 +4,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://civensa.com"),
-  title: { default: "Civensa — Procurement intelligence, mapped", template: "%s — Civensa" },
-  description: "Evidence-led research on UK public procurement: buyer intent, contract renewals, supplier requirements and market structure.",
-  keywords: ["public procurement intelligence", "UK tenders", "contract renewals", "buyer intelligence", "supplier requirements"],
+  title: { default: "Civensa | UK procurement tools, mapped", template: "%s | Civensa" },
+  description: "Evidence-led UK public procurement research and a source-linked directory of tender alerts, procurement intelligence, bid-writing software and services.",
+  keywords: ["public procurement intelligence", "UK tender alerts", "contract renewals", "buyer intelligence", "bid writing software", "tender writing services"],
   alternates: { types: { "application/rss+xml": "/feed.xml" } },
-  openGraph: { title: "Civensa — See the market before it moves", description: "Procurement intelligence connecting buyer intent, contract cycles and supplier requirements.", url: "https://civensa.com", siteName: "Civensa", type: "website", images: [{ url: "/og.png", width: 1733, height: 909, alt: "Civensa — See the market before it moves" }] },
-  twitter: { card: "summary_large_image", title: "Civensa — See the market before it moves", description: "Procurement intelligence, mapped.", images: ["/og.png"] },
+  openGraph: { title: "Civensa | UK procurement tools, mapped", description: "A source-linked guide to tender alerts, procurement intelligence, bid-writing software and specialist services.", url: "https://civensa.com", siteName: "Civensa", type: "website", images: [{ url: "/og-tools.png", width: 1731, height: 909, alt: "Civensa: UK procurement tools, mapped" }] },
+  twitter: { card: "summary_large_image", title: "Civensa | UK procurement tools, mapped", description: "Tender alerts, procurement intelligence and bid-writing tools compared with sources.", images: ["/og-tools.png"] },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
@@ -21,5 +21,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       { "@type": "WebSite", "@id": "https://civensa.com/#website", name: "Civensa", url: "https://civensa.com", publisher: { "@id": "https://civensa.com/#organization" }, inLanguage: "en-GB" },
     ],
   };
-  return <html lang="en"><body>{children}<AnalyticsConsent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></body></html>;
+  return <html lang="en-GB"><body>{children}<AnalyticsConsent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></body></html>;
 }

@@ -23,7 +23,7 @@ test("server-renders the Civensa publication", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Civensa — Procurement intelligence, mapped<\/title>/i);
+  assert.match(html, /<title>Civensa \| UK procurement tools, mapped<\/title>/i);
   assert.match(html, /See the market/);
   assert.match(html, /application\/rss\+xml/);
   assert.match(html, /"@type":"Organization"/);
@@ -59,12 +59,47 @@ test("authority articles meet the editorial depth and anti-slop gate", async () 
   }
 });
 
+test("renders the procurement tools directory with dated evidence and ownership disclosure", async () => {
+  const routes = [
+    "/tools/",
+    "/tools/tender-alerts/",
+    "/tools/procurement-intelligence/",
+    "/tools/bid-writing-software/",
+    "/tools/bid-writing-services/",
+    "/tools/official-portals/",
+    "/tools/methodology/",
+  ];
+  for (const route of routes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.match(html, /Civensa/, route);
+    assert.match(html, /12 August 2026|2026-08-12/, route);
+    assert.match(html, /canonical[^>]+https:\/\/civensa\.com\/tools\//i, route);
+    assert.doesNotMatch(html, /—|–|\s--\s/, `${route}: contains humanizer-prohibited dash punctuation`);
+  }
+
+  const alerts = await (await render("/tools/tender-alerts/")).text();
+  assert.match(alerts, /BidSkim Limited/i);
+  assert.match(alerts, /Monitor[^<]{0,80}£79|£79[^<]{0,80}Monitor/i);
+  assert.match(alerts, /Predict[^<]{0,80}£189|£189[^<]{0,80}Predict/i);
+  assert.match(alerts, /provider-stated|Provider-stated/i);
+
+  const hub = await (await render("/tools/")).text();
+  assert.match(hub, /"@type":"ItemList"/);
+  assert.match(hub, /no affiliate links|no paid rankings/i);
+});
+
 test("publishes complete discovery files", async () => {
   const [sitemap, llms, feed] = await Promise.all([readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8"), readFile(new URL("../public/llms.txt", import.meta.url), "utf8"), readFile(new URL("../public/feed.xml", import.meta.url), "utf8")]);
   for (const slug of ["uk-public-procurement-intelligence", "pipeline-notices", "bid-readiness-checklist"]) {
     assert.match(sitemap, new RegExp(slug));
     assert.match(llms, new RegExp(slug));
   }
+  for (const path of ["tools/", "tools/tender-alerts", "tools/procurement-intelligence", "tools/bid-writing-software", "tools/bid-writing-services", "tools/official-portals", "tools/methodology"]) {
+    assert.match(sitemap, new RegExp(path.replaceAll("/", "\\/")));
+  }
+  assert.match(llms, /procurement tools directory/i);
   assert.match(feed, /Civensa Research/);
 });
 
@@ -72,7 +107,7 @@ test("unknown legacy URLs return a non-indexable branded 404", async () => {
   const response = await render("/2023/legacy-spam-page/");
   assert.equal(response.status, 404);
   const html = await response.text();
-  assert.match(html, /<title>Page not found — Civensa<\/title>/i);
+  assert.match(html, /<title>Page not found \| Civensa<\/title>/i);
   assert.match(html, /name="robots" content="noindex, follow"/i);
   assert.match(html, /This page is not on the map/);
   assert.doesNotMatch(html, /rel="canonical"/i);

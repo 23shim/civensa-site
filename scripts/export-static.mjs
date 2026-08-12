@@ -27,6 +27,13 @@ const routes = [
   "/research/public-sector-buyer-profile/",
   "/research/bid-readiness-checklist/",
   "/terms/",
+  "/tools/",
+  "/tools/methodology/",
+  "/tools/tender-alerts/",
+  "/tools/procurement-intelligence/",
+  "/tools/bid-writing-software/",
+  "/tools/bid-writing-services/",
+  "/tools/official-portals/",
 ];
 
 const server = spawn(process.execPath, ["dist/standalone/server.js"], {

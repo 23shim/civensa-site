@@ -21,6 +21,13 @@ const paths = [
   "/research/public-sector-buyer-profile/",
   "/research/bid-readiness-checklist/",
   "/terms/",
+  "/tools/",
+  "/tools/methodology/",
+  "/tools/tender-alerts/",
+  "/tools/procurement-intelligence/",
+  "/tools/bid-writing-software/",
+  "/tools/bid-writing-services/",
+  "/tools/official-portals/",
 ];
 
 const response = await fetch("https://www.bing.com/indexnow", {
