@@ -2,18 +2,6 @@ import { commercialRecord, type VendorRecord } from "./types";
 
 export const procurementIntelligenceRecords: readonly VendorRecord[] = [
   commercialRecord({
-    slug: "bidskim-intelligence", name: "BidSkim", category: "procurement-intelligence",
-    providerType: "Commercial procurement-intelligence platform", officialUrl: "https://bidskim.com/",
-    summary: "BidSkim says its higher plan connects tenders with renewal signals, buyer profiles, competitor awards and similar contracts.",
-    coverage: "Provider states Britain-wide data from Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales.",
-    pricing: "Free: £0. Monitor: £79/month or £780/year. Predict: £189/month or £1,860/year.",
-    pricingCaveat: "These plan names and annual prices were supplied by BidSkim Limited on 12 August 2026. The public page may still show older annual amounts or terminology.",
-    bestFor: "Small British suppliers linking current notices to buyer and contract context.",
-    notFor: "Large teams needing enterprise account management or markets outside Great Britain.",
-    caveat: "Renewal dates can be observed, calculated or predictive signals. Verify the source and status before acting.",
-    evidenceLinks: [{ label: "BidSkim pricing and scope", url: "https://bidskim.com/pricing" }],
-  }),
-  commercialRecord({
     slug: "stotles-sales-studio", name: "Stotles Sales Studio", category: "procurement-intelligence",
     providerType: "Commercial UK public-sector sales platform", officialUrl: "https://www.stotles.com/",
     summary: "Stotles lists tenders, pre-tenders, expiring contracts, buyer and supplier profiles, frameworks and contacts by tier.",

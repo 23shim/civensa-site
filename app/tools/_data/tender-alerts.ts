@@ -2,18 +2,6 @@ import { commercialRecord, type VendorRecord } from "./types";
 
 export const tenderAlertRecords: readonly VendorRecord[] = [
   commercialRecord({
-    slug: "bidskim-alerts", name: "BidSkim", category: "tender-alerts",
-    providerType: "Commercial alert and qualification platform", officialUrl: "https://bidskim.com/",
-    summary: "BidSkim says it scores public-sector notices against a supplier profile and sends a daily shortlist with reasons.",
-    coverage: "Provider states Britain-wide coverage from Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales.",
-    pricing: "Free: £0. Monitor: £79/month or £780/year. Predict: £189/month or £1,860/year.",
-    pricingCaveat: "These plan names and annual prices were supplied by BidSkim Limited on 12 August 2026. The public page may still show older annual amounts or terminology.",
-    bestFor: "British suppliers wanting profile-based qualification and links back to official notices.",
-    notFor: "Teams needing managed bid writing or coverage outside Great Britain.",
-    caveat: "The provider says it does not write bids. Its score is a qualification aid, not a buyer decision or award forecast.",
-    evidenceLinks: [{ label: "BidSkim pricing and plan scope", url: "https://bidskim.com/pricing" }],
-  }),
-  commercialRecord({
     slug: "bidstats", name: "BidStats", category: "tender-alerts",
     providerType: "Commercial tender search and alert service", officialUrl: "https://bidstats.uk/",
     summary: "BidStats offers tender search, award history, daily alerts and, on higher plans, exports and pre-procurement data.",

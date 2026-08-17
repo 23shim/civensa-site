@@ -17,7 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": "https://civensa.com/#organization", name: "Civensa", url: "https://civensa.com", description: "A procurement research publication operated by BidSkim Limited." },
+      { "@type": "Organization", "@id": "https://civensa.com/#organization", name: "Civensa", url: "https://civensa.com", description: "A UK public procurement directory." },
       { "@type": "WebSite", "@id": "https://civensa.com/#website", name: "Civensa", url: "https://civensa.com", publisher: { "@id": "https://civensa.com/#organization" }, inLanguage: "en-GB" },
     ],
   };

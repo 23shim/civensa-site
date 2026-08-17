@@ -10,12 +10,6 @@ const internationalProcurementSlugs = new Set([
   "tenderalpha",
 ]);
 
-const ownershipDisclosure = (
-  <div className="disclosure">
-    <strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, the company that develops BidSkim. BidSkim is included where relevant using the same fields and provider-source standard as other entries. Civensa has not independently tested or ranked any listed product. This directory has no affiliate links or paid rankings.
-  </div>
-);
-
 function BreadcrumbSchema({ category }: { category?: { name: string; slug: string } }) {
   const elements = [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://civensa.com/" },
@@ -71,7 +65,6 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
 export function CategoryPage({ slug }: { slug: CategorySlug }) {
   const category = getCategory(slug);
   const records = getRecords(slug);
-  const containsBidSkim = records.some((record) => record.name === "BidSkim");
   const ukIntelligenceRecords = slug === "procurement-intelligence"
     ? records.filter((record) => !internationalProcurementSlugs.has(record.slug))
     : [];
@@ -83,7 +76,7 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
     <PageIntro kicker="Procurement tools directory" title={category.name} lead={category.lead} />
     <section className="shell directory-intro">
       <div>
-        {containsBidSkim ? ownershipDisclosure : <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>}
+        <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>
         <p>Research desk: Civensa Research. Evidence checked 12 August 2026.</p>
         <p><a className="text-link" href="/tools/methodology/">Read the directory methodology and corrections policy →</a></p>
       </div>
@@ -133,7 +126,7 @@ export function DirectoryIndex() {
     <SiteHeader />
     <PageIntro kicker="Sourced directory" title="Tools for finding, understanding and bidding for public contracts." lead="A source-linked directory of tender alerts, procurement intelligence, bid-response software, bid-writing services and official portals." />
     <section className="shell directory-intro">
-      <div>{ownershipDisclosure}<p>Research desk: Civensa Research. Evidence checked 12 August 2026.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
+      <div><div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div><p>Research desk: Civensa Research. Evidence checked 12 August 2026.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
       <div className="directory-facts" aria-label="Directory facts">
         <div><span>Listings</span><strong>{getRecords("tender-alerts").length + getRecords("procurement-intelligence").length + getRecords("bid-writing-software").length + getRecords("bid-writing-services").length + getRecords("official-portals").length}</strong></div>
         <div><span>Categories</span><strong>{categories.length}</strong></div>

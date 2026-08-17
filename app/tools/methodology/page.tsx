@@ -17,8 +17,6 @@ export default function ToolsMethodologyPage() {
     <SiteHeader />
     <PageIntro kicker="Directory methodology" title="What is included, what is checked, and what is not." lead="A practical standard for keeping a changing procurement market useful without pretending that provider claims are product tests." />
     <div className="page-copy shell">
-      <div className="disclosure"><strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, which develops BidSkim. BidSkim receives no preferential label, score or placement. The directory has no affiliate links or paid rankings.</div>
-
       <h2>Inclusion</h2>
       <p>We include an active product, service or official portal when it has a clear procurement use, a working official website and enough first-party information to describe its scope without relying on review sites. A listing is not an endorsement. We aim to cover meaningful choices, not every newly registered domain.</p>
       <p>We exclude inactive services, lead-generation pages with no identifiable product, duplicate brands, unsupported comparison pages, review-only listings and providers for which we cannot establish a useful official source. We may also omit a provider while a material identity, ownership or product-status question is unresolved.</p>
@@ -42,7 +40,6 @@ export default function ToolsMethodologyPage() {
       <p>Material updates use one short line: <strong>date · entry · field changed · source or reason</strong>. We log price, plan, coverage, ownership, product-status and methodology corrections. Routine punctuation and layout edits are not logged.</p>
       <ul>
         <li>12 August 2026 · directory · first sourced release · provider and official-portal records checked.</li>
-        <li>12 August 2026 · BidSkim · pricing corrected · current product plan information supplied by the operator, BidSkim Limited.</li>
       </ul>
     </div>
     <SiteFooter />

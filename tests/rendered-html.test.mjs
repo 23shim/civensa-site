@@ -59,7 +59,7 @@ test("authority articles meet the editorial depth and anti-slop gate", async () 
   }
 });
 
-test("renders the procurement tools directory with dated evidence and ownership disclosure", async () => {
+test("renders the procurement tools directory with dated evidence", async () => {
   const routes = [
     "/tools/",
     "/tools/tender-alerts/",
@@ -80,9 +80,7 @@ test("renders the procurement tools directory with dated evidence and ownership 
   }
 
   const alerts = await (await render("/tools/tender-alerts/")).text();
-  assert.match(alerts, /BidSkim Limited/i);
-  assert.match(alerts, /Monitor[^<]{0,80}£79|£79[^<]{0,80}Monitor/i);
-  assert.match(alerts, /Predict[^<]{0,80}£189|£189[^<]{0,80}Predict/i);
+  assert.doesNotMatch(alerts, /BidSkim/i);
   assert.match(alerts, /provider-stated|Provider-stated/i);
 
   const hub = await (await render("/tools/")).text();

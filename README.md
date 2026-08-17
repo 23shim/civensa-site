@@ -1,6 +1,6 @@
 # Civensa
 
-[Civensa](https://civensa.com/) is an evidence-led UK public procurement research publication operated by BidSkim Limited.
+[Civensa](https://civensa.com/) is a UK public procurement directory.
 
 The publication connects public evidence across buyer plans, procurement notices, contracts, suppliers, requirements and market structure. Its editorial method separates published facts, calculated milestones and qualified interpretation.
 
@@ -12,9 +12,9 @@ The publication connects public evidence across buyer plans, procurement notices
 - [Preliminary market engagement: a supplier's practical guide](https://civensa.com/research/preliminary-market-engagement/)
 - [Public-sector bid readiness checklist](https://civensa.com/research/bid-readiness-checklist/)
 
-## Editorial standard
+## Directory standard
 
-Research links material claims to primary sources where practicable and states the publication date, assumptions and limitations. Civensa is not affiliated with the UK Government or any public authority.
+Entries link material claims to primary sources where practicable and state the publication date, assumptions and limitations.
 
 See the [research methodology](https://civensa.com/methodology/) or email [research@civensa.com](mailto:research@civensa.com).
 
@@ -27,4 +27,4 @@ See the [research methodology](https://civensa.com/methodology/) or email [resea
 - [Official tender portals](https://civensa.com/tools/official-portals/)
 - [Directory methodology](https://civensa.com/tools/methodology/)
 
-The directory uses official provider pages, visible checked dates and correction links. It has no affiliate links or paid rankings. Civensa discloses that it is operated by BidSkim Limited wherever BidSkim appears.
+The directory uses official provider pages, visible checked dates and correction links. It has no affiliate links or paid rankings.
