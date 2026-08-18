@@ -58,6 +58,7 @@ export default function ToolsMethodologyPage() {
         <li>18 August 2026 · tender-alert providers · deep audit profiles added and plan-gating rule clarified · first-party documentation and official records checked.</li>
         <li>18 August 2026 · tender-alert directory · product classes, filters, comparison and public-evidence score added · normalized research fields used.</li>
         <li>18 August 2026 · tender-alert directory · keyword alerts removed, buyer-document corpus tightened, overlapping product types and separate alert and full-package prices added · normalized research revised.</li>
+        <li>18 August 2026 · comparisons · 25 BidSkim-versus-provider pages added · normalized features, pricing, coverage and the published shortlist score used.</li>
       </ul>
     </div>
     <SiteFooter />

@@ -6,7 +6,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  return <footer className="site-footer"><div className="shell footer-top"><div><Wordmark /><p>Public procurement, mapped.</p></div><div className="footer-links"><div><strong>Explore</strong><a href="/research">Research</a><a href="/tools">Tools directory</a><a href="/compare">Compare approaches</a><a href="/methodology">Methodology</a></div><div><strong>Directory</strong><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Using Civensa</a></div></div></div><div className="shell footer-bottom"><span>© 2026 Civensa. All rights reserved.</span></div></footer>;
+  return <footer className="site-footer"><div className="shell footer-top"><div><Wordmark /><p>Public procurement, mapped.</p></div><div className="footer-links"><div><strong>Explore</strong><a href="/research">Research</a><a href="/tools">Tools directory</a><a href="/compare">Compare approaches</a><a href="/methodology">Methodology</a></div><div><strong>Directory</strong><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Using Civensa</a></div></div></div><div className="shell footer-bottom"><span>© 2026 Civensa. All rights reserved.</span><span>Civensa is published by BidSkim Limited.</span></div></footer>;
 }
 
 export function PageIntro({ kicker, title, lead }: { kicker: string; title: string; lead: string }) {

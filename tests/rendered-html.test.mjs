@@ -190,6 +190,41 @@ test("renders deep provider audit pages", async () => {
   assert.match(bidSkim, /Buyer profiles[\s\S]{0,400}feature-status-yes|feature-status-yes[\s\S]{0,400}Buyer profiles/i);
 });
 
+test("renders 25 BidSkim comparison pages with verifiable scores and commercial disclosure", async () => {
+  const providerBatches = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  const providers = providerBatches.flatMap((batch) => batch.providers).filter((provider) => provider.slug !== "bidskim-alerts");
+  assert.equal(providers.length, 25);
+
+  const hubResponse = await render("/compare/");
+  assert.equal(hubResponse.status, 200);
+  const hub = await hubResponse.text();
+  assert.match(hub, /25 named comparisons/i);
+  assert.match(hub, /Commercial disclosure:[\s\S]{0,250}BidSkim Limited/i);
+  assert.match(hub, /"numberOfItems":25/);
+  assert.equal((hub.match(/href="\/compare\/bidskim-vs-[^"]+\/"/g) ?? []).length, 25);
+
+  for (const provider of providers) {
+    const route = `/compare/bidskim-vs-${provider.slug}/`;
+    const response = await render(route);
+    assert.equal(response.status, 200, provider.slug);
+    const html = await response.text();
+    assert.match(html, new RegExp(`<title>BidSkim vs ${provider.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}: features, pricing and scores \\| Civensa<\\/title>`, "i"), provider.slug);
+    assert.match(html, new RegExp(`canonical[^>]+https://civensa\\.com/compare/bidskim-vs-${provider.slug}/`, "i"), provider.slug);
+    assert.match(html, /Commercial disclosure:[\s\S]{0,250}BidSkim Limited/i, provider.slug);
+    assert.match(html, /Fourteen capabilities compared/i, provider.slug);
+    assert.match(html, /Tender-alert benchmark/i, provider.slug);
+    assert.match(html, /Full-package benchmark/i, provider.slug);
+    assert.match(html, /68% feature depth and 32% value/i, provider.slug);
+    assert.equal((html.match(/class="feature-status feature-status-/g) ?? []).length, 28, `${provider.slug}: two statuses for each feature`);
+    assert.doesNotMatch(html, /property="og:image"|name="twitter:image"/i, `${provider.slug}: inherited social image should be cleared`);
+  }
+
+  const stotles = await (await render("/compare/bidskim-vs-stotles/")).text();
+  assert.match(stotles, /£99\/mo[\s\S]{0,100}Sales Studio Basic/i);
+  const tussell = await (await render("/compare/bidskim-vs-tussell/")).text();
+  assert.match(tussell, /Quote only/);
+});
+
 test("publishes complete discovery files", async () => {
   const [sitemap, llms, feed] = await Promise.all([readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8"), readFile(new URL("../public/llms.txt", import.meta.url), "utf8"), readFile(new URL("../public/feed.xml", import.meta.url), "utf8")]);
   for (const slug of ["uk-public-procurement-intelligence", "pipeline-notices", "bid-readiness-checklist"]) {
@@ -204,6 +239,10 @@ test("publishes complete discovery files", async () => {
   for (const provider of providerBatches.flatMap((batch) => batch.providers)) {
     assert.match(sitemap, new RegExp(`tools\\/tender-alerts\\/${provider.slug}\\/`), provider.slug);
     assert.match(llms, new RegExp(`tools/tender-alerts/${provider.slug}/`), provider.slug);
+    if (provider.slug !== "bidskim-alerts") {
+      assert.match(sitemap, new RegExp(`compare\\/bidskim-vs-${provider.slug}\\/`), provider.slug);
+      assert.match(llms, new RegExp(`compare/bidskim-vs-${provider.slug}/`), provider.slug);
+    }
   }
   assert.match(feed, /Civensa Research/);
 });

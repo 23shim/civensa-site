@@ -8,7 +8,7 @@ Civensa is a UK public procurement directory. It brings together public evidence
 
 - [Research](https://civensa.com/research/): All Civensa research notes.
 - [Methodology](https://civensa.com/methodology/): Source hierarchy, evidence standards and limitations.
-- [Compare approaches](https://civensa.com/compare/): Transparent comparison of procurement research approaches.
+- [BidSkim comparisons](https://civensa.com/compare/): Twenty-five source-linked comparisons using normalized features, alert and full-package price benchmarks and a disclosed score.
 - [Procurement tools directory](https://civensa.com/tools/): Dated, source-linked records for tender alerts, procurement intelligence, bid-writing software, services and official portals.
 - [Tender-alert shortlist builder](https://civensa.com/tools/tender-alerts/): Filter 26 providers by overlapping product types, tender-alert and full-package prices, named portal and must-have features; compare a disclosed 68% feature and 32% value score.
 - [Tools directory methodology](https://civensa.com/tools/methodology/): Inclusion rules, evidence labels, pricing checks and corrections.
@@ -60,6 +60,36 @@ Deep, source-linked profiles cover normalized features, comparable pricing, name
 - [Tenders Direct](https://civensa.com/tools/tender-alerts/tenders-direct-alerts/)
 - [Tracker Intelligence](https://civensa.com/tools/tender-alerts/tracker-intelligence-alerts/)
 - [Tussell](https://civensa.com/tools/tender-alerts/tussell/)
+
+## BidSkim provider comparisons
+
+Each page compares BidSkim with one listed provider across the same 14 normalized capabilities, named portal evidence, tender-alert and full-package pricing and the published 68% feature and 32% value score.
+
+- [BidSkim vs BidLens](https://civensa.com/compare/bidskim-vs-bidlens/)
+- [BidSkim vs BidScout](https://civensa.com/compare/bidskim-vs-bidscout/)
+- [BidSkim vs BidStats](https://civensa.com/compare/bidskim-vs-bidstats/)
+- [BidSkim vs CleanTender](https://civensa.com/compare/bidskim-vs-cleantender/)
+- [BidSkim vs Contract Finder Pro](https://civensa.com/compare/bidskim-vs-contract-finder-pro-alerts/)
+- [BidSkim vs Contracts Advance](https://civensa.com/compare/bidskim-vs-contracts-advance/)
+- [BidSkim vs D3 Tenders](https://civensa.com/compare/bidskim-vs-d3-tenders-alerts/)
+- [BidSkim vs Jorpex](https://civensa.com/compare/bidskim-vs-jorpex/)
+- [BidSkim vs KimonBids](https://civensa.com/compare/bidskim-vs-kimonbids-alerts/)
+- [BidSkim vs Mercell Tender Discovery](https://civensa.com/compare/bidskim-vs-mercell-tender-discovery/)
+- [BidSkim vs myTenders](https://civensa.com/compare/bidskim-vs-mytenders-supplier/)
+- [BidSkim vs Open Opportunities](https://civensa.com/compare/bidskim-vs-open-opportunities-alerts/)
+- [BidSkim vs PSIP](https://civensa.com/compare/bidskim-vs-psip-alerts/)
+- [BidSkim vs Scrymint](https://civensa.com/compare/bidskim-vs-scrymint/)
+- [BidSkim vs Stotles](https://civensa.com/compare/bidskim-vs-stotles/)
+- [BidSkim vs Supply2Gov](https://civensa.com/compare/bidskim-vs-supply2gov/)
+- [BidSkim vs Tendarix](https://civensa.com/compare/bidskim-vs-tendarix/)
+- [BidSkim vs Tender Alerts UK](https://civensa.com/compare/bidskim-vs-tender-alerts-uk/)
+- [BidSkim vs Tender Radar](https://civensa.com/compare/bidskim-vs-tender-radar/)
+- [BidSkim vs TenderAI](https://civensa.com/compare/bidskim-vs-tenderai/)
+- [BidSkim vs Tenderlake](https://civensa.com/compare/bidskim-vs-tenderlake/)
+- [BidSkim vs TenderLedger](https://civensa.com/compare/bidskim-vs-tenderledger-alerts/)
+- [BidSkim vs Tenders Direct](https://civensa.com/compare/bidskim-vs-tenders-direct-alerts/)
+- [BidSkim vs Tracker Intelligence](https://civensa.com/compare/bidskim-vs-tracker-intelligence-alerts/)
+- [BidSkim vs Tussell](https://civensa.com/compare/bidskim-vs-tussell/)
 
 ## Citation and contact
 

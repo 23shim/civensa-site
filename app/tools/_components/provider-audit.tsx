@@ -131,6 +131,7 @@ export function TenderAlertProviderAudit({ record }: { record: VendorRecord }) {
           <div><small>Named portals</small><strong>{normalized.explicitPortals.length}</strong></div>
           <div><small>Official product</small><a href={record.officialUrl} rel="noopener noreferrer">Open provider site ↗</a></div>
         </div>
+        <p className="audit-comparison-link"><a className="button button-dark" href={record.slug === "bidskim-alerts" ? "/compare/" : `/compare/bidskim-vs-${record.slug}/`}>{record.slug === "bidskim-alerts" ? "Browse every BidSkim comparison" : `Compare BidSkim and ${record.name}`} <span aria-hidden="true">↗</span></a></p>
       </section>
 
       <section aria-labelledby="provider-feature-audit">

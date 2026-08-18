@@ -5,14 +5,17 @@ import path from "node:path";
 const port = "4173";
 const origin = `http://127.0.0.1:${port}`;
 const outputDir = path.resolve("site-dist");
-const providerAuditRoutes = (await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => {
+const providerSlugs = (await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => {
   const batch = JSON.parse(await readFile(path.resolve(`docs/provider-research-batch-${number}.json`), "utf8"));
-  return batch.providers.map((provider) => `/tools/tender-alerts/${provider.slug}/`);
+  return batch.providers.map((provider) => provider.slug);
 }))).flat();
+const providerAuditRoutes = providerSlugs.map((slug) => `/tools/tender-alerts/${slug}/`);
+const comparisonRoutes = providerSlugs.filter((slug) => slug !== "bidskim-alerts").map((slug) => `/compare/bidskim-vs-${slug}/`);
 const routes = [
   "/",
   "/about/",
   "/compare/",
+  ...comparisonRoutes,
   "/contact/",
   "/methodology/",
   "/privacy/",
