@@ -8,6 +8,8 @@ import {
   type NormalizedFeatureKey,
   type VendorRecord,
 } from "../_data";
+import { TenderAlertExplorer } from "./tender-alert-explorer";
+import { scoreTenderAlert, toTenderAlertExplorerRecord } from "../_data/tender-alert-scoring";
 
 const internationalProcurementSlugs = new Set([
   "civant",
@@ -72,7 +74,7 @@ const portalColumns = [
 
 const ownershipDisclosure = (
   <div className="disclosure">
-    <strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, the company that develops BidSkim. BidSkim is included where relevant using the same fields and provider-source standard as other entries. Civensa has not independently tested or ranked any listed product. This directory has no affiliate links or paid rankings.
+    <strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, the company that develops BidSkim. BidSkim uses the same fields, feature weights and provider-source standard as every other entry. Civensa has not independently tested these products. Product classes and scores are mechanical outputs from public evidence. There are no affiliate links or paid placements.
   </div>
 );
 
@@ -268,6 +270,9 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
   const records = getRecords(slug);
   const checkedDate = formatCheckedDate(latestChecked(records));
   const containsBidSkim = records.some((record) => record.name === "BidSkim");
+  const structuredRecords = slug === "tender-alerts"
+    ? [...records].sort((left, right) => scoreTenderAlert(right).overallScore - scoreTenderAlert(left).overallScore || left.name.localeCompare(right.name, "en-GB"))
+    : records;
   const ukIntelligenceRecords = slug === "procurement-intelligence"
     ? records.filter((record) => !internationalProcurementSlugs.has(record.slug))
     : [];
@@ -286,17 +291,30 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
       <div className="directory-facts" aria-label="Directory facts">
         <div><span>Listings</span><strong>{records.length}</strong></div>
         <div><span>Last checked</span><strong>{checkedDate}</strong></div>
-        <div><span>Ratings</span><strong>None</strong></div>
+        <div><span>Independent tests</span><strong>None</strong></div>
       </div>
     </section>
-    <section className="content-section shell" aria-labelledby="questions-title">
-      <div className="section-kicker">Before you shortlist</div>
-      <h2 id="questions-title">Three questions worth asking</h2>
-      <ul>{category.questions.map((question) => <li key={question}>{question}</li>)}</ul>
+    <section className="content-section shell" aria-labelledby={slug === "tender-alerts" ? "tender-explorer-title" : "questions-title"}>
       <nav className="directory-controls" aria-label="Tools categories">
         {categories.map((item) => <a key={item.slug} href={`/tools/${item.slug}/`} aria-current={item.slug === slug ? "page" : undefined}>{item.shortName}</a>)}
       </nav>
-      {slug === "tender-alerts" ? <><NormalizedFeatureMatrix records={records} /><NormalizedPricingMatrix records={records} /><PortalCoverageMatrix records={records} /></> : null}
+      {slug === "tender-alerts" ? <>
+        <TenderAlertExplorer records={records.map(toTenderAlertExplorerRecord)} />
+        <details className="shortlist-questions">
+          <summary>Three questions to ask before buying</summary>
+          <ul>{category.questions.map((question) => <li key={question}>{question}</li>)}</ul>
+        </details>
+        <details className="research-tables">
+          <summary>Open the full research tables</summary>
+          <NormalizedFeatureMatrix records={records} />
+          <NormalizedPricingMatrix records={records} />
+          <PortalCoverageMatrix records={records} />
+        </details>
+      </> : <>
+        <div className="section-kicker">Before you shortlist</div>
+        <h2 id="questions-title">Three questions worth asking</h2>
+        <ul>{category.questions.map((question) => <li key={question}>{question}</li>)}</ul>
+      </>}
       {slug === "procurement-intelligence" ? <>
         <section aria-labelledby="uk-intelligence-title">
           <h2 id="uk-intelligence-title">UK-facing procurement intelligence</h2>
@@ -308,12 +326,12 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
           <p>Products focused on European, US or global markets. Entries are alphabetical, not ranked.</p>
           <div className="directory-list">{internationalIntelligenceRecords.map((record) => <DirectoryEntry key={record.slug} record={record} />)}</div>
         </section>
-      </> : <div className="directory-list">{records.map((record) => <DirectoryEntry key={record.slug} record={record} />)}</div>}
+      </> : slug === "tender-alerts" ? null : <div className="directory-list">{records.map((record) => <DirectoryEntry key={record.slug} record={record} />)}</div>}
       <div className="directory-note"><strong>Verify before buying:</strong> Public prices and feature pages can change. Request a dated order form, check official notice links, and run a real workflow before committing.</div>
     </section>
     <SiteFooter />
     <BreadcrumbSchema category={{ name: category.name, slug }} />
-    <ItemListSchema name={`Civensa ${category.name}`} records={records} />
+    <ItemListSchema name={`Civensa ${category.name}`} records={structuredRecords} />
   </main>;
 }
 

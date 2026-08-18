@@ -89,14 +89,30 @@ test("renders the procurement tools directory with dated evidence and ownership 
   assert.match(alerts, /Portals explicitly named by each provider/i);
   assert.match(alerts, /Not stated is not evidence that the service lacks coverage/i);
   assert.match(alerts, /Not offered/i);
-  assert.match(alerts, /Strict profile and planning audit/i);
-  assert.match(alerts, /394 councils tracked but only 31 active/i);
-  assert.match(alerts, /Knowledge base £0\/month[^<]{0,100}£20\/month[^<]{0,100}£30\/month/i);
+  assert.match(alerts, /Shortlist builder/i);
+  assert.match(alerts, /Full intelligence/i);
+  assert.match(alerts, /Intelligence \+ workflow/i);
+  assert.match(alerts, /Smart matchers/i);
+  assert.match(alerts, /Lite alerting/i);
+  assert.match(alerts, /Maximum monthly cost/i);
+  assert.match(alerts, /Must offer/i);
+  assert.match(alerts, /Add to compare/i);
+  assert.match(alerts, /68%<\/strong>\s*features/i);
+  assert.match(alerts, /32%<\/strong>\s*value/i);
+  const renderedScores = [...alerts.matchAll(/class="overall-score"[^>]*>[\s\S]*?<strong>(\d+)<\/strong>/g)].map((match) => Number(match[1]));
+  assert.equal(renderedScores.length, 29, "one combined score per provider");
+  assert.deepEqual(renderedScores, [...renderedScores].sort((left, right) => right - left), "default results should be sorted by combined score");
+  assert.ok(renderedScores.every((score) => score >= 0 && score <= 100), "combined scores should stay within 0 to 100");
   assert.ok(Buffer.byteLength(alerts) < 700_000, "tender-alert comparison page should stay below 700 kB");
+
+  const methodology = await (await render("/tools/methodology/")).text();
+  assert.match(methodology, /Product classes and shortlist score/i);
+  assert.match(methodology, /68% feature depth and 32% headline value/i);
+  assert.match(methodology, /lowest published plan may not contain every scored feature/i);
 
   const hub = await (await render("/tools/")).text();
   assert.match(hub, /"@type":"ItemList"/);
-  assert.match(hub, /no affiliate links|no paid rankings/i);
+  assert.match(hub, /no affiliate links|no paid rankings|no paid placements/i);
 });
 
 test("normalized tender-alert research is complete and schema-consistent", async () => {
