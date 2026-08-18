@@ -103,12 +103,12 @@ function NormalizedFeatureMatrix({ records }: { records: readonly VendorRecord[]
   return <section className="feature-matrix-section" aria-labelledby="feature-matrix-title">
     <div className="section-kicker">Normalized comparison</div>
     <h2 id="feature-matrix-title">Features described on provider pages</h2>
-    <p>Yes requires clear first-party evidence of the capability. Partial means the public product covers only part of the definition or limits it by plan. If the reviewed pages do not establish it, Civensa marks it not offered.</p>
+    <p>Yes requires clear first-party evidence that the complete capability is available in at least one current plan. Partial means the implementation is adjacent, incomplete or materially narrower. If the reviewed pages do not establish it, Civensa marks it not offered.</p>
     <div className="feature-matrix-scroll" role="region" aria-label="Scrollable normalized feature comparison">
       <table className="feature-matrix">
         <thead><tr><th scope="col">Service</th><th scope="col">Pricing basis</th>{matrixFeatureKeys.map((key) => <th scope="col" key={key}>{featureLabels[key]}</th>)}</tr></thead>
         <tbody>{normalizedRecords.map((record) => <tr key={record.slug}>
-          <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
+          <th scope="row"><a href={`/tools/tender-alerts/${record.slug}/`}>{record.name}</a></th>
           <td>{record.normalized?.pricing.billingBasis.replaceAll("_", " ")}</td>
           {matrixFeatureKeys.map((key) => <td key={key}><FeatureStatusLabel status={record.normalized!.features[key].status} /></td>)}
         </tr>)}</tbody>
@@ -130,7 +130,7 @@ function NormalizedPricingMatrix({ records }: { records: readonly VendorRecord[]
         <tbody>{normalizedRecords.map((record) => {
           const pricing = record.normalized!.pricing;
           return pricing.comparablePlans.map((plan, planIndex) => <tr key={`${record.slug}-${plan.planName}`}>
-            {planIndex === 0 ? <th scope="rowgroup" rowSpan={pricing.comparablePlans.length}><a href={`#${record.slug}`}>{record.name}</a></th> : null}
+            {planIndex === 0 ? <th scope="rowgroup" rowSpan={pricing.comparablePlans.length}><a href={`/tools/tender-alerts/${record.slug}/`}>{record.name}</a></th> : null}
             <th scope="row">{plan.planName}</th>
             <td>{formatPrice(plan.monthlyPrice, plan.currency)}</td>
             <td>{formatPrice(plan.annualPrice, plan.currency)}{plan.annualPriceCalculation === "calculated_from_annual_monthly_rate" ? <small className="calculated-price">Calculated</small> : null}</td>
@@ -159,7 +159,7 @@ function PortalCoverageMatrix({ records }: { records: readonly VendorRecord[] })
           const explicitPortals = record.normalized!.explicitPortals;
           const otherPortals = explicitPortals.filter((portal) => !portalColumns.some((column) => column.id === portal.portalId));
           return <tr key={record.slug}>
-            <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
+            <th scope="row"><a href={`/tools/tender-alerts/${record.slug}/`}>{record.name}</a></th>
             {portalColumns.map((column) => {
               const portal = explicitPortals.find((item) => item.portalId === column.id);
               const evidence = portal?.evidenceLinks[0];
@@ -223,7 +223,9 @@ function ItemListSchema({ name, records }: { name: string; records: readonly Ven
       "@type": "ListItem",
       position: index + 1,
       name: record.name,
-      url: `https://civensa.com/tools/${record.category}/#${record.slug}`,
+      url: record.category === "tender-alerts"
+        ? `https://civensa.com/tools/tender-alerts/${record.slug}/`
+        : `https://civensa.com/tools/${record.category}/#${record.slug}`,
     })),
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
@@ -238,6 +240,7 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
       <h2><a href={record.officialUrl} rel="noopener noreferrer">{record.name} <span aria-hidden="true">↗</span></a></h2>
       <span className="evidence-label">{record.evidenceBasis}</span>
       <span className="evidence-label">Not independently tested</span>
+      {record.category === "tender-alerts" && record.normalized ? <a className="deep-audit-link" href={`/tools/tender-alerts/${record.slug}/`}>View deep audit →</a> : null}
     </div>
     <div>
       <p>{record.summary}</p>

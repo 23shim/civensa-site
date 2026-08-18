@@ -7,6 +7,8 @@ import batch6Json from "../../../docs/provider-research-batch-6.json";
 import {
   normalizedFeatureKeys,
   type BillingBasis,
+  type DeepEvidenceField,
+  type DeepProviderAudit,
   type EvidenceLink,
   type FeatureStatus,
   type NormalizedFeature,
@@ -20,6 +22,31 @@ type RawFeature = {
   status: FeatureStatus;
   detail: string;
   evidence: readonly RawEvidence[];
+};
+type RawDeepEvidenceField = {
+  evidenceStrength: "strong" | "moderate" | "weak" | "not_found";
+  detail: string;
+  evidence: readonly RawEvidence[];
+};
+type RawDeepAuditNote = { detail: string; evidence: readonly RawEvidence[] };
+type RawDeepProviderAudit = {
+  researchSummary: string;
+  legalAndMaturity: RawDeepEvidenceField;
+  targetCustomerAndUseCase: RawDeepEvidenceField;
+  dataSourcesAndCoverageMethod: RawDeepEvidenceField;
+  dataIngestionAndFreshness: RawDeepEvidenceField;
+  matchingAndQualificationMethod: RawDeepEvidenceField;
+  buyerEntityInvestment: RawDeepEvidenceField;
+  supplierEntityInvestment: RawDeepEvidenceField;
+  renewalSignalMethod: RawDeepEvidenceField;
+  requirementsPlanningMethod: RawDeepEvidenceField;
+  historicalAndAwardDepth: RawDeepEvidenceField;
+  workflowAndIntegrations: RawDeepEvidenceField;
+  securitySupportAndOnboarding: RawDeepEvidenceField;
+  commercialModel: RawDeepEvidenceField;
+  materialLimitations: readonly RawDeepAuditNote[];
+  contradictions: readonly RawDeepAuditNote[];
+  diligenceQuestions: readonly string[];
 };
 type RawProvider = {
   slug: string;
@@ -56,6 +83,7 @@ type RawProvider = {
     evidence: readonly RawEvidence[];
   }[];
   caveats: readonly string[];
+  deepAudit: RawDeepProviderAudit;
 };
 type RawBatch = { researchedAt: string; providers: readonly RawProvider[] };
 
@@ -67,6 +95,36 @@ function cleanText(value: string): string {
 
 function evidenceLinks(evidence: readonly RawEvidence[]): readonly EvidenceLink[] {
   return evidence.map((link) => ({ label: cleanText(link.label), url: link.url }));
+}
+
+function normalizeDeepField(field: RawDeepEvidenceField): DeepEvidenceField {
+  return {
+    evidenceStrength: field.evidenceStrength,
+    detail: cleanText(field.detail),
+    evidenceLinks: evidenceLinks(field.evidence),
+  };
+}
+
+function normalizeDeepAudit(audit: RawDeepProviderAudit): DeepProviderAudit {
+  return {
+    researchSummary: cleanText(audit.researchSummary),
+    legalAndMaturity: normalizeDeepField(audit.legalAndMaturity),
+    targetCustomerAndUseCase: normalizeDeepField(audit.targetCustomerAndUseCase),
+    dataSourcesAndCoverageMethod: normalizeDeepField(audit.dataSourcesAndCoverageMethod),
+    dataIngestionAndFreshness: normalizeDeepField(audit.dataIngestionAndFreshness),
+    matchingAndQualificationMethod: normalizeDeepField(audit.matchingAndQualificationMethod),
+    buyerEntityInvestment: normalizeDeepField(audit.buyerEntityInvestment),
+    supplierEntityInvestment: normalizeDeepField(audit.supplierEntityInvestment),
+    renewalSignalMethod: normalizeDeepField(audit.renewalSignalMethod),
+    requirementsPlanningMethod: normalizeDeepField(audit.requirementsPlanningMethod),
+    historicalAndAwardDepth: normalizeDeepField(audit.historicalAndAwardDepth),
+    workflowAndIntegrations: normalizeDeepField(audit.workflowAndIntegrations),
+    securitySupportAndOnboarding: normalizeDeepField(audit.securitySupportAndOnboarding),
+    commercialModel: normalizeDeepField(audit.commercialModel),
+    materialLimitations: audit.materialLimitations.map((item) => ({ detail: cleanText(item.detail), evidenceLinks: evidenceLinks(item.evidence) })),
+    contradictions: audit.contradictions.map((item) => ({ detail: cleanText(item.detail), evidenceLinks: evidenceLinks(item.evidence) })),
+    diligenceQuestions: audit.diligenceQuestions.map(cleanText),
+  };
 }
 
 function normalizeProvider(provider: RawProvider, researchedAt: string): NormalizedVendorProfile {
@@ -115,6 +173,7 @@ function normalizeProvider(provider: RawProvider, researchedAt: string): Normali
       evidenceLinks: evidenceLinks(claim.evidence),
     })),
     caveats: provider.caveats.map(cleanText),
+    deepAudit: normalizeDeepAudit(provider.deepAudit),
   };
 }
 

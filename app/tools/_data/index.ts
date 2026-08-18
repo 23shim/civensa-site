@@ -13,8 +13,12 @@ export type {
   CategoryDefinition,
   CategorySlug,
   CoverageClaim,
+  DeepAuditNote,
+  DeepEvidenceField,
+  DeepProviderAudit,
   EvidenceBasis,
   EvidenceLink,
+  EvidenceStrength,
   ExplicitPortalCoverage,
   FeatureStatus,
   NormalizedFeature,
@@ -44,4 +48,8 @@ export function getRecords(slug: CategorySlug): readonly VendorRecord[] {
   return vendorRecords
     .filter((record) => record.category === slug)
     .sort((left, right) => left.name.localeCompare(right.name, "en-GB"));
+}
+
+export function getRecord(category: CategorySlug, slug: string): VendorRecord | undefined {
+  return vendorRecords.find((record) => record.category === category && record.slug === slug);
 }

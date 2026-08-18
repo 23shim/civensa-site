@@ -108,6 +108,7 @@ test("normalized tender-alert research is complete and schema-consistent", async
   });
   assert.equal(providers.length, 29);
   assert.equal(new Set(providers.map((provider) => provider.slug)).size, 29);
+  const deepAuditFields = ["legalAndMaturity", "targetCustomerAndUseCase", "dataSourcesAndCoverageMethod", "dataIngestionAndFreshness", "matchingAndQualificationMethod", "buyerEntityInvestment", "supplierEntityInvestment", "renewalSignalMethod", "requirementsPlanningMethod", "historicalAndAwardDepth", "workflowAndIntegrations", "securitySupportAndOnboarding", "commercialModel"];
   for (const provider of providers) {
     assert.deepEqual(Object.keys(provider.features).sort(), [...featureKeys].sort(), provider.slug);
     for (const feature of Object.values(provider.features)) {
@@ -118,6 +119,15 @@ test("normalized tender-alert research is complete and schema-consistent", async
     assert.ok(Array.isArray(provider.explicitPortals));
     assert.ok(Array.isArray(provider.caveats));
     assert.ok(Array.isArray(provider.sourceUrls));
+    assert.equal(typeof provider.deepAudit.researchSummary, "string");
+    for (const field of deepAuditFields) {
+      assert.match(provider.deepAudit[field].evidenceStrength, /^(strong|moderate|weak|not_found)$/, `${provider.slug}: ${field}`);
+      assert.equal(typeof provider.deepAudit[field].detail, "string");
+      assert.ok(Array.isArray(provider.deepAudit[field].evidence));
+    }
+    assert.ok(Array.isArray(provider.deepAudit.materialLimitations));
+    assert.ok(Array.isArray(provider.deepAudit.contradictions));
+    assert.ok(Array.isArray(provider.deepAudit.diligenceQuestions));
     assert.ok(Array.isArray(provider.pricing.comparablePlans));
     assert.ok(provider.pricing.comparablePlans.length > 0, `${provider.slug}: comparable plans`);
     for (const plan of provider.pricing.comparablePlans) {
@@ -128,6 +138,26 @@ test("normalized tender-alert research is complete and schema-consistent", async
       else assert.ok(Math.abs(plan.annualMonthlyEquivalent - Math.round((plan.annualPrice / 12) * 100) / 100) < 0.001, `${provider.slug}: ${plan.planName} annual monthly equivalent`);
     }
   }
+  const bidSkim = providers.find((provider) => provider.slug === "bidskim-alerts");
+  assert.equal(bidSkim.features.buyerProfiles.status, "yes");
+  assert.equal(bidSkim.features.supplierProfiles.status, "yes");
+  assert.equal(bidSkim.features.renewalSignals.status, "yes");
+});
+
+test("renders deep provider audit pages", async () => {
+  for (const slug of ["bidskim-alerts", "psip-alerts", "tenderlake", "kimonbids-alerts"]) {
+    const response = await render(`/tools/tender-alerts/${slug}/`);
+    assert.equal(response.status, 200, slug);
+    const html = await response.text();
+    assert.match(html, /Deep provider audit/i, slug);
+    assert.match(html, /Capability-by-capability evidence/i, slug);
+    assert.match(html, /Data and discovery engine/i, slug);
+    assert.match(html, /Limitations, contradictions and questions/i, slug);
+    assert.match(html, new RegExp(`canonical[^>]+https://civensa\\.com/tools/tender-alerts/${slug}/`, "i"), slug);
+  }
+  const bidSkim = await (await render("/tools/tender-alerts/bidskim-alerts/")).text();
+  assert.match(bidSkim, /Ownership disclosure/i);
+  assert.match(bidSkim, /Buyer profiles[\s\S]{0,400}feature-status-yes|feature-status-yes[\s\S]{0,400}Buyer profiles/i);
 });
 
 test("publishes complete discovery files", async () => {
@@ -140,6 +170,11 @@ test("publishes complete discovery files", async () => {
     assert.match(sitemap, new RegExp(path.replaceAll("/", "\\/")));
   }
   assert.match(llms, /procurement tools directory/i);
+  const providerBatches = await Promise.all([1, 2, 3, 4, 5, 6].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  for (const provider of providerBatches.flatMap((batch) => batch.providers)) {
+    assert.match(sitemap, new RegExp(`tools\\/tender-alerts\\/${provider.slug}\\/`), provider.slug);
+    assert.match(llms, new RegExp(`tools/tender-alerts/${provider.slug}/`), provider.slug);
+  }
   assert.match(feed, /Civensa Research/);
 });
 

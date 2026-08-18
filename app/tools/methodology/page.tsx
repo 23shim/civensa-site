@@ -29,8 +29,9 @@ export default function ToolsMethodologyPage() {
       <p>Products and services are shown alphabetically within each category or geographic group. The order is not a ranking.</p>
 
       <h2>Normalized feature and portal fields</h2>
-      <p>Tender-alert products use the same feature definitions for keyword alerts, AI or semantic matching, buyer and supplier profiles, renewals, similar contracts, buyer documents, buyer requirements, requirements planning, award history and related workflow capabilities. <strong>Yes</strong> requires clear first-party evidence of the defined capability. <strong>Partial</strong> means it is plan-limited, indirect or covers only part of the definition. <strong>Not offered</strong> is the default when the reviewed public product pages do not establish the capability.</p>
+      <p>Tender-alert products use the same feature definitions for keyword alerts, AI or semantic matching, buyer and supplier profiles, renewals, similar contracts, buyer documents, buyer requirements, requirements planning, award history and related workflow capabilities. <strong>Yes</strong> requires clear first-party evidence that the complete capability is offered in at least one current plan. Higher-plan gating is shown separately and does not make a complete capability partial. <strong>Partial</strong> means the implementation is adjacent, incomplete, indirect, pilot-only or materially narrower. <strong>Not offered</strong> is the default when the reviewed public product pages do not establish the capability.</p>
       <p>Buyer and supplier profiles receive <strong>Yes</strong> only where the provider establishes deliberately built cross-notice entities with canonicalisation, deduplication, entity resolution or comparable investment. Filters, names on notices, spend charts and flat directories are not enough. Requirements planning receives <strong>Yes</strong> only for a durable workflow that turns requirements into tracked gaps, evidence needs, owners, actions or readiness. Extraction, checklists and bid/no-bid explanations alone are partial.</p>
+      <p>Each tender-alert provider also has a deep audit page covering product maturity, target customers, data sourcing and freshness, matching method, identity investment, renewals, requirements planning, historical depth, integrations, security and onboarding, commercial structure, limitations, contradictory first-party statements and buyer diligence questions. Evidence strength describes the specificity of the reviewed sources, not product quality.</p>
       <p>A portal appears in the coverage matrix only when a first-party provider page explicitly names it. Broad claims such as “all UK portals” are preserved separately and do not populate individual portal cells. The linked source beside a claim is evidence that the provider made it, not proof that Civensa independently confirmed feed completeness.</p>
 
       <h2>Pricing and freshness</h2>
@@ -49,6 +50,7 @@ export default function ToolsMethodologyPage() {
         <li>12 August 2026 · directory · first sourced release · provider and official-portal records checked.</li>
         <li>18 August 2026 · tender-alert directory · normalized feature, pricing and explicit-portal fields added · first-party provider pages checked.</li>
         <li>18 August 2026 · BidSkim · relevant listings and common-ownership disclosure added · public provider pages checked.</li>
+        <li>18 August 2026 · tender-alert providers · deep audit profiles added and plan-gating rule clarified · first-party documentation and official records checked.</li>
       </ul>
     </div>
     <SiteFooter />

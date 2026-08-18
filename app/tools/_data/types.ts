@@ -77,6 +77,39 @@ export type CoverageClaim = {
   evidenceLinks: readonly EvidenceLink[];
 };
 
+export type EvidenceStrength = "strong" | "moderate" | "weak" | "not_found";
+
+export type DeepEvidenceField = {
+  evidenceStrength: EvidenceStrength;
+  detail: string;
+  evidenceLinks: readonly EvidenceLink[];
+};
+
+export type DeepAuditNote = {
+  detail: string;
+  evidenceLinks: readonly EvidenceLink[];
+};
+
+export type DeepProviderAudit = {
+  researchSummary: string;
+  legalAndMaturity: DeepEvidenceField;
+  targetCustomerAndUseCase: DeepEvidenceField;
+  dataSourcesAndCoverageMethod: DeepEvidenceField;
+  dataIngestionAndFreshness: DeepEvidenceField;
+  matchingAndQualificationMethod: DeepEvidenceField;
+  buyerEntityInvestment: DeepEvidenceField;
+  supplierEntityInvestment: DeepEvidenceField;
+  renewalSignalMethod: DeepEvidenceField;
+  requirementsPlanningMethod: DeepEvidenceField;
+  historicalAndAwardDepth: DeepEvidenceField;
+  workflowAndIntegrations: DeepEvidenceField;
+  securitySupportAndOnboarding: DeepEvidenceField;
+  commercialModel: DeepEvidenceField;
+  materialLimitations: readonly DeepAuditNote[];
+  contradictions: readonly DeepAuditNote[];
+  diligenceQuestions: readonly string[];
+};
+
 export type NormalizedVendorProfile = {
   researchedAt: string;
   pricing: NormalizedPricing;
@@ -84,6 +117,7 @@ export type NormalizedVendorProfile = {
   explicitPortals: readonly ExplicitPortalCoverage[];
   otherCoverageClaims: readonly CoverageClaim[];
   caveats: readonly string[];
+  deepAudit: DeepProviderAudit;
 };
 
 export type VendorRecord = {

@@ -71,8 +71,8 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "partial",
-          "detail": "The provider advertises AI-powered summaries, bid/no-bid qualification support and an opportunity qualification score, but the reviewed pages do not explicitly establish semantic alert matching.",
+          "status": "yes",
+          "detail": "TenderLedger applies AI summarisation and opportunity scoring against supplier fit for bid/no-bid qualification. Its saved-search alerts remain criteria-based, but the current AI qualification workflow satisfies profile-based relevance matching.",
           "evidence": [
             {
               "label": "TenderLedger features",
@@ -86,7 +86,7 @@
         },
         "buyerProfiles": {
           "status": "partial",
-          "detail": "Buyer intelligence covers procurement rhythm, category behaviour, award outcomes and buyer-focused analysis; buyer tracking is listed from Pro and a compact buyer profile is exposed through the gated MCP service.",
+          "detail": "Buyer intelligence covers procurement rhythm, category behaviour and award outcomes, and the MCP service exposes a compact cross-notice buyer profile. The provider does not document authority-name canonicalisation, aliases, deduplication or entity-resolution controls.",
           "evidence": [
             {
               "label": "TenderLedger buyer intelligence",
@@ -100,7 +100,7 @@
         },
         "supplierProfiles": {
           "status": "partial",
-          "detail": "Supplier intelligence includes recent winners, market share, supplier comparison and compact competitor profiles, but tracking and full supplier intelligence are plan- or access-limited.",
+          "detail": "Supplier intelligence includes recent winners, market share, comparisons and compact cross-notice competitor profiles. The provider does not document supplier-name canonicalisation, company-number matching, aliases, deduplication or entity resolution.",
           "evidence": [
             {
               "label": "TenderLedger award tracking",
@@ -113,7 +113,7 @@
           ]
         },
         "renewalSignals": {
-          "status": "partial",
+          "status": "yes",
           "detail": "Pro includes renewal signals, likely re-tenders and a 90-day radar derived from published start dates, durations and extension options. The provider describes each re-tender window as an estimate linked to the award source.",
           "evidence": [
             {
@@ -180,8 +180,8 @@
           ]
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "Pro includes competitor, incumbent and buyer tracking; the product also supports supplier comparisons and alerts for competitor wins.",
+          "status": "yes",
+          "detail": "Pro includes complete named competitor, incumbent and buyer tracking, including supplier comparisons and alerts for competitor wins. The higher-tier restriction is recorded as plan gating rather than an incomplete feature.",
           "evidence": [
             {
               "label": "TenderLedger pricing",
@@ -194,7 +194,7 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
+          "status": "yes",
           "detail": "Enterprise includes custom exports and integrations. A gated MCP/REST service exposes capped structured JSON tools; production keys and higher quotas require access.",
           "evidence": [
             {
@@ -208,8 +208,8 @@
           ]
         },
         "collaboration": {
-          "status": "partial",
-          "detail": "Enterprise includes multi-user access, while Pro includes saved-market Slack alerts that can route signals into a configured team channel. Public seat counts and task-assignment workflow are not stated.",
+          "status": "yes",
+          "detail": "Enterprise includes multi-user access, and Pro includes saved-market Slack alerts routed to a configured team channel. Public seat counts and task-assignment depth are not stated, but a complete multi-user capability exists on a current plan.",
           "evidence": [
             {
               "label": "TenderLedger pricing",
@@ -300,6 +300,298 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "TenderLedger sells a self-serve UK tender, award and renewal-intelligence layer aimed at SMEs and public-sector sales teams, with public monthly pricing and an Enterprise tier for teams and integrations. Its clearest depth is the award-backed 90-day renewal radar, source-linked buyer and competitor context, and controlled Slack/MCP delivery; legal-counterparty disclosure, identity resolution and enterprise assurance remain thin publicly.",
+        "legalAndMaturity": {
+          "evidenceStrength": "weak",
+          "detail": "The Terms and Privacy Policy are dated 14 July 2026 and identify only the TenderLedger brand and a contact email; they do not name an incorporated operator, company number, registered office or VAT number. The reviewed first-party pages therefore establish a recently documented B2B service but not the legal counterparty or corporate operating history.",
+          "evidence": [
+            {
+              "label": "TenderLedger Terms of Service",
+              "url": "https://tenderledger.co.uk/terms"
+            },
+            {
+              "label": "TenderLedger Privacy Policy",
+              "url": "https://tenderledger.co.uk/privacy"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The service is positioned for bid managers, public-sector BD and sales leads, consultancies and SMEs that need to discover tenders, qualify them with incumbent and buyer context, and approach buyers before a re-tender. Starter is market visibility, Pro adds renewal and competitor tracking, and Enterprise adds teams and custom workflows.",
+          "evidence": [
+            {
+              "label": "TenderLedger overview",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger pricing",
+              "url": "https://tenderledger.co.uk/pricing"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "TenderLedger explicitly names five official UK sources: Contracts Finder, Find a Tender, Public Contracts Scotland, Sell2Wales and eTendersNI. It says it uses official public data only and links every incumbent, value and expiry signal back to its source notice; the public coverage is narrower and more inspectable than aggregators claiming hundreds of portals.",
+          "evidence": [
+            {
+              "label": "TenderLedger source coverage",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger procurement-intelligence method",
+              "url": "https://tenderledger.co.uk/public-procurement-intelligence"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The main product page says five portals are ingested hourly, deduplicated and tagged by sector, with freshness timestamps and source attribution also exposed through MCP. Separate Find a Tender and Contracts Finder pages say listings refresh daily, so the exact per-source schedule, failure handling, backfills and amendment latency require confirmation.",
+          "evidence": [
+            {
+              "label": "TenderLedger hourly-ingestion claim",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger Find a Tender refresh claim",
+              "url": "https://tenderledger.co.uk/find-a-tender-search"
+            },
+            {
+              "label": "TenderLedger Contracts Finder refresh claim",
+              "url": "https://tenderledger.co.uk/contracts-finder-search"
+            },
+            {
+              "label": "TenderLedger MCP attribution and freshness",
+              "url": "https://tenderledger.co.uk/developers/mcp"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Users define sectors, regions, value bands and keywords; TenderLedger then supplies saved alerts, AI summaries and opportunity scoring for bid/no-bid qualification. The provider says explanations are human-readable and grounded in official data, but does not publish model/provider details, evaluation sets, precision/recall, confidence calibration or how user outcomes tune scoring.",
+          "evidence": [
+            {
+              "label": "TenderLedger features",
+              "url": "https://tenderledger.co.uk/features"
+            },
+            {
+              "label": "TenderLedger AI opportunity workflow",
+              "url": "https://tenderledger.co.uk/resources/ai-identify-public-sector-sales-opportunities"
+            },
+            {
+              "label": "TenderLedger MCP qualification tool",
+              "url": "https://tenderledger.co.uk/developers/mcp"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Buyer intelligence aggregates procurement rhythm, category behaviour, award outcomes and value ranges into buyer-focused analysis, and MCP exposes a compact buyer profile from indexed notices. Notice deduplication is claimed, but no authority canonicalisation, alias table, hierarchy handling, identifier strategy or entity-resolution quality measure is documented.",
+          "evidence": [
+            {
+              "label": "TenderLedger buyer intelligence",
+              "url": "https://tenderledger.co.uk/buyer-intelligence-public-sector"
+            },
+            {
+              "label": "TenderLedger MCP buyer profile",
+              "url": "https://tenderledger.co.uk/developers/mcp"
+            },
+            {
+              "label": "TenderLedger ingestion and deduplication claim",
+              "url": "https://tenderledger.co.uk/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Award tracking aggregates winning suppliers, values, incumbency and market share and supports supplier filters, comparisons and compact MCP competitor profiles. No Companies House linkage, supplier aliases, group-company mapping, canonical identifiers or supplier-resolution error controls are published.",
+          "evidence": [
+            {
+              "label": "TenderLedger award tracking",
+              "url": "https://tenderledger.co.uk/contract-award-tracking"
+            },
+            {
+              "label": "TenderLedger MCP supplier intelligence",
+              "url": "https://tenderledger.co.uk/developers/mcp"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The published method works backwards from award start dates, durations and extension options, then flags contracts entering their final months with an estimated re-tender window and source-award link. The 90-day radar is a forecast from award history, not confirmation that a buyer will re-procure; public material does not explain treatment of exercised extensions, termination, framework call-offs or confidence thresholds beyond illustrative examples.",
+          "evidence": [
+            {
+              "label": "TenderLedger renewal methodology",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger award tracking",
+              "url": "https://tenderledger.co.uk/contract-award-tracking"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "AI summaries and bid/no-bid scoring support qualification, but the reviewed material does not establish structured requirement extraction or a durable readiness workflow joining gaps, evidence, owners, actions and deadlines. TenderLedger explicitly says it is not bid-writing software or a compliance suite.",
+          "evidence": [
+            {
+              "label": "TenderLedger product boundaries",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger features",
+              "url": "https://tenderledger.co.uk/features"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "The platform exposes historical award notices, values, winning suppliers, incumbents and buyer information and attaches relevant award history to open tenders. No public corpus start date, award count, amendment history, missing-award rate or per-portal retention period was found, limiting quantitative comparison.",
+          "evidence": [
+            {
+              "label": "TenderLedger award tracking",
+              "url": "https://tenderledger.co.uk/contract-award-tracking"
+            },
+            {
+              "label": "TenderLedger overview",
+              "url": "https://tenderledger.co.uk/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Pro can push saved-market alerts, buyer activity, supplier movements and renewal signals into Slack and answer slash commands. Enterprise adds multi-user access and custom exports/integrations; a gated MCP/REST gateway exposes seven capped, source-attributed tools with API keys and quota tiers, but is explicitly not raw database or full-graph access.",
+          "evidence": [
+            {
+              "label": "TenderLedger Slack integration",
+              "url": "https://tenderledger.co.uk/integrations/slack"
+            },
+            {
+              "label": "TenderLedger MCP and REST gateway",
+              "url": "https://tenderledger.co.uk/developers/mcp"
+            },
+            {
+              "label": "TenderLedger plan boundaries",
+              "url": "https://tenderledger.co.uk/pricing"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "The provider claims UK-based hosting, encryption in transit and at rest, private account workspaces and GDPR alignment; its Privacy Policy describes generic risk-appropriate controls and international-transfer safeguards. Enterprise includes dedicated onboarding and support, while standard setup is self-serve in about two minutes. No public ISO/SOC certification, DPA, subprocessor register, SSO/MFA statement, backup/RTO/RPO, security whitepaper or status page was found.",
+          "evidence": [
+            {
+              "label": "TenderLedger security and hosting claims",
+              "url": "https://tenderledger.co.uk/"
+            },
+            {
+              "label": "TenderLedger Privacy Policy",
+              "url": "https://tenderledger.co.uk/privacy"
+            },
+            {
+              "label": "TenderLedger onboarding boundary",
+              "url": "https://tenderledger.co.uk/pricing"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Starter is £99 monthly or £990 yearly; Pro is £249 monthly or £2,490 yearly; Enterprise is custom. A 14-day trial is offered, monthly plans run to the billing-period end after cancellation, fees are exclusive of tax and non-refundable, subscriptions auto-renew, and the terms cap aggregate liability at the lower of the previous month's fees or £50.",
+          "evidence": [
+            {
+              "label": "TenderLedger pricing",
+              "url": "https://tenderledger.co.uk/pricing"
+            },
+            {
+              "label": "TenderLedger subscription terms",
+              "url": "https://tenderledger.co.uk/terms"
+            },
+            {
+              "label": "TenderLedger refund policy",
+              "url": "https://tenderledger.co.uk/refund"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The public legal terms do not identify the incorporated operator or company number, so procurement, credit and contracting checks cannot be completed from the brand site alone.",
+            "evidence": [
+              {
+                "label": "TenderLedger Terms of Service",
+                "url": "https://tenderledger.co.uk/terms"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer and supplier intelligence is cross-notice but has no published entity-resolution method; name variants and group structures may therefore distort counts, market share and incumbency.",
+            "evidence": [
+              {
+                "label": "TenderLedger buyer intelligence",
+                "url": "https://tenderledger.co.uk/buyer-intelligence-public-sector"
+              },
+              {
+                "label": "TenderLedger award tracking",
+                "url": "https://tenderledger.co.uk/contract-award-tracking"
+              }
+            ]
+          },
+          {
+            "detail": "Renewal windows are estimates from award data, not confirmed future procurements, and public pages do not publish validation or false-positive rates.",
+            "evidence": [
+              {
+                "label": "TenderLedger renewal methodology",
+                "url": "https://tenderledger.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "MCP/API access is capped and gated and does not expose raw tables or the full intelligence graph; production keys and enterprise audit requirements require discussion.",
+            "evidence": [
+              {
+                "label": "TenderLedger MCP limits",
+                "url": "https://tenderledger.co.uk/developers/mcp"
+              }
+            ]
+          },
+          {
+            "detail": "The terms grant broad, perpetual rights to process, train on, commercialise and retain anonymised or aggregated customer content and telemetry, while liability is capped at one month of fees or £50.",
+            "evidence": [
+              {
+                "label": "TenderLedger Terms of Service",
+                "url": "https://tenderledger.co.uk/terms"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The main page says all five portals are ingested hourly, while the Find a Tender and Contracts Finder search pages say listings refresh daily; no per-source schedule reconciles the two claims.",
+            "evidence": [
+              {
+                "label": "TenderLedger hourly-ingestion claim",
+                "url": "https://tenderledger.co.uk/"
+              },
+              {
+                "label": "TenderLedger daily Find a Tender refresh claim",
+                "url": "https://tenderledger.co.uk/find-a-tender-search"
+              },
+              {
+                "label": "TenderLedger daily Contracts Finder refresh claim",
+                "url": "https://tenderledger.co.uk/contracts-finder-search"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the full legal name, company number, registered office and VAT status of the contracting operator?",
+          "Provide the current per-source ingestion schedule, last-success monitoring, amendment handling, backfill process and measured end-to-end latency.",
+          "How are buyer and supplier names canonicalised across aliases, subsidiaries, departments and Companies House identities, and what merge-error rate is measured?",
+          "How are extensions, modifications, early terminations and framework call-offs incorporated into renewal predictions, and what historical precision and recall does the 90-day radar achieve?",
+          "Which AI and embedding providers process customer profiles or tender documents, is customer data used for model training, and can training/retention be contractually disabled?",
+          "Can TenderLedger provide a DPA, subprocessor register, penetration-test summary, backup and disaster-recovery targets, security-incident process, SSO/MFA roadmap and uptime history?",
+          "What exact seats, export formats, API quotas, rate limits, fields, audit logs and support response times are included in Enterprise?"
+        ]
+      },
       "caveats": [
         "Renewal and likely re-tender windows are estimates derived from published award data, not confirmed future procurements.",
         "The public pages establish AI summaries and qualification but do not explicitly establish semantic alert matching.",
@@ -314,7 +606,13 @@
         "https://tenderledger.co.uk/buyer-intelligence-public-sector",
         "https://tenderledger.co.uk/contract-award-tracking",
         "https://tenderledger.co.uk/integrations/slack",
-        "https://tenderledger.co.uk/developers/mcp"
+        "https://tenderledger.co.uk/developers/mcp",
+        "https://tenderledger.co.uk/resources/ai-identify-public-sector-sales-opportunities",
+        "https://tenderledger.co.uk/find-a-tender-search",
+        "https://tenderledger.co.uk/contracts-finder-search",
+        "https://tenderledger.co.uk/terms",
+        "https://tenderledger.co.uk/privacy",
+        "https://tenderledger.co.uk/refund"
       ]
     },
     {
@@ -428,9 +726,14 @@
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_offered",
-          "detail": "The product tracks competitor wins, awardees and market share, but the reviewed pages did not establish structured supplier or competitor profile pages.",
-          "evidence": []
+          "status": "partial",
+          "detail": "Competitor Tracker exposes any named business's award history, values, buyer relationships, market share and renewal dates and calls this a competitor profile. No supplier-name canonicalisation, company-number matching, aliases or deduplication method is published.",
+          "evidence": [
+            {
+              "label": "Tenders Direct Competitor Tracker",
+              "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/"
+            }
+          ]
         },
         "renewalSignals": {
           "status": "yes",
@@ -458,8 +761,8 @@
           ]
         },
         "buyerRequirements": {
-          "status": "partial",
-          "detail": "The separate managed bid-writing service says it establishes the buyer's requirements and checks that all required information is included. The reviewed subscription pages do not establish automated structured requirements extraction.",
+          "status": "yes",
+          "detail": "The separate current managed bid-writing service establishes the buyer's requirements and checks that every required item is considered and included. This is a human service rather than automated extraction and is priced separately from the alert subscription.",
           "evidence": [
             {
               "label": "Tenders Direct bid-writing service",
@@ -492,9 +795,14 @@
           ]
         },
         "frameworks": {
-          "status": "not_offered",
-          "detail": "Framework notices may be present in the broad notice corpus, but the reviewed product pages did not establish a dedicated framework, DPS or route-to-market discovery feature.",
-          "evidence": []
+          "status": "yes",
+          "detail": "The Searchable Notice Database has a dedicated contract-type filter for Framework Agreements and Dynamic Procurements, enabling current framework and dynamic-market discovery across the historical corpus.",
+          "evidence": [
+            {
+              "label": "Tenders Direct searchable notice database",
+              "url": "https://www.tendersdirect.co.uk/product/searchable-notice-database/"
+            }
+          ]
         },
         "competitorTracking": {
           "status": "yes",
@@ -618,6 +926,141 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "Tenders Direct is a mature, human-curated UK and Ireland tender-alert service operated by Proactis Tenders Ltd, combining notice discovery with a searchable archive, competitor and advance-alert intelligence, opportunity management, integrations and separately sold bid services. Its most defensible differentiation is daily analyst sourcing, peer review and category matching rather than proprietary AI; public contractual material, however, conflicts with the current product page on trial length, users, archive depth and some plan entitlements.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "The brand identifies Proactis Tenders Ltd as its operator and Companies House records company SC115090 as active and incorporated on 12 December 1988. The company page says Tenders Direct was established in 1993 and is part of the Proactis group, giving it a substantially longer operating history than newer alert tools.",
+          "evidence": [
+            { "label": "Tenders Direct company history", "url": "https://www.tendersdirect.co.uk/company/" },
+            { "label": "Companies House: Proactis Tenders Ltd", "url": "https://find-and-update.company-information.service.gov.uk/company/SC115090" }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The service targets suppliers pursuing UK, Irish and European public-sector work, from SMEs needing focused alerts through teams using opportunity management, competitor research, integrations and managed bid support. Published plans scale mainly by saved searches and intelligence depth rather than user count, while consultancy services serve organisations needing hands-on bid preparation.",
+          "evidence": [
+            { "label": "Tenders Direct product and plans", "url": "https://www.tendersdirect.co.uk/product/" },
+            { "label": "Tenders Direct tender-alert service", "url": "https://www.tendersdirect.co.uk/product/tender-alert-service/" },
+            { "label": "Tenders Direct bid-writing service", "url": "https://www.tendersdirect.co.uk/consultancy/bid-writing-service/" }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The provider says specialists monitor more than 500 sources daily, including official UK, Ireland and OJEU sources, procurement portals and direct buyer sites, and source more than 1,700 opportunities each week. The five UK national services are explicitly named in its guidance, but no exhaustive source register or source-level completeness measure is published.",
+          "evidence": [
+            { "label": "Tenders Direct sourcing and review", "url": "https://www.tendersdirect.co.uk/product/sourcing-and-review/" },
+            { "label": "Tenders Direct alert coverage", "url": "https://www.tendersdirect.co.uk/product/tender-alert-service/" },
+            { "label": "Tenders Direct procurement-source guidance", "url": "https://www.tendersdirect.co.uk/knowledge-hub/uk-procurement-act/" }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "Analysts source notices every working day, analyse requirements, rewrite titles, assign more than 2,000 categories and peer-review each record before matching. The database says it is updated daily. This is unusually explicit human quality control, but public pages do not quantify publication-to-alert latency, weekend coverage, amendment handling, failed-source monitoring or recall.",
+          "evidence": [
+            { "label": "Tenders Direct sourcing and peer review", "url": "https://www.tendersdirect.co.uk/product/sourcing-and-review/" },
+            { "label": "Tenders Direct searchable notice database", "url": "https://www.tendersdirect.co.uk/product/searchable-notice-database/" }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Matching is a complete current capability based on a customer business profile and human-applied industry categories and keywords. Analysts review the underlying requirement before assigning categories, reducing dependence on inconsistent buyer CPV coding and titles. The provider does not claim semantic models or publish match-rate validation, so this is evidence of curated profile matching rather than AI.",
+          "evidence": [
+            { "label": "Tenders Direct sourcing and matching", "url": "https://www.tendersdirect.co.uk/product/sourcing-and-review/" },
+            { "label": "Tenders Direct alert profiles", "url": "https://www.tendersdirect.co.uk/product/tender-alert-service/" }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "Search, award history and competitor views can be filtered by buyer and show buying relationships, but reviewed first-party material does not describe canonical buyer records, authority aliases, departmental hierarchies, buyer identifiers or merge-quality controls. Buyer pages and filters therefore do not establish a resolved cross-notice buyer entity layer.",
+          "evidence": [
+            { "label": "Tenders Direct competitor tracker", "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/" },
+            { "label": "Tenders Direct searchable database", "url": "https://www.tendersdirect.co.uk/product/searchable-notice-database/" }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Competitor Tracker builds named-business profiles from up to ten years of awards, showing buyer relationships, values, market share and alerts. No Companies House identifier, trading-name aliasing, subsidiary/group mapping or entity-resolution accuracy is described, so the feature is useful cross-award aggregation but not proven canonical supplier identity.",
+          "evidence": [
+            { "label": "Tenders Direct competitor tracker", "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/" }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Advance Tender Alerts use published contract end dates to identify potential future opportunities 3, 6, 12 or 18 months ahead. This is a complete current higher-tier feature, but the provider correctly frames the records as potential rather than confirmed procurements and does not publish rules for extensions, early termination, framework call-offs or historical precision. Entitlement wording conflicts across current pages.",
+          "evidence": [
+            { "label": "Tenders Direct advance tender alerts", "url": "https://www.tendersdirect.co.uk/product/advance-tender-alerts/" },
+            { "label": "Tenders Direct current plan table", "url": "https://www.tendersdirect.co.uk/product/" }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Opportunity Manager supplies a durable pipeline with stages, tasks, deadlines, documents and team ownership, while separately contracted bid-writing and bid-management consultants analyse tender requirements, plan responses and review compliance. The reviewed software does not establish requirement-by-requirement extraction linked to gaps, reusable evidence, owners and readiness, so requirements planning remains adjacent/incomplete even though managed buyer-requirement handling is available.",
+          "evidence": [
+            { "label": "Tenders Direct Opportunity Manager", "url": "https://www.tendersdirect.co.uk/product/opportunity-manager/" },
+            { "label": "Tenders Direct bid-writing service", "url": "https://www.tendersdirect.co.uk/consultancy/bid-writing-service/" },
+            { "label": "Tenders Direct bid-management service", "url": "https://www.tendersdirect.co.uk/consultancy/bid-management-service/" }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "The current product and database pages advertise more than ten years of searchable notices and complete ten-year award histories for tracked competitors, with values, buyers and market-share analysis. The subscription terms instead say Basic searches only the previous five years, so the archive may be plan-limited or the terms may be stale.",
+          "evidence": [
+            { "label": "Tenders Direct searchable notice database", "url": "https://www.tendersdirect.co.uk/product/searchable-notice-database/" },
+            { "label": "Tenders Direct competitor tracker", "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/" },
+            { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Opportunity Manager supports unlimited users, stages, tasks, deadlines and document storage across subscriptions. Integrate advertises Slack at Basic and Salesforce, HubSpot, Zapier, Slack and Microsoft Teams in Complete; exports include PDF, Excel and CSV in relevant products. No public API schema, webhooks, rate limits or integration field maps were found.",
+          "evidence": [
+            { "label": "Tenders Direct Opportunity Manager", "url": "https://www.tendersdirect.co.uk/product/opportunity-manager/" },
+            { "label": "Tenders Direct integrations", "url": "https://www.tendersdirect.co.uk/product/integrate/integrate-with-slack/" },
+            { "label": "Tenders Direct competitor export", "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/" }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "The current product page states ISO 27001:2022 certification, dedicated account management, onboarding and weekday support. Subscription terms include data-processing clauses, identify Redcentric as a subprocessor, provide audit rights and require breach notification. Public evidence does not establish SSO/MFA, backup objectives, penetration-test results, a public status page or contractual uptime SLA.",
+          "evidence": [
+            { "label": "Tenders Direct product, support and ISO claim", "url": "https://www.tendersdirect.co.uk/product/" },
+            { "label": "Tenders Direct subscription and data terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The live one-year table publishes Basic £1,359, Core £2,044 and Premium £2,319 for unlimited users, with a seven-day trial and bespoke options. Terms describe annual commitment, automatic renewal, VAT-exclusive fees, 28-day invoices, cancellation before renewal, no cooling-off and a possible £299 administration charge; renewal price may rise by up to 10%. Several commercial terms conflict with the live table.",
+          "evidence": [
+            { "label": "Tenders Direct current pricing", "url": "https://www.tendersdirect.co.uk/product/" },
+            { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }
+          ]
+        },
+        "materialLimitations": [
+          { "detail": "Human curation is well described, but no measured source recall, match precision, notification latency or category-assignment error rate is published.", "evidence": [{ "label": "Tenders Direct sourcing and review", "url": "https://www.tendersdirect.co.uk/product/sourcing-and-review/" }] },
+          { "detail": "Buyer and supplier aggregation lacks a published identity-resolution method, so aliases, group companies and reorganised authorities may fragment histories.", "evidence": [{ "label": "Tenders Direct competitor tracker", "url": "https://www.tendersdirect.co.uk/product/competitor-tracker/" }] },
+          { "detail": "Advance alerts are potential opportunities inferred from contract end dates and are not assurance that the buyer will re-tender.", "evidence": [{ "label": "Tenders Direct advance tender alerts", "url": "https://www.tendersdirect.co.uk/product/advance-tender-alerts/" }] },
+          { "detail": "FOI-sourced winning submissions, prices and pipeline information depend on buyer disclosure and statutory exemptions; they are not guaranteed data fields.", "evidence": [{ "label": "Tenders Direct FOI tool", "url": "https://www.tendersdirect.co.uk/product/freedom-of-information-request-tool/" }] },
+          { "detail": "Bid writing, bid management and full requirements handling are separately contracted services, not native functionality included in the tender-alert subscription.", "evidence": [{ "label": "Tenders Direct bid-writing service", "url": "https://www.tendersdirect.co.uk/consultancy/bid-writing-service/" }] }
+        ],
+        "contradictions": [
+          { "detail": "The live table prices Basic at £1,359, while a current Procurement Act guidance page says subscriptions start at £1,395.", "evidence": [{ "label": "Tenders Direct live pricing", "url": "https://www.tendersdirect.co.uk/product/" }, { "label": "Tenders Direct Procurement Act guidance", "url": "https://www.tendersdirect.co.uk/knowledge-hub/uk-procurement-act/" }] },
+          { "detail": "The live product page advertises a seven-day free trial, while subscription terms describe the free trial as two weeks.", "evidence": [{ "label": "Tenders Direct product page", "url": "https://www.tendersdirect.co.uk/product/" }, { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }] },
+          { "detail": "Current plans state unlimited users, but subscription terms say use is limited to two users unless an add-on is purchased.", "evidence": [{ "label": "Tenders Direct current plans", "url": "https://www.tendersdirect.co.uk/product/" }, { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }] },
+          { "detail": "Current product pages advertise more than ten years of archive access, whereas terms say Basic is limited to the previous five years.", "evidence": [{ "label": "Tenders Direct searchable database", "url": "https://www.tendersdirect.co.uk/product/searchable-notice-database/" }, { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }] },
+          { "detail": "The guarantee markets complete matching and a £100 charity remedy for a confirmed miss, while the terms disclaim completeness, accuracy, availability and whether an advance tender will arise.", "evidence": [{ "label": "Tenders Direct Guarantee", "url": "https://www.tendersdirect.co.uk/product/the-tenders-direct-guarantee/" }, { "label": "Tenders Direct subscription terms", "url": "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/" }] },
+          { "detail": "The current plan table lists Advance Alerts in Basic, while the dedicated feature page describes the service as available to Core and Premium users.", "evidence": [{ "label": "Tenders Direct current plans", "url": "https://www.tendersdirect.co.uk/product/" }, { "label": "Tenders Direct advance alerts", "url": "https://www.tendersdirect.co.uk/product/advance-tender-alerts/" }] }
+        ],
+        "diligenceQuestions": [
+          "Which current document governs seats, trial duration, archive years, Advance Alert entitlement and renewal pricing where the product table and terms conflict?",
+          "Provide a complete source register, daily monitoring controls, amendment/backfill process, measured source recall and publication-to-alert latency by source type.",
+          "How are buyer and supplier identities canonicalised across names, subsidiaries, public-body reorganisations and Companies House records?",
+          "How are extensions, terminations and call-offs handled in Advance Alerts, and what historical conversion and false-positive rates are measured at each horizon?",
+          "Which Opportunity Manager objects, exports and integration fields are available per plan, and is there a supported API or webhook roadmap?",
+          "Provide the ISO 27001 certificate scope, DPA/subprocessor list, SSO/MFA controls, penetration-test summary, backup/RTO/RPO and service-availability history.",
+          "What services, deliverables, ownership of work product, revision limits and pricing apply to bid writing, bid management and FOI support?"
+        ]
+      },
       "caveats": [
         "The subscription prices were displayed under the one-year billing selection; prices for two- and three-year commitments were not established from the rendered page.",
         "A current official Procurement Act guidance page says subscriptions start at £1,395, while the live subscription table and homepage show Basic/from £1,359. Comparable pricing uses the live subscription table's £1,359 figure and preserves this contradiction.",
@@ -631,9 +1074,18 @@
         "https://www.tendersdirect.co.uk/product/",
         "https://www.tendersdirect.co.uk/company/",
         "https://www.tendersdirect.co.uk/product/the-tenders-direct-guarantee/",
+        "https://www.tendersdirect.co.uk/product/sourcing-and-review/",
+        "https://www.tendersdirect.co.uk/product/tender-alert-service/",
+        "https://www.tendersdirect.co.uk/product/searchable-notice-database/",
+        "https://www.tendersdirect.co.uk/product/competitor-tracker/",
+        "https://www.tendersdirect.co.uk/product/advance-tender-alerts/",
+        "https://www.tendersdirect.co.uk/product/opportunity-manager/",
+        "https://www.tendersdirect.co.uk/product/integrate/integrate-with-slack/",
         "https://www.tendersdirect.co.uk/product/freedom-of-information-request-tool/",
         "https://www.tendersdirect.co.uk/consultancy/bid-writing-service/",
         "https://www.tendersdirect.co.uk/consultancy/bid-management-service/",
+        "https://www.tendersdirect.co.uk/subscription-terms-and-conditions/",
+        "https://find-and-update.company-information.service.gov.uk/company/SC115090",
         "https://www.tendersdirect.co.uk/knowledge-hub/uk-procurement-act/",
         "https://www.tendersdirect.co.uk/knowledge-hub/news/what-is-find-a-tender/",
         "https://www.tendersdirect.co.uk/knowledge-hub/uk-government-tenders/"
@@ -720,8 +1172,8 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "partial",
-          "detail": "Pro and Business rank and explain each match with AI relevance scoring; Free does not include AI scoring. The public page also describes full AI scoring on Business.",
+          "status": "yes",
+          "detail": "Pro and Business provide complete AI relevance scoring: every matched tender is ranked against the business profile and accompanied by the reasoning. Free lacks AI scoring, which is plan gating rather than an incomplete capability.",
           "evidence": [
             {
               "label": "TenderSignal pricing",
@@ -749,7 +1201,7 @@
           ]
         },
         "renewalSignals": {
-          "status": "partial",
+          "status": "yes",
           "detail": "Business includes Pipeline Intelligence, which tracks award notices, contract end dates and buyer announcements to surface likely re-tenders three to twelve months before publication.",
           "evidence": [
             {
@@ -778,9 +1230,14 @@
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_offered",
-          "detail": "A bid tracker is available on Business, but the reviewed pages did not establish requirements-gap, readiness-action or evidence-planning functionality.",
-          "evidence": []
+          "status": "partial",
+          "detail": "Business includes a bid tracker and pipeline board, an adjacent pursuit workflow. The reviewed pages do not establish requirements-to-gap mapping, evidence needs, owners, actions or readiness state.",
+          "evidence": [
+            {
+              "label": "TenderSignal pricing and feature matrix",
+              "url": "https://www.tendersignal.co.uk/pricing"
+            }
+          ]
         },
         "awardHistory": {
           "status": "yes",
@@ -797,13 +1254,18 @@
           ]
         },
         "frameworks": {
-          "status": "not_offered",
-          "detail": "Framework notices appear in the provider's examples, but the reviewed pages did not establish a dedicated framework, DPS or route-to-market discovery feature.",
-          "evidence": []
+          "status": "yes",
+          "detail": "TenderSignal explicitly says framework and DPS notices are surfaced and tagged across its aggregated UK coverage, establishing route-to-market discovery even though no deeper framework analytics module is described.",
+          "evidence": [
+            {
+              "label": "TenderSignal Contracts Finder comparison",
+              "url": "https://www.tendersignal.co.uk/contracts-finder-alternative"
+            }
+          ]
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "Business adds Competitor Intelligence and competitor tracking; all plans expose award history and competitor profiles, but active tracking is plan-limited.",
+          "status": "yes",
+          "detail": "Business provides complete named-supplier tracking with alerts for new wins and approaching renewals. Free supplier search and award history remain available below that tier; plan gating does not make active tracking partial.",
           "evidence": [
             {
               "label": "TenderSignal pricing",
@@ -812,11 +1274,15 @@
             {
               "label": "TenderSignal overview",
               "url": "https://www.tendersignal.co.uk/"
+            },
+            {
+              "label": "TenderSignal competitor intelligence",
+              "url": "https://www.tendersignal.co.uk/competitors"
             }
           ]
         },
         "exportsApi": {
-          "status": "partial",
+          "status": "yes",
           "detail": "Business includes CSV export. The reviewed pages did not establish an API, webhook or CRM integration.",
           "evidence": [
             {
@@ -907,6 +1373,94 @@
               "url": "https://www.tendersignal.co.uk/"
             }
           ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "eTenders.gov.ie",
+          "detail": "Explicitly named as an Irish national source scanned as part of the provider's 145-source aggregation.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "in_tend",
+          "portalName": "In-Tend",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "procontract",
+          "portalName": "ProContract",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Jaggaer",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Mercell",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "delta_esourcing",
+          "portalName": "Delta eSourcing",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "compete_for",
+          "portalName": "CompeteFor",
+          "detail": "Explicitly named as a major portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "defence_sourcing_portal",
+          "portalName": "MOD Defence Sourcing Portal",
+          "detail": "Explicitly named as a specialist portal scanned by TenderSignal.",
+          "evidence": [
+            {
+              "label": "TenderSignal named sources",
+              "url": "https://www.tendersignal.co.uk/how-it-works"
+            }
+          ]
         }
       ],
       "otherCoverageClaims": [
@@ -933,6 +1487,139 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "TenderSignal is a young, low-cost UK and Ireland alert product operated by KK London (Designs & Fashion) Limited, aimed explicitly at SMEs. It combines a broad named portal network, profile-based AI relevance, award-backed renewal signals and a Business pipeline at unusually transparent pricing. Its public method is clearer than many small aggregators, but entity resolution, collaboration, integrations, service assurance and model-quality evidence remain limited, and current pages conflict on refresh, digest frequency and renewal-plan entitlement.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Terms and Privacy identify KK London (Designs & Fashion) Limited, company 12968488, as operator. Companies House records the company active and incorporated on 22 October 2020, filing micro-entity accounts and using a specialised-design SIC code. The About page says TenderSignal was built by a marketing agency for SMEs, supporting legal traceability but indicating a newer and smaller operating base than long-established incumbents.",
+          "evidence": [
+            { "label": "TenderSignal terms", "url": "https://www.tendersignal.co.uk/terms" },
+            { "label": "TenderSignal privacy policy", "url": "https://www.tendersignal.co.uk/privacy" },
+            { "label": "TenderSignal about", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "Companies House: KK London (Designs & Fashion) Limited", "url": "https://find-and-update.company-information.service.gov.uk/company/12968488" }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The product is designed for SMEs and small business-development teams that need affordable discovery, a simple business profile, AI-ranked matches and, on Business, pipeline, competitor and renewal intelligence. Free is an acquisition tier, Pro is single-business alerting, Business adds intelligence and workflow, and an Agency multi-seat offer is described as coming soon.",
+          "evidence": [
+            { "label": "TenderSignal about and audience", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "TenderSignal plans", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The provider claims 145 UK and Ireland sources and explicitly names Find a Tender, Contracts Finder, Public Contracts Scotland, Sell2Wales, eTenders.gov.ie, NHS Atamis, In-Tend, ProContract, Jaggaer, Mercell, Delta, CompeteFor and MOD DSP. It says it normalises and deduplicates records across sources and adds portals when customers identify gaps, but does not publish the full 145-source register or measured coverage by source.",
+          "evidence": [
+            { "label": "TenderSignal how it works and named sources", "url": "https://www.tendersignal.co.uk/how-it-works" },
+            { "label": "TenderSignal data approach", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "TenderSignal coverage", "url": "https://www.tendersignal.co.uk/" }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "Find a Tender and Contracts Finder are described as refreshing every four hours while NHS Atamis and council portals are checked nightly; About says 145 sources are scanned nightly with automated quality checks. Records are normalised and deduplicated. The reviewed pages do not document amendments, source outages, backfills, weekend cadence or a status page, and their all-source freshness wording is inconsistent.",
+          "evidence": [
+            { "label": "TenderSignal source-specific refresh", "url": "https://www.tendersignal.co.uk/" },
+            { "label": "TenderSignal nightly ingestion and QA", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "TenderSignal pricing FAQ", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Users configure sectors, regions, values and keywords in a business profile, and paid plans apply AI relevance scoring to normalised notices and explain why a tender matches. This is a complete current matching capability. No model/provider disclosure, benchmark, precision/recall, negative-feedback loop or handling of confidential profile data is published.",
+          "evidence": [
+            { "label": "TenderSignal matching workflow", "url": "https://www.tendersignal.co.uk/how-it-works" },
+            { "label": "TenderSignal AI plan features", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Tender and award records expose buyer names and allow searches, but reviewed first-party pages do not establish durable buyer profiles, authority aliases, canonical identifiers, hierarchy mapping or cross-notice entity-resolution controls. Normalising and deduplicating notices is not evidence of resolving buyer identity.",
+          "evidence": [
+            { "label": "TenderSignal data normalisation", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "TenderSignal how it works", "url": "https://www.tendersignal.co.uk/how-it-works" }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Business users can search suppliers, open a competitor's award history, see buyers and values, follow named businesses and receive new-award alerts. This is useful cross-award aggregation, but no Companies House IDs, trading-name aliases, subsidiaries, groups or supplier canonicalisation are described.",
+          "evidence": [
+            { "label": "TenderSignal competitor tracking", "url": "https://www.tendersignal.co.uk/competitors" }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Pipeline Intelligence derives likely re-tenders three to twelve months ahead from award dates, contract end dates and published announcements, showing previous winner and contract value. This is a complete Business-plan capability, but it predicts rather than confirms future procurement and publishes no confidence score, extension logic or historical validation.",
+          "evidence": [
+            { "label": "TenderSignal pipeline method", "url": "https://www.tendersignal.co.uk/pipeline" },
+            { "label": "TenderSignal renewal overview", "url": "https://www.tendersignal.co.uk/" },
+            { "label": "TenderSignal Business plan", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "weak",
+          "detail": "Business includes a bid tracker and pipeline, which can organise candidate opportunities, but no public page establishes structured extraction of tender requirements or a persistent workflow mapping requirement gaps to actions, evidence, owners, deadlines and readiness. The capability is adjacent workflow rather than complete requirements planning.",
+          "evidence": [
+            { "label": "TenderSignal Business plan and bid tracker", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "The About page claims nearly one million indexed opportunities, while competitor and pipeline products use award history, winners, buyers, values and end dates. Public pages do not state the corpus start date, award count, retention by source, amendment history or missing-award rate, so depth cannot be normalised against providers with dated archives.",
+          "evidence": [
+            { "label": "TenderSignal corpus claim", "url": "https://www.tendersignal.co.uk/about" },
+            { "label": "TenderSignal competitor history", "url": "https://www.tendersignal.co.uk/competitors" },
+            { "label": "TenderSignal renewal pipeline", "url": "https://www.tendersignal.co.uk/pipeline" }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "moderate",
+          "detail": "Business includes a bid tracker, saved tenders, pipeline and CSV export. No current API, CRM, Slack/Teams integration, webhook or multi-seat collaboration capability is established; an Agency multi-seat tier is only announced as coming soon. Current workflow depth is therefore appropriate for a small team or individual, not proven enterprise orchestration.",
+          "evidence": [
+            { "label": "TenderSignal plan comparison", "url": "https://www.tendersignal.co.uk/pricing" }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "Business includes an onboarding call and privacy material names key processors including Stripe, Cloudflare, Resend, Customer.io and Hetzner, with EU-region or EU hosting statements. Terms provide no SLA. No public ISO/SOC certification, DPA, subprocessor change process, SSO/MFA, pen-test summary, backup objectives, incident response commitments or status page was found.",
+          "evidence": [
+            { "label": "TenderSignal pricing and onboarding", "url": "https://www.tendersignal.co.uk/pricing" },
+            { "label": "TenderSignal privacy and processors", "url": "https://www.tendersignal.co.uk/privacy" },
+            { "label": "TenderSignal service terms", "url": "https://www.tendersignal.co.uk/terms" }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Pricing is unusually transparent: Free £0, Pro £29 monthly or £290 yearly, Business £59 monthly or £590 yearly, excluding 20% VAT, with annual billing equating to ten monthly payments. Every new account gets a no-card 14-day Pro trial; charity and nonprofit users are offered 30% off. Agency multi-seat pricing is not yet available and terms disclaim SLA and public-data completeness.",
+          "evidence": [
+            { "label": "TenderSignal pricing", "url": "https://www.tendersignal.co.uk/pricing" },
+            { "label": "TenderSignal terms", "url": "https://www.tendersignal.co.uk/terms" }
+          ]
+        },
+        "materialLimitations": [
+          { "detail": "No published buyer identity layer and no supplier canonicalisation method support reliable cross-notice treatment of aliases, groups and reorganisations.", "evidence": [{ "label": "TenderSignal data method", "url": "https://www.tendersignal.co.uk/about" }, { "label": "TenderSignal competitors", "url": "https://www.tendersignal.co.uk/competitors" }] },
+          { "detail": "AI relevance is not supported by public model details, benchmark data, precision/recall, confidence calibration or outcome-based validation.", "evidence": [{ "label": "TenderSignal AI features", "url": "https://www.tendersignal.co.uk/pricing" }] },
+          { "detail": "Renewal predictions are derived from public award and end-date data, not confirmed buyer intentions, and no extension handling or accuracy measure is published.", "evidence": [{ "label": "TenderSignal pipeline method", "url": "https://www.tendersignal.co.uk/pipeline" }] },
+          { "detail": "Requirements planning, multi-user collaboration, CRM/chat integrations and an API are not established as complete current capabilities.", "evidence": [{ "label": "TenderSignal plan comparison", "url": "https://www.tendersignal.co.uk/pricing" }] },
+          { "detail": "The operator is a micro-entity and public assurance material lacks an uptime SLA, certifications, recovery targets and security-test evidence.", "evidence": [{ "label": "Companies House: KK London", "url": "https://find-and-update.company-information.service.gov.uk/company/12968488" }, { "label": "TenderSignal terms", "url": "https://www.tendersignal.co.uk/terms" }] }
+        ],
+        "contradictions": [
+          { "detail": "About and How It Works say 145 sources are checked overnight/nightly, while the homepage and pricing material also describe updates every four hours or multiple times daily; this may be source-specific, but no complete schedule reconciles the wording.", "evidence": [{ "label": "TenderSignal about", "url": "https://www.tendersignal.co.uk/about" }, { "label": "TenderSignal how it works", "url": "https://www.tendersignal.co.uk/how-it-works" }, { "label": "TenderSignal homepage", "url": "https://www.tendersignal.co.uk/" }] },
+          { "detail": "The Free plan is described as a weekly digest on pricing, while homepage/how-it-works copy describes daily emails for new matches without clearly separating Free from paid cadence.", "evidence": [{ "label": "TenderSignal pricing", "url": "https://www.tendersignal.co.uk/pricing" }, { "label": "TenderSignal how it works", "url": "https://www.tendersignal.co.uk/how-it-works" }] },
+          { "detail": "How It Works says Pro and above can track likely renewals, while the current pricing table reserves Pipeline Intelligence and renewal visibility for Business.", "evidence": [{ "label": "TenderSignal how it works", "url": "https://www.tendersignal.co.uk/how-it-works" }, { "label": "TenderSignal current plans", "url": "https://www.tendersignal.co.uk/pricing" }] },
+          { "detail": "Pricing says the business profile and saved tenders never leave the UK, while Privacy names Customer.io in the EU region and Hetzner hosting within the EU; the statement may apply only to selected data, but scope is not defined.", "evidence": [{ "label": "TenderSignal pricing security claim", "url": "https://www.tendersignal.co.uk/pricing" }, { "label": "TenderSignal privacy and processors", "url": "https://www.tendersignal.co.uk/privacy" }] }
+        ],
+        "diligenceQuestions": [
+          "Provide the complete source list and source-specific refresh schedule, including amendment handling, outage monitoring, weekend operation and measured publication-to-alert latency.",
+          "Which models and subprocessors power AI relevance, what profile/tender data is sent, how long is it retained, and what benchmark precision and recall are achieved?",
+          "How are buyer and supplier identities resolved across name variants, subsidiaries, group companies and reorganised public authorities?",
+          "How do renewal models handle extensions, early termination, frameworks and missing end dates, and what historical precision and conversion rate are measured?",
+          "Clarify whether Pro includes renewal tracking, whether Free alerts are weekly or daily, and which data fields are covered by the UK-only storage claim.",
+          "When will Agency launch, with what seats, permissions, audit trail, pricing and team workflow; are API, CRM, Slack or Teams integrations planned?",
+          "Can the provider supply a DPA, full subprocessor register, security controls, penetration-test summary, backups/RTO/RPO, incident process and uptime history?"
+        ]
+      },
       "caveats": [
         "AI relevance scoring is unavailable on Free and is therefore plan-limited.",
         "Pipeline Intelligence is Business-only and describes likely re-tenders derived from awards, end dates and announcements rather than confirmed future tenders.",
@@ -942,7 +1629,15 @@
       ],
       "sourceUrls": [
         "https://www.tendersignal.co.uk/",
-        "https://www.tendersignal.co.uk/pricing"
+        "https://www.tendersignal.co.uk/pricing",
+        "https://www.tendersignal.co.uk/about",
+        "https://www.tendersignal.co.uk/how-it-works",
+        "https://www.tendersignal.co.uk/competitors",
+        "https://www.tendersignal.co.uk/pipeline",
+        "https://www.tendersignal.co.uk/contracts-finder-alternative",
+        "https://www.tendersignal.co.uk/terms",
+        "https://www.tendersignal.co.uk/privacy",
+        "https://find-and-update.company-information.service.gov.uk/company/12968488"
       ]
     },
     {
@@ -1042,8 +1737,8 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "partial",
-          "detail": "Aria Personal Insights uses AI to assess strategic fit against a supplier's capabilities, procurement history and goals and provides personalized relevance insights. Personal Insights and framework insights are available only on higher plans in the reviewed matrix.",
+          "status": "yes",
+          "detail": "Aria Personal Insights assesses strategic fit against supplier capabilities, procurement history and goals, while Recommender learns from user behaviour to suggest relevant opportunities. Higher-plan access is plan gating, not incomplete matching.",
           "evidence": [
             {
               "label": "Tracker Aria Intelligence",
@@ -1056,8 +1751,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "partial",
-          "detail": "Buyer insights, buyer behavior, activity, spend, key decision makers and buyer-supplier relationships are available across intelligence modules, but depth depends on plan.",
+          "status": "yes",
+          "detail": "Tracker deliberately builds cross-notice buyer intelligence from contracts, awards and spend: buyer profiles, procurement patterns, decision makers, Business Relationship Scores and combined-spend views. Its help centre also documents a buyer/supplier record boundary for public bodies, showing an explicit identity model despite that limitation.",
           "evidence": [
             {
               "label": "Tracker overview",
@@ -1070,12 +1765,20 @@
             {
               "label": "Tracker frameworks",
               "url": "https://www.trackerintelligence.com/frameworks/"
+            },
+            {
+              "label": "Tracker Spend Analysis Pro",
+              "url": "https://www.trackerintelligence.com/spend-analysis/"
+            },
+            {
+              "label": "Tracker application FAQ and data enhancement",
+              "url": "https://app.trackerintelligence.com/faq.html"
             }
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "Framework and spend modules connect suppliers, buyers, awards and contracts, show previous awardees and supplier success, and expose buyer-supplier associations. These intelligence modules are plan-limited.",
+          "status": "yes",
+          "detail": "Tracker builds cross-notice supplier entities from awards, contracts and spend, enriches private suppliers with Companies House data, and exposes relationship scores, comparisons and supplier success. Public bodies acting as suppliers remain separate from their buyer record, an explicit documented limitation.",
           "evidence": [
             {
               "label": "Tracker frameworks",
@@ -1084,6 +1787,14 @@
             {
               "label": "Tracker DynamIQ",
               "url": "https://www.trackerintelligence.com/tracker-dynamiq/"
+            },
+            {
+              "label": "Tracker Spend Analysis Pro",
+              "url": "https://www.trackerintelligence.com/spend-analysis/"
+            },
+            {
+              "label": "Tracker application FAQ and supplier enrichment",
+              "url": "https://app.trackerintelligence.com/faq.html"
             }
           ]
         },
@@ -1141,7 +1852,7 @@
         },
         "requirementsPlanning": {
           "status": "partial",
-          "detail": "Aria Personal Insights gives plan-limited actionable next steps on whom to contact, what to prepare and how to position a bid; Award Data also supports advance resource planning.",
+          "detail": "Aria gives actionable next steps and Bid Manager tracks shared documents, tasks, milestones and bid status. The reviewed materials do not establish a requirement-level workflow linking each gap to evidence, owner, action, deadline and readiness state.",
           "evidence": [
             {
               "label": "Tracker Aria Intelligence",
@@ -1150,6 +1861,10 @@
             {
               "label": "Tracker Award Data",
               "url": "https://www.trackerintelligence.com/pro-award-data/"
+            },
+            {
+              "label": "Tracker Bid Manager FAQ",
+              "url": "https://app.trackerintelligence.com/faq.html"
             }
           ]
         },
@@ -1168,7 +1883,7 @@
           ]
         },
         "frameworks": {
-          "status": "partial",
+          "status": "yes",
           "detail": "Higher plans include a dedicated Frameworks module connecting more than 18,000 frameworks, 140,000 contracts, call-offs, suppliers and buyers, with expiry views, search, relevance ranking and five years of history.",
           "evidence": [
             {
@@ -1182,8 +1897,8 @@
           ]
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "Award Data, Spend Analysis and Frameworks expose previous awardees, competitor landscapes, supplier success and buyer-supplier associations. The deeper spend and framework functions are plan-limited.",
+          "status": "yes",
+          "detail": "Tracker supports complete competitor monitoring through named-supplier award alerts, Smart Alerts for competitor moves, Award Data, Spend Analysis and Frameworks. Deeper intelligence is higher-tier, which is plan gating rather than an incomplete capability.",
           "evidence": [
             {
               "label": "Tracker Award Data",
@@ -1200,7 +1915,7 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
+          "status": "yes",
           "detail": "The Frameworks module supports data download/export. Open API is included only on the highest AnalytIQ plan in the published plan matrix.",
           "evidence": [
             {
@@ -1218,8 +1933,8 @@
           ]
         },
         "collaboration": {
-          "status": "partial",
-          "detail": "The plan matrix includes one, three or five licences, and the provider says Contract Reminders can be shared with a team. Multi-user access is therefore plan-limited; task assignments or comments were not established.",
+          "status": "yes",
+          "detail": "Current plans include one, three or five licences, and Tracker's Bid Manager supports unlimited invited bid members, per-bid permissions, shared documents, tasks, milestones and progress statuses. These are complete collaboration workflows despite plan and product boundaries.",
           "evidence": [
             {
               "label": "Tracker plans",
@@ -1228,13 +1943,22 @@
             {
               "label": "Tracker LogIQ",
               "url": "https://www.trackerintelligence.com/tracker-logiq/"
+            },
+            {
+              "label": "Tracker Bid Manager FAQ",
+              "url": "https://app.trackerintelligence.com/faq.html"
             }
           ]
         },
         "bidWriting": {
-          "status": "not_offered",
-          "detail": "Aria provides summaries, qualification insights and preparation guidance, but the reviewed pages did not establish response drafting, an answer library, a compliance matrix or a managed bid-writing service.",
-          "evidence": []
+          "status": "partial",
+          "detail": "Tracker's procurement consultancy provides bid preparation, document and response review, tender support and recommendations. The reviewed pages do not establish that consultants draft the full response, nor an in-product answer library or compliance matrix.",
+          "evidence": [
+            {
+              "label": "Tracker procurement consultancy",
+              "url": "https://www.trackerintelligence.com/procurement-consultancy/"
+            }
+          ]
         }
       },
       "explicitPortals": [
@@ -1348,6 +2072,143 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "Tracker Intelligence is a mature public-sector market-intelligence platform operated by BiP Solutions Ltd, extending beyond tender alerts into awards, spend, frameworks, relationships, AI recommendations, bid workflow and API delivery. Its strongest defensible investments are long-running data operations, analyst-enhanced spend and supplier records, Companies House enrichment, relationship scoring and manually mapped framework call-offs. Pricing is entirely quote-led, product scope is heavily tiered, renewal methodology is opaque and the platform documents a material buyer/supplier identity boundary for public bodies.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Tracker is operated by BiP Solutions Ltd. Companies House records SC086146 as active and incorporated on 9 January 1984, and Tracker says BiP has more than 40 years of public-procurement experience. The combination of long operating history, named corporate operator and current terms effective 23 July 2026 establishes significantly greater maturity than recently launched tools.",
+          "evidence": [
+            { "label": "Tracker FAQ and company maturity", "url": "https://www.trackerintelligence.com/resources/tracker-faq/" },
+            { "label": "Tracker terms", "url": "https://www.trackerintelligence.com/terms-and-conditions/" },
+            { "label": "Companies House: BiP Solutions Ltd", "url": "https://find-and-update.company-information.service.gov.uk/company/SC086146" }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "Tracker targets established suppliers and business-development teams pursuing UK and Republic of Ireland public-sector growth, particularly organisations that have already won public work and can exploit market, competitor, framework, spend and relationship intelligence. Four named tiers progress from discovery to sales intelligence and API-enabled analytics, with EU/global coverage available separately.",
+          "evidence": [
+            { "label": "Tracker FAQ and ideal customer", "url": "https://www.trackerintelligence.com/resources/tracker-faq/" },
+            { "label": "Tracker plans", "url": "https://www.trackerintelligence.com/plans/" }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Tracker names national portals and Atamis and claims UK/Ireland coverage from more than 90 portals, while researchers track thousands of sources. Plans distinguish standard UK/ROI coverage from EU/Global add-ons. No complete ingestion register is public, and current pages variously cite more than 3,000 procurement sources and more than 5,000 unique sources, preventing a consistent denominator.",
+          "evidence": [
+            { "label": "Tracker tender-alert coverage", "url": "https://www.trackerintelligence.com/tender-opportunities/tender-alerts/" },
+            { "label": "Tracker free-search source claim", "url": "https://www.trackerintelligence.com/free-uk-tender-search/" },
+            { "label": "Tracker plans and geography", "url": "https://www.trackerintelligence.com/plans/" }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "The platform says tender alerts are delivered each working day and the research team cleanses and enhances spend data daily. Supplier records are enriched with Companies House data plus sector, region and keyword classification; framework call-offs are manually mapped to originals and framework data is continuously refreshed. Public material does not quantify source latency, failure/backfill controls or weekend handling.",
+          "evidence": [
+            { "label": "Tracker application FAQ: data enhancement", "url": "https://app.trackerintelligence.com/faq.html" },
+            { "label": "Tracker framework mapping and refresh", "url": "https://www.trackerintelligence.com/frameworks/" },
+            { "label": "Tracker alert terms", "url": "https://www.trackerintelligence.com/terms-and-conditions/" }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Alert profiles use keywords, CPV and geography with support from account teams; current terms explicitly state machine learning and AI learn user behaviour and suggest relevant tender, contact and award notices. The recommender adapts opportunity recommendations to usage. This is a complete current matching layer, though no model architecture, offline benchmark or precision/recall is published.",
+          "evidence": [
+            { "label": "Tracker application FAQ: alert profiles", "url": "https://app.trackerintelligence.com/faq.html" },
+            { "label": "Tracker AI and machine-learning terms", "url": "https://www.trackerintelligence.com/terms-and-conditions/" },
+            { "label": "Tracker recommender", "url": "https://www.trackerintelligence.com/recommender/" }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Spend Analysis creates persistent buyer-supplier relationships and Business Relationship Scores, supports buyer comparison and grouping of similar organisations, and joins awards and live contracts. This is comparable cross-notice buyer investment. However, Tracker's own FAQ says a public body appearing as both buyer and supplier has separate records with no relationship between them, exposing a deliberate entity-model boundary.",
+          "evidence": [
+            { "label": "Tracker spend analysis and relationship scores", "url": "https://www.trackerintelligence.com/spend-analysis/" },
+            { "label": "Tracker application FAQ: buyer/supplier identity boundary", "url": "https://app.trackerintelligence.com/faq.html" }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Private suppliers are defined by company number, enriched from Companies House and classified by sector, region and keywords; award, spend, relationship and framework views provide persistent cross-notice supplier intelligence. This supports a complete supplier-profile classification. Public group-company and trading-name resolution rules, merge accuracy and handling of unincorporated suppliers are not disclosed.",
+          "evidence": [
+            { "label": "Tracker application FAQ: Companies House enrichment", "url": "https://app.trackerintelligence.com/faq.html" },
+            { "label": "Tracker spend analysis", "url": "https://www.trackerintelligence.com/spend-analysis/" },
+            { "label": "Tracker framework ecosystem", "url": "https://www.trackerintelligence.com/frameworks/" }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "PRO Award Data surfaces upcoming contract and framework renewals and provides previous awardees and pricing before an opportunity reaches tender. The capability is complete in a current plan, but reviewed pages do not explain whether dates are calculated, researched or buyer-confirmed, how extensions and call-offs are handled, or what accuracy and horizon are achieved.",
+          "evidence": [
+            { "label": "Tracker PRO Award Data", "url": "https://www.trackerintelligence.com/pro-award-data/" },
+            { "label": "Tracker plan availability", "url": "https://www.trackerintelligence.com/plans/" }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Bid Manager supplies a durable shared bid pipeline with status, tasks, milestones, permissions, files, actions and audit export. Users can attach tender requirement documents, but the FAQ warns them to check the official notice and does not establish requirement extraction or a requirement-level map of gaps, evidence, owners and readiness. Consultancy can review responses but remains an adjacent service.",
+          "evidence": [
+            { "label": "Tracker application FAQ: Bid Manager", "url": "https://app.trackerintelligence.com/faq.html" },
+            { "label": "Tracker procurement consultancy", "url": "https://www.trackerintelligence.com/procurement-consultancy/" }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "Tracker publishes substantial award, contract and spend datasets and says Frameworks connects more than 18,000 frameworks and 140,000 contracts, including manually mapped call-offs and five-year histories. Current product statistics also cite hundreds of thousands of contracts and awards and more than 120 million spend transactions. Exact start dates, plan-specific retention and reconciled corpus counts remain unpublished.",
+          "evidence": [
+            { "label": "Tracker framework corpus", "url": "https://www.trackerintelligence.com/frameworks/" },
+            { "label": "Tracker competitor and market dataset", "url": "https://www.trackerintelligence.com/competitor-analysis/" },
+            { "label": "Tracker spend analysis", "url": "https://www.trackerintelligence.com/spend-analysis/" }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Bid Manager allows unlimited bid-team members with per-bid permissions, tasks, milestones, indefinite document retention, action history and export. AnalytIQ Open API connects contract, award and spend data to systems including Salesforce and Power BI; the public API page does not disclose schema, rate limits, webhooks, historical depth or support boundaries.",
+          "evidence": [
+            { "label": "Tracker application FAQ: collaborative Bid Manager", "url": "https://app.trackerintelligence.com/faq.html" },
+            { "label": "Tracker Open API", "url": "https://www.trackerintelligence.com/open-api/" },
+            { "label": "Tracker AnalytIQ plan", "url": "https://www.trackerintelligence.com/tracker-analytiq/" }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "Tracker states ISO 9001 and ISO 27001 certification, EU-hosted servers, firewalls, encryption and regular independent penetration testing. Plans include support and Success Manager access, and trials start immediately without card details. The public security page cites one infrastructure/application assessment from April 2012, and no public status history, SLA, SSO/MFA scope, RTO/RPO or current pen-test report is provided.",
+          "evidence": [
+            { "label": "Tracker privacy and security controls", "url": "https://www.trackerintelligence.com/privacy-policy/" },
+            { "label": "Tracker security page", "url": "https://www.trackerintelligence.com/security/" },
+            { "label": "Tracker support and trial FAQ", "url": "https://www.trackerintelligence.com/resources/tracker-faq/" },
+            { "label": "Tracker plans and Success Manager", "url": "https://www.trackerintelligence.com/plans/" }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "IconIQ, LogIQ, DynamIQ and AnalytIQ include 1, 3, 5 and 5 licences respectively but all prices are quote-only. Terms describe a typical minimum one-year commitment, invoices, automatic renewal for the same term, cancellation at least 30 days before renewal and no refunds; feature access is heavily tiered and EU/Global coverage is an add-on. A three-day no-card trial is advertised.",
+          "evidence": [
+            { "label": "Tracker plan and licence matrix", "url": "https://www.trackerintelligence.com/plans/" },
+            { "label": "Tracker commercial terms", "url": "https://www.trackerintelligence.com/terms-and-conditions/" },
+            { "label": "Tracker trial FAQ", "url": "https://www.trackerintelligence.com/resources/tracker-faq/" }
+          ]
+        },
+        "materialLimitations": [
+          { "detail": "No numeric prices, billing periods, additional-seat prices, VAT treatment or add-on prices are public, making commercial comparison dependent on sales engagement.", "evidence": [{ "label": "Tracker plans", "url": "https://www.trackerintelligence.com/plans/" }] },
+          { "detail": "A public body represented as both buyer and supplier has separate unlinked records, which can fragment organisation-wide relationship and market analysis.", "evidence": [{ "label": "Tracker application FAQ", "url": "https://app.trackerintelligence.com/faq.html" }] },
+          { "detail": "Renewal intelligence is marketed without a published derivation method, confidence model or accuracy validation.", "evidence": [{ "label": "Tracker PRO Award Data", "url": "https://www.trackerintelligence.com/pro-award-data/" }] },
+          { "detail": "Bid Manager provides strong opportunity workflow but not a demonstrated requirement-level readiness system linking every gap to evidence, actions and owners.", "evidence": [{ "label": "Tracker application FAQ: Bid Manager", "url": "https://app.trackerintelligence.com/faq.html" }] },
+          { "detail": "Plan gating is substantial: Frameworks, Aria, spend intelligence and Open API are restricted to higher tiers or specific packages, and standard geography excludes EU/Global coverage.", "evidence": [{ "label": "Tracker plan matrix", "url": "https://www.trackerintelligence.com/plans/" }] }
+        ],
+        "contradictions": [
+          { "detail": "Current pages give unreconciled coverage denominators: more than 90 portals and more than 5,000 unique sources on tender alerts, but more than 3,000 procurement data sources on free search. The larger number may include non-portal research sources, but no taxonomy is published.", "evidence": [{ "label": "Tracker tender alerts", "url": "https://www.trackerintelligence.com/tender-opportunities/tender-alerts/" }, { "label": "Tracker free search", "url": "https://www.trackerintelligence.com/free-uk-tender-search/" }] },
+          { "detail": "The security page presents regular independent testing but its specifically dated public assessment reference is from April 2012, so the freshness of publicly inspectable assurance is unclear.", "evidence": [{ "label": "Tracker security page", "url": "https://www.trackerintelligence.com/security/" }] }
+        ],
+        "diligenceQuestions": [
+          "Provide a complete source register and taxonomy reconciling 90 portals, 3,000 procurement sources and 5,000 unique sources, plus source-level latency, outage and backfill controls.",
+          "How are buyer aliases, government reorganisations, supplier trading names, subsidiaries and group companies resolved, and can the buyer/supplier split for public bodies be linked or exported?",
+          "How are renewal dates derived and validated, including extensions, early termination, frameworks and call-offs, and what precision and conversion rates are measured?",
+          "Demonstrate the AI recommender's model inputs, explainability, evaluation results, feedback loop, data retention and third-party AI subprocessors.",
+          "Provide current prices, minimum term, included licences, additional-seat charges, add-on costs, EU/Global fees, implementation fees and renewal-uplift rules for each plan.",
+          "Provide Open API schemas, history depth, quotas, rate limits, update cadence, Salesforce/Power BI field maps, audit logs and support response targets.",
+          "Provide current ISO certificates and scope, DPA/subprocessors, latest pen-test executive summary, SSO/MFA and access controls, backup/RTO/RPO, incident commitments and uptime history."
+        ]
+      },
       "caveats": [
         "No public numeric subscription prices, billing periods, additional-seat prices, VAT treatment or trial card requirement were found on the reviewed plan pages.",
         "Feature depth varies substantially across IconIQ, LogIQ, DynamIQ and AnalytIQ; Aria Personal Insights, Frameworks, Spend Analysis and Open API are plan-limited.",
@@ -1365,7 +2226,12 @@
         "https://www.trackerintelligence.com/aria-intelligence/",
         "https://www.trackerintelligence.com/pro-award-data/",
         "https://www.trackerintelligence.com/frameworks/",
+        "https://www.trackerintelligence.com/spend-analysis/",
+        "https://www.trackerintelligence.com/competitor-analysis/",
+        "https://www.trackerintelligence.com/recommender/",
+        "https://www.trackerintelligence.com/smart-alerts-and-notification-centre/",
         "https://www.trackerintelligence.com/open-api/",
+        "https://www.trackerintelligence.com/procurement-consultancy/",
         "https://www.trackerintelligence.com/tender-opportunities/tender-alerts/",
         "https://www.trackerintelligence.com/public-sector-procurement/",
         "https://www.trackerintelligence.com/tender-opportunities/dynamic-purchasing-systems/",
@@ -1374,7 +2240,13 @@
         "https://www.trackerintelligence.com/resources/procurement-news/digital-marketing-tenders-how-to-find-and-win-public-sector-contracts/",
         "https://www.trackerintelligence.com/public-sector-procurement/courier-contracts/",
         "https://www.trackerintelligence.com/public-sector-procurement/ojeu-tenders/",
-        "https://www.trackerintelligence.com/resources/healthcare-tenders-london/"
+        "https://www.trackerintelligence.com/resources/healthcare-tenders-london/",
+        "https://app.trackerintelligence.com/faq.html",
+        "https://www.trackerintelligence.com/resources/tracker-faq/",
+        "https://www.trackerintelligence.com/terms-and-conditions/",
+        "https://www.trackerintelligence.com/privacy-policy/",
+        "https://www.trackerintelligence.com/security/",
+        "https://find-and-update.company-information.service.gov.uk/company/SC086146"
       ]
     }
   ]

@@ -154,12 +154,16 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
-          "detail": "Enterprise advertises custom integrations. The reviewed pages do not publicly document a standard API, CSV/Excel export or webhook.",
+          "status": "yes",
+          "detail": "Enterprise advertises custom integrations, and the terms define the service as including related APIs and refer to plan API-call limits. The implementation, data scope and standard API documentation remain unpublished.",
           "evidence": [
             {
               "label": "Jorpex pricing",
               "url": "https://jorpex.com/pricing/"
+            },
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
             }
           ]
         },
@@ -182,6 +186,244 @@
           "detail": "The reviewed first-party pages did not establish bid-response drafting, an answer library, compliance matrix or managed bid-writing support.",
           "evidence": []
         }
+      },
+      "deepAudit": {
+        "researchSummary": "Jorpex sells a lightweight global tender-monitoring and notification layer: it normalises notices from more than 50 public sources, scores them against user profiles and pushes matches into Slack, email or Microsoft Teams. Its clearest defensible depth is cross-portal ingestion, multilingual normalisation and fast channel delivery; the public product does not establish resolved buyer or supplier intelligence, renewal modelling, requirements planning or bid production.",
+        "legalAndMaturity": {
+          "evidenceStrength": "weak",
+          "detail": "Jorpex's April 2026 terms and privacy policy state that it is a company registered in England and Wales, but neither publishes a legal name, company number, registered office, founding history or named management team. No matching authoritative corporate record was established in the reviewed sources, so legal identity and operating maturity require direct confirmation.",
+          "evidence": [
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            },
+            {
+              "label": "Jorpex privacy policy",
+              "url": "https://jorpex.com/privacy/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The service targets small through enterprise government contractors and cross-border suppliers that need automated discovery rather than a full bid-management suite. Starter is positioned for small teams, Pro for growing teams and Enterprise for large organisations; sector pages focus on government contractors, IT consulting, construction and international procurement.",
+          "evidence": [
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            },
+            {
+              "label": "About Jorpex",
+              "url": "https://jorpex.com/about/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Jorpex says it aggregates more than 50 public procurement sources, explicitly naming major national and international portals. Its documentation describes portal-specific ingestion that handles different formats, authentication, pagination and rate limits, then normalises notices into one structured format with CPV, geography, translated metadata and source-provided values.",
+          "evidence": [
+            {
+              "label": "Tender sources",
+              "url": "https://jorpex.com/sources/"
+            },
+            {
+              "label": "Smaller EU portal ingestion",
+              "url": "https://jorpex.com/sources/eu-smaller-portals/"
+            },
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "Source pages say monitoring is continuous or around the clock and matches normally arrive within hours of source publication. The ingestion documentation describes source-specific parsing and cross-portal normalisation, but no public per-source freshness report, completeness metric, incident history or missed-record reconciliation process is published; the terms expressly disclaim delays caused by source outages and data-format inconsistencies.",
+          "evidence": [
+            {
+              "label": "Contracts Finder monitoring",
+              "url": "https://jorpex.com/sources/contracts-finder/"
+            },
+            {
+              "label": "Smaller EU portal ingestion",
+              "url": "https://jorpex.com/sources/eu-smaller-portals/"
+            },
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Users configure keywords, CPV or NAICS context, regions, value ranges and disqualifiers; Jorpex then applies embedding-based semantic matching across 17 languages and returns a relevance score plus an explanation or summary. Its privacy policy identifies OpenAI as the model provider and says only public tender text and matching criteria are sent; the public pages do not disclose thresholds, evaluation results or false-positive performance.",
+          "evidence": [
+            {
+              "label": "Canadian portal matching method",
+              "url": "https://jorpex.com/sources/canada-provincial-portals/"
+            },
+            {
+              "label": "US state portal matching method",
+              "url": "https://jorpex.com/sources/us-state-portals/"
+            },
+            {
+              "label": "Jorpex privacy policy",
+              "url": "https://jorpex.com/privacy/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Notices retain contracting-authority fields, but the reviewed product and technical pages do not establish canonical buyer entities, alias handling, cross-notice buyer profiles, buyer-level spend aggregation or entity-resolution controls.",
+          "evidence": []
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Some source notices contain award winners, but the reviewed pages do not establish canonical supplier entities, alias resolution, cross-notice supplier profiles or structured incumbency relationships.",
+          "evidence": []
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "No current product documentation was found for expiry alerts, extension monitoring, calculated renewal windows, predicted re-tender dates or confirmed renewal notices. Award notices on covered portals are not presented as a renewal model.",
+          "evidence": []
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Jorpex publishes bid guidance but the product documentation does not establish extraction of buyer requirements into gaps, evidence needs, owners, actions, dates or readiness state. The product boundary is monitoring, matching, summarisation and notification.",
+          "evidence": []
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "Jorpex ingests notice types that can include awards, and its BOAMP and Contracts Finder documentation describes winner and value fields for competitive context. Public pages do not establish the retained history window, a unified award-search interface, completeness across sources or award-to-tender linkage.",
+          "evidence": [
+            {
+              "label": "BOAMP source coverage",
+              "url": "https://jorpex.com/sources/boamp/"
+            },
+            {
+              "label": "Contracts Finder monitoring",
+              "url": "https://jorpex.com/sources/contracts-finder/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "moderate",
+          "detail": "The core workflow is profile configuration followed by scored notifications into Slack, email and Microsoft Teams, with real-time or digest cadence by plan. Pro expands profiles and Slack channels; Enterprise adds custom integrations and related APIs, but the public documentation does not show assignments, comments, CRM synchronisation, webhook schemas or a shared bid pipeline.",
+          "evidence": [
+            {
+              "label": "Jorpex integrations",
+              "url": "https://jorpex.com/integrations/"
+            },
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            },
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "Jorpex documents TLS 1.2+, encryption at rest, bcrypt password hashing, role-based internal access, incident procedures, Stripe card handling and named subprocessors including Supabase, Railway, PostHog and OpenAI. Setup is advertised as under five minutes; support moves from email to priority support and an Enterprise account manager/SLA. Certifications, penetration-test results, SSO/MFA availability, backup targets and a public incident history are not stated, and the live status page was showing the service down during this audit.",
+          "evidence": [
+            {
+              "label": "Jorpex privacy policy",
+              "url": "https://jorpex.com/privacy/"
+            },
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            },
+            {
+              "label": "Jorpex system status",
+              "url": "https://jorpex.com/status/"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Self-serve subscriptions are $49/month Starter and $149/month Pro, with a custom Enterprise tier and a 14-day trial. Profiles, notification cadence, Slack channels, support and integrations are the main gates. A yearly toggle claims 35% savings, but annual totals, seat allowances, extra-user pricing, taxes and Enterprise minimums are not published; cancellation retains access through the paid period and annual subscriptions are non-refundable for unused months.",
+          "evidence": [
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            },
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Public documentation establishes alerting depth but not buyer or supplier entity resolution, renewal forecasting, durable requirements planning, bid drafting or a unified historical-awards product.",
+            "evidence": [
+              {
+                "label": "Jorpex home",
+                "url": "https://jorpex.com/"
+              }
+            ]
+          },
+          {
+            "detail": "Source availability, format changes and source delays can affect notification timeliness and completeness, and the terms exclude liability for missed tender notifications.",
+            "evidence": [
+              {
+                "label": "Jorpex terms",
+                "url": "https://jorpex.com/terms/"
+              }
+            ]
+          },
+          {
+            "detail": "No public source-level quality dashboard, published matching evaluation, company registration number or security certification was found.",
+            "evidence": [
+              {
+                "label": "Jorpex privacy policy",
+                "url": "https://jorpex.com/privacy/"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The homepage labels Microsoft Teams as 'Soon', while the terms, integrations copy and other source pages describe Teams as an available delivery channel.",
+            "evidence": [
+              {
+                "label": "Jorpex home",
+                "url": "https://jorpex.com/"
+              },
+              {
+                "label": "Jorpex terms",
+                "url": "https://jorpex.com/terms/"
+              },
+              {
+                "label": "Jorpex integrations",
+                "url": "https://jorpex.com/integrations/"
+              }
+            ]
+          },
+          {
+            "detail": "The homepage advertises 99.9% uptime, while the public status page showed the overall service as down during the 18 August 2026 audit; no incident timeline or historical uptime calculation was exposed.",
+            "evidence": [
+              {
+                "label": "Jorpex home",
+                "url": "https://jorpex.com/"
+              },
+              {
+                "label": "Jorpex system status",
+                "url": "https://jorpex.com/status/"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the contracting legal entity, Companies House number and registered office?",
+          "Which exact 50-plus sources are production-active, and what are the last-successful-ingestion and completeness SLAs for each?",
+          "How are duplicate notices, amendments and cross-posted awards linked and reconciled?",
+          "What are measured semantic-match precision and recall on a customer's own historical wins and no-bids?",
+          "Does Enterprise expose a standard API or only bespoke integrations, and what data, rate limits and implementation fees apply?",
+          "What caused the status-page outage observed on 18 August 2026, and what is the independently measured trailing-12-month uptime?"
+        ]
       },
       "explicitPortals": [
         {
@@ -315,7 +557,14 @@
         "https://jorpex.com/sources/ungm/",
         "https://jorpex.com/use-cases/government-contractors/",
         "https://jorpex.com/guides/uk-local-authority-tenders-guide/",
-        "https://jorpex.com/guides/uk-procurement-frameworks-g-cloud-guide/"
+        "https://jorpex.com/guides/uk-procurement-frameworks-g-cloud-guide/",
+        "https://jorpex.com/about/",
+        "https://jorpex.com/integrations/",
+        "https://jorpex.com/privacy/",
+        "https://jorpex.com/status/",
+        "https://jorpex.com/sources/eu-smaller-portals/",
+        "https://jorpex.com/sources/us-state-portals/",
+        "https://jorpex.com/sources/canada-provincial-portals/"
       ]
     },
     {
@@ -340,7 +589,7 @@
             "annualMonthlyEquivalent": null,
             "annualPriceCalculation": "not_available",
             "includedUsers": "1 user",
-            "notes": "Free forever; one alert and one lifetime watermarked, read-only AI bid-draft trial."
+            "notes": "Free forever and one lifetime watermarked, read-only AI bid-draft trial. The current pricing bullets say three keyword alerts, while the feature comparison says one alert; confirm the live allowance."
           },
           {
             "planName": "Pro",
@@ -390,7 +639,7 @@
       "features": {
         "keywordAlerts": {
           "status": "yes",
-          "detail": "KimonBids supports saved keyword and sector searches with email alerts. The free plan includes one alert; paid plans advertise unlimited alerts with daily or weekly delivery, while the help centre also documents an Immediate option.",
+          "detail": "KimonBids supports saved keyword and sector searches with email alerts; paid plans advertise unlimited alerts with daily or weekly delivery, while the help centre also documents an Immediate option. First-party pages conflict on whether Free includes one or three alerts.",
           "evidence": [
             {
               "label": "KimonBids pricing",
@@ -445,8 +694,8 @@
           ]
         },
         "renewalSignals": {
-          "status": "partial",
-          "detail": "The provider's comparison page lists expiring-contract tracking for competitor awards due for renewal, and tender details include contract start/end dates. The reviewed dedicated feature/help pages do not explain the renewal workflow or tier availability.",
+          "status": "yes",
+          "detail": "KimonBids advertises expiring-contract tracking for competitor awards due for renewal, supported by contract start/end dates in its intelligence data. The public pages do not explain whether extensions or predicted re-tenders are modelled or clearly state plan gating.",
           "evidence": [
             {
               "label": "KimonBids comparison",
@@ -536,12 +785,16 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
-          "detail": "Bid drafts and generated compliance documents can be exported to DOCX/PDF. The reviewed pages did not establish tender-data CSV export, an API, webhook or CRM integration.",
+          "status": "yes",
+          "detail": "Bid drafts and generated compliance documents can be exported to DOCX/PDF, and the security page says users can export account data, bid history, match data and documents in standard formats. No public tender-data API, webhook or CRM integration was established.",
           "evidence": [
             {
               "label": "KimonBids features",
               "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids security",
+              "url": "https://kimonbids.com/security"
             }
           ]
         },
@@ -573,6 +826,285 @@
             }
           ]
         }
+      },
+      "deepAudit": {
+        "researchSummary": "KimonBids sells an unusually broad UK-SME workflow spanning tender discovery, AI qualification, bid drafting, reusable evidence, compliance readiness and pre-procurement planning. Its strongest differentiation is the connected bid/evidence/readiness workflow at published SME pricing; its weakest diligence areas are a very young operating company, four-portal-only coverage and no demonstrated buyer or competitor entity-resolution layer.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Companies House records Kimon Services (UK) Ltd (15309792) as an active private company incorporated on 27 November 2023. KimonBids' privacy policy identifies that entity, its registered office and ICO number ZB664518; the public site does not publish headcount, funding, uptime history or audited customer counts, so product-scale maturity is less established than the feature breadth suggests.",
+          "evidence": [
+            {
+              "label": "Companies House: Kimon Services (UK) Ltd",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/15309792"
+            },
+            {
+              "label": "KimonBids privacy policy",
+              "url": "https://kimonbids.com/privacy"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The product is purpose-built for UK SMEs rather than enterprise bid teams. It covers occasional bidders on Free through higher-volume teams on Scale and combines discovery, bid/no-bid, drafting, compliance preparation, track-record management and team review in one workspace.",
+          "evidence": [
+            {
+              "label": "KimonBids home",
+              "url": "https://kimonbids.com/"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "KimonBids explicitly limits live tender ingestion to Find a Tender, Contracts Finder, Sell2Wales and Public Contracts Scotland, covering live, post-award and Procurement Act pipeline/transparency notice types. It states that full specification text, buyer contacts, published evaluation weightings, deadlines and values are indexed, but does not document connectors, licences, amendment handling or source-level field completeness.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The provider says it monitors the four portals in real time and indexes new notices within minutes of publication, with homepage counts updated hourly. No public freshness dashboard, status page, ingestion incident log, deduplication specification, amendment reconciliation or missed-notice SLA was found.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids home",
+              "url": "https://kimonbids.com/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "A company profile captures sector, capabilities, geographic reach, typical values and accreditations. Every notice is scored across sector alignment, capability match, geography, value fit and certification requirements, with Strong Match through Not a Match labels and a plain-English rationale; higher plans add document-enhanced and lot-level scoring, and go/no-go flags capability gaps, evaluation fit and effort-to-value.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            },
+            {
+              "label": "AI bid-writing workflow",
+              "url": "https://kimonbids.com/bid-writing-software"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Buyer history aggregates previous awards, incumbent suppliers, values, frequency, methods, spending patterns and procurement behaviour. This is meaningful cross-notice buyer intelligence, but the public documentation does not explain buyer-name canonicalisation, aliases, organisational hierarchies, duplicate merging or entity-resolution quality, so it remains partial.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "KimonBids advertises competitor wins, framework positions, consortium-partner matching and an automatically built award portfolio for the user's own company. Companies House enriches the user's profile, but public documentation does not establish canonical competitor or incumbent entities, alias resolution or reusable supplier pages.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "The comparison page advertises expiring-contract tracking for competitor awards due for renewal, while tender and buyer history includes contract start/end dates. It does not say whether signals are source dates, calculated windows, extension-adjusted dates or predicted re-tenders, nor show alert cadence or plan gating clearly.",
+          "evidence": [
+            {
+              "label": "KimonBids comparison",
+              "url": "https://kimonbids.com/compare"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "strong",
+          "detail": "KimonBids goes beyond extraction: pipeline opportunities generate preparation actions for relationship building, evidence gathering, accreditation renewals and financial documents with recommended timelines and persistent preparation status. Its PA2023 centre tracks required evidence, complete/incomplete items, weighted readiness, expiry dates and 60-day alerts; bid workspaces retain question-level progress and versions, and team workflows support assigned sections and review state. Public pages do not show custom owner assignment on every compliance item, but a durable gaps, evidence, action, date and readiness workflow is established.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "Procurement Act 2023 guide",
+              "url": "https://kimonbids.com/procurement-act-2023"
+            },
+            {
+              "label": "KimonBids home",
+              "url": "https://kimonbids.com/"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "The product advertises complete buyer award histories, incumbent and competitor wins, pricing benchmarks, framework positions and automatic construction of a user's public-sector award portfolio. It does not publish the history start date, award completeness rate, award-to-tender linking method or treatment of duplicate and missing-value awards.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Each pursued tender has a bid workspace with buyer and company documents, organised questions, progress, drafts and version history. Teams receive Owner/Admin/Member/Viewer roles, a shared organisation workspace, section assignment and review state; responses export to DOCX and account data is exportable. No public API, CRM integration, webhook, Microsoft 365/Google Workspace co-authoring or direct portal submission is documented.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            },
+            {
+              "label": "KimonBids security",
+              "url": "https://kimonbids.com/security"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "KimonBids documents TLS 1.2+, AES-256 at rest, UK/EEA hosting, role-based access, staff MFA with logged/audited production access, backups, geographic redundancy, dependency monitoring, OWASP practices and 24/7 infrastructure monitoring. It says LLM API agreements prohibit training and discard queries, offers Enterprise DPAs, retains cancelled-account data for 30 days and advertises 99.9% infrastructure uptime. It is only working toward Cyber Essentials, and no independent penetration report, ISO/SOC certification, SSO or public status history is exposed. Self-serve onboarding takes under an hour, with email or priority support by plan.",
+          "evidence": [
+            {
+              "label": "KimonBids security",
+              "url": "https://kimonbids.com/security"
+            },
+            {
+              "label": "KimonBids privacy policy",
+              "url": "https://kimonbids.com/privacy"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The flat per-organisation plans are Free, Pro £79/month, Growth £179/month and Scale £399/month, with published annual totals at a 20% discount and 1, 3, 5 and 10-user limits. Paid tiers mainly gate draft credits and team size; Pro already includes the broad intelligence, compliance, social-value and drafting toolset. Monthly plans have no minimum term, subscriptions renew in advance, partial-period refunds are excluded and prices may change with 30 days' notice.",
+          "evidence": [
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            },
+            {
+              "label": "KimonBids annual pricing",
+              "url": "https://kimonbids.com/pricing?billing=annual"
+            },
+            {
+              "label": "KimonBids terms",
+              "url": "https://kimonbids.com/terms"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Coverage excludes eTendersNI and specialist commercial portals; 'all four UK portals' is KimonBids' own four-source definition, not literal coverage of every UK tender publication system.",
+            "evidence": [
+              {
+                "label": "KimonBids features",
+                "url": "https://kimonbids.com/features"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer and competitor intelligence lacks published entity-resolution, alias, deduplication and history-completeness methods.",
+            "evidence": [
+              {
+                "label": "Tender Intelligence help",
+                "url": "https://kimonbids.com/help/using-tender-intelligence"
+              }
+            ]
+          },
+          {
+            "detail": "The operating company was incorporated in late 2023, and no public status history, audited customer scale or independent security certification was found.",
+            "evidence": [
+              {
+                "label": "Companies House: Kimon Services (UK) Ltd",
+                "url": "https://find-and-update.company-information.service.gov.uk/company/15309792"
+              },
+              {
+                "label": "KimonBids security",
+                "url": "https://kimonbids.com/security"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The pricing-page headline bullets say the Free plan includes three keyword alerts, while the feature comparison and other first-party copy say one alert.",
+            "evidence": [
+              {
+                "label": "KimonBids pricing",
+                "url": "https://kimonbids.com/pricing"
+              },
+              {
+                "label": "KimonBids features",
+                "url": "https://kimonbids.com/features"
+              }
+            ]
+          },
+          {
+            "detail": "The privacy policy identifies Kimon Services (UK) Ltd, matching Companies House, while the terms shorten the operator to Kimon Services Ltd; the contracting entity should be confirmed before purchase.",
+            "evidence": [
+              {
+                "label": "KimonBids privacy policy",
+                "url": "https://kimonbids.com/privacy"
+              },
+              {
+                "label": "KimonBids terms",
+                "url": "https://kimonbids.com/terms"
+              },
+              {
+                "label": "Companies House: Kimon Services (UK) Ltd",
+                "url": "https://find-and-update.company-information.service.gov.uk/company/15309792"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the live Free-plan alert allowance: one or three, and which feature table is contractually authoritative?",
+          "How are buyer and supplier aliases resolved across the four portals, and what percentage of award records is linked to a canonical entity?",
+          "How are amendments, withdrawn notices, duplicate cross-postings and missing attachments detected and reconciled?",
+          "Does renewal tracking use stated end dates, extension options, calculated windows or predictive models, and which plan includes alerts?",
+          "Can owners be assigned to every preparation or compliance gap with bespoke deadlines and escalation, or only to bid sections?",
+          "What independent security testing, Cyber Essentials timetable, uptime history and business-continuity targets can be supplied?",
+          "What bulk export and continuity protections apply to generated drafts, evidence libraries and audit trails?"
+        ]
       },
       "explicitPortals": [
         {
@@ -647,7 +1179,12 @@
         "https://kimonbids.com/help/using-tender-intelligence",
         "https://kimonbids.com/frameworks",
         "https://kimonbids.com/compare",
-        "https://kimonbids.com/bid-writing-software"
+        "https://kimonbids.com/bid-writing-software",
+        "https://kimonbids.com/privacy",
+        "https://kimonbids.com/security",
+        "https://kimonbids.com/terms",
+        "https://kimonbids.com/procurement-act-2023",
+        "https://find-and-update.company-information.service.gov.uk/company/15309792"
       ]
     },
     {
@@ -731,8 +1268,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_offered",
-          "detail": "The connected Market Intelligence module analyses award history and purchasing behaviour by buyer, but the reviewed pages do not establish structured buyer profile pages, buyer canonicalisation, deduplication or entity resolution. It is also not established as part of base Tender Discovery.",
+          "status": "partial",
+          "detail": "The current Market Intelligence module provides deep cross-notice buyer insights including spend, award history, buying frequency, patterns, incumbents and likely return-to-market timing. The reviewed pages do not establish buyer canonicalisation, aliases, deduplication or entity resolution, and the module is outside base Tender Discovery.",
           "evidence": [
             {
               "label": "Mercell Market Intelligence",
@@ -741,8 +1278,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "not_offered",
-          "detail": "The connected Market Intelligence module can filter and analyse winners, incumbents and competitor public-sales history, but the reviewed pages do not establish deliberately built cross-notice supplier entities or structured supplier profile pages.",
+          "status": "partial",
+          "detail": "The current Market Intelligence module analyses suppliers and competitors across awards, categories, buyers, win patterns and incumbent relationships. The reviewed pages do not establish supplier-name canonicalisation, alias resolution or deduplication, so this remains a partial structured supplier-intelligence capability.",
           "evidence": [
             {
               "label": "Mercell Market Intelligence",
@@ -809,8 +1346,8 @@
           ]
         },
         "awardHistory": {
-          "status": "partial",
-          "detail": "Historical tenders are listed in the UK plan comparison and the connected Market Intelligence module provides years of enriched award data by buyer, region, category and framework. The reviewed table extraction does not establish exact UK-tier inclusion for award intelligence.",
+          "status": "yes",
+          "detail": "The current Market Intelligence module provides years of enriched contract-award history searchable and analysable by buyer, supplier, region, category and framework. It is a separate or gated Mercell Bidding module rather than an established inclusion in base Tender Discovery.",
           "evidence": [
             {
               "label": "Mercell Bidding UK pricing",
@@ -823,8 +1360,8 @@
           ]
         },
         "frameworks": {
-          "status": "partial",
-          "detail": "Mercell says its supplier discovery spans frameworks and Market Intelligence can analyse award history by framework. The reviewed UK plan page does not separately state framework coverage or tier inclusion.",
+          "status": "yes",
+          "detail": "Mercell's supplier products cover framework opportunities, and the current Market Intelligence module supports contract-award analysis by framework. Exact UK regional coverage and module pricing are not public.",
           "evidence": [
             {
               "label": "Where to find public tenders",
@@ -837,8 +1374,8 @@
           ]
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "The connected Market Intelligence module provides competitor visibility, incumbent data and public-sales history. Inclusion and limits for the two UK Tender Discovery plans were not established on the reviewed pricing page.",
+          "status": "yes",
+          "detail": "The current Market Intelligence module provides named competitor visibility, incumbent data, wins, market position and public-sales history across buyers and categories. It is not established as included in the two public Tender Discovery prices.",
           "evidence": [
             {
               "label": "Mercell Market Intelligence",
@@ -884,6 +1421,273 @@
           ]
         }
       },
+      "deepAudit": {
+        "researchSummary": "Mercell is a mature European procurement-platform group selling connected supplier modules for discovery, market intelligence, bid delivery and training, alongside a substantial buyer-side suite. Its defensible depth is scale, locally enriched European data, decades of award history, early signals and enterprise-grade security; the main diligence challenge is that UK public prices cover only Tender Discovery while several strongest intelligence and delivery capabilities sit in separately gated, unpriced modules.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Mercell Holding AS is registered in Norway under organisation number 829 227 932, while its imprint names the same entity and Oslo address. Mercell says it has 25 years' experience, more than 500 employees, more than 5,000 public entities and more than 400,000 active suppliers; these scale figures are provider claims, but the official registration and long operating footprint materially exceed newer alert-only vendors.",
+          "evidence": [
+            {
+              "label": "Norwegian business register: Mercell Holding AS",
+              "url": "https://virksomhet.brreg.no/en/oppslag/enheter/829227932"
+            },
+            {
+              "label": "Mercell imprint",
+              "url": "https://info.mercell.com/en-gb/imprint/"
+            },
+            {
+              "label": "About Mercell",
+              "url": "https://info.mercell.com/en-gb/about-us/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "Mercell Bidding serves suppliers from startups to international enterprises: Tender Discovery finds and qualifies opportunities, Market Intelligence supports strategic public-sector sales, Bid Delivery controls collaborative submission and Bid Excellence provides training and certification. The wider Mercell Tendering suite targets public buyers and is not interchangeable with supplier-plan capability.",
+          "evidence": [
+            {
+              "label": "Mercell for suppliers",
+              "url": "https://info.mercell.com/en/for-suppliers/"
+            },
+            {
+              "label": "Mercell Tendering",
+              "url": "https://info.mercell.com/en-gb/mercell-tendering/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Tender Discovery claims Europe's largest AI-enriched tender database, combining official sources, below-threshold opportunities, expiring contracts, municipal meeting minutes and budget plans. Local data specialists validate and enrich opportunities daily. The reviewed UK pages do not publish a source register, portal-level connector method or named UK coverage beyond TED guidance, so breadth cannot be independently mapped to every portal.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell for suppliers",
+              "url": "https://info.mercell.com/en/for-suppliers/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "Mercell says local specialists validate and enrich opportunities every day and Tender Discovery delivers daily alerts, while users can follow tenders for real-time updates. It does not publicly describe crawling versus feeds, ingestion latency, source-by-source health, deduplication, amendment reconciliation, missing-document metrics or a supplier-data freshness SLA.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Business Plus trial",
+              "url": "https://info.mercell.com/en-gb/suppliers/start-a-free-trial/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "An AI profile builder creates a monitoring profile in minutes; AI matching, monitoring profiles and summaries tailor daily alerts and extract scope, deadlines and key requirements. Mercell says the model is informed by more than 20 years of data, but public pages do not disclose scoring dimensions, model architecture, thresholds, explanations, test results or customer-level tuning controls.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Business Plus trial",
+              "url": "https://info.mercell.com/en-gb/suppliers/start-a-free-trial/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Market Intelligence aggregates years of award activity into buyer purchasing behaviour, spend, frequency, categories, incumbents and likely return-to-market timing across thousands of buyers. This is substantial buyer intelligence, but no reviewed source documents canonical buyer IDs, aliases, organisational hierarchies, deduplication or entity-resolution accuracy.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Explore versus Market Intelligence",
+              "url": "https://info.mercell.com/en-gb/blog/how-suppliers-stay-ahead-with-mercell/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Market Intelligence supports supplier and competitor analysis across wins, buyers, categories, values, strength, market share and incumbency. The public buyer suite separately claims millions of vetted suppliers, but that does not prove the supplier-side intelligence uses resolved entities; aliases, registration-number matching and cross-country identity controls are not documented.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Explore versus Market Intelligence",
+              "url": "https://info.mercell.com/en-gb/blog/how-suppliers-stay-ahead-with-mercell/"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Market Intelligence exposes expiring agreements and contracts, automatic renewal alerts, and buying patterns used to forecast likely return-to-market timing. First-party guidance explains that expiry dates and contract lengths come from award notices and that historical patterns support forecasts; it does not say how extensions, early terminations or confirmed replacement notices override predicted dates.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Contract award intelligence",
+              "url": "https://info.mercell.com/en/procurement-insights/contract-award-notices/"
+            },
+            {
+              "label": "Proactive procurement workflow",
+              "url": "https://info.mercell.com/en-gb/blog/work-proactively-in-public-procurement/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Tender Discovery gathers requirements and procurement documents; Bid Delivery adds a controlled workspace with documents, workflows, deadline overview, comments, roles, submission progress and e-submission. This is a durable bid-delivery workflow, but public pages do not show a requirement-level compliance matrix that converts every requirement into gaps, evidence, owners and remediation actions, so normalized requirements planning remains partial.",
+          "evidence": [
+            {
+              "label": "Mercell Bid Delivery",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-delivery/"
+            },
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "Market Intelligence is built on decades of procurement activity and provides years of enriched award data across Europe, filterable by buyer, supplier, category, region, time and framework. It surfaces winners, values, bidder counts, contract duration, incumbents and patterns; exact UK start dates, completeness percentages and retention by plan are not public.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Contract award intelligence",
+              "url": "https://info.mercell.com/en/procurement-insights/contract-award-notices/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Tender Discovery supports saved opportunities, notes, comments and sharing. Bid Delivery adds shared files, updates, deadline tracking, roles, permissions and electronic submission in a controlled workspace. The reviewed supplier pages do not establish CRM/API/CSV export, webhook automation or included access to Bid Delivery in the £150/£250 plans; buyer-side ERP and BI integrations should not be attributed to supplier plans.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Bid Delivery",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-delivery/"
+            },
+            {
+              "label": "Mercell UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "Mercell states that all customer data is hosted in EU AWS regions and encrypted in transit and at rest, with least-privilege access, peer review, automated security scanning, tested continuity and disaster-recovery plans, and contracted recovery objectives as short as four hours. It reports ISO 27001, ISO 27701, SOC 2 and BSI C5/ISAE 3000 assurance, with audit documents through a Trust Portal under NDA. Supplier onboarding includes a 14-day no-card Business Plus trial, AI profile setup, tickets, office-hours phone support and a 24/7 knowledge base.",
+          "evidence": [
+            {
+              "label": "Mercell security programme",
+              "url": "https://info.mercell.com/en-gb/blog/mercell-raises-the-bar-on-security/"
+            },
+            {
+              "label": "Mercell Business Plus trial",
+              "url": "https://info.mercell.com/en-gb/suppliers/start-a-free-trial/"
+            },
+            {
+              "label": "Supplier support",
+              "url": "https://info.mercell.com/en-gb/suppliers/knowledge-center-and-support"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "moderate",
+          "detail": "UK Tender Discovery is publicly priced from £150/month for National with one licence and from £250/month for Business Plus with two. Both advertise unlimited monitoring profiles; Business Plus broadens coverage and tender-document access. Market Intelligence, Bid Delivery and Bid Excellence appear as connected modules or add-ons without public prices, and the public page omits VAT, billing term, extra licences, implementation fees and renewal increases.",
+          "evidence": [
+            {
+              "label": "Mercell UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            },
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Mercell Bid Delivery",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-delivery/"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The public £150 and £250 prices do not establish which Market Intelligence, Bid Delivery or Bid Excellence capabilities are included versus separately contracted.",
+            "evidence": [
+              {
+                "label": "Mercell UK pricing",
+                "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+              }
+            ]
+          },
+          {
+            "detail": "UK source coverage is described broadly but not published as a named portal register, connector inventory or source-level completeness/freshness report.",
+            "evidence": [
+              {
+                "label": "Mercell Tender Discovery",
+                "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+              }
+            ]
+          },
+          {
+            "detail": "Rich buyer and supplier analytics are documented, but identity-resolution, alias and deduplication methods are not public.",
+            "evidence": [
+              {
+                "label": "Mercell Market Intelligence",
+                "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The group website's imprint names Mercell Holding AS with organisation number 829 227 932, while older Mercell corporate documents available on the same domain refer to a Mercell Holding AS with business ID 980 921 565. The current contracting entity and relevant subsidiary should be confirmed for a UK subscription.",
+            "evidence": [
+              {
+                "label": "Mercell imprint",
+                "url": "https://info.mercell.com/en-gb/imprint/"
+              },
+              {
+                "label": "Historical Mercell offer document",
+                "url": "https://www.mercell.com/m/file/GetFile.ashx?id=107654921"
+              }
+            ]
+          },
+          {
+            "detail": "Bid Excellence is marketed as part of the connected platform and has calls to start using it, but its current page also labels it 'Coming Soon'; present production availability is unclear.",
+            "evidence": [
+              {
+                "label": "Mercell Bid Excellence",
+                "url": "https://info.mercell.com/en-gb/suppliers/bid-excellence/"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Which exact UK portals and below-threshold sources are covered by National and Business Plus, and what is each source's freshness SLA?",
+          "Are Market Intelligence, Bid Delivery and Bid Excellence included, optional add-ons or separate contracts, and what are their prices and licence limits?",
+          "How are buyer and supplier aliases, reorganisations and cross-border legal entities resolved and quality-tested?",
+          "How do renewal signals handle extension options, contract modifications, early termination and already-published replacement notices?",
+          "Does Bid Delivery provide a requirement-level compliance matrix with owners, evidence and actions, or only document and deadline workflow?",
+          "Can supplier users export opportunities, award history and account work in bulk or access a supported API/CRM integration?",
+          "Which Mercell legal entity contracts with UK suppliers, and which certifications and service levels cover that exact product environment?"
+        ]
+      },
       "explicitPortals": [
         {
           "portalId": "ted",
@@ -928,7 +1732,18 @@
         "https://info.mercell.com/en-gb/suppliers/bid-excellence/",
         "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/",
         "https://info.mercell.com/en/procurement-insights/mercell-for-suppliers/",
-        "https://info.mercell.com/en/procurement-insights/manual-tender-searching/"
+        "https://info.mercell.com/en/procurement-insights/manual-tender-searching/",
+        "https://info.mercell.com/en/for-suppliers/",
+        "https://info.mercell.com/en-gb/about-us/",
+        "https://info.mercell.com/en-gb/imprint/",
+        "https://info.mercell.com/en-gb/mercell-tendering/",
+        "https://info.mercell.com/en-gb/suppliers/knowledge-center-and-support",
+        "https://info.mercell.com/en-gb/blog/how-suppliers-stay-ahead-with-mercell/",
+        "https://info.mercell.com/en-gb/blog/work-proactively-in-public-procurement/",
+        "https://info.mercell.com/en-gb/blog/mercell-raises-the-bar-on-security/",
+        "https://info.mercell.com/en/procurement-insights/contract-award-notices/",
+        "https://virksomhet.brreg.no/en/oppslag/enheter/829227932",
+        "https://www.mercell.com/m/file/GetFile.ashx?id=107654921"
       ]
     },
     {
@@ -969,12 +1784,20 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_offered",
-          "detail": "The reviewed myTenders supplier pages establish free opportunity search but do not establish saved keyword alerts. The homepage directs users to the separate Tenders Direct service for wider emailed alerts.",
+          "status": "partial",
+          "detail": "The supplier FAQ and buyer terms refer to a myTenders website-based Alerts Service or myTenders Alerts add-on, but do not establish current keyword configuration, price or coverage; the main site directs suppliers to the separate Tenders Direct product for comprehensive emailed alerts.",
           "evidence": [
             {
               "label": "myTenders home",
               "url": "https://www.mytenders.co.uk/"
+            },
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "myTenders buyer terms",
+              "url": "https://www.mytenders.co.uk/helpandresources/termsandconditionsbuyers/termsandconditionsforbuyingorganisations"
             }
           ]
         },
@@ -984,9 +1807,18 @@
           "evidence": []
         },
         "buyerProfiles": {
-          "status": "not_offered",
-          "detail": "The reviewed supplier pages did not establish structured buyer intelligence profiles. Buyer-side PRO can sell an optional branded notice page, which is not the same as buyer intelligence.",
-          "evidence": []
+          "status": "partial",
+          "detail": "Suppliers can search for a buying organisation and open its Buyer Profile listing that buyer's notices; PRO buyers can also buy a branded profile page that automatically lists their publications. These are notice pages rather than resolved buyer intelligence, with no canonicalisation, aliases, spend or cross-source history.",
+          "evidence": [
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            }
+          ]
         },
         "supplierProfiles": {
           "status": "not_offered",
@@ -1049,6 +1881,263 @@
           "evidence": []
         }
       },
+      "deepAudit": {
+        "researchSummary": "myTenders is primarily a portal-native eProcurement publishing, clarification and secure-response service, not a broad tender-intelligence aggregator. Suppliers can search and respond to notices published through myTenders for free; the operator directs suppliers who want comprehensive multi-source alerts to its separate Tenders Direct product, so Civensa should keep those product boundaries explicit.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "The service terms identify Proactis Tenders Limited, company number SC115090, and Companies House records the company as active, incorporated on 12 December 1988, previously Millstream Associates Limited, with web-portal and data-processing activities. This is a mature legal operator within the Proactis group, although the public myTenders interface and several guides retain older terminology and long-lived legacy URLs.",
+          "evidence": [
+            {
+              "label": "Companies House: Proactis Tenders Limited",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/SC115090"
+            },
+            {
+              "label": "myTenders buyer terms",
+              "url": "https://www.mytenders.co.uk/helpandresources/termsandconditionsbuyers/termsandconditionsforbuyingorganisations"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The paid PRO and Demo products target public or private buying organisations that need compliant notice publication, documents, clarification, supplier selection and electronic response handling. The supplier side is a free search, Interest List, document, Q&A, messaging and secure-response interface for notices published through the portal; it is not positioned as a full-market intelligence subscription.",
+          "evidence": [
+            {
+              "label": "myTenders registration",
+              "url": "https://www.mytenders.co.uk/Register/Register_Start.aspx"
+            },
+            {
+              "label": "myTenders services",
+              "url": "https://www.mytenders.co.uk/ourservices"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Supplier coverage is limited to notices created and published by buyers through myTenders. Buyer-side PRO is a recognised eSender that can transmit those notices outward to Find a Tender and Contracts Finder; those outbound publishing links do not mean the supplier search ingests either government's complete dataset. The site explicitly directs broader UK and ROI alert coverage to Tenders Direct.",
+          "evidence": [
+            {
+              "label": "myTenders home",
+              "url": "https://www.mytenders.co.uk/"
+            },
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            },
+            {
+              "label": "Find a Tender publishing",
+              "url": "https://www.mytenders.co.uk/find-a-tender"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "This is buyer-entered portal data rather than third-party aggregation. The FAQ says notices submitted before 4pm on weekdays are processed the same day unless clarification is required; site notices publish directly after support review, while external notices follow the target portal's dispatch process. myTenders describes two automated compliance checks and a final manual customer-service check before a notice goes live, but no public freshness/status dashboard or supplier-facing amendment SLA is available.",
+          "evidence": [
+            {
+              "label": "myTenders supplier and buyer FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "About myTenders",
+              "url": "https://www.mytenders.co.uk/about_us"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "weak",
+          "detail": "The free supplier product supports searching and filtering notices and recording interest. A legacy/current FAQ references a website-based alert service, but reviewed pages do not document saved keyword logic, semantic matching, profile scoring, relevance explanations or alert coverage. Full multi-source matching is explicitly positioned as the separate human-curated Tenders Direct service.",
+          "evidence": [
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "myTenders services",
+              "url": "https://www.mytenders.co.uk/ourservices"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "Buyers register organisation records, suppliers can search buyer names and open Buyer Profiles listing their notices, and paying buyers may add a branded profile page. This is a portal directory and publication page, not evidence of canonical authority IDs, aliases, merger handling, cross-source aggregation, spend analysis or entity-resolution quality.",
+          "evidence": [
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "Supplier registration captures organisation name, company number, address, categories and operating geography, and buyers can search registered suppliers by company name or postcode. The reviewed pages do not establish deduplication, Companies House validation, aliases, award aggregation, incumbency relationships or supplier intelligence profiles.",
+          "evidence": [
+            {
+              "label": "myTenders supplier registration",
+              "url": "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx"
+            },
+            {
+              "label": "Quick Quote supplier guide",
+              "url": "https://www.mytenders.co.uk/helpandresources/supplier-user-guides/supplier-qq"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "No supplier-facing contract-expiry, extension, calculated renewal window, predicted re-tender or confirmed replacement-notice workflow was established. Buyer-side contract-management functionality should not be treated as supplier renewal intelligence.",
+          "evidence": []
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Buyer-side PRO provides notice wizards, compliance checks, selection questionnaires and procurement-management workflows. The free supplier product exposes tender documents and response facilities, but no workflow turning requirements into supplier gaps, evidence owners, remediation actions, deadlines or tracked readiness was found.",
+          "evidence": [
+            {
+              "label": "myTenders registration",
+              "url": "https://www.mytenders.co.uk/Register/Register_Start.aspx"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "weak",
+          "detail": "Buyer Profile and branded portal pages can list current and past tenders, and the general notice search retains portal publications. The reviewed supplier pages do not establish a historical contract-award database, winners, award values, comparable-contract surfacing, cross-source linkage or a defined retention window for searchable notices.",
+          "evidence": [
+            {
+              "label": "Example myTenders past tenders",
+              "url": "https://metaprocurement.mytenders.co.uk/PastTenders.aspx"
+            },
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Suppliers can record interest, manage notices in an Interest List, download buyer documents, ask clarifications, receive private messages and submit securely through the electronic postbox. Buyer-side PRO adds FTS/Contracts Finder eSender links, document hosting, Q&A, two-stage procurement and contract management. No supplier team assignments, shared bid workspace, CRM/API or tender-data export is documented; the available RSS documentation concerns site news rather than opportunity data.",
+          "evidence": [
+            {
+              "label": "myTenders registration",
+              "url": "https://www.mytenders.co.uk/Register/Register_Start.aspx"
+            },
+            {
+              "label": "myTenders supplier FAQ",
+              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+            },
+            {
+              "label": "Supplier private messaging guide",
+              "url": "https://www.mytenders.co.uk/helpandresources/supplier-user-guides/supplier-pm"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "The portal uses password-protected accounts, secure electronic postboxes and privacy terms that refer to strict procedures and security features after receipt; supplier passwords require at least nine characters with mixed character types. Submission and response documents are retained for two years after the notice deadline. Parent-group Proactis reports current ISO 27001 recertification, but the public evidence does not map the certified scope specifically to myTenders or publish encryption, MFA, hosting region, backup, penetration-test or incident-response details. Supplier help is available by phone/email and buyers receive initial training and ongoing support.",
+          "evidence": [
+            {
+              "label": "myTenders privacy and registration",
+              "url": "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx"
+            },
+            {
+              "label": "myTenders contact and privacy",
+              "url": "https://www.mytenders.co.uk/aboutus/aboutus_contactus.aspx"
+            },
+            {
+              "label": "Proactis ISO recertification",
+              "url": "https://www.proactis.com/uk/resources/proactis-achieves-continued-iso-certification/"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Supplier registration, search and response are free for notices published on myTenders. Buyer PRO is quote-led and can be annual, pay-as-you-go or multi-year, with separate branded Buyer Profile and alert add-ons mentioned; public numeric buyer prices and user limits are not stated. Comprehensive supplier alerts are sold through the separate Tenders Direct product and should not be combined with the free myTenders plan in comparisons.",
+          "evidence": [
+            {
+              "label": "myTenders home",
+              "url": "https://www.mytenders.co.uk/"
+            },
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            },
+            {
+              "label": "myTenders registration",
+              "url": "https://www.mytenders.co.uk/Register/Register_Start.aspx"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The supplier search covers notices published through myTenders, not the complete data from Find a Tender, Contracts Finder or devolved and commercial portals.",
+            "evidence": [
+              {
+                "label": "myTenders home",
+                "url": "https://www.mytenders.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "Comprehensive alerting, human reclassification and broader UK/ROI coverage belong to the separate Tenders Direct service.",
+            "evidence": [
+              {
+                "label": "myTenders services",
+                "url": "https://www.mytenders.co.uk/ourservices"
+              }
+            ]
+          },
+          {
+            "detail": "No supplier-facing AI matching, award/renewal intelligence, entity resolution, requirements planning, team bid workspace or bid drafting was established.",
+            "evidence": [
+              {
+                "label": "myTenders registration",
+                "url": "https://www.mytenders.co.uk/Register/Register_Start.aspx"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The supplier FAQ says myTenders has a website-based Alerts Service, and buyer terms name a myTenders Alerts add-on, while the main supplier pages direct users seeking emailed/full-coverage alerts to Tenders Direct. Current availability, scope and pricing of a myTenders-only alert remain unclear.",
+            "evidence": [
+              {
+                "label": "myTenders supplier FAQ",
+                "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
+              },
+              {
+                "label": "myTenders buyer terms",
+                "url": "https://www.mytenders.co.uk/helpandresources/termsandconditionsbuyers/termsandconditionsforbuyingorganisations"
+              },
+              {
+                "label": "myTenders home",
+                "url": "https://www.mytenders.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "Current marketing repeatedly promises compliance with the Public Contracts Regulations 2015, while also supporting Find a Tender after the Procurement Act 2023 came into force; the scope of the claimed compliance checks under the current regime is not explained.",
+            "evidence": [
+              {
+                "label": "myTenders home",
+                "url": "https://www.mytenders.co.uk/"
+              },
+              {
+                "label": "myTenders PRO",
+                "url": "https://www.mytenders.co.uk/pro_service"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Does myTenders currently sell its own supplier Alerts Service, and if so what keywords, price, cadence and portal-only coverage apply?",
+          "Does supplier search ingest any notices not natively published through myTenders, or are FTS and Contracts Finder integrations outbound only?",
+          "What Procurement Act 2023 notice forms and compliance checks have replaced or supplemented the advertised PCR 2015 workflow?",
+          "Which Proactis ISO 27001 scope covers myTenders, and what encryption, MFA, hosting, backup and recovery controls apply to supplier submissions?",
+          "Can organisations have multiple supplier users and shared response permissions, and can their Interest List and documents be exported?",
+          "How are duplicate buyer and supplier registrations prevented or merged, and are company numbers validated?"
+        ]
+      },
       "explicitPortals": [
         {
           "portalId": "mytenders",
@@ -1104,7 +2193,19 @@
       "sourceUrls": [
         "https://www.mytenders.co.uk/",
         "https://www.mytenders.co.uk/pro_service",
-        "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx"
+        "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx",
+        "https://www.mytenders.co.uk/Register/Register_Start.aspx",
+        "https://www.mytenders.co.uk/ourservices",
+        "https://www.mytenders.co.uk/about_us",
+        "https://www.mytenders.co.uk/aboutus/aboutus_contactus.aspx",
+        "https://www.mytenders.co.uk/find-a-tender",
+        "https://www.mytenders.co.uk/helpandresources/termsandconditionsbuyers/termsandconditionsforbuyingorganisations",
+        "https://www.mytenders.co.uk/helpandresources/supplier-user-guides/supplier-pm",
+        "https://www.mytenders.co.uk/helpandresources/supplier-user-guides/supplier-qq",
+        "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx",
+        "https://metaprocurement.mytenders.co.uk/PastTenders.aspx",
+        "https://www.proactis.com/uk/resources/proactis-achieves-continued-iso-certification/",
+        "https://find-and-update.company-information.service.gov.uk/company/SC115090"
       ]
     },
     {
@@ -1307,8 +2408,8 @@
           ]
         },
         "similarContracts": {
-          "status": "yes",
-          "detail": "Open Opportunities' documented sales workflow explicitly tells users to search for similar contracts, review similar past tenders and inspect buyer history and previous values.",
+          "status": "partial",
+          "detail": "Open Opportunities' documented workflow tells users to manually search for similar contracts and review similar past tenders, buyer history and values. The reviewed pages do not establish an automatic related-contract panel surfaced against a notice or profile.",
           "evidence": [
             {
               "label": "Sales strategy",
@@ -1418,6 +2519,314 @@
           "detail": "Open Opportunities publishes guidance about using AI for bid writing, but the reviewed product pages did not establish response drafting, an answer library, compliance matrix or managed writing as a platform feature.",
           "evidence": []
         }
+      },
+      "deepAudit": {
+        "researchSummary": "Open Opportunities is a global procurement-data and tender-alert business operated by Ticon UK Ltd, selling a web search/alert product and a separately priced data API. Its most defensible depth is transparent ingestion engineering: more than 900 source claims, twice-daily collection, public daily data-quality reports, document capture, notice deduplication and standards-led enrichment; its weaker areas are buyer/supplier identity, bid/requirements workflow and dated legal/security documentation.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Companies House records Ticon UK Limited (04962733) as active, incorporated on 13 November 2003, with IT services, data processing/hosting and consultancy activities; 2025 accounts are filed as a micro company. Open Opportunities identifies Ticon UK Ltd as its legal entity and says the business began as a procurement consultancy, launched the global service in 2016 and relaunched OpenOpps.com in 2025.",
+          "evidence": [
+            {
+              "label": "Companies House: Ticon UK Limited",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/04962733"
+            },
+            {
+              "label": "Open Opportunities about",
+              "url": "https://openopps.com/about/"
+            },
+            {
+              "label": "Open Opportunities history",
+              "url": "https://openopps.com/what-is-open-opportunities/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "Solo and Team serve suppliers and business-development teams seeking global opportunity discovery, alerts, history and competitor/expiry research. The API tier targets developers, data teams, bid-automation products, dashboards and CRM/alert-routing integrations. The product is strongest for organisations that value geographic breadth and raw structured data rather than in-platform bid production.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities API",
+              "url": "https://openopps.com/api/"
+            },
+            {
+              "label": "Open Opportunities about",
+              "url": "https://openopps.com/about/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The provider claims 900-plus government and public-sector sources across 180-plus countries, including federal, sub-national and low-value coverage, and publishes a directory of 100 named examples. It gathers tenders, contracts, prior/planning notices and documents, uses OCDS-aligned structured data, adds CPV categories, countries, languages, currencies and regional groups, and exposes provenance/source links. The public directory is illustrative rather than a complete 900-source inventory.",
+          "evidence": [
+            {
+              "label": "Open Opportunities sources",
+              "url": "https://openopps.com/sources/"
+            },
+            {
+              "label": "Open Opportunities coverage",
+              "url": "https://openopps.com/coverage/"
+            },
+            {
+              "label": "Open Opportunities about",
+              "url": "https://openopps.com/about/"
+            },
+            {
+              "label": "Open Opportunities pricing and enrichment",
+              "url": "https://openopps.com/pricing/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "Release notes say tender and contract collection runs twice daily, overnight and mid-morning. A public daily quality audit checks source freshness and expected volume, matches and merges cross-portal duplicates, captures and indexes attachments, validates/back-fills buyer/value/deadline/CPV/country fields, and holds back or flags problematic records. Daily reports expose processed, held-back, flagged and document-update counts, but do not publish per-source service levels or independent audit assurance.",
+          "evidence": [
+            {
+              "label": "Open Opportunities data-quality reports",
+              "url": "https://openopps.com/data-quality-reports/"
+            },
+            {
+              "label": "Twice-daily collection release note",
+              "url": "https://openopps.com/release-notes"
+            },
+            {
+              "label": "Example daily quality report",
+              "url": "https://openopps.com/blog/data-quality-reports-2026-06-11/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Intent Search uses Open Opportunities' own AI model to interpret meaning across languages and rank results rather than relying only on literal keyword occurrence. Users can combine intent or keyword search with category, buyer, supplier, geography, value and notice-type filters, then save searches as alerts. The provider does not publish training data, embeddings, precision/recall, score calibration or customer-specific evaluation results.",
+          "evidence": [
+            {
+              "label": "Open Opportunities Intent Search",
+              "url": "https://openopps.com/introducing-intent-search-enhanced-multilingual-search-that-understands-intent"
+            },
+            {
+              "label": "Open Opportunities product",
+              "url": "https://openopps.com/product/"
+            },
+            {
+              "label": "Search user guide",
+              "url": "https://openopps.com/blog/user-guide-making-tender-search-easier/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "Records carry buyer fields and links, users can search buyer names and inspect buying patterns, and quality checks validate/back-fill the buyer field. The documented deduplication is notice-level; no first-party page establishes canonical buyer IDs, name aliases, organisational hierarchies, merger handling or cross-notice entity-resolution metrics.",
+          "evidence": [
+            {
+              "label": "Open Opportunities data-quality reports",
+              "url": "https://openopps.com/data-quality-reports/"
+            },
+            {
+              "label": "Open Opportunities sales workflow",
+              "url": "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "weak",
+          "detail": "Users can filter awards by supplier name and monitor competitors, but the reviewed pages do not establish canonical supplier IDs, Companies House or registry matching, alias resolution, duplicate winners or structured supplier pages. Notice deduplication should not be mistaken for supplier entity resolution.",
+          "evidence": [
+            {
+              "label": "Search by supplier",
+              "url": "https://www.openopps.com/help/how-to-search-by-supplier/"
+            },
+            {
+              "label": "Open Opportunities data-quality reports",
+              "url": "https://openopps.com/data-quality-reports/"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The Team plan exposes expiring contracts awarded in the last five years, and source records include contract start/end dates and award details. Users can search or alert on expiries and competitors. Public documentation does not establish calculated expiry when source dates are missing, extension-option handling, modification/termination monitoring, confidence scores or confirmation that a replacement tender has actually been published.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities coverage fields",
+              "url": "https://openopps.com/coverage/"
+            },
+            {
+              "label": "Open Opportunities home",
+              "url": "https://openopps.com/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Planning notices support early opportunity discovery and the provider publishes bid guidance, but no in-product requirements extraction, compliance matrix, gap/evidence workflow, owner assignment, remediation plan, deadline tracking or readiness state was established.",
+          "evidence": []
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "Open Opportunities reports collecting procurement data since 2006, storing 11.4 million documents and exposing tenders, contracts, awards and planning notices. Team includes full history while Solo is limited to 90 days; award records expose supplier, buyer, value and award dates, with API access to the wider structured corpus. History and completeness still vary with what each source publishes.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities about",
+              "url": "https://openopps.com/about/"
+            },
+            {
+              "label": "Data feature breakdown",
+              "url": "https://openopps.com/data-a-breakdown-of-the-data-features-in-open-opportunities/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "The web product provides saved searches, daily alerts, bookmarks/watchlists, record sharing and Team CSV downloads up to 100 rows; Team has unlimited users. The separately priced REST API returns JSON, documents and daily updates for CRM, dashboard, Teams/Slack alert routing and research automation, with a sandbox and documented rate limits. The web app does not establish assignments, comments, bid stages or direct submission.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities API",
+              "url": "https://openopps.com/api/"
+            },
+            {
+              "label": "Expert API launch",
+              "url": "https://openopps.com/blog/introducing-expert-api-procurement-data/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "weak",
+          "detail": "Current support pages offer self-serve videos on Solo, onboarding and chat on Team, video calls, analyst help and SLA-backed enterprise response times; the trial is seven days without a card. However, the public privacy page still centres the Data Protection Act 1998, allows processing outside the EEA, warns that transmission security cannot be guaranteed and does not state encryption, hosting, access control, MFA, subprocessors, backups, incident response, certifications or data-retention periods. This is materially weaker diligence evidence than the data-engineering transparency.",
+          "evidence": [
+            {
+              "label": "Open Opportunities legal and privacy",
+              "url": "https://openopps.com/legals/"
+            },
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities support",
+              "url": "https://openopps.com/contact/"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Current annual pricing is Solo at £1,440/€1,680/$1,920 for one user and Team at £3,108/€3,600/$4,104 for unlimited users; the API starts at £5,000/€5,800/$6,700 per year with high-volume terms agreed separately. Solo limits alerts, saved searches and history; Team expands all three and adds CSV, onboarding and unlimited users. A seven-day no-card trial and 30-day annual money-back guarantee are advertised; numeric monthly-billing prices are not exposed despite monthly billing being available.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities subscription terms",
+              "url": "https://openopps.com/subscription-terms-and-conditions/"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Only 100 illustrative sources are named publicly against the 900-plus coverage claim; per-source history, latency and completeness are not contractually published on the reviewed pages.",
+            "evidence": [
+              {
+                "label": "Open Opportunities sources",
+                "url": "https://openopps.com/sources/"
+              },
+              {
+                "label": "Open Opportunities coverage",
+                "url": "https://openopps.com/coverage/"
+              }
+            ]
+          },
+          {
+            "detail": "Notice-level deduplication and buyer-field validation do not establish buyer or supplier entity resolution; competitor searches may remain sensitive to naming variants.",
+            "evidence": [
+              {
+                "label": "Open Opportunities data-quality reports",
+                "url": "https://openopps.com/data-quality-reports/"
+              }
+            ]
+          },
+          {
+            "detail": "Public privacy/security documentation is outdated and lacks modern control detail or independent assurance, despite the product handling accounts, searches and integrations.",
+            "evidence": [
+              {
+                "label": "Open Opportunities legal and privacy",
+                "url": "https://openopps.com/legals/"
+              }
+            ]
+          },
+          {
+            "detail": "The product does not establish buyer-authored non-notice document intelligence, extracted requirements planning or bid drafting; API automations require customers to build or operate their own tooling.",
+            "evidence": [
+              {
+                "label": "Open Opportunities API",
+                "url": "https://openopps.com/api/"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The current pricing page starts at £1,440/year (£120 monthly equivalent) for Solo and £3,108/year for Team, while current first-party pages elsewhere say plans start around £50-£60 or £55 per month and an older coverage comparison says £2,100/year for unlimited users. The live pricing page should be treated as canonical but the sales copy is materially inconsistent.",
+            "evidence": [
+              {
+                "label": "Open Opportunities pricing",
+                "url": "https://openopps.com/pricing/"
+              },
+              {
+                "label": "What is Open Opportunities",
+                "url": "https://openopps.com/what-is-open-opportunities/"
+              },
+              {
+                "label": "Open Opportunities coverage comparison",
+                "url": "https://openopps.com/coverage/"
+              }
+            ]
+          },
+          {
+            "detail": "The about page describes the pricing model as per seat, while the current Team and API offers provide unlimited users on per-team or per-organisation pricing.",
+            "evidence": [
+              {
+                "label": "Open Opportunities about",
+                "url": "https://openopps.com/about/"
+              },
+              {
+                "label": "Open Opportunities pricing",
+                "url": "https://openopps.com/pricing/"
+              }
+            ]
+          },
+          {
+            "detail": "The public legal page contains obsolete Data Protection Act 1998 wording and even visible internal draft/deployment text alongside the live policy, creating uncertainty over which privacy terms are approved and current.",
+            "evidence": [
+              {
+                "label": "Open Opportunities legal and privacy",
+                "url": "https://openopps.com/legals/"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Can Open Opportunities provide the complete 900-plus source register with history start, last successful run, typical latency and document completeness for each source?",
+          "How are buyer and supplier names canonicalised across languages, company suffixes, reorganisations and duplicate award records?",
+          "How do expiring-contract alerts handle extensions, contract modifications, early termination and source records with missing or estimated end dates?",
+          "Which current privacy policy governs the service, where is customer data hosted, and what encryption, MFA, subprocessors, retention, incident-response and independent assurance controls apply?",
+          "What are the actual month-to-month Solo, Team and API prices, renewal uplift rules and API rate/volume limits?",
+          "Can Team users collaborate beyond sharing and bookmarks, and can all account searches, records and watchlists be exported on exit?",
+          "What precision/recall evidence exists for Intent Search on a customer's own relevant and irrelevant tender history?"
+        ]
       },
       "explicitPortals": [
         {
@@ -1596,7 +3005,15 @@
         "https://openopps.com/data-a-breakdown-of-the-data-features-in-open-opportunities/",
         "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/",
         "https://openopps.com/blog/how-smes-can-find-and-win-public-sector-contracts-uk-procurement-act-2023/",
-        "https://openopps.com/wp-content/uploads/2025/08/AI-for-Bid-Writers-White-paper-Reduced-size.pdf"
+        "https://openopps.com/wp-content/uploads/2025/08/AI-for-Bid-Writers-White-paper-Reduced-size.pdf",
+        "https://openopps.com/what-is-open-opportunities/",
+        "https://openopps.com/release-notes",
+        "https://openopps.com/blog/data-quality-reports-2026-06-11/",
+        "https://openopps.com/blog/introducing-expert-api-procurement-data/",
+        "https://openopps.com/contact/",
+        "https://openopps.com/legals/",
+        "https://openopps.com/subscription-terms-and-conditions/",
+        "https://find-and-update.company-information.service.gov.uk/company/04962733"
       ]
     }
   ]

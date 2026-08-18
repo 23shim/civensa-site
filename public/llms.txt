@@ -29,6 +29,40 @@ Civensa is a UK public procurement directory. It brings together public evidence
 - [Reading the buyer before reading the opportunity](https://civensa.com/research/buyer-intelligence/)
 - [Requirements are a market signal, not an admin task](https://civensa.com/research/supplier-requirements/)
 
+## Tender-alert provider audits
+
+Deep, source-linked profiles cover normalized features, comparable pricing, named portals, data methods, buyer and supplier entities, renewals, requirements planning, limitations and diligence questions.
+
+- [BidLens](https://civensa.com/tools/tender-alerts/bidlens/)
+- [BidScout](https://civensa.com/tools/tender-alerts/bidscout/)
+- [BidSkim](https://civensa.com/tools/tender-alerts/bidskim-alerts/)
+- [BidStats](https://civensa.com/tools/tender-alerts/bidstats/)
+- [Bidwell](https://civensa.com/tools/tender-alerts/bidwell-alerts/)
+- [Buzz Tender Alert](https://civensa.com/tools/tender-alerts/buzz-tender-alert/)
+- [CleanTender](https://civensa.com/tools/tender-alerts/cleantender/)
+- [Contract Finder Pro](https://civensa.com/tools/tender-alerts/contract-finder-pro-alerts/)
+- [Contracts Advance](https://civensa.com/tools/tender-alerts/contracts-advance/)
+- [D3 Tenders](https://civensa.com/tools/tender-alerts/d3-tenders-alerts/)
+- [Jorpex](https://civensa.com/tools/tender-alerts/jorpex/)
+- [KimonBids](https://civensa.com/tools/tender-alerts/kimonbids-alerts/)
+- [Mercell Tender Discovery](https://civensa.com/tools/tender-alerts/mercell-tender-discovery/)
+- [myTenders](https://civensa.com/tools/tender-alerts/mytenders-supplier/)
+- [Open Opportunities](https://civensa.com/tools/tender-alerts/open-opportunities-alerts/)
+- [PSIP](https://civensa.com/tools/tender-alerts/psip-alerts/)
+- [Scrymint](https://civensa.com/tools/tender-alerts/scrymint/)
+- [Supply2Gov](https://civensa.com/tools/tender-alerts/supply2gov/)
+- [Tendarix](https://civensa.com/tools/tender-alerts/tendarix/)
+- [Tender Alerts UK](https://civensa.com/tools/tender-alerts/tender-alerts-uk/)
+- [Tender Radar](https://civensa.com/tools/tender-alerts/tender-radar/)
+- [TenderAI](https://civensa.com/tools/tender-alerts/tenderai/)
+- [Tenderbase](https://civensa.com/tools/tender-alerts/tenderbase/)
+- [Tenderlake](https://civensa.com/tools/tender-alerts/tenderlake/)
+- [TenderLead](https://civensa.com/tools/tender-alerts/tenderlead/)
+- [TenderLedger](https://civensa.com/tools/tender-alerts/tenderledger-alerts/)
+- [Tenders Direct](https://civensa.com/tools/tender-alerts/tenders-direct-alerts/)
+- [TenderSignal](https://civensa.com/tools/tender-alerts/tendersignal/)
+- [Tracker Intelligence](https://civensa.com/tools/tender-alerts/tracker-intelligence-alerts/)
+
 ## Citation and contact
 
 When citing Civensa, preserve the article title, canonical URL and publication date. Contact research@civensa.com for research queries.

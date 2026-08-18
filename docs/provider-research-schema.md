@@ -6,9 +6,11 @@ Research date: 18 August 2026
 
 - Use first-party provider pages, help centres, pricing pages, terms, or official product documentation.
 - Record a portal only when the provider explicitly names or links it. A broad claim such as "all UK portals" belongs in `otherCoverageClaims`, not `explicitPortals`.
+- `yes` means the complete normalized capability is offered in at least one current plan. A higher-plan restriction does not turn a complete capability into `partial`; record plan gating in the detail and deep audit.
+- `partial` means the product offers only an adjacent, incomplete, indirect, pilot, or materially narrower version of the normalized capability.
 - `not_offered` is the default when the reviewed first-party pages do not establish the feature. For this directory, an undocumented capability is treated as not offered to a buyer evaluating the public product.
 - Do not infer a capability from generic marketing language, screenshots without an identifiable workflow, a search filter, or a raw notice field.
-- Plan-limited or indirect functionality is `partial`.
+- Plan-limited but otherwise complete functionality is `yes`. Indirect or incomplete functionality is `partial`.
 - Keep provider claims separate from Civensa testing. This research does not constitute an independent product test.
 - Preserve direct evidence URLs beside each material fact.
 
@@ -106,6 +108,57 @@ Each explicit portal uses:
   "evidence": [{ "label": "Coverage", "url": "https://..." }]
 }
 ```
+
+## Deep provider audit
+
+Every provider also receives a deeper business and product audit. Use first-party product pages, documentation, help centres, terms, privacy/security pages and status pages, plus authoritative official corporate records where useful. Do not use anonymous review claims as evidence.
+
+Each evidence field uses:
+
+```json
+{
+  "evidenceStrength": "strong | moderate | weak | not_found",
+  "detail": "Specific factual assessment, including plan or product boundaries",
+  "evidence": [{ "label": "Direct source", "url": "https://..." }]
+}
+```
+
+Each provider must add:
+
+```json
+{
+  "deepAudit": {
+    "researchSummary": "Two or three concise sentences explaining what the business actually sells and where its defensible depth appears to be.",
+    "legalAndMaturity": {},
+    "targetCustomerAndUseCase": {},
+    "dataSourcesAndCoverageMethod": {},
+    "dataIngestionAndFreshness": {},
+    "matchingAndQualificationMethod": {},
+    "buyerEntityInvestment": {},
+    "supplierEntityInvestment": {},
+    "renewalSignalMethod": {},
+    "requirementsPlanningMethod": {},
+    "historicalAndAwardDepth": {},
+    "workflowAndIntegrations": {},
+    "securitySupportAndOnboarding": {},
+    "commercialModel": {},
+    "materialLimitations": [{ "detail": "Material limitation", "evidence": [] }],
+    "contradictions": [{ "detail": "Conflicting first-party statements", "evidence": [] }],
+    "diligenceQuestions": ["Concrete question a buyer should ask before purchase"]
+  }
+}
+```
+
+Deep-audit rules:
+
+- `strong` requires direct, specific documentation or an authoritative official record.
+- `moderate` means useful first-party evidence exists but an important implementation detail is missing.
+- `weak` means only broad marketing copy or an indirect signal was found.
+- `not_found` means the reviewed sources did not establish the subject.
+- For buyer and supplier entities, name the evidence for canonicalisation, deduplication, entity resolution, aliases, cross-notice aggregation or other substantial identity work. Rich-looking pages without identity evidence are not `strong`.
+- For renewals, distinguish published contract-end dates, calculated expiry windows, extension evidence, predicted re-tender timing and confirmed future notices.
+- For requirements planning, distinguish extraction/checklists from a durable workflow with gaps, evidence, owners, actions, dates and readiness state.
+- Record what is included by plan. Do not downgrade a fully implemented feature merely because it is sold on a higher tier.
 
 ## Batch artifact
 

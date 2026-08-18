@@ -114,8 +114,8 @@
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "partial",
-          "detail": "Professional advertises AI document summaries, while the shipped roadmap item says uploaded documents can yield requirements, deadlines and evaluation criteria. This is plan-limited.",
+          "status": "yes",
+          "detail": "Professional includes Document AI summaries, and the shipped roadmap item says uploaded documents yield requirements, deadlines and evaluation criteria. The complete capability is plan-limited to Professional and above.",
           "evidence": [
             {
               "label": "Pricing",
@@ -408,6 +408,306 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "Tender Radar sells AI-ranked, multi-country tender discovery built from a website-derived capability profile, with document extraction and team functionality on higher plans. Its clearest depth is a named European and international source-estate plus unusually specific AI-processing and security documentation, but the commercial product still shows launch-stage inconsistencies.",
+        "legalAndMaturity": {
+          "evidenceStrength": "moderate",
+          "detail": "The April 2026 terms choose Dutch law and Amsterdam courts, and the privacy policy names Tender Radar as controller, but neither reviewed legal page gives a registered legal entity, company number or physical address. The waitlist page describes a closed beta and summer 2026 public launch while current pricing and trial language are already published.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://tenderradar.io/terms"
+            },
+            {
+              "label": "Privacy Policy",
+              "url": "https://tenderradar.io/privacy"
+            },
+            {
+              "label": "Waitlist",
+              "url": "https://tenderradar.io/waitlist"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The service is explicitly for business professionals in procurement, sales and business development. Starter targets small businesses, Professional targets growing companies bidding across multiple fronts, and Enterprise targets organisations needing unlimited profiles, SSO and integrations.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "https://tenderradar.io/terms"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Pricing names 14 active sources spanning EU Funding & Tenders, national European portals, Contracts Finder, the Council of Europe, NATO bodies, UNGM and SAM.gov. Coverage documentation describes seven fully covered countries, dedicated national integrations plus TED, while the public product claims broader coverage across 27 countries; the provider warns that coverage is not guaranteed exhaustive.",
+          "evidence": [
+            {
+              "label": "Pricing coverage FAQ",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "https://tenderradar.io/terms"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "Tender Radar says automated crawlers monitor portals around the clock, collect notices as they publish and pass them through AI classification and matching. No source-by-source polling interval, ingestion-lag report, status history or contractual freshness SLA was found.",
+          "evidence": [
+            {
+              "label": "Product tour",
+              "url": "https://tenderradar.io/demo"
+            },
+            {
+              "label": "Product overview",
+              "url": "https://tenderradar.io/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The platform scans a customer's website into a capability profile covering services, sectors, certifications and experience, then uses OpenAI and Anthropic-backed classification to score and explain each tender's fit. AI outputs are expressly advisory and customers are told to verify tender information independently.",
+          "evidence": [
+            {
+              "label": "Privacy Policy AI processing",
+              "url": "https://tenderradar.io/privacy"
+            },
+            {
+              "label": "Pricing matching FAQ",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Terms of Service AI disclaimer",
+              "url": "https://tenderradar.io/terms"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Public CPV pages expose distinct-buyer counts and buyer names on notices, but the reviewed sources do not document canonical buyer entities, aliases, duplicate merging or cross-notice buyer profiles.",
+          "evidence": [
+            {
+              "label": "Example public CPV page",
+              "url": "https://tenderradar.io/cpv/30000000-9"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Company profiles are customer-owned matching configurations. No canonical supplier, incumbent or winner entities, supplier aliases, or cross-award supplier intelligence were established.",
+          "evidence": [
+            {
+              "label": "Product tour",
+              "url": "https://tenderradar.io/demo"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "weak",
+          "detail": "Public CPV category pages label a broad re-tender likelihood based on how often contracts in that category return. No contract-specific end-date calculation, extension evidence, incumbent expiry alert, predicted re-procurement date or confirmed future notice workflow was documented.",
+          "evidence": [
+            {
+              "label": "Example CPV category intelligence",
+              "url": "https://tenderradar.io/cpv/73100000-3"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Document AI can extract requirements, deadlines and evaluation criteria, and bid/no-bid recommendations are in progress, but no durable requirement register with evidence needs, owners, actions, dates or readiness state was found.",
+          "evidence": [
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            },
+            {
+              "label": "Product tour",
+              "url": "https://tenderradar.io/demo"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "Starter, Professional and Enterprise advertise 7-day, 90-day and unlimited match history respectively. Public category pages show all-time notice totals and award counts, but the reviewed product pages do not establish a dedicated award search with winners, award values and linked notice histories.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Example public CPV page",
+              "url": "https://tenderradar.io/cpv/30000000-9"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "moderate",
+          "detail": "Shipped functionality includes multi-tenant workspaces, role-based access, multiple profiles and shared feeds; Professional adds Slack alerts and Enterprise advertises API access plus SSO/SAML. The roadmap still calls REST API access coming soon, so the exact currently usable API boundary needs confirmation.",
+          "evidence": [
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "The privacy policy documents EU-primary storage, named sub-processors, TLS 1.2+, AES-256 at rest, row-level multi-tenant isolation, bcrypt password hashing, access controls and retention periods. Setup is marketed as under five minutes; Professional includes priority support, Enterprise a dedicated account manager, and the contact page promises a 24-hour response during CET business hours. No independent certification, penetration-test report or public status page was found.",
+          "evidence": [
+            {
+              "label": "Privacy Policy",
+              "url": "https://tenderradar.io/privacy"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Product tour",
+              "url": "https://tenderradar.io/demo"
+            },
+            {
+              "label": "Contact and support",
+              "url": "https://tenderradar.io/contact"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The public offer is €79 per month for one-profile Starter, €149 per month for Professional with up to ten profiles, and custom Enterprise. Every plan claims all monitored portals; the 14-day trial requires a card, prices exclude VAT, and terms allow monthly or annual billing although public annual totals were not extractable from the reviewed pricing state.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "https://tenderradar.io/terms"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The legal pages do not disclose a registered entity name, company or chamber number, or physical business address.",
+            "evidence": [
+              {
+                "label": "Terms of Service",
+                "url": "https://tenderradar.io/terms"
+              },
+              {
+                "label": "Privacy Policy",
+                "url": "https://tenderradar.io/privacy"
+              }
+            ]
+          },
+          {
+            "detail": "The provider expressly disclaims exhaustive portal coverage, timeliness and AI accuracy, so source completeness and match quality require trial validation.",
+            "evidence": [
+              {
+                "label": "Terms of Service",
+                "url": "https://tenderradar.io/terms"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer/supplier entity intelligence, contract-specific renewals and a durable requirements-readiness workflow were not established on reviewed pages.",
+            "evidence": [
+              {
+                "label": "Product roadmap",
+                "url": "https://tenderradar.io/roadmap"
+              },
+              {
+                "label": "Example CPV page",
+                "url": "https://tenderradar.io/cpv/73100000-3"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The waitlist describes a closed beta and summer 2026 public launch, while pricing advertises paid plans and a 14-day card-backed trial but still routes plan CTAs to Join Waitlist.",
+            "evidence": [
+              {
+                "label": "Waitlist",
+                "url": "https://tenderradar.io/waitlist"
+              },
+              {
+                "label": "Pricing",
+                "url": "https://tenderradar.io/pricing"
+              }
+            ]
+          },
+          {
+            "detail": "Enterprise pricing says API access is included, while the product roadmap lists REST API access as coming soon.",
+            "evidence": [
+              {
+                "label": "Pricing",
+                "url": "https://tenderradar.io/pricing"
+              },
+              {
+                "label": "Product roadmap",
+                "url": "https://tenderradar.io/roadmap"
+              }
+            ]
+          },
+          {
+            "detail": "Pricing names Contracts Finder as active and public pages show UK records, while the roadmap describes dedicated UK coverage as coming soon.",
+            "evidence": [
+              {
+                "label": "Pricing",
+                "url": "https://tenderradar.io/pricing"
+              },
+              {
+                "label": "Product roadmap",
+                "url": "https://tenderradar.io/roadmap"
+              },
+              {
+                "label": "Public CPV page",
+                "url": "https://tenderradar.io/cpv/30000000-9"
+              }
+            ]
+          },
+          {
+            "detail": "Current first-party pages report different source totals: the About page says 13 sources, pricing says 14 active sources, and public CPV pages market monitoring across 15+ portals.",
+            "evidence": [
+              {
+                "label": "About",
+                "url": "https://tenderradar.io/about"
+              },
+              {
+                "label": "Pricing",
+                "url": "https://tenderradar.io/pricing"
+              },
+              {
+                "label": "Public CPV page",
+                "url": "https://tenderradar.io/cpv/30000000-9"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the contracting legal entity, registration number and business address?",
+          "Is the product generally available now, and which trial or paid-plan functions are live rather than beta?",
+          "Which exact sources are production-active today, with source-specific polling intervals and measured ingestion lag?",
+          "What API endpoints and limits are live today, and why does the roadmap still call REST API access coming soon?",
+          "Can the provider supply a representative recall-and-precision evaluation for our categories and countries?",
+          "Are ISO 27001, SOC 2, penetration-test summaries, DPA and sub-processor change terms available for diligence?"
+        ]
+      },
       "caveats": [
         "Provider claims only; Civensa has not independently tested coverage, matching or alert delivery.",
         "The waitlist page described Tender Radar as a closed beta with a summer 2026 public launch, and pricing calls to action still said Join Waitlist on the reviewed date.",
@@ -422,6 +722,9 @@
         "https://tenderradar.io/demo",
         "https://tenderradar.io/waitlist",
         "https://tenderradar.io/terms",
+        "https://tenderradar.io/privacy",
+        "https://tenderradar.io/about",
+        "https://tenderradar.io/contact",
         "https://tenderradar.io/glossary/dynamic-purchasing-system",
         "https://tenderradar.io/fi/glossary/framework-agreement",
         "https://tenderradar.io/cpv/30000000-9",
@@ -473,8 +776,8 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "partial",
-          "detail": "Profiles can include keywords, sectors and CPV codes, but changes are handled by email and a provider-managed daily brief rather than a documented self-serve saved-keyword alert workflow.",
+          "status": "yes",
+          "detail": "TenderAI builds a managed profile from keywords, sectors and CPV codes and sends matching opportunities in daily briefs; profile changes are handled by email rather than self-serve editing.",
           "evidence": [
             {
               "label": "Product and FAQ",
@@ -593,6 +896,207 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "TenderAI sells a low-touch, per-profile email briefing for UK SMEs: two official feeds are scored against a provider-managed business profile and reduced to a short BID/FLAG/SKIP list. The offer is simple and inexpensive to operate, but the public surface gives little evidence of workflow depth, legal maturity, information-security controls or data infrastructure beyond the daily digest.",
+        "legalAndMaturity": {
+          "evidenceStrength": "weak",
+          "detail": "The reviewed site identifies only the TenderAI brand and brief@tenderai.uk contact, describes 16 active business profiles and a first cohort, and publishes beta-customer testimonials. No registered operator, company number, terms, privacy policy, data-processing terms, physical address or official corporate record was found on the reviewed first-party surface.",
+          "evidence": [
+            {
+              "label": "TenderAI product page",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "TenderAI explicitly targets UK SMEs without dedicated bid teams across IT, construction, facilities management, consulting, training, health and social care, waste and catering. The intended job is to replace 30-60 minutes of daily manual screening with a two-minute email decision list.",
+          "evidence": [
+            {
+              "label": "TenderAI product page",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The current product names exactly two sources: Find a Tender Service and Contracts Finder, aggregated under the Open Government Licence. It claims roughly 100,000 notices per year and broader UK-public-sector coverage, but provides no source inventory beyond those two feeds and no independent completeness evidence.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderai.uk/"
+            },
+            {
+              "label": "Daily digest source note",
+              "url": "https://tenderai.uk/daily/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The provider says it scans opportunities daily, updates the public digest daily and sends customer briefs each morning, with the first brief at 04:00 UTC after profile setup. It does not publish feed polling intervals, deduplication rules, correction handling, status history, measured ingestion lag or a freshness SLA.",
+          "evidence": [
+            {
+              "label": "TenderAI product and delivery FAQ",
+              "url": "https://tenderai.uk/"
+            },
+            {
+              "label": "Public daily digest",
+              "url": "https://tenderai.uk/daily/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "A concierge-built profile records sector, keywords, sectors served, CPV codes and value range; TenderAI says it validates this profile against past tenders and then applies 0-100 BID, FLAG or SKIP scoring with plain-English rationale. Profile changes are provider-managed by email within 24 hours and self-serve editing is only coming soon.",
+          "evidence": [
+            {
+              "label": "How it works and FAQ",
+              "url": "https://tenderai.uk/"
+            },
+            {
+              "label": "Public scored digest",
+              "url": "https://tenderai.uk/daily/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Buyer names appear in tender briefs, but no canonical buyer record, alias handling, duplicate merging, buyer history or cross-notice buyer profile was documented.",
+          "evidence": [
+            {
+              "label": "Public daily digest",
+              "url": "https://tenderai.uk/daily/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "The personalised business profile is the subscriber's matching configuration, not a supplier-intelligence entity. No winner, incumbent, competitor, alias or cross-award supplier model was found.",
+          "evidence": [
+            {
+              "label": "TenderAI product page",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "The reviewed pages do not document published contract-end monitoring, calculated expiry windows, extension tracking, predicted re-tender timing or confirmed future-notice linkage.",
+          "evidence": []
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "BID/FLAG/SKIP rationales help triage opportunities, but no requirement extraction, evidence-gap register, owner/action/deadline workflow or readiness state was documented.",
+          "evidence": [
+            {
+              "label": "TenderAI product page",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "weak",
+          "detail": "TenderAI says it validates a new profile against past tenders the customer would have won, but this is an onboarding method rather than a user-facing history or awards product. No award search, winner/value history, linked notice chain or customer-accessible historical depth was established.",
+          "evidence": [
+            {
+              "label": "How it works",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "weak",
+          "detail": "The operational surface is an emailed top-ten brief with links to original tender pages and provider-managed profile updates. No CSV/API, CRM or messaging integration, assignments, shared workspace, multi-user controls, comments or tender pipeline was documented.",
+          "evidence": [
+            {
+              "label": "TenderAI product page",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "weak",
+          "detail": "Onboarding is a 15-minute call or email exchange, with profile setup promised within hours and ongoing changes by reply email. The reviewed public surface does not state the legal controller, hosting region, authentication model, encryption, retention, sub-processors, tenant isolation, support SLA, security certification or incident route.",
+          "evidence": [
+            {
+              "label": "Concierge onboarding and FAQ",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The paid offer is £99 per month per business profile with unlimited opportunities, cancel-anytime billing and a free first month; a free weekly digest is also offered. The page says no card is charged for 30 days but does not state clearly whether payment details are required to begin, and no annual, team or enterprise schedule is published.",
+          "evidence": [
+            {
+              "label": "TenderAI pricing",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Only Find a Tender and Contracts Finder are currently named, leaving devolved and specialist portal coverage unestablished.",
+            "evidence": [
+              {
+                "label": "Coverage FAQ",
+                "url": "https://tenderai.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "No public legal entity, terms, privacy, security or data-processing documentation was found on the reviewed first-party surface.",
+            "evidence": [
+              {
+                "label": "TenderAI product page",
+                "url": "https://tenderai.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "The product is an email-screening layer with no documented buyer/supplier intelligence, renewals, award history, collaboration, requirements planning or export integration.",
+            "evidence": [
+              {
+                "label": "TenderAI product page",
+                "url": "https://tenderai.uk/"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The homepage says matching is not keyword matching and uses real semantic understanding, while many public daily-digest explanations visibly rely on CPV match, keyword found and value-within-range rules. This may be a hybrid method, but the weighting is not disclosed.",
+            "evidence": [
+              {
+                "label": "Semantic-matching claim",
+                "url": "https://tenderai.uk/"
+              },
+              {
+                "label": "Public daily digest rationales",
+                "url": "https://tenderai.uk/daily/"
+              }
+            ]
+          },
+          {
+            "detail": "The page calls the offer a free first month and says no card is charged for 30 days, but it does not resolve whether a card is collected at signup.",
+            "evidence": [
+              {
+                "label": "TenderAI pricing and CTA",
+                "url": "https://tenderai.uk/"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What legal entity contracts with customers, and where are the terms, privacy policy and data-processing agreement?",
+          "Is a payment card required to start the first free month, and what happens automatically on day 30?",
+          "How often are each of the two official feeds polled, how are duplicates/corrections handled, and what is measured ingestion latency?",
+          "What percentage of the match score comes from semantic analysis versus keywords, CPV codes and value filters?",
+          "Can TenderAI provide recall-and-precision results on a representative historical sample for our sector?",
+          "What hosting, encryption, retention, access-control and incident-response controls protect company-profile data?"
+        ]
+      },
       "caveats": [
         "Provider claims only; Civensa has not independently tested source completeness, semantic scoring or delivery.",
         "The page labels Find a Tender as all UK contracts over £10K and Contracts Finder as MOD plus wider public sector; these characterisations should not be treated as official portal rules.",
@@ -784,8 +1288,8 @@
           ]
         },
         "requirementsPlanning": {
-          "status": "partial",
-          "detail": "The separately priced Bid-Ready Package produces a saved questionnaire, RAG-rated gaps report and personalised 90-day action plan with sequenced actions and target dates. This is a managed add-on rather than a demonstrated self-serve per-tender readiness workflow.",
+          "status": "yes",
+          "detail": "The current, separately priced Bid-Ready Package creates a saved questionnaire, RAG-rated gaps report and personalised 90-day readiness plan with sequenced actions and target dates. It is a managed service rather than a self-serve per-tender workflow.",
           "evidence": [
             {
               "label": "Bid-Ready Package",
@@ -844,8 +1348,8 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
-          "detail": "Tenderbase documents an authenticated search/notice REST API and Google Sheets tender export, while standard plans advertise PDF downloads and integrations. API pricing and customer entitlement are not stated on the normal pricing page.",
+          "status": "yes",
+          "detail": "Tenderbase documents a current authenticated search/notice REST API, Google Sheets tender export, PDF downloads and named integrations. API access is sold through a separate registration flow and its public price is not stated.",
           "evidence": [
             {
               "label": "API help",
@@ -880,8 +1384,8 @@
           ]
         },
         "bidWriting": {
-          "status": "partial",
-          "detail": "Tenderbase offers human end-to-end bid writing, editing and compliance review plus paid quote-request add-ons; the reviewed pages do not establish automated response drafting in the platform.",
+          "status": "yes",
+          "detail": "Tenderbase offers a current human end-to-end bid writing service covering drafting, editing, compliance review and submission support. It is a separately priced managed service, not automated in-platform drafting.",
           "evidence": [
             {
               "label": "Bid writing service",
@@ -937,6 +1441,327 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "Tenderbase combines a low-priced UK/Ireland tender portal with buyer/supplier dashboards, award and pipeline intelligence, team workflow, integrations and separately sold human bid services. Its broadest differentiation is the breadth of adjacent managed services and commercial tooling, while source transparency, organisation identity resolution and record-level data quality remain the key diligence areas.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Tenderbase Ltd is an active English private company, number 14721045, incorporated 10 March 2023, with filed accounts through 31 March 2025. The official register currently gives 41 Long Lynderswood, Basildon as the registered office, whereas the provider terms still state Charles House, Denbigh Road.",
+          "evidence": [
+            {
+              "label": "Companies House overview",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/14721045"
+            },
+            {
+              "label": "Companies House filing history",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/14721045/filing-history"
+            },
+            {
+              "label": "Tenderbase terms",
+              "url": "https://tenderbase.co.uk/terms-and-condition"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The subscription tiers target suppliers searching up to three or five regions, the whole UK, or the UK and Ireland. The wider service estate addresses both established teams needing competitor/buyer/pipeline intelligence and SMEs needing managed bid-readiness or end-to-end writing support.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Bid services",
+              "url": "https://tenderbase.co.uk/services/bid-services"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Tenderbase claims a centralised feed from every portal on the market or thousands of UK and Irish public-sector portals, but does not publish an exhaustive normalized source inventory. Public notice pages directly link records to Public Contracts Scotland and Sell2Wales; the API documentation also describes an approved-publisher ingestion route, without clarifying how much of Tenderbase's own dataset arrives through that interface.",
+          "evidence": [
+            {
+              "label": "Tender management",
+              "url": "https://tenderbase.co.uk/services/tender-management"
+            },
+            {
+              "label": "API integration",
+              "url": "https://tenderbase.co.uk/api-integration"
+            },
+            {
+              "label": "Example Sell2Wales-linked notice",
+              "url": "https://tenderbase.co.uk/tender/the-wye-tour-heritage-trail-app-development-for-wye-valley-aonb/725821"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "weak",
+          "detail": "The product promises daily tailored alerts and exposes open, awarded, expired, PIN and pipeline notices, but the reviewed pages do not publish portal-specific polling intervals, deduplication/correction logic, measured latency or a freshness SLA. Several public notice examples display internally inconsistent dates or repeated generic-looking identifiers/contact fields, making sample-based fidelity testing important.",
+          "evidence": [
+            {
+              "label": "Pricing and daily alerts",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Example notice with publication/deadline fields",
+              "url": "https://tenderbase.co.uk/tender/ai-content-creation-training-support/1612896"
+            },
+            {
+              "label": "Unrelated example with repeated identifiers and contact fields",
+              "url": "https://tenderbase.co.uk/tender/xrm-crm-salesforce-systems-integration-partner/1581455"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Advanced search supports CPV codes, keywords, locations, business type and contract value, while the scoring feature says it analyses a notice against the customer's business profile and produces a fit score. The reviewed pages do not disclose model type, training/evaluation method, feature weighting, feedback loop or measured precision and recall.",
+          "evidence": [
+            {
+              "label": "Advanced tender search",
+              "url": "https://tenderbase.co.uk/services/tender-management/advanced-tender-search"
+            },
+            {
+              "label": "Tender scoring system",
+              "url": "https://tenderbase.co.uk/services/tender-management/tender-scoring-system"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Buyer dashboards aggregate tender counts and values, award patterns, publication trends, suppliers worked with, category mix, historical tenders and decision makers across notices. This is meaningful buyer-page investment, but no first-party documentation was found for canonicalisation, aliases, duplicate merging or organisation-resolution quality controls.",
+          "evidence": [
+            {
+              "label": "Complete buyer intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel"
+            },
+            {
+              "label": "Public buyer profile example",
+              "url": "https://tenderbase.co.uk/buyer/luton-council/8734"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Supplier profiles aggregate awarded values, buyers, sectors, regional footprint and historical awards and are used for competitor tracking. The reviewed pages do not explain how supplier aliases, corporate groups, trading names, duplicate winners or joint awards are resolved.",
+          "evidence": [
+            {
+              "label": "Complete supplier intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            },
+            {
+              "label": "Supplier tracker",
+              "url": "https://tenderbase.co.uk/supplier/tracker"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The pipeline workflow links PINs and tender cycles, records published start/end dates, displays estimated renewal dates, and supports user-configured expiry countdowns for contracts, frameworks and DPS arrangements. The product describes estimated renewal timing rather than proof of a confirmed future notice, so users must distinguish a calculated planning signal from an announced re-procurement.",
+          "evidence": [
+            {
+              "label": "PIN and pipeline tracking",
+              "url": "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline"
+            },
+            {
+              "label": "Pipeline introduction",
+              "url": "https://tenderbase.co.uk/resources/introducing-tenderbase-pipeline-your-proactive-edge-in-public-procurement/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The separately priced £599 Bid-Ready Package is a current managed readiness workflow: a 42-question questionnaire is saved to the account, scored through a RAG report, converted into documented gaps and a personalised 90-day action plan with sequenced actions and target dates. It is organisational readiness support rather than an in-platform requirement-by-requirement plan for every live tender.",
+          "evidence": [
+            {
+              "label": "Bid-Ready Package",
+              "url": "https://tenderbase.co.uk/services/bid-services/bid-ready-package"
+            },
+            {
+              "label": "Tenderbase workflow",
+              "url": "https://tenderbase.co.uk/workflow"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "All subscription tiers advertise access to open, awarded and expired tenders. Buyer and supplier intelligence adds award counts, values, dates, winners, supplier relationships and filtered historical award lists; no maximum lookback period or completeness benchmark is published.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Buyer intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel"
+            },
+            {
+              "label": "Supplier intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Regional Plus and wider plans add users and tender/task allocation. Depending on tier, Tenderbase supplies self-setup guidance or provider setup for Microsoft Teams, HubSpot, Salesforce, WhatsApp and Monday; the site also documents Slack, PDF download, Google Sheets export and a separately registered authenticated REST API, though the API's normal buyer entitlement and price are unclear.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "API help",
+              "url": "https://tenderbase.co.uk/api-integration"
+            },
+            {
+              "label": "REST API and Google Sheets registration",
+              "url": "https://tenderbase.co.uk/restapi-registration"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "Terms state that the service is hosted on AWS, uses SSL and processes payments through Stripe; the privacy policy covers Google API Limited Use. Email/ticket support is standard, UK Wide adds 9-5 phone support with a four-hour email target, and UK+Ireland advertises a two-hour email target plus up-to-five-user onboarding. No independent security certification, penetration-test summary, data-location detail, public status page or detailed incident commitment was found.",
+          "evidence": [
+            {
+              "label": "Terms and security",
+              "url": "https://tenderbase.co.uk/terms-and-condition"
+            },
+            {
+              "label": "Privacy Policy",
+              "url": "https://tenderbase.co.uk/privacy-policy"
+            },
+            {
+              "label": "Pricing and support tiers",
+              "url": "https://tenderbase.co.uk/pricing"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Tenderbase publishes organisation plans from £25 to £55 per month, with annual totals equal to twelve monthly payments and higher tiers adding geography, users, support and setup. A 14-day trial requires valid payment details, applies a temporary refundable £0.50 verification hold and auto-converts; documents, bid-service quote requests, £599 readiness work, £350 strategy sessions, managed bid writing and REST API access sit outside the core subscription.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Signup and trial terms",
+              "url": "https://tenderbase.co.uk/signup"
+            },
+            {
+              "label": "REST API registration",
+              "url": "https://tenderbase.co.uk/restapi-registration"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Broad every-portal and thousands-of-portals claims are not backed by an exhaustive source list, source-specific polling schedule or measured completeness report.",
+            "evidence": [
+              {
+                "label": "Tender management",
+                "url": "https://tenderbase.co.uk/services/tender-management"
+              },
+              {
+                "label": "Pricing",
+                "url": "https://tenderbase.co.uk/pricing"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer and supplier pages are rich, but public documentation does not establish entity resolution, alias management or duplicate-merge quality.",
+            "evidence": [
+              {
+                "label": "Buyer intelligence",
+                "url": "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel"
+              },
+              {
+                "label": "Supplier intelligence",
+                "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+              }
+            ]
+          },
+          {
+            "detail": "Reviewed public tender pages show data-quality warning signs including a publication date after the displayed deadline and repeated identifiers, address and contact values across unrelated notices; buyers should validate record fidelity before relying on analytics.",
+            "evidence": [
+              {
+                "label": "AI training-support notice",
+                "url": "https://tenderbase.co.uk/tender/ai-content-creation-training-support/1612896"
+              },
+              {
+                "label": "Salesforce integration notice",
+                "url": "https://tenderbase.co.uk/tender/xrm-crm-salesforce-systems-integration-partner/1581455"
+              }
+            ]
+          },
+          {
+            "detail": "Several valuable capabilities are separately paid managed services or add-ons rather than included self-serve software, and REST API pricing is not public.",
+            "evidence": [
+              {
+                "label": "Pricing",
+                "url": "https://tenderbase.co.uk/pricing"
+              },
+              {
+                "label": "Bid services",
+                "url": "https://tenderbase.co.uk/services/bid-services"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "Tenderbase terms give Charles House, Denbigh Road as the registered company address, while the current Companies House record gives 41 Long Lynderswood, Basildon.",
+            "evidence": [
+              {
+                "label": "Tenderbase terms",
+                "url": "https://tenderbase.co.uk/terms-and-condition"
+              },
+              {
+                "label": "Companies House overview",
+                "url": "https://find-and-update.company-information.service.gov.uk/company/14721045"
+              }
+            ]
+          },
+          {
+            "detail": "Signup/pricing copy says the 14-day trial has no cost or no payment needed, while subscription terms require card details and a temporary £0.50 verification hold and auto-conversion.",
+            "evidence": [
+              {
+                "label": "Signup",
+                "url": "https://tenderbase.co.uk/signup"
+              },
+              {
+                "label": "Terms and conditions",
+                "url": "https://tenderbase.co.uk/terms-and-condition"
+              }
+            ]
+          },
+          {
+            "detail": "The API page describes a public REST interface but focuses heavily on approved external notice publishers and inbound publishing, while the registration page sells an API subscription; the standard plan entitlement remains unclear.",
+            "evidence": [
+              {
+                "label": "API integration",
+                "url": "https://tenderbase.co.uk/api-integration"
+              },
+              {
+                "label": "REST API registration",
+                "url": "https://tenderbase.co.uk/restapi-registration"
+              },
+              {
+                "label": "Standard pricing",
+                "url": "https://tenderbase.co.uk/pricing"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Provide the complete production source inventory, polling cadence, measured ingestion lag and last-90-day source uptime/completeness figures.",
+          "How are buyer and supplier names canonicalised across aliases, reorganisations, joint ventures and duplicate award records?",
+          "Can Tenderbase explain and correct the repeated identifiers/contact fields and publication-after-deadline examples on public notice pages?",
+          "Which renewal dates are source-published, arithmetically estimated or inferred, and how are extension options represented?",
+          "Which Teams/CRM/Monday/WhatsApp/Slack integrations are native, which are forwarding recipes, and what data can flow in each direction?",
+          "What is the REST API price, entitlement, rate limit, data licence and service-level commitment for supplier customers?",
+          "Can the provider supply DPA, data-location/sub-processor details, independent security assurance and incident-response commitments?"
+        ]
+      },
       "caveats": [
         "Provider claims only; Civensa has not independently tested portal completeness, AI matching, analytics or alert delivery.",
         "Broad every-portal and thousands-of-portals claims are not a substitute for an explicit portal inventory.",
@@ -957,6 +1782,7 @@
         "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel",
         "https://tenderbase.co.uk/services/bid-services/bid-ready-package",
         "https://tenderbase.co.uk/services/bid-services/bid-writing-service",
+        "https://tenderbase.co.uk/services/bid-services",
         "https://tenderbase.co.uk/workflow",
         "https://tenderbase.co.uk/resources/introducing-tenderbase-pipeline-your-proactive-edge-in-public-procurement/",
         "https://tenderbase.co.uk/restapi-registration",
@@ -964,7 +1790,16 @@
         "https://tenderbase.co.uk/buyer/tracker",
         "https://tenderbase.co.uk/supplier/tracker",
         "https://tenderbase.co.uk/tender/grounds-maintenance-and-landscaping-contract/862991",
-        "https://tenderbase.co.uk/tender/the-wye-tour-heritage-trail-app-development-for-wye-valley-aonb/725821"
+        "https://tenderbase.co.uk/tender/the-wye-tour-heritage-trail-app-development-for-wye-valley-aonb/725821",
+        "https://tenderbase.co.uk/tender/ai-content-creation-training-support/1612896",
+        "https://tenderbase.co.uk/tender/xrm-crm-salesforce-systems-integration-partner/1581455",
+        "https://tenderbase.co.uk/buyer/luton-council/8734",
+        "https://tenderbase.co.uk/buyer/glasgow-city-council/3411",
+        "https://tenderbase.co.uk/about-us",
+        "https://tenderbase.co.uk/terms-and-condition",
+        "https://tenderbase.co.uk/privacy-policy",
+        "https://find-and-update.company-information.service.gov.uk/company/14721045",
+        "https://find-and-update.company-information.service.gov.uk/company/14721045/filing-history"
       ]
     },
     {
@@ -1281,6 +2116,293 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "Tenderlake is a mature supplier-side tender-intelligence platform built around multilingual semantic search, workflow distribution, award/contract-end intelligence and cross-notice organisation monitoring. Its strongest defensible depth is the combination of long historical coverage, user-configured buyer/supplier aliasing, sophisticated team routing and current API access, while it intentionally stops before bid writing and detailed requirements planning.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Tenderlake Ltd is an active English private company, number 10295265, incorporated 26 July 2016, with filed accounts through 31 March 2025. The provider terms identify the same company and registered office; a decade-long filing history and current product documentation indicate materially greater operating maturity than launch-stage entrants.",
+          "evidence": [
+            {
+              "label": "Companies House overview",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/10295265"
+            },
+            {
+              "label": "Companies House filing history",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/10295265/filing-history"
+            },
+            {
+              "label": "Tenderlake Terms of Service",
+              "url": "https://www.tenderlake.com/home/ToS"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "Tenderlake explicitly serves serious public-sector suppliers, commercial leaders, central tender-intelligence teams and bid operations that need complete UK/EU visibility, faster qualification, multilingual discovery and distribution across business units. Primary/Pro account design also addresses larger workgroups with central administrators and specialist stakeholders.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Primary vs Pro accounts",
+              "url": "https://www.tenderlake.com/blog/article/121/tenderlake-primary-and-pro-accounts-what-is-the-difference"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "The product claims full UK/EU/EEA coverage, coverage in 192 countries and more than 200,000 buying organisations; the higher plan claims more than 250,000. Pricing distinguishes UK+Ireland from a Europe/UK/International tier, and first-party pages explicitly establish TED, Find a Tender, Contracts Finder, Public Contracts Scotland, Sell2Wales and DOS records, but no single exhaustive portal inventory is published.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "TED alternative",
+              "url": "https://www.tenderlake.com/Alternatives/TED-Tenders-Electronic-Daily-Alternative"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "Saved searches can feed daily alerts and automatic weekday-morning distributions, while the API lets customers check new or updated procurements using stable identifiers and paging. The reviewed pages do not publish source-specific polling cadences, measured ingestion latency, duplicate/correction rules, a public status history or a contractual freshness SLA.",
+          "evidence": [
+            {
+              "label": "Distribution-list workflow",
+              "url": "https://www.tenderlake.com/blog/article/70/efficient-distribution-of-procurement-notices-to-internal-stakeholders"
+            },
+            {
+              "label": "Tenderlake API",
+              "url": "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Customers describe products, services, scope and exclusions in natural language; Tenderlake evaluates semantic capability alignment, explains relevance and concerns, operates across European languages, and learns from user feedback. Primary users configure shared AI searches while Pro users can maintain personal AI searches; keyword search remains available but is not the core method.",
+          "evidence": [
+            {
+              "label": "Product overview and AI matching",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Primary vs Pro accounts",
+              "url": "https://www.tenderlake.com/blog/article/121/tenderlake-primary-and-pro-accounts-what-is-the-difference"
+            },
+            {
+              "label": "Why Tenderlake",
+              "url": "https://www.tenderlake.com/Home/Why-Tenderlake"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Tenderlake provides cross-notice buyer procurement profiles with history, category mix, similar organisations, awards and suppliers. Its monitoring workflow explicitly separates the canonical display organisation from multiple common-name aliases entered to match that buyer across notices; this establishes deliberate identity handling, although the reviewed evidence is user-configured rather than automatic entity resolution.",
+          "evidence": [
+            {
+              "label": "Monitor specific competitors and buyers",
+              "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
+            },
+            {
+              "label": "Public buyer procurement profile",
+              "url": "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Users create a canonical contractor organisation, attach multiple name aliases and monitor awards across those aliases; award reports aggregate winning suppliers to support competitor, partner and customer analysis. Identity quality depends on the aliases configured by the customer, and no automatic corporate-group resolution claim was found.",
+          "evidence": [
+            {
+              "label": "Monitor specific competitors and buyers",
+              "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
+            },
+            {
+              "label": "Contract Awards Report",
+              "url": "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The Contract End Report surfaces previously awarded service and supply contracts whose recorded end dates fall within the next 24 months and alerts users when relevant contracts are nearing expiry. The provider frames this as an opportunity to ask the buyer whether it will re-tender, extend or renew, so the signal is an end-date window rather than confirmation of a future competition.",
+          "evidence": [
+            {
+              "label": "Contract End Report and renewal feature index",
+              "url": "https://www.tenderlake.com/blog/index?tag=New+Feature"
+            },
+            {
+              "label": "Product plan-ahead description",
+              "url": "https://www.tenderlake.com/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Tenderlake supports relevance explanations, concern flags, qualify-in/out stages and requests from stakeholders to a central team, but no durable requirement-level workflow with evidence gaps, owners, actions, deadlines or readiness state was documented. The provider expressly positions itself as intelligence rather than bid writing.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Tenderlake workflow",
+              "url": "https://www.tenderlake.com/blog/article/79/working-with-tenderlake-pro"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "Published plans include more than ten years of history, award-update subscriptions, industry contract-award reports and contract-end reports. Documentation also describes related-notice chains linking prior information notices, corrections and subsequent awards, and public buyer profiles expose historical tenders, awards and suppliers.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Contract Awards Report",
+              "url": "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report"
+            },
+            {
+              "label": "Tenderlake Academy notice history index",
+              "url": "https://www.tenderlake.com/Blog/Index"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Primary administrators configure searches, folders, reports, exports, Teams/Slack connections, email lists and automated distribution; Pro users receive shared folders, submit requests, provide feedback and run personal AI searches. Distribution lists, bid-interest coordination and folder-based routing support larger teams, while the current customer-scoped REST API is versioned and OpenAPI-documented but remains labelled beta.",
+          "evidence": [
+            {
+              "label": "Primary vs Pro accounts",
+              "url": "https://www.tenderlake.com/blog/article/121/tenderlake-primary-and-pro-accounts-what-is-the-difference"
+            },
+            {
+              "label": "Distribution lists",
+              "url": "https://www.tenderlake.com/blog/article/70/efficient-distribution-of-procurement-notices-to-internal-stakeholders"
+            },
+            {
+              "label": "Tenderlake API",
+              "url": "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "The privacy policy says passwords are stored encrypted, connections use SSL and computers/storage are in the UK; API keys are customer-scoped and permissioned. The public offer includes a seven-day no-card trial, demonstrations, Academy tutorials and direct support, but no current sub-processor list, AI data-use boundary, independent certification, penetration-test summary, incident SLA or public status page was found; the privacy policy predates the current AI/API product surface.",
+          "evidence": [
+            {
+              "label": "Privacy Policy",
+              "url": "https://www.tenderlake.com/home/privacy"
+            },
+            {
+              "label": "Tenderlake API",
+              "url": "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines"
+            },
+            {
+              "label": "Pricing and trial",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "UK+Ireland is £325 month-to-month or £249 per month billed annually; Europe/UK/International+ is £546 month-to-month or £396 per month billed annually, with a bespoke tier available. Plans bundle users, AI/keyword searches, alerts, history, renewals, awards, competitor tracking, integrations and API; invoice billing is offered separately at the undiscounted monthly-plan rate.",
+          "evidence": [
+            {
+              "label": "Tenderlake pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Very broad full-coverage and country/organisation claims are not backed by a single exhaustive portal inventory or public source-level freshness metrics.",
+            "evidence": [
+              {
+                "label": "Product overview",
+                "url": "https://www.tenderlake.com/"
+              },
+              {
+                "label": "Pricing",
+                "url": "https://www.tenderlake.com/pricing/index"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer and supplier alias handling is explicit but user-configured; automatic entity resolution, corporate-family modelling and duplicate-merge accuracy are not established.",
+            "evidence": [
+              {
+                "label": "Organisation monitoring workflow",
+                "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
+              }
+            ]
+          },
+          {
+            "detail": "Contract-end alerts indicate expiry risk, not a confirmed extension, renewal or re-tender event.",
+            "evidence": [
+              {
+                "label": "Renewal feature index",
+                "url": "https://www.tenderlake.com/blog/index?tag=New+Feature"
+              }
+            ]
+          },
+          {
+            "detail": "The service does not write bids and the reviewed workflow does not establish detailed requirement/evidence readiness planning or buyer-authored document intelligence.",
+            "evidence": [
+              {
+                "label": "Product overview",
+                "url": "https://www.tenderlake.com/"
+              }
+            ]
+          },
+          {
+            "detail": "The published privacy and terms pages are materially older than current AI, API and connector features and do not disclose a current processor/security assurance package.",
+            "evidence": [
+              {
+                "label": "Privacy Policy",
+                "url": "https://www.tenderlake.com/home/privacy"
+              },
+              {
+                "label": "Terms of Service",
+                "url": "https://www.tenderlake.com/home/ToS"
+              },
+              {
+                "label": "Current API announcement",
+                "url": "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "Pricing presents API access as an included plan feature, while the current API announcement calls it a beta available only to customers on the latest plans and says pricing may evolve after the no-extra-charge beta period.",
+            "evidence": [
+              {
+                "label": "Pricing",
+                "url": "https://www.tenderlake.com/pricing/index"
+              },
+              {
+                "label": "API beta announcement",
+                "url": "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Provide the exhaustive source inventory, per-source polling cadence, last-90-day ingestion lag and completeness figures.",
+          "How much buyer/supplier entity resolution is automatic versus dependent on customer-maintained aliases, and how are reorganisations or corporate groups handled?",
+          "Exactly which source field drives Contract End Report dates, how are extension options treated, and are confidence/provenance labels shown?",
+          "Which plan/account types can use the API beta, what are its limits, and what pricing or endpoint changes are expected at general availability?",
+          "Can Tenderlake supply a current DPA, sub-processor list, AI model/data-use statement, security architecture and independent assurance evidence?",
+          "What measured recall and precision does AI Search achieve for our services across the languages and countries we target?"
+        ]
+      },
       "caveats": [
         "Provider claims only; Civensa has not independently tested source completeness, AI matching, renewal signals or alert delivery.",
         "The reviewed pages make broad full-coverage claims but do not publish one normalized, exhaustive portal inventory.",
@@ -1297,6 +2419,16 @@
         "https://www.tenderlake.com/blog/index?tag=New+Feature",
         "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers",
         "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report",
+        "https://www.tenderlake.com/blog/article/70/efficient-distribution-of-procurement-notices-to-internal-stakeholders",
+        "https://www.tenderlake.com/blog/article/79/working-with-tenderlake-pro",
+        "https://www.tenderlake.com/blog/article/121/tenderlake-primary-and-pro-accounts-what-is-the-difference",
+        "https://www.tenderlake.com/news/article/330/tenderlake-api-beta-bring-procurement-intelligence-into-your-internal-systems-and-ai-pipelines",
+        "https://www.tenderlake.com/Alternatives/TED-Tenders-Electronic-Daily-Alternative",
+        "https://www.tenderlake.com/Blog/Index",
+        "https://www.tenderlake.com/home/privacy",
+        "https://www.tenderlake.com/home/ToS",
+        "https://find-and-update.company-information.service.gov.uk/company/10295265",
+        "https://find-and-update.company-information.service.gov.uk/company/10295265/filing-history",
         "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420",
         "https://www.tenderlake.com/Notice/Tender/1dac79ea-cdae-4c51-bc77-43a041cea6ad/human-in-the-loop-triage-exploration/f7e709d6-9401-47b5-b5b9-967600d88689?lg=en",
         "https://www.tenderlake.com/notice/tender/7c2b304a-f562-4784-8d02-923b0d2092a3/macduff-harbour-fishmarket-pier-concrete-repairs-and-other-remedial-works/f13a4a1f-9920-46be-800c-41c1778fc020?lg=EN",
@@ -1411,7 +2543,7 @@
         },
         "buyerRequirements": {
           "status": "partial",
-          "detail": "Pro surfaces compliance signals, proof gaps and clarification questions and keeps route and likely answer burden visible; this is plan-limited and no recurring buyer-requirements profile was established.",
+          "detail": "Pro surfaces notice-level compliance signals, proof gaps, clarification questions, route and likely answer burden, but it does not establish extracted participation/evaluation criteria or a normalized recurring buyer-requirements register.",
           "evidence": [
             {
               "label": "Product overview",
@@ -1470,8 +2602,8 @@
           "evidence": []
         },
         "exportsApi": {
-          "status": "partial",
-          "detail": "Team accounts can discuss custom integrations or delivery routes, but CRM integration and bid-library exports are explicitly not normal self-serve features.",
+          "status": "yes",
+          "detail": "Custom Team accounts explicitly include custom integrations or delivery routes. CRM integration and bid-library exports are not standard self-serve features and require a Team discussion.",
           "evidence": [
             {
               "label": "Product FAQ",
@@ -1484,8 +2616,8 @@
           ]
         },
         "collaboration": {
-          "status": "partial",
-          "detail": "Custom Team accounts support multiple users, profiles or departments; Starter and Pro user limits and collaborative assignments/comments are not publicly stated.",
+          "status": "yes",
+          "detail": "Custom Team accounts support multiple users, profiles or departments. Starter and Pro user limits and assignment/comment mechanics are not publicly stated.",
           "evidence": [
             {
               "label": "Pricing",
@@ -1565,6 +2697,287 @@
           ]
         }
       ],
+      "deepAudit": {
+        "researchSummary": "TenderLead sells a focused UK pre-bid qualification layer: three official feeds are polled, deduplicated and scored into source-linked BID/SKIP weekday briefs, with a dashboard, proof-gap prompts and pipeline on Pro. Its clearest depth is transparent ingestion timing and evidence-aware qualification for small specialist suppliers; award/renewal/entity intelligence and mature integrations remain limited or custom.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "TenderLead is operated by Studea Limited, an active English private company, number 17228961, incorporated 19 May 2026; its first accounts are not yet due. TenderLead publishes current June 2026 privacy and paid-service terms, but older first-party terms still describe a waitlist-only surface, confirming a very recent transition from preview to commercial service.",
+          "evidence": [
+            {
+              "label": "Companies House overview",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/17228961"
+            },
+            {
+              "label": "TenderLead company information",
+              "url": "https://tenderlead.co.uk/legal"
+            },
+            {
+              "label": "Current paid-service terms",
+              "url": "https://tenderlead.co.uk/terms"
+            },
+            {
+              "label": "Legacy waitlist terms",
+              "url": "https://tenderlead.co.uk/terms.html"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The service targets UK suppliers, consultants and specialist contractors without a full-time tender-research team. IT, software, cloud, cyber and MSP firms are active clusters, with construction, M&E, facilities, design consultancy and specialist contractors also in scope; the core job is to protect bid-team time before drafting starts.",
+          "evidence": [
+            {
+              "label": "About TenderLead",
+              "url": "https://tenderlead.co.uk/about-tenderlead"
+            },
+            {
+              "label": "TenderLead product page",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "TenderLead explicitly ingests Contracts Finder, Find a Tender and Public Contracts Scotland. Sell2Wales is explicitly not directly ingested while its API is unavailable; the provider says Welsh notices are instead picked up through Find a Tender. Team accounts may discuss custom sources, but no additional production source is named.",
+          "evidence": [
+            {
+              "label": "Coverage FAQ",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Team pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "The three named feeds are polled hourly and deduplicated overnight. Weekday briefs are sent early Monday-Friday, weekend notices roll into Monday, and weak-fit notices remain scored in the dashboard; no contractual freshness SLA, public status history or correction/retraction methodology is published.",
+          "evidence": [
+            {
+              "label": "Coverage and ingestion FAQ",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Pricing and delivery cadence",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "TenderLead scores each notice against the customer's services, buyer preferences, procurement routes, proof, compliance signals, value/deadline constraints, saved no-bid rules and feedback. It exposes BID/SKIP reasoning rather than only a number, retains filtered notices for audit and uses relevant/not-for-us feedback to tune subsequent scoring.",
+          "evidence": [
+            {
+              "label": "Product workflow and scoring",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Sample qualification scorecard",
+              "url": "https://tenderlead.co.uk/sample-tender-scorecard"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Buyer context and named-buyer market watch are scoring inputs, but no canonical buyer entity, alias handling, duplicate merging, cross-notice buyer profile, spend history or decision-maker model was documented.",
+          "evidence": [
+            {
+              "label": "Pricing and buyer context",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "The customer's company profile is a matching configuration. No supplier/winner entity, incumbent history, competitor profile, alias handling or cross-award supplier aggregation was established.",
+          "evidence": [
+            {
+              "label": "TenderLead product page",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Pro includes pipeline and named-buyer/sector market watch, but the reviewed pages do not document contract-end dates, calculated expiry windows, extension evidence, predicted re-tender timing or confirmed future-notice linkage.",
+          "evidence": [
+            {
+              "label": "Pro pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "The signed-in Pro app attaches clarification questions, evidence gaps, deadline risk, no-bid rules and a first task to scored tenders; a copyable kickoff note includes recommendation, questions, gaps and a next-review date/owner. This is useful pre-bid action prompting, but the reviewed live product does not establish a persistent requirement-by-requirement evidence register with readiness state.",
+          "evidence": [
+            {
+              "label": "Clarification questions and evidence gaps",
+              "url": "https://tenderlead.co.uk/tender-clarification-questions-evidence-gaps"
+            },
+            {
+              "label": "Sample qualification scorecard",
+              "url": "https://tenderlead.co.uk/sample-tender-scorecard"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "Starter and Pro include an unspecified history and the product retains reviewed opportunities and decisions in dashboard/history views. No public lookback period, award-notice search, winner/value intelligence, linked notice chain or incumbent history was established.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            },
+            {
+              "label": "UK IT tender-alert workflow",
+              "url": "https://tenderlead.co.uk/uk-it-tender-alerts"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "moderate",
+          "detail": "Pro adds dashboard, saved no-bid signals, deadline tracking, pipeline and weekly market watch; custom Team accounts support multiple users, profiles/departments, custom sources, delivery routes and integrations. The provider says CRM integration and bid-library exports are not standard self-serve features, and no specific production connector, API, assignment or comment mechanism is documented.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            },
+            {
+              "label": "Product FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "Privacy documentation says customer profiles, feedback and bid data are not used to tune other customers; Stripe handles payments, deletion is available by email, and public analytics uses Plausible/Ahrefs plus consent-gated GA4. Preview and Pro trials require no card and Team includes human setup, but hosting/data location, encryption, access controls, retention periods, sub-processors, DPA, independent assurance, incident commitments and a public status page are not documented.",
+          "evidence": [
+            {
+              "label": "Privacy Policy",
+              "url": "https://tenderlead.co.uk/privacy"
+            },
+            {
+              "label": "Cookies and analytics",
+              "url": "https://tenderlead.co.uk/cookies"
+            },
+            {
+              "label": "Pricing and onboarding",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The funnel starts with one free personalised preview and a seven-day no-card Pro trial. Starter is £29 per month, Pro £79 per month and Team custom, all without annual lock-in; one subscription covers one company profile, and no VAT is currently charged. Pro contains qualification workflow while Starter is deliberately a lighter alert-only digest.",
+          "evidence": [
+            {
+              "label": "TenderLead pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            },
+            {
+              "label": "Current paid-service terms",
+              "url": "https://tenderlead.co.uk/terms"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Only three production sources are named, and Sell2Wales is not directly ingested while its API is unavailable.",
+            "evidence": [
+              {
+                "label": "Coverage FAQ",
+                "url": "https://tenderlead.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "No buyer/supplier entity intelligence, award database or contract-specific renewal method is established.",
+            "evidence": [
+              {
+                "label": "Product and FAQ",
+                "url": "https://tenderlead.co.uk/"
+              },
+              {
+                "label": "Pricing",
+                "url": "https://tenderlead.co.uk/pricing"
+              }
+            ]
+          },
+          {
+            "detail": "The bid-writing Workspace remains gated/pilot and drafting, CRM integration and bid-library exports are not sold as normal self-serve features.",
+            "evidence": [
+              {
+                "label": "Sample bid pack",
+                "url": "https://tenderlead.co.uk/sample-bid-pack"
+              },
+              {
+                "label": "UK IT tender-alert product boundary",
+                "url": "https://tenderlead.co.uk/uk-it-tender-alerts"
+              }
+            ]
+          },
+          {
+            "detail": "Security and data-governance documentation is transparent about cross-customer use and analytics but does not establish enterprise-grade hosting, encryption, retention, DPA, certification or incident controls.",
+            "evidence": [
+              {
+                "label": "Privacy Policy",
+                "url": "https://tenderlead.co.uk/privacy"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The current coverage FAQ says three production sources, while the illustrative homepage sample labels its run as using four sources. Because the sample is explicitly illustrative, it should not be treated as current coverage evidence.",
+            "evidence": [
+              {
+                "label": "Homepage sample and current FAQ",
+                "url": "https://tenderlead.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "Current terms cover live Starter/Pro paid access, while the still-public legacy terms.html page says the site is waitlist-only and any future paid service would require a separate agreement.",
+            "evidence": [
+              {
+                "label": "Current terms",
+                "url": "https://tenderlead.co.uk/terms"
+              },
+              {
+                "label": "Legacy terms",
+                "url": "https://tenderlead.co.uk/terms.html"
+              }
+            ]
+          },
+          {
+            "detail": "Some market-guide copy describes evidence-aware drafting and structured drafting workflow, while current pricing and product FAQs say drafting is not a normal sellable self-serve feature and the bid-writing Workspace remains gated.",
+            "evidence": [
+              {
+                "label": "Public procurement software guide",
+                "url": "https://tenderlead.co.uk/public-procurement-software-for-bidders"
+              },
+              {
+                "label": "Current product FAQ",
+                "url": "https://tenderlead.co.uk/"
+              },
+              {
+                "label": "UK IT tender-alert boundary",
+                "url": "https://tenderlead.co.uk/uk-it-tender-alerts"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Can the provider supply standard customer terms, a DPA and continuity assurances appropriate to a newly incorporated operator?",
+          "What measured ingestion lag, duplicate rate and correction handling apply to each of the three production sources?",
+          "How is scoring evaluated for false negatives, and can a customer audit all notices excluded by its saved no-bid rules?",
+          "Which exact Team integrations and delivery routes are currently live, and what are their setup, export and support boundaries?",
+          "What data fields and time window are included in History, and is any award/renewal intelligence planned?",
+          "Can TenderLead provide hosting region, encryption, retention, access-control, sub-processor, backup and incident-response documentation?",
+          "Is the bid-writing Workspace purchasable, and if so which elements are production, pilot or planned?"
+        ]
+      },
       "caveats": [
         "Provider claims only; Civensa has not independently tested portal completeness, scoring, source polling or alert delivery.",
         "Sell2Wales is explicitly not directly ingested while its API is unavailable; the provider says Welsh notices are covered through Find a Tender.",
@@ -1577,7 +2990,16 @@
         "https://tenderlead.co.uk/tender-clarification-questions-evidence-gaps",
         "https://tenderlead.co.uk/sample-bid-pack",
         "https://tenderlead.co.uk/universities-it-tenders",
-        "https://tenderlead.co.uk/uk-it-tender-alerts"
+        "https://tenderlead.co.uk/uk-it-tender-alerts",
+        "https://tenderlead.co.uk/about-tenderlead",
+        "https://tenderlead.co.uk/legal",
+        "https://tenderlead.co.uk/privacy",
+        "https://tenderlead.co.uk/cookies",
+        "https://tenderlead.co.uk/terms",
+        "https://tenderlead.co.uk/terms.html",
+        "https://find-and-update.company-information.service.gov.uk/company/17228961",
+        "https://tenderlead.co.uk/sample-tender-scorecard",
+        "https://tenderlead.co.uk/public-procurement-software-for-bidders"
       ]
     }
   ]

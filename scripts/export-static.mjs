@@ -1,10 +1,14 @@
 import { spawn } from "node:child_process";
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const port = "4173";
 const origin = `http://127.0.0.1:${port}`;
 const outputDir = path.resolve("site-dist");
+const providerAuditRoutes = (await Promise.all([1, 2, 3, 4, 5, 6].map(async (number) => {
+  const batch = JSON.parse(await readFile(path.resolve(`docs/provider-research-batch-${number}.json`), "utf8"));
+  return batch.providers.map((provider) => `/tools/tender-alerts/${provider.slug}/`);
+}))).flat();
 const routes = [
   "/",
   "/about/",
@@ -34,6 +38,7 @@ const routes = [
   "/tools/bid-writing-software/",
   "/tools/bid-writing-services/",
   "/tools/official-portals/",
+  ...providerAuditRoutes,
 ];
 
 const server = spawn(process.execPath, ["dist/standalone/server.js"], {

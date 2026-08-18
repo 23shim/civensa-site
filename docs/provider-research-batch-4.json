@@ -121,8 +121,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "Growth and higher plans provide competitor and supplier tracking. Users can search a supplier to see award history and, where covered, payments across buyers; the feature is not included on Essential.",
+          "status": "yes",
+          "detail": "Growth and higher plans provide deliberately built supplier intelligence: users can search a supplier across notices to see awards, buyers, contract values, dates, categories and, where covered, cross-buyer payments. PSIP also documents matching award suppliers to Companies House records.",
           "evidence": [
             {
               "label": "PSIP competitor tracking",
@@ -163,8 +163,8 @@
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "partial",
-          "detail": "Growth and higher plans extract mandatory requirements into a compliance checklist and structure drafting against tender requirements and evaluation criteria; this is not included on Essential.",
+          "status": "yes",
+          "detail": "Growth and higher plans extract mandatory requirements into a compliance checklist and structure drafting against tender requirements and evaluation criteria. The capability is complete but plan-gated; Essential excludes it.",
           "evidence": [
             {
               "label": "PSIP bid workspace",
@@ -219,8 +219,8 @@
           ]
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "Growth and higher plans track named suppliers, their wins and approaching expiries and can alert on those events; Essential excludes competitor and supplier tracking.",
+          "status": "yes",
+          "detail": "Growth and higher plans track named suppliers, their wins and approaching expiries and can alert on those events. The capability is complete but plan-gated; Essential excludes it.",
           "evidence": [
             {
               "label": "PSIP competitor tracking",
@@ -233,8 +233,8 @@
           ]
         },
         "exportsApi": {
-          "status": "partial",
-          "detail": "Growth includes CSV export. Professional adds API export, CRM integrations for Salesforce and HubSpot, and Zapier or Make delivery; Essential has none of these listed.",
+          "status": "yes",
+          "detail": "Growth includes CSV export. Professional adds API export, CRM integrations for Salesforce and HubSpot, and Zapier or Make delivery. These are complete export and integration routes despite their plan gates.",
           "evidence": [
             {
               "label": "PSIP pricing",
@@ -247,8 +247,8 @@
           ]
         },
         "collaboration": {
-          "status": "partial",
-          "detail": "Bid Agency and Enterprise include unlimited users, team management and team or multi-client workspaces. Standard-plan user counts and shared-workspace access are not publicly stated.",
+          "status": "yes",
+          "detail": "Bid Agency and Enterprise include unlimited users, team management and team or multi-client workspaces. The collaboration capability is complete on those current custom plans; standard-plan user counts remain unpublished.",
           "evidence": [
             {
               "label": "PSIP pricing",
@@ -257,8 +257,8 @@
           ]
         },
         "bidWriting": {
-          "status": "partial",
-          "detail": "Growth and higher plans include evidence-gated drafting for executive summaries, method statements, win themes, compliance checklists and clarification questions. Essential excludes the bid workspace and drafting.",
+          "status": "yes",
+          "detail": "Growth and higher plans include evidence-gated drafting for executive summaries, method statements, win themes, compliance checklists and clarification questions. The capability is complete but plan-gated; Essential excludes it.",
           "evidence": [
             {
               "label": "PSIP bid workspace",
@@ -355,6 +355,293 @@
         "The standard-plan pages do not state included user counts or additional-seat prices. Unlimited users are stated only for Bid Agency and Enterprise.",
         "AI and generated bid material still require human verification against the original notice and the supplier's evidence."
       ],
+      "deepAudit": {
+        "researchSummary": "PSIP sells a comparatively deep UK procurement-intelligence platform rather than a simple alert feed. Its most defensible depth is the documented ingestion and entity-enrichment pipeline, cross-source buyer and supplier intelligence, published-end-date expiry tracking, and bid workspace; several workflow and integration capabilities are gated to Growth, Professional or custom plans.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "PSIP is operated by BN Solutions, identified in its privacy policy as Scottish company SC318654 and ICO registrant ZC123196. Companies House records BN SOLUTIONS LIMITED as active and incorporated on 15 March 2007, providing a substantially longer legal operating history than the 2026 product pages alone imply.",
+          "evidence": [
+            {
+              "label": "PSIP privacy policy",
+              "url": "https://psip.co.uk/privacy"
+            },
+            {
+              "label": "Companies House: BN Solutions Limited",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/SC318654"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The product is positioned for UK public-sector suppliers, especially SMEs, internal bid teams and bid consultancies that need opportunity discovery, qualification, competitor and buyer research, renewal prospecting and bid drafting. Sector pages cover IT and cybersecurity, facilities management, professional services, construction and healthcare, while custom plans address agencies and larger teams.",
+          "evidence": [
+            {
+              "label": "PSIP about",
+              "url": "https://psip.co.uk/about"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "PSIP explicitly documents Find a Tender and Contracts Finder API ingestion, Public Contracts Scotland ingestion, and portal ingestion for Sell2Wales and eTendersNI. It separates procurement notices from published spending files, retains official-source links and describes cross-portal deduplication using source reference identifiers rather than relying on an unqualified all-portals claim.",
+          "evidence": [
+            {
+              "label": "PSIP data coverage",
+              "url": "https://psip.co.uk/coverage"
+            },
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "strong",
+          "detail": "The coverage documentation describes scheduled ingestion, schema validation, source-reference deduplication, status-change processing and traceability back to the original notice. Public pages say source data is updated daily, while alert delivery itself is daily, four-hourly or hourly by plan; no per-source uptime dashboard or failed-ingestion history was found.",
+          "evidence": [
+            {
+              "label": "PSIP data coverage and pipeline",
+              "url": "https://psip.co.uk/coverage"
+            },
+            {
+              "label": "PSIP pricing and alert cadence",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "PSIP documents explainable 1-10 AI relevance scoring against a supplier's business profile, including semantic capability matching when buyer terminology differs. The bid workspace adds a bid/no-bid scorecard, strengths, red flags and clarification questions; scoring is decision support and the provider requires source verification.",
+          "evidence": [
+            {
+              "label": "PSIP AI relevance scoring",
+              "url": "https://psip.co.uk/features/ai-relevance-scoring"
+            },
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Buyer profiles aggregate notices, awards, suppliers, spending and expiries. PSIP also documents buyer enrichment using NHS ODS and GIAS identifiers, normalized source references and a validated data pipeline, which is concrete identity investment beyond a buyer-name filter or display page.",
+          "evidence": [
+            {
+              "label": "PSIP buyer and spend intelligence",
+              "url": "https://psip.co.uk/features/buyer-intelligence"
+            },
+            {
+              "label": "PSIP data coverage and identity handling",
+              "url": "https://psip.co.uk/coverage"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Supplier intelligence crosses award notices, buyers, categories and published payments. PSIP explicitly says it queries the Companies House API to identify supplier organisations named in award notices, providing identity-enrichment evidence in addition to the cross-notice supplier histories.",
+          "evidence": [
+            {
+              "label": "PSIP competitor tracking",
+              "url": "https://psip.co.uk/features/competitor-tracking"
+            },
+            {
+              "label": "PSIP privacy policy: Companies House enrichment",
+              "url": "https://psip.co.uk/privacy"
+            },
+            {
+              "label": "PSIP data coverage",
+              "url": "https://psip.co.uk/coverage"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The expiry tracker is based on published contract end dates, grouped into 30, 90, 180 and 365-day windows and paired with buyer, incumbent and value where available. PSIP expressly qualifies this as a floor rather than the whole market because only a subset of awards contains usable end dates; extensions and missing earlier notices can change the commercial reality, and the pages do not claim confirmed re-tenders.",
+          "evidence": [
+            {
+              "label": "PSIP contract expiry tracker",
+              "url": "https://psip.co.uk/features/contract-expiry-tracker"
+            },
+            {
+              "label": "PSIP data coverage",
+              "url": "https://psip.co.uk/coverage"
+            },
+            {
+              "label": "PSIP home renewal coverage qualification",
+              "url": "https://psip.co.uk/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Growth and higher plans turn tender material into a compliance checklist, red flags, clarification questions, missing-evidence placeholders, deadlines and a durable bid pipeline. This is materially more than extraction, but the public documentation does not establish per-requirement owners, assigned remediation actions or a persistent readiness state, so normalized requirements planning remains partial.",
+          "evidence": [
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "PSIP exposes award winners, buyers, values, dates, durations and categories, with searchable supplier history and buyer-spend context. Standard-plan history is explicitly tiered at six months on Essential, twelve months on Growth and full history on Professional; published-spend depth varies by covered authority and source publication quality.",
+          "evidence": [
+            {
+              "label": "PSIP competitor tracking",
+              "url": "https://psip.co.uk/features/competitor-tracking"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            },
+            {
+              "label": "PSIP buyer intelligence",
+              "url": "https://psip.co.uk/features/buyer-intelligence"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "The product documents a staged bid pipeline and document-aware bid workspace. Growth adds CSV and Slack or Teams delivery, Professional adds API export, Salesforce, HubSpot, Zapier and Make routes, and custom agency or enterprise plans add unlimited users, team management and multi-client workspaces.",
+          "evidence": [
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            },
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            },
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "The privacy policy names subprocessors, purposes and transfer mechanisms and documents TLS 1.2+, encryption at rest, hashed passwords, encrypted webhook credentials, row-level account isolation, restricted production access and monitoring. Supabase database and authentication are stated to be in Dublin; a responsible-disclosure page promises acknowledgement within two business days and an initial response within ten, but no public ISO 27001, SOC 2, Cyber Essentials certificate, customer SLA, backup objective or live status page was found.",
+          "evidence": [
+            {
+              "label": "PSIP privacy and security controls",
+              "url": "https://psip.co.uk/privacy"
+            },
+            {
+              "label": "PSIP security disclosure",
+              "url": "https://psip.co.uk/security"
+            },
+            {
+              "label": "PSIP terms",
+              "url": "https://psip.co.uk/terms"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Three public standard tiers run from £199 to £1,199 per month, with lower monthly-equivalent rates when billed annually, plus custom Bid Agency and Enterprise tiers. Prices exclude VAT; the Growth trial is fourteen days without a card. Terms provide monthly or annual advance billing, cancellation at period end and a liability cap based on fees paid in the preceding twelve months; standard-plan seat counts and usage limits are not public.",
+          "evidence": [
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            },
+            {
+              "label": "PSIP terms",
+              "url": "https://psip.co.uk/terms"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Expiry coverage is constrained to awards with a usable published end date and should be treated as prospecting evidence, not proof that a re-tender will occur; extensions and missing predecessor records can alter the date.",
+            "evidence": [
+              {
+                "label": "PSIP contract expiry tracker",
+                "url": "https://psip.co.uk/features/contract-expiry-tracker"
+              },
+              {
+                "label": "PSIP home coverage qualification",
+                "url": "https://psip.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer-spend intelligence is narrower and more publication-dependent than national tender coverage; a prospect may not have equivalent payment depth for every authority.",
+            "evidence": [
+              {
+                "label": "PSIP data coverage",
+                "url": "https://psip.co.uk/coverage"
+              }
+            ]
+          },
+          {
+            "detail": "Standard-tier user allowances, overage rules and API or AI usage limits are not disclosed on the public pricing page.",
+            "evidence": [
+              {
+                "label": "PSIP pricing",
+                "url": "https://psip.co.uk/pricing"
+              }
+            ]
+          },
+          {
+            "detail": "The bid workspace does not publicly document requirement-level owners, remediation actions and a durable readiness state, so it should not be represented as complete pre-bid requirements planning.",
+            "evidence": [
+              {
+                "label": "PSIP bid workspace",
+                "url": "https://psip.co.uk/features/bid-workspace"
+              }
+            ]
+          },
+          {
+            "detail": "AI scores, analyst answers and generated bid material require human verification; the terms do not warrant the accuracy or completeness of source data.",
+            "evidence": [
+              {
+                "label": "PSIP privacy policy",
+                "url": "https://psip.co.uk/privacy"
+              },
+              {
+                "label": "PSIP terms",
+                "url": "https://psip.co.uk/terms"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "First-party pages display materially different award-corpus totals without a common snapshot date. These may be live counts captured at different times, but they cannot be treated as one fixed coverage figure without clarification.",
+            "evidence": [
+              {
+                "label": "PSIP home",
+                "url": "https://psip.co.uk/"
+              },
+              {
+                "label": "PSIP about",
+                "url": "https://psip.co.uk/about"
+              },
+              {
+                "label": "PSIP features",
+                "url": "https://psip.co.uk/features"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What are the measured ingestion latency, failure rate and recovery process for each named source, and can customers see source-health incidents?",
+          "How are buyer aliases, reorganisations and supplier-name collisions reviewed, and what confidence or correction process applies to Companies House matches?",
+          "How does the expiry tracker detect extensions, early termination and confirmed successor notices, and what proportion of signals historically became procurements?",
+          "Which standard-plan user counts, API limits, AI fair-use limits and additional-seat charges apply in the signed order form?",
+          "Can PSIP provide its current DPA, full subprocessor schedule, penetration-test summary, backup and recovery objectives and any independent security certifications?",
+          "Can the bid workspace assign owners and remediation actions to each requirement and maintain an auditable readiness state, or is that work managed outside PSIP?"
+        ]
+      },
       "sourceUrls": [
         "https://psip.co.uk/",
         "https://psip.co.uk/features",
@@ -366,7 +653,12 @@
         "https://psip.co.uk/features/competitor-tracking",
         "https://psip.co.uk/features/ccs-frameworks",
         "https://psip.co.uk/features/bid-workspace",
-        "https://psip.co.uk/coverage"
+        "https://psip.co.uk/coverage",
+        "https://psip.co.uk/about",
+        "https://psip.co.uk/privacy",
+        "https://psip.co.uk/terms",
+        "https://psip.co.uk/security",
+        "https://find-and-update.company-information.service.gov.uk/company/SC318654"
       ]
     },
     {
@@ -476,8 +768,8 @@
           ]
         },
         "renewalSignals": {
-          "status": "partial",
-          "detail": "Pro includes contract expiry and renewal signals. The public supplier directory also describes finding where supplier contracts are up for renewal.",
+          "status": "yes",
+          "detail": "Pro includes contract expiry and renewal signals, and the supplier directory describes finding contracts that are up for renewal. This is a complete plan-gated renewal capability, although the public pages do not disclose how dates are derived or adjusted for extensions.",
           "evidence": [
             {
               "label": "Scrymint pricing",
@@ -533,8 +825,8 @@
           "evidence": []
         },
         "competitorTracking": {
-          "status": "partial",
-          "detail": "The Intelligence plan includes competitor and incumbent tracking. Public supplier profiles provide incumbent research, but named monitoring behavior is not described in detail.",
+          "status": "yes",
+          "detail": "The Intelligence plan includes competitor and incumbent tracking, supported by public supplier profiles for incumbent research. This is a complete named-tracking capability on that tier, although alert rules and tracking limits are not published.",
           "evidence": [
             {
               "label": "Scrymint pricing",
@@ -566,8 +858,8 @@
           "evidence": []
         },
         "bidWriting": {
-          "status": "partial",
-          "detail": "The Intelligence plan advertises AI-drafted first-pass responses. Scrymint separately offers introductions to vetted bid writers; scope and usage limits are not publicly detailed.",
+          "status": "yes",
+          "detail": "The Intelligence plan advertises AI-drafted first-pass responses, and Scrymint separately offers introductions to vetted bid writers. This meets the normalized drafting or managed-support capability; scope and usage limits remain unpublished.",
           "evidence": [
             {
               "label": "Scrymint pricing",
@@ -653,13 +945,280 @@
         "AI bid/no-bid scoring, drafting, competitor tracking and pipeline forecasts are restricted to the £149/month Intelligence plan.",
         "API commercial licensing and bulk-feed terms require contact despite the advertised free request allowance."
       ],
+      "deepAudit": {
+        "researchSummary": "Scrymint combines free UK tender and award search with unusually open public buyer and supplier intelligence and a documented JSON API. Its defensible product depth is the stated entity-resolved data layer and cross-notice buyer-supplier relationships; the main diligence weakness is the absence of a publicly identified legal operator, terms, privacy, security and service-level documentation.",
+        "legalAndMaturity": {
+          "evidenceStrength": "weak",
+          "detail": "Scrymint describes itself as an independent UK tender-intelligence service, but the reviewed first-party site does not identify the contracting legal entity, company number, registered address or ICO registration. No accessible public terms or privacy policy was found, so the legal operating history and contractual counterparty could not be established from authoritative records.",
+          "evidence": [
+            {
+              "label": "Scrymint about",
+              "url": "https://scrymint.com/about"
+            },
+            {
+              "label": "Scrymint home",
+              "url": "https://scrymint.com/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "Scrymint explicitly targets UK SMEs and teams that need a low-cost route into public procurement. Free users can search notices and awards and receive a daily alert, Pro adds unlimited alerts, buyer spend, renewals and export, and Intelligence adds forward pipeline, competitor intelligence, AI bid/no-bid scoring and drafting.",
+          "evidence": [
+            {
+              "label": "Scrymint about",
+              "url": "https://scrymint.com/about"
+            },
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "First-party pages explicitly name Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales as daily sources and describe tenders and awards in one normalized search. The API exposes tenders, awards, buyers and suppliers as clean JSON, but source-specific ingestion methods, eTendersNI coverage, portal deduplication rules and data licensing beyond open-government data are not documented.",
+          "evidence": [
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "Scrymint says it pulls the four named feeds daily and sends a morning alert. No public source-health page, ingestion timestamps, correction policy, failed-feed reporting, schema-validation method or per-source latency commitment was found.",
+          "evidence": [
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            },
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Discovery uses saved searches, keywords, trade or niche targeting and structured filters. The Intelligence tier advertises AI bid/no-bid scoring, but the public pages do not document semantic discovery matching, the scoring inputs, calibration, explanations or evaluation results.",
+          "evidence": [
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            },
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "The API explicitly labels buyers as entity-resolved and exposes each buyer's spend, top suppliers and recent notices. Public buyer pages aggregate live tenders, awards and tracked value across notices, which establishes deliberate cross-notice buyer entities rather than a display-name filter.",
+          "evidence": [
+            {
+              "label": "Scrymint entity-resolved API",
+              "url": "https://scrymint.com/developers"
+            },
+            {
+              "label": "Scrymint buyers",
+              "url": "https://scrymint.com/buyers"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "strong",
+          "detail": "Scrymint says the API exposes the same entity-resolved data that powers the product and provides supplier endpoints for everything a supplier has won and the buyers it sells to. Public supplier pages aggregate awards, buyer relationships, values and renewal context, establishing cross-notice supplier entities; the matching and alias methodology itself is not disclosed.",
+          "evidence": [
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Pro and Intelligence explicitly include contract-expiry and renewal signals, and supplier pages describe identifying contracts that are up for renewal. No first-party explanation was found for whether signals come from published end dates, inferred durations, extensions, predicted re-tender timing or confirmed notices, so confidence and recall cannot be assessed publicly.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "AI bid/no-bid scoring and first-pass response drafting are advertised, but the reviewed first-party pages do not establish extracted requirement records, gap ownership, evidence requests, actions, deadlines or a persistent readiness workflow.",
+          "evidence": []
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "strong",
+          "detail": "Every plan can search awards and see past winners, while public buyer and supplier entities aggregate historical winners, relationships and values. The API exposes award, buyer and supplier endpoints, and the Intelligence tier adds an eighteen-month forward pipeline; the exact retrospective date floor and completeness by source are not published.",
+          "evidence": [
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            },
+            {
+              "label": "Scrymint buyers",
+              "url": "https://scrymint.com/buyers"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "moderate",
+          "detail": "Pro offers CSV export and the documented v1 JSON API covers tenders, awards, buyers, suppliers and trends with an advertised free allowance of 1,000 requests per day. No CRM, webhook, Slack or Teams integration, shared pipeline, assignment, comments or multi-user workflow is publicly established.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "not_found",
+          "detail": "The reviewed site establishes free sign-up, no-card API access and a simple upgrade path, but no accessible privacy policy, terms, security documentation, DPA, subprocessor list, hosting region, retention schedule, certification, incident process, status page or support SLA was found.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing and onboarding",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint developers API onboarding",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "moderate",
+          "detail": "The public ladder is a permanent free plan, £49 per month Pro and £149 per month Intelligence. Pro says billed monthly and cancel anytime; there is no public annual schedule, VAT treatment, user allowance, overage policy or paid-trial term, and bulk-feed or commercial API arrangements require contact.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "No publicly identified legal counterparty, privacy terms or service contract was found, which materially limits procurement, data-protection and recourse diligence.",
+            "evidence": [
+              {
+                "label": "Scrymint about",
+                "url": "https://scrymint.com/about"
+              }
+            ]
+          },
+          {
+            "detail": "The named source list does not establish eTendersNI coverage despite broader wording about every UK feed or portal.",
+            "evidence": [
+              {
+                "label": "Scrymint how it works",
+                "url": "https://scrymint.com/how-it-works"
+              },
+              {
+                "label": "Scrymint home",
+                "url": "https://scrymint.com/"
+              }
+            ]
+          },
+          {
+            "detail": "Renewal signals are sold as a complete Pro capability but their derivation, extension handling, confidence and historical accuracy are not documented.",
+            "evidence": [
+              {
+                "label": "Scrymint pricing",
+                "url": "https://scrymint.com/pricing"
+              },
+              {
+                "label": "Scrymint suppliers",
+                "url": "https://scrymint.com/suppliers"
+              }
+            ]
+          },
+          {
+            "detail": "AI qualification, competitor tracking and drafting are confined to Intelligence, and public pages do not disclose AI usage limits, scoring methodology or drafting safeguards.",
+            "evidence": [
+              {
+                "label": "Scrymint pricing",
+                "url": "https://scrymint.com/pricing"
+              }
+            ]
+          },
+          {
+            "detail": "The free API allowance is explicit, but production licensing, bulk-feed pricing, rate-limit enforcement, service levels and permitted reuse are not public.",
+            "evidence": [
+              {
+                "label": "Scrymint developers API",
+                "url": "https://scrymint.com/developers"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "Broad first-party language says every UK feed or procurement portal is covered, while the concrete source explanation names only Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales and does not identify eTendersNI. The broader claim therefore cannot be reconciled to the explicit list without provider clarification.",
+            "evidence": [
+              {
+                "label": "Scrymint home",
+                "url": "https://scrymint.com/"
+              },
+              {
+                "label": "Scrymint how it works",
+                "url": "https://scrymint.com/how-it-works"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the full legal name, company number, registered address and ICO registration of the contracting operator?",
+          "Can Scrymint provide current terms, privacy notice, DPA, subprocessor list, data-location and retention details, security controls and incident or uptime commitments?",
+          "Is eTendersNI ingested, and what is the complete named source list with measured freshness and failure monitoring for each feed?",
+          "How are buyer and supplier aliases resolved, deduplicated and corrected, and can customers see match confidence or provenance?",
+          "What source fields and models create a renewal signal, how are extensions handled, and what precision or conversion rate has been measured?",
+          "What users, AI usage, tracked competitors, exports and API calls are included in each paid plan, and what VAT, overage and cancellation terms apply?"
+        ]
+      },
       "sourceUrls": [
         "https://scrymint.com/",
         "https://scrymint.com/how-it-works",
         "https://scrymint.com/pricing",
         "https://scrymint.com/buyers",
         "https://scrymint.com/suppliers",
-        "https://scrymint.com/developers"
+        "https://scrymint.com/developers",
+        "https://scrymint.com/about"
       ]
     },
     {
@@ -668,62 +1227,66 @@
       "officialUrl": "https://www.supply2govtenders.co.uk/",
       "pricing": {
         "availability": "public_numeric",
-        "billingBasis": "unknown",
+        "billingBasis": "per_seat",
         "currency": "GBP",
         "plansText": "Free Local Area: £0. Country: from £25/month, £140 per six months or £270/year. UK Wide: from £80/month, £455 per six months or £799/year. UK and Ireland: from £95/month, £540 per six months or £899/year.",
-        "seatDetail": "Included users and additional-seat pricing are not publicly stated on the reviewed pricing and FAQ pages.",
-        "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
+        "seatDetail": "The service licence grants one named user per registration or subscription unless a subscription explicitly permits multiple users. Free access is capped at two user accounts per organisation. Additional paid-seat pricing is not published.",
+        "vatDetail": "All advertised prices exclude VAT, which is added at checkout where payable.",
         "trialDetail": "No time-limited trial is stated. A permanent free Local Area plan is advertised and can be upgraded.",
         "comparablePlans": [
           {
             "planName": "Free Local Area",
             "currency": "GBP",
-            "billingBasis": "unknown",
+            "billingBasis": "per_seat",
             "monthlyPrice": 0,
             "annualPrice": null,
             "annualMonthlyEquivalent": null,
             "annualPriceCalculation": "not_available",
-            "includedUsers": "Not publicly stated",
-            "notes": "Permanent free access to one chosen local area. No annual billing option, VAT treatment or user allowance is published."
+            "includedUsers": "1 named user per registration; maximum 2 free accounts per organisation",
+            "notes": "Permanent free access to one chosen local area. No annual billing option is published. Prices exclude VAT where payable."
           },
           {
             "planName": "Country",
             "currency": "GBP",
-            "billingBasis": "unknown",
+            "billingBasis": "per_seat",
             "monthlyPrice": 25,
             "annualPrice": 270,
             "annualMonthlyEquivalent": 22.5,
             "annualPriceCalculation": "published_total",
-            "includedUsers": "Not publicly stated",
-            "notes": "Prices are advertised as 'from'. A six-month price from £140 is also published but is not a schema billing field. VAT and user allowance are not stated."
+            "includedUsers": "1 named user unless the subscription explicitly permits multiple users",
+            "notes": "Prices are advertised as 'from' and exclude VAT. A six-month price from £140 is also published but is not a schema billing field. The licence states a two-month minimum for monthly payment, six months for six-monthly payment and twelve months for annual payment."
           },
           {
             "planName": "UK Wide",
             "currency": "GBP",
-            "billingBasis": "unknown",
+            "billingBasis": "per_seat",
             "monthlyPrice": 80,
             "annualPrice": 799,
             "annualMonthlyEquivalent": 66.58,
             "annualPriceCalculation": "published_total",
-            "includedUsers": "Not publicly stated",
-            "notes": "Prices are advertised as 'from'. A six-month price from £455 is also published but is not a schema billing field. VAT and user allowance are not stated."
+            "includedUsers": "1 named user unless the subscription explicitly permits multiple users",
+            "notes": "Prices are advertised as 'from' and exclude VAT. A six-month price from £455 is also published but is not a schema billing field. The licence states a two-month minimum for monthly payment, six months for six-monthly payment and twelve months for annual payment."
           },
           {
             "planName": "UK and Ireland",
             "currency": "GBP",
-            "billingBasis": "unknown",
+            "billingBasis": "per_seat",
             "monthlyPrice": 95,
             "annualPrice": 899,
             "annualMonthlyEquivalent": 74.92,
             "annualPriceCalculation": "published_total",
-            "includedUsers": "Not publicly stated",
-            "notes": "Prices are advertised as 'from'. A six-month price from £540 is also published but is not a schema billing field. VAT and user allowance are not stated."
+            "includedUsers": "1 named user unless the subscription explicitly permits multiple users",
+            "notes": "Prices are advertised as 'from' and exclude VAT. A six-month price from £540 is also published but is not a schema billing field. The licence states a two-month minimum for monthly payment, six months for six-monthly payment and twelve months for annual payment."
           }
         ],
         "evidence": [
           {
             "label": "Supply2Gov pricing",
             "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+          },
+          {
+            "label": "Supply2Gov service licence and subscription terms",
+            "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
           }
         ]
       },
@@ -892,12 +1455,279 @@
       ],
       "caveats": [
         "All feature, source-count and coverage statements are provider claims and were not independently tested by Civensa.",
-        "Paid prices are displayed as 'from'; VAT, included users and additional-seat prices are not stated on the reviewed pricing page.",
+        "Paid prices are displayed as 'from' and exclude VAT. The service licence grants one named user per registration or subscription unless explicitly stated otherwise; additional-seat pricing is not public.",
         "The checked product pages explicitly name CompeteFor but do not publish a complete portal-by-portal source list for the claimed 3,000-plus sources.",
         "Alerts are stated as available each working day, excluding UK bank holidays, rather than continuously.",
         "Geographic access is plan-dependent; the free tier covers one chosen local area rather than nationwide records.",
         "The provider points customers who need deeper buyer, competitor and spend intelligence to its separate Tracker product; those Tracker features are not attributed to Supply2Gov here."
       ],
+      "deepAudit": {
+        "researchSummary": "Supply2Gov is a long-running BiP Solutions service focused on inexpensive, geography-tiered tender alerts and basic tender-readiness guidance for SMEs. It has credible corporate and security maturity, but its normalized product depth is mostly keyword alerts and award search: advanced buyer, supplier, renewal, workflow and AI capabilities belong to other BiP products or are not publicly established for Supply2Gov.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "The service licence names BiP Solutions Limited as the contracting operator. Companies House records BIP SOLUTIONS LIMITED, SC086146, as an active Scottish private company incorporated on 9 January 1984, giving the operator the longest documented corporate history in this five-provider batch.",
+          "evidence": [
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            },
+            {
+              "label": "Companies House: BiP Solutions Limited",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/SC086146"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The licence and product pages explicitly frame Supply2Gov as a service for SMEs to become tender-ready and receive relevant public-sector opportunities. Its tiering is geographic: one free local area, then country, UK-wide and UK-and-Ireland access, with toolkits and guides rather than an enterprise intelligence workflow.",
+          "evidence": [
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            },
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            },
+            {
+              "label": "How Supply2Gov works",
+              "url": "https://www.supply2govtenders.co.uk/how-s2g-works/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Supply2Gov claims aggregation from more than 3,000 public-sector sources across the UK and Ireland and explicitly names CompeteFor on the pricing page. The reviewed pages do not publish a complete portal inventory, source links or a source-by-source acquisition method, so the broad count cannot be independently reconciled to explicit portal coverage from first-party documentation.",
+          "evidence": [
+            {
+              "label": "Supply2Gov home",
+              "url": "https://www.supply2govtenders.co.uk/"
+            },
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            },
+            {
+              "label": "Supply2Gov public-sector market guide",
+              "url": "https://www.supply2govtenders.co.uk/contract-opportunities/the-public-sector-market/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The licence states that relevant alerts are available each working day, excluding UK bank holidays, and the product describes daily profile-based email delivery. No per-source ingestion timestamp, duplicate handling, validation method, correction workflow, source-health dashboard or latency service level is published.",
+          "evidence": [
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            },
+            {
+              "label": "Supply2Gov daily alert guidance",
+              "url": "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Alert profiles use keywords or phrases and CPV codes, with documented filters for region, buyer type, value, category and exclusions. This is a conventional rules-based matching system; the reviewed pages do not claim semantic matching, machine learning or AI relevance scoring.",
+          "evidence": [
+            {
+              "label": "Supply2Gov FAQ",
+              "url": "https://www.supply2govtenders.co.uk/faqs/"
+            },
+            {
+              "label": "Supply2Gov daily alert guidance",
+              "url": "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Buyer names and buyer-type filters appear in notices and guidance, but no deliberately canonicalized, deduplicated or entity-resolved Supply2Gov buyer profile with cross-notice intelligence is established. The FAQ points users seeking deeper buyer and spend intelligence to a separate BiP product.",
+          "evidence": [
+            {
+              "label": "Supply2Gov FAQ",
+              "url": "https://www.supply2govtenders.co.uk/faqs/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Award notices may expose winner names, but the reviewed pages do not establish canonicalized supplier profiles, alias handling, cross-notice supplier relationships or incumbent entities inside Supply2Gov.",
+          "evidence": []
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "Editorial guidance recommends watching procurement cycles, pipelines and frameworks, but no product feature based on contract end dates, extensions, predicted re-tenders or confirmed renewal notices is documented for Supply2Gov.",
+          "evidence": [
+            {
+              "label": "Supply2Gov CCS monitoring guide",
+              "url": "https://www.supply2govtenders.co.uk/best-way-to-monitor-crown-commercial-service-activity/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Plans include a Tender Ready Toolkit and general resources designed to help SMEs prepare to tender. The public pages do not establish opportunity-specific requirements extraction, recorded gaps, evidence requests, owners, remediation actions, deadlines or tracked readiness, so this remains only an adjacent planning capability.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            },
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "The database includes UK and Ireland contract and award notices, and provider guidance recommends searching past awards for winners, lots and indicative values. No structured supplier identity layer, published retrospective date floor, coverage ratio by source or automated similar-contract linkage is established.",
+          "evidence": [
+            {
+              "label": "Supply2Gov FAQ",
+              "url": "https://www.supply2govtenders.co.uk/faqs/"
+            },
+            {
+              "label": "Supply2Gov council tenders",
+              "url": "https://www.supply2govtenders.co.uk/contract-opportunities/council-tenders/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "weak",
+          "detail": "The service provides configurable alert profiles, an online portal and basic opportunity tracking, but the reviewed pages do not document CSV export, an API, CRM or messaging integrations, shared pipeline, comments, assignments or multi-user collaboration. The licence also expressly prohibits exporting or extracting BiP data into other databases unless made available by the service.",
+          "evidence": [
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            },
+            {
+              "label": "How Supply2Gov works",
+              "url": "https://www.supply2govtenders.co.uk/how-s2g-works/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "strong",
+          "detail": "BiP's privacy notice states UK staff and EU hosting and describes ISO 9001 and ISO 27001 policies, firewalls, intrusion detection, encrypted transmission, physical controls, patching and independent penetration testing. The licence uses named users, says reasonable endeavours are made to keep the service available, and provides a support email, but does not publish an uptime SLA, response-time SLA, live status page or certificate scope and current validity on the reviewed product pages.",
+          "evidence": [
+            {
+              "label": "BiP Solutions privacy policy",
+              "url": "https://www.bipsolutions.com/privacy-policy/"
+            },
+            {
+              "label": "Supply2Gov service licence",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "Supply2Gov uses a freemium geographic ladder with public monthly, six-monthly and annual prices. The contract is a named-user licence; paid terms have minimum periods of two, six or twelve months by payment frequency, exclude VAT, use continuing renewal and card authority where supported, and require downgrade rather than a simple alert stop. A monthly downgrade takes effect only at the end of the following month's paid term.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            },
+            {
+              "label": "Supply2Gov service licence and subscription terms",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The claimed 3,000-plus-source coverage is not accompanied by a complete portal inventory or source-level freshness evidence; only CompeteFor is explicitly named in the reviewed pricing material.",
+            "evidence": [
+              {
+                "label": "Supply2Gov home",
+                "url": "https://www.supply2govtenders.co.uk/"
+              },
+              {
+                "label": "Supply2Gov pricing",
+                "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+              }
+            ]
+          },
+          {
+            "detail": "Alerts are working-day daily rather than real-time, and the licence disclaims accuracy, errors and delays without a published ingestion or uptime service level.",
+            "evidence": [
+              {
+                "label": "Supply2Gov service licence",
+                "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer intelligence, competitor intelligence and deeper spend analysis referenced by the site belong to the separate Tracker service and must not be attributed to Supply2Gov.",
+            "evidence": [
+              {
+                "label": "Supply2Gov FAQ",
+                "url": "https://www.supply2govtenders.co.uk/faqs/"
+              }
+            ]
+          },
+          {
+            "detail": "The public product lacks established exports, API, collaboration, AI matching, renewal monitoring and requirement-level planning, and its licence restricts data extraction into other databases.",
+            "evidence": [
+              {
+                "label": "Supply2Gov service licence",
+                "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+              },
+              {
+                "label": "Supply2Gov pricing",
+                "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+              }
+            ]
+          },
+          {
+            "detail": "Paid access is a one-named-user licence unless explicitly varied; additional-seat prices are not public, free access is capped at two accounts per organisation and advertised prices exclude VAT.",
+            "evidence": [
+              {
+                "label": "Supply2Gov service licence",
+                "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The pricing page emphasizes flexibility, while the binding licence imposes minimum terms, continuing renewals and a downgrade process; even a monthly downgrade takes effect only at the end of the following month's term. Buyers should rely on the licence rather than the shorter marketing wording.",
+            "evidence": [
+              {
+                "label": "Supply2Gov pricing",
+                "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+              },
+              {
+                "label": "Supply2Gov service licence",
+                "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+              }
+            ]
+          },
+          {
+            "detail": "First-party coverage copy uses promotional comparisons such as more than 90 percent of opportunities and more than 100 percent UK-and-Ireland coverage without a published denominator or audit method. Those percentages cannot be reconciled to the unenumerated 3,000-plus-source claim from the public evidence alone.",
+            "evidence": [
+              {
+                "label": "Supply2Gov public-sector market guide",
+                "url": "https://www.supply2govtenders.co.uk/contract-opportunities/the-public-sector-market/"
+              },
+              {
+                "label": "Supply2Gov home",
+                "url": "https://www.supply2govtenders.co.uk/"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "What is the complete named source list, and what measured completeness, latency and failure-recovery evidence supports the 3,000-plus-source claim?",
+          "What exactly is included in the advertised from prices for one named user, and what do extra users, regions, alert profiles and any usage overages cost?",
+          "What date must a monthly customer submit a downgrade to avoid the next two billing periods, and how are renewal reminders, refunds and disputed renewals handled?",
+          "Can BiP provide the current scope and validity of its ISO 27001 certification, recent penetration-test assurance, DPA, subprocessors, backup objectives and incident-response commitments?",
+          "What award-history date floor and source coverage apply, and are winners normalized or left as raw notice text?",
+          "Which buyer, competitor and spend features require a separate Tracker contract, and can Supply2Gov data be exported or integrated under any licensed option?"
+        ]
+      },
       "sourceUrls": [
         "https://www.supply2govtenders.co.uk/",
         "https://www.supply2govtenders.co.uk/pricing-3/",
@@ -908,7 +1738,9 @@
         "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/",
         "https://www.supply2govtenders.co.uk/contract-opportunities/council-tenders/",
         "https://www.supply2govtenders.co.uk/contract-opportunities/the-public-sector-market/",
-        "https://www.supply2govtenders.co.uk/best-way-to-monitor-crown-commercial-service-activity/"
+        "https://www.supply2govtenders.co.uk/best-way-to-monitor-crown-commercial-service-activity/",
+        "https://www.bipsolutions.com/privacy-policy/",
+        "https://find-and-update.company-information.service.gov.uk/company/SC086146"
       ]
     },
     {
@@ -1223,11 +2055,291 @@
         "The terms say underlying notice details may be incomplete, outdated or erroneous and direct users to verify every opportunity against its official source.",
         "User and fair-use limits for the advertised unlimited drafts, API, team workspaces and alerts are not publicly detailed."
       ],
+      "deepAudit": {
+        "researchSummary": "Tendarix presents the broadest free feature set in this batch: hybrid matching, buyer intelligence, renewal radar, collaboration, bid drafting, CSV and API access. Its main weakness is not feature breadth but operational proof: the live council-coverage page shows a small active subset and many broken or pending sources, while identity, renewal, security and service-level methods remain thinly documented.",
+        "legalAndMaturity": {
+          "evidenceStrength": "strong",
+          "detail": "Tendarix's terms and footer identify Unique Evolution Limited as operator. Companies House records UNIQUE EVOLUTION LTD, company 14243073, as active and incorporated on 19 July 2022; the operator's studio site identifies Tendarix as a Laravel and Meilisearch product with live search, AI analysis, buyer profiles, bid pipeline and a readiness module.",
+          "evidence": [
+            {
+              "label": "Tendarix terms",
+              "url": "https://tendarix.com/terms"
+            },
+            {
+              "label": "Companies House: Unique Evolution Ltd",
+              "url": "https://find-and-update.company-information.service.gov.uk/company/14243073"
+            },
+            {
+              "label": "Unique Evolution studio and Tendarix case entry",
+              "url": "https://uniqevo.co.uk/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "strong",
+          "detail": "The homepage explicitly targets UK SMEs, sole traders, internal bid teams and bid consultancies. It positions onboarding as a ten-minute company profile that narrows tender feeds, supports renewal prospecting and creates shared multi-client bid workflows.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "Tendarix explicitly names six national feeds: Contracts Finder, Find a Tender, Public Contracts Scotland, Sell2Wales, eTendersNI and TED. It separately claims more than 400 buyer portals and publishes a 394-council coverage table with vendor labels including In-tend, Bravo and ProContract, but the table's active, broken and pending states materially limit the breadth implied by the headline.",
+          "evidence": [
+            {
+              "label": "Tendarix home and national feeds",
+              "url": "https://tendarix.com/"
+            },
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The homepage shows live counts, source links and a next-update timer and claims national and local feed monitoring. The coverage page is unusually transparent about scrape status, but at research time showed only 31 active of 394 tracked councils, four contracts indexed and 52 successful scrapes in the preceding 30 days. The site does not explain validation, deduplication, failure recovery or why it uses both twelve-hour and hourly refresh claims.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            },
+            {
+              "label": "Tendarix council coverage and scrape status",
+              "url": "https://tendarix.com/coverage"
+            },
+            {
+              "label": "Tendarix terms and source verification",
+              "url": "https://tendarix.com/terms"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Tendarix describes hybrid keyword and semantic search, scoring each tender against company profile, geography, capacity and past performance. Onboarding accepts CPV codes, geography, team size and past performance and extracts company data from Companies House; results include match score, urgency and a plain-English brief. No model evaluation or false-positive benchmark is public.",
+          "evidence": [
+            {
+              "label": "Tendarix home and match engine",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "moderate",
+          "detail": "Buyer pages aggregate award history, top suppliers, average deal size, SME share, spend and renewal timing across records. This is useful structured cross-notice intelligence, but the reviewed pages do not establish canonicalization, aliases, deduplication, organizational hierarchies or entity-resolution controls, so normalized buyer profiles remain partial.",
+          "evidence": [
+            {
+              "label": "Tendarix buyer intelligence",
+              "url": "https://tendarix.com/"
+            },
+            {
+              "label": "Unique Evolution Tendarix case entry",
+              "url": "https://uniqevo.co.uk/"
+            }
+          ]
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "Buyer pages expose top suppliers and the free plan advertises competitor tracking, but no canonicalized standalone supplier entity, alias-resolution method, cross-buyer supplier profile or supplier correction process is established in the reviewed first-party material.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "weak",
+          "detail": "Renewal Radar is presented as a complete product feature and the homepage claims it flags a rebid window six to nine months before the next notice. The public pages do not explain whether that timing comes from published end dates, contract duration, historical cycles, machine prediction, extension records or confirmed pipeline notices, and no accuracy evidence is provided.",
+          "evidence": [
+            {
+              "label": "Tendarix renewal radar",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "moderate",
+          "detail": "A limited summarizer produces an eligibility checklist, key dates, complexity rating and bid/no-bid score, while the platform offers a bid pipeline and the operator's case entry names a readiness module. No public workflow shows durable requirement records with gaps, evidence needs, owners, remediation actions, deadlines and tracked readiness, so the normalized capability remains partial.",
+          "evidence": [
+            {
+              "label": "Tendarix home and tender summarizer",
+              "url": "https://tendarix.com/"
+            },
+            {
+              "label": "Unique Evolution Tendarix case entry",
+              "url": "https://uniqevo.co.uk/"
+            }
+          ]
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "moderate",
+          "detail": "Buyer profiles include award history, suppliers, spend and average deal size, and competitor tracking is advertised. The reviewed pages do not publish the award date floor, completeness by feed, winner normalization, relationship accuracy or direct comparable-contract surfacing.",
+          "evidence": [
+            {
+              "label": "Tendarix buyer and award intelligence",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "strong",
+          "detail": "Tendarix documents saved searches with email and Slack alerts, bookmarks, shared comments, assignments and a pipeline board. Consultancy use adds multi-profile workspaces, and the free plan lists CSV export and API access while the consultancy section also names webhooks; public limits and integration documentation are not stated.",
+          "evidence": [
+            {
+              "label": "Tendarix home and team workflow",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "moderate",
+          "detail": "The privacy policy identifies Unique Evolution Limited as controller and describes account, business-profile, usage, device, location and cookie data. The homepage promises ten-minute setup and priority support, but no security-control page, DPA, named subprocessor schedule, hosting region, fixed retention periods, certification, status history, backup objective or service SLA is public. The terms provide the free service as-is without uninterrupted availability.",
+          "evidence": [
+            {
+              "label": "Tendarix privacy policy",
+              "url": "https://tendarix.com/privacy"
+            },
+            {
+              "label": "Tendarix terms",
+              "url": "https://tendarix.com/terms"
+            },
+            {
+              "label": "Tendarix onboarding and support",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "strong",
+          "detail": "The current Tendarix Member plan is explicitly free, with no card and no trial, and advertises unlimited searches, alerts and bid drafts plus full buyer intelligence, competitor tracking, CSV and API access. Terms reserve the right to add, change or remove features. Public pages do not state user limits, fair-use controls, API quotas, advertising economics or a future paid model; the privacy policy permits Google AdSense on public content pages.",
+          "evidence": [
+            {
+              "label": "Tendarix pricing",
+              "url": "https://tendarix.com/"
+            },
+            {
+              "label": "Tendarix terms",
+              "url": "https://tendarix.com/terms"
+            },
+            {
+              "label": "Tendarix privacy policy",
+              "url": "https://tendarix.com/privacy"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "The live council table materially narrows the 400-plus-portal claim: only 31 of 394 tracked councils were active at research time, with many entries broken or pending and very low recent scrape and indexing counts.",
+            "evidence": [
+              {
+                "label": "Tendarix council coverage",
+                "url": "https://tendarix.com/coverage"
+              }
+            ]
+          },
+          {
+            "detail": "Buyer profiles are structured but lack published identity-resolution evidence, while standalone supplier entity investment is not established.",
+            "evidence": [
+              {
+                "label": "Tendarix buyer intelligence",
+                "url": "https://tendarix.com/"
+              }
+            ]
+          },
+          {
+            "detail": "Renewal Radar gives a six-to-nine-month commercial signal without disclosing its source fields, prediction method, extension handling, confidence or back-tested accuracy.",
+            "evidence": [
+              {
+                "label": "Tendarix renewal radar",
+                "url": "https://tendarix.com/"
+              }
+            ]
+          },
+          {
+            "detail": "The readiness and summarizer material does not establish a complete durable requirements workflow with evidence gaps, owners, actions and readiness state.",
+            "evidence": [
+              {
+                "label": "Tendarix home",
+                "url": "https://tendarix.com/"
+              },
+              {
+                "label": "Unique Evolution Tendarix case entry",
+                "url": "https://uniqevo.co.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "The free plan advertises unlimited AI, team and API features, but no fair-use, user, API, data-export or support limits are published and the terms permit feature changes without a paid service commitment.",
+            "evidence": [
+              {
+                "label": "Tendarix pricing",
+                "url": "https://tendarix.com/"
+              },
+              {
+                "label": "Tendarix terms",
+                "url": "https://tendarix.com/terms"
+              }
+            ]
+          }
+        ],
+        "contradictions": [
+          {
+            "detail": "The homepage claims more than 400 buyer portals and says every portal is watched, while the live coverage page listed 394 councils with only 31 active and many broken or pending sources. The operational table does not support treating the headline as fully active coverage.",
+            "evidence": [
+              {
+                "label": "Tendarix home",
+                "url": "https://tendarix.com/"
+              },
+              {
+                "label": "Tendarix council coverage",
+                "url": "https://tendarix.com/coverage"
+              }
+            ]
+          },
+          {
+            "detail": "The homepage says feeds are updated every twelve hours near the source list but later says every portal is watched every hour. A source-specific cadence or explanation for the two figures is not published.",
+            "evidence": [
+              {
+                "label": "Tendarix home",
+                "url": "https://tendarix.com/"
+              }
+            ]
+          },
+          {
+            "detail": "The operator's studio site repeatedly says established in 2000, while Companies House records the named legal operator as incorporated in 2022. The earlier date may refer to personal or predecessor experience, but that distinction is not stated.",
+            "evidence": [
+              {
+                "label": "Unique Evolution studio",
+                "url": "https://uniqevo.co.uk/"
+              },
+              {
+                "label": "Companies House: Unique Evolution Ltd",
+                "url": "https://find-and-update.company-information.service.gov.uk/company/14243073"
+              }
+            ]
+          }
+        ],
+        "diligenceQuestions": [
+          "Which of the 394 listed council sources are currently production-active, what proportion of their notices is ingested, and how are broken scrapers detected and repaired?",
+          "Why do public pages state both hourly and twelve-hourly monitoring, and what measured publish-to-index latency applies to each national and local source?",
+          "How are buyer names canonicalized, deduplicated and corrected, and is there a supplier entity layer behind competitor tracking?",
+          "What data and model produce the six-to-nine-month rebid window, how are extensions and confirmed successor notices handled, and what back-tested precision is achieved?",
+          "Can the readiness module assign owners, actions, evidence and deadlines per requirement and maintain an auditable readiness state?",
+          "What fair-use, user, API, export and AI limits apply to the free plan, and what continuity or migration commitment applies if pricing or features change?",
+          "Can Tendarix provide a DPA, named subprocessors, hosting and retention details, security controls, penetration assurance, backup objectives and support or uptime commitments?"
+        ]
+      },
       "sourceUrls": [
         "https://tendarix.com/",
         "https://tendarix.com/coverage",
         "https://tendarix.com/terms",
-        "https://tendarix.com/privacy"
+        "https://tendarix.com/privacy",
+        "https://uniqevo.co.uk/",
+        "https://find-and-update.company-information.service.gov.uk/company/14243073"
       ]
     },
     {
@@ -1414,6 +2526,178 @@
         "VAT treatment, exports, integrations and historical data depth are not stated on the reviewed public pages.",
         "The product describes keyword and structured filtering; no semantic or AI matching claim is attributed."
       ],
+      "deepAudit": {
+        "researchSummary": "Tender Alerts UK is a narrowly scoped alert product: one search interface and weekday emails over four named UK portals. It has clear headline pricing and a low-complexity workflow, but no public evidence of entity intelligence, awards, renewals, AI, exports or team features, and its legal, security and contractual disclosure is materially thinner than the other paid services in this batch.",
+        "legalAndMaturity": {
+          "evidenceStrength": "weak",
+          "detail": "The reviewed site does not identify the operating company, company number, registered office, contracting entity or ICO registration. The legal page is a generic privacy policy and does not establish corporate operating history; no separate public terms of service was found.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK legal and privacy page",
+              "url": "https://tenderalerts.uk/legal"
+            },
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "targetCustomerAndUseCase": {
+          "evidenceStrength": "moderate",
+          "detail": "The product is for individual UK tender searchers who want saved free-text and structured searches delivered by email. It is not presented as a team intelligence or bid-management platform: one user and up to 50 alerts are explicitly supported.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home and FAQ",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "dataSourcesAndCoverageMethod": {
+          "evidenceStrength": "strong",
+          "detail": "The homepage explicitly names Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales and says their notices are retrieved each day into one search. No additional local-authority portal coverage, eTendersNI, TED, private opportunities or source-level acquisition method is claimed on the reviewed pages.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home and source list",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "dataIngestionAndFreshness": {
+          "evidenceStrength": "moderate",
+          "detail": "The provider says it retrieves the four named sources each day and sends email alerts Monday to Friday. No source timestamp, duplicate-handling method, validation, correction policy, failure reporting, status page or publish-to-alert latency commitment is public.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home and alert cadence",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "matchingAndQualificationMethod": {
+          "evidenceStrength": "strong",
+          "detail": "Matching is conventional free-text search over title and description plus region, deadline, category, source, framework and lot filters. A saved search becomes an email alert. The reviewed pages do not establish semantic matching, company-profile scoring, AI qualification or bid/no-bid analysis.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK search and alert fields",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "buyerEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "The reviewed pages do not establish a canonicalized or entity-resolved buyer profile, cross-notice buyer history, buyer spend, hierarchy or alias management.",
+          "evidence": []
+        },
+        "supplierEntityInvestment": {
+          "evidenceStrength": "not_found",
+          "detail": "The reviewed pages do not establish supplier, winner, incumbent or competitor entities or any cross-notice supplier identity work.",
+          "evidence": []
+        },
+        "renewalSignalMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "No published contract-end date view, calculated expiry window, extension evidence, predicted re-tender timing or confirmed future-notice monitoring is established.",
+          "evidence": []
+        },
+        "requirementsPlanningMethod": {
+          "evidenceStrength": "not_found",
+          "detail": "The reviewed product does not extract buyer requirements or provide a durable workflow for gaps, evidence, owners, actions, deadlines or readiness.",
+          "evidence": []
+        },
+        "historicalAndAwardDepth": {
+          "evidenceStrength": "not_found",
+          "detail": "The public pages describe live tender opportunities but do not establish award notices, winners, values, retrospective depth, supplier histories or similar-contract discovery.",
+          "evidence": []
+        },
+        "workflowAndIntegrations": {
+          "evidenceStrength": "weak",
+          "detail": "Workflow is limited to creating, editing and receiving up to 50 saved alerts for one user. CSV or Excel export, API, webhooks, CRM or messaging integrations, shared pipeline, comments and assignments are not documented, and the FAQ says multi-user support is not currently available.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK FAQ",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "securitySupportAndOnboarding": {
+          "evidenceStrength": "weak",
+          "detail": "The privacy page generically describes account and technical data, cookies, third-party service providers and user rights. It does not name the controller, subprocessors, hosting region, retention periods, security controls, DPA, incident process or certification; no public security page, status page, support SLA or full subscription terms were found.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK privacy page",
+              "url": "https://tenderalerts.uk/legal"
+            }
+          ]
+        },
+        "commercialModel": {
+          "evidenceStrength": "moderate",
+          "detail": "One full-access plan costs £109 monthly or £1,099 yearly for one user, with a seven-day trial that converts to paid unless cancelled. Cancellation is described through the user profile, but VAT, card requirement, refunds, renewal notice, payment processor, contracting entity and full subscription terms are not public.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK pricing and trial",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "materialLimitations": [
+          {
+            "detail": "Coverage is limited to four explicitly named portals; eTendersNI and local buyer portals are not established, and alerts are sent on weekdays rather than continuously.",
+            "evidence": [
+              {
+                "label": "Tender Alerts UK source list and cadence",
+                "url": "https://tenderalerts.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "The service supports one user and no collaboration; the FAQ only says multi-user functionality may be added later.",
+            "evidence": [
+              {
+                "label": "Tender Alerts UK FAQ",
+                "url": "https://tenderalerts.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "No buyer or supplier intelligence, award history, renewal monitoring, semantic matching, requirements planning, bid writing, export or API is established in the reviewed public product.",
+            "evidence": [
+              {
+                "label": "Tender Alerts UK home and feature description",
+                "url": "https://tenderalerts.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "A paid subscription is offered without a publicly identified legal operator, complete service terms, security documentation or detailed data-protection disclosures.",
+            "evidence": [
+              {
+                "label": "Tender Alerts UK legal page",
+                "url": "https://tenderalerts.uk/legal"
+              },
+              {
+                "label": "Tender Alerts UK pricing",
+                "url": "https://tenderalerts.uk/"
+              }
+            ]
+          },
+          {
+            "detail": "The seven-day trial converts to a charge unless cancelled; the public pages do not state the card requirement, refund treatment, VAT or renewal notice terms.",
+            "evidence": [
+              {
+                "label": "Tender Alerts UK trial and pricing",
+                "url": "https://tenderalerts.uk/"
+              }
+            ]
+          }
+        ],
+        "contradictions": [],
+        "diligenceQuestions": [
+          "What is the legal name, company number, registered address, ICO registration and payment merchant of the operator?",
+          "Can the provider supply full subscription terms covering VAT, card collection, automatic renewal, cancellation timing, refunds and liability?",
+          "What measured daily ingestion time, completeness and failure-recovery process applies to each of the four sources, and is eTendersNI planned?",
+          "What hosting region, security controls, subprocessors, retention periods, DPA, backup and incident-response commitments protect customer accounts and searches?",
+          "Are award search, export, API, multi-user access or additional portals available privately, and if so under what current plan and limits?",
+          "What support channel, response target and uptime or service-credit commitment applies to a paid subscription?"
+        ]
+      },
       "sourceUrls": [
         "https://tenderalerts.uk/",
         "https://tenderalerts.uk/legal"
