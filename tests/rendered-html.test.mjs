@@ -59,7 +59,7 @@ test("authority articles meet the editorial depth and anti-slop gate", async () 
   }
 });
 
-test("renders the procurement tools directory with dated evidence", async () => {
+test("renders the procurement tools directory with dated evidence and ownership disclosure", async () => {
   const routes = [
     "/tools/",
     "/tools/tender-alerts/",
@@ -74,18 +74,49 @@ test("renders the procurement tools directory with dated evidence", async () => 
     assert.equal(response.status, 200, route);
     const html = await response.text();
     assert.match(html, /Civensa/, route);
-    assert.match(html, /12 August 2026|2026-08-12/, route);
+    assert.match(html, /12 August 2026|18 August 2026|2026-08-12|2026-08-18/, route);
     assert.match(html, /canonical[^>]+https:\/\/civensa\.com\/tools\//i, route);
     assert.doesNotMatch(html, /—|–|\s--\s/, `${route}: contains humanizer-prohibited dash punctuation`);
   }
 
   const alerts = await (await render("/tools/tender-alerts/")).text();
-  assert.doesNotMatch(alerts, /BidSkim/i);
+  assert.match(alerts, /BidSkim Limited/i);
+  assert.match(alerts, /Monitor[^<]{0,80}£79|£79[^<]{0,80}Monitor/i);
+  assert.match(alerts, /Predict[^<]{0,80}£189|£189[^<]{0,80}Predict/i);
   assert.match(alerts, /provider-stated|Provider-stated/i);
+  assert.match(alerts, /Features described on provider pages/i);
+  assert.match(alerts, /Public pricing and seat basis/i);
+  assert.match(alerts, /Portals explicitly named by each provider/i);
+  assert.match(alerts, /Not stated is not evidence that the service lacks coverage/i);
+  assert.match(alerts, /394 councils tracked but only 31 active/i);
+  assert.match(alerts, /Knowledge base £0\/month[^<]{0,100}£20\/month[^<]{0,100}£30\/month/i);
+  assert.ok(Buffer.byteLength(alerts) < 600_000, "tender-alert comparison page should stay below 600 kB");
 
   const hub = await (await render("/tools/")).text();
   assert.match(hub, /"@type":"ItemList"/);
   assert.match(hub, /no affiliate links|no paid rankings/i);
+});
+
+test("normalized tender-alert research is complete and schema-consistent", async () => {
+  const featureKeys = ["keywordAlerts", "semanticAiMatching", "buyerProfiles", "supplierProfiles", "renewalSignals", "similarContracts", "buyerDocuments", "buyerRequirements", "requirementsPlanning", "awardHistory", "frameworks", "competitorTracking", "exportsApi", "collaboration", "bidWriting"];
+  const batches = await Promise.all([1, 2, 3, 4, 5, 6].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  const providers = batches.flatMap((batch) => {
+    assert.equal(batch.researchedAt, "2026-08-18");
+    return batch.providers;
+  });
+  assert.equal(providers.length, 29);
+  assert.equal(new Set(providers.map((provider) => provider.slug)).size, 29);
+  for (const provider of providers) {
+    assert.deepEqual(Object.keys(provider.features).sort(), [...featureKeys].sort(), provider.slug);
+    for (const feature of Object.values(provider.features)) {
+      assert.match(feature.status, /^(yes|partial|no|not_stated)$/);
+      assert.equal(typeof feature.detail, "string");
+      assert.ok(Array.isArray(feature.evidence));
+    }
+    assert.ok(Array.isArray(provider.explicitPortals));
+    assert.ok(Array.isArray(provider.caveats));
+    assert.ok(Array.isArray(provider.sourceUrls));
+  }
 });
 
 test("publishes complete discovery files", async () => {

@@ -1,0 +1,1345 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "bidlens",
+      "name": "BidLens",
+      "officialUrl": "https://bidlens.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Starter £49/month; Pro £99/month; Team £199/month. Annual billing is available on request, but no annual figures are published.",
+        "seatDetail": "No included-user count or additional-seat price is publicly stated. Plans instead limit capability profiles to 1, 3 or 5.",
+        "vatDetail": "Prices exclude VAT, which is added at checkout where applicable.",
+        "trialDetail": "No free trial. A no-card sample digest is offered; the provider advertises a first-month satisfaction refund and a 14-day cancellation right.",
+        "evidence": [
+          {
+            "label": "BidLens pricing",
+            "url": "https://bidlens.uk/pricing"
+          },
+          {
+            "label": "BidLens terms",
+            "url": "https://bidlens.uk/terms"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "The reviewed pages describe capability-profile matching, not saved keyword searches or keyword notifications.",
+          "evidence": []
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Each release is scored against a capability profile using sector, region, buyer type, value band and semantic fit, with the component scores exposed.",
+          "evidence": [
+            {
+              "label": "BidLens product",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "No structured buyer-profile or contracting-authority intelligence feature was established on the reviewed pages.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "Capability profiles describe the subscriber's own business and do not establish supplier, incumbent or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "No contract-expiry, renewal, re-tender or extension-monitoring feature was established.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "No comparable historical contract or award feature was established.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "No buyer plans, policies, strategies, minutes, budgets or other buyer-document library was established.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "No extracted participation conditions, certifications, policies or evaluation criteria feature was established.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "No readiness, evidence-gap or requirements-planning workflow was established.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The provider says it processes procurement releases, but the reviewed pages do not establish a searchable historical-award feature.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "No framework, DPS or dynamic-market discovery feature was established.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "No competitor, incumbent, supplier or winner tracking feature was established.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "CSV export is limited to Pro and Team; API access and webhook delivery are limited to Team.",
+          "evidence": [
+            {
+              "label": "BidLens pricing",
+              "url": "https://bidlens.uk/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "not_stated",
+          "detail": "A Team plan is named, but the reviewed pages do not state included users, shared workspaces, assignments or comments.",
+          "evidence": []
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "No bid drafting, answer library, tender-document analysis or managed writing feature was established.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "The current homepage says BidLens reads every release from Find a Tender.",
+          "evidence": [
+            {
+              "label": "BidLens coverage",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "The current homepage says BidLens reads every release from Contracts Finder.",
+          "evidence": [
+            {
+              "label": "BidLens coverage",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "The current homepage says BidLens reads every release from Sell2Wales.",
+          "evidence": [
+            {
+              "label": "BidLens coverage",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "The current homepage says BidLens reads every release from Public Contracts Scotland.",
+          "evidence": [
+            {
+              "label": "BidLens coverage",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The homepage describes the service as scanning every UK tender and using official open-data feeds.",
+          "evidence": [
+            {
+              "label": "BidLens product",
+              "url": "https://bidlens.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The current homepage names four sources, while the terms last updated 17 May 2026 name only Find a Tender and Contracts Finder; confirm whether Sell2Wales and Public Contracts Scotland are contractually included.",
+        "The scoring, coverage and delivery claims are provider-stated and were not independently tested by Civensa.",
+        "Seat entitlement is not publicly stated even though a Team plan is offered."
+      ],
+      "sourceUrls": [
+        "https://bidlens.uk/",
+        "https://bidlens.uk/pricing",
+        "https://bidlens.uk/terms"
+      ]
+    },
+    {
+      "slug": "bidscout",
+      "name": "BidScout",
+      "officialUrl": "https://www.bidscout.co.uk/",
+      "pricing": {
+        "availability": "quote_only",
+        "billingBasis": "unknown",
+        "currency": "unknown",
+        "plansText": "Starter, Professional and Enterprise tiers are published, but no numeric paid subscription price is displayed. Professional includes full tender intelligence, AI bid writing, Bid/No-Bid scoring and Market Intelligence; Enterprise adds consortium tools, advanced analytics, support and custom integrations.",
+        "seatDetail": "Included users and additional-seat pricing are not publicly stated.",
+        "vatDetail": "VAT treatment is not publicly stated.",
+        "trialDetail": "The pricing page advertises a 7-day Starter trial without a credit card. Another first-party comparison page references a 14-day trial, so confirm the current trial at signup.",
+        "evidence": [
+          {
+            "label": "BidScout pricing",
+            "url": "https://www.bidscout.co.uk/pricing"
+          },
+          {
+            "label": "BidScout product comparison",
+            "url": "https://www.bidscout.co.uk/best-uk-bid-writer-platform"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Real-time or daily alerts can be configured by keyword, sector, region, CPV code or buyer and delivered by email, Slack or Microsoft Teams.",
+          "evidence": [
+            {
+              "label": "Smart tender alerts",
+              "url": "https://www.bidscout.co.uk/features/smart-alerts"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "partial",
+          "detail": "BidScout documents AI Bid/No-Bid scoring for technical fit, competitive position, resources and relationship, but its alert-matching page describes keyword, CPV and buyer rules rather than semantic alert matching.",
+          "evidence": [
+            {
+              "label": "Bid/No-Bid scoring",
+              "url": "https://www.bidscout.co.uk/features/bid-no-bid-scoring"
+            },
+            {
+              "label": "Smart tender alerts",
+              "url": "https://www.bidscout.co.uk/features/smart-alerts"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "The Professional-tier Market Intelligence hub includes buyer spend analysis across 8,200+ authorities, but a separate public buyer-profile directory was not established.",
+          "evidence": [
+            {
+              "label": "Market Intelligence",
+              "url": "https://www.bidscout.co.uk/features/market-intelligence"
+            },
+            {
+              "label": "BidScout pricing",
+              "url": "https://www.bidscout.co.uk/pricing"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "yes",
+          "detail": "Public supplier pages show award counts and values, recent contract awards, top buyers and live opportunities matched to the supplier's win history.",
+          "evidence": [
+            {
+              "label": "Example supplier profile",
+              "url": "https://www.bidscout.co.uk/suppliers/bae-systems-applied-intelligence-limited"
+            },
+            {
+              "label": "Supplier intelligence directory",
+              "url": "https://www.bidscout.co.uk/competitor-intel"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "The Contract Renewal Tracker monitors awarded-contract end dates, bands urgency and advertises alerts 90–180 days before expiry with a direct rebid link when published.",
+          "evidence": [
+            {
+              "label": "Contract Renewal Tracker",
+              "url": "https://www.bidscout.co.uk/features/renewal-tracker"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "partial",
+          "detail": "Competitor Watch sends similar live opportunities based on a supplier's win history; no notice-level comparable historical-award view was established.",
+          "evidence": [
+            {
+              "label": "Example supplier profile",
+              "url": "https://www.bidscout.co.uk/suppliers/bae-systems-applied-intelligence-limited"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The Document Library covers the subscriber's own evidence, policies and case studies; it does not establish a library of buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond notices.",
+          "evidence": [
+            {
+              "label": "Document Library",
+              "url": "https://www.bidscout.co.uk/features/document-library"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "yes",
+          "detail": "Evaluation Criteria Analysis auto-extracts scoring criteria, weightings and mandatory compliance requirements from a tender.",
+          "evidence": [
+            {
+              "label": "Evaluation Criteria Analysis",
+              "url": "https://www.bidscout.co.uk/features/evaluation-criteria"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Bid/No-Bid scoring assesses technical fit, resources and relationships, while evaluation analysis highlights mandatory requirements; no explicit gap-remediation or pre-tender evidence-planning workflow was established.",
+          "evidence": [
+            {
+              "label": "Bid/No-Bid scoring",
+              "url": "https://www.bidscout.co.uk/features/bid-no-bid-scoring"
+            },
+            {
+              "label": "Evaluation Criteria Analysis",
+              "url": "https://www.bidscout.co.uk/features/evaluation-criteria"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Supplier pages expose historical contract awards, award counts, total values and buyers; alerts can also be configured for new awards.",
+          "evidence": [
+            {
+              "label": "Example supplier profile",
+              "url": "https://www.bidscout.co.uk/suppliers/bae-systems-applied-intelligence-limited"
+            },
+            {
+              "label": "Smart tender alerts",
+              "url": "https://www.bidscout.co.uk/features/smart-alerts"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "Market Intelligence includes framework analysis, and the provider positions its coverage as including major framework agreements.",
+          "evidence": [
+            {
+              "label": "Market Intelligence",
+              "url": "https://www.bidscout.co.uk/features/market-intelligence"
+            },
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Competitor Watch can monitor a named supplier, email when it wins new contracts and surface similar live opportunities; Market Intelligence includes competitor award tracking and league tables.",
+          "evidence": [
+            {
+              "label": "Example supplier profile",
+              "url": "https://www.bidscout.co.uk/suppliers/bae-systems-applied-intelligence-limited"
+            },
+            {
+              "label": "Market Intelligence",
+              "url": "https://www.bidscout.co.uk/features/market-intelligence"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Documented integrations include Slack, Teams, Salesforce, HubSpot, SharePoint and Google Drive; the site also advertises DOCX/PDF bid export, while custom integrations are limited to Enterprise. No public API specification was found.",
+          "evidence": [
+            {
+              "label": "BidScout integrations",
+              "url": "https://www.bidscout.co.uk/integrations"
+            },
+            {
+              "label": "BidScout pricing",
+              "url": "https://www.bidscout.co.uk/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Users can share saved searches with a team; Enterprise advertises consortium tools. Included users and detailed assignment/comment permissions are not stated.",
+          "evidence": [
+            {
+              "label": "Tender Search",
+              "url": "https://www.bidscout.co.uk/features/tender-search"
+            },
+            {
+              "label": "BidScout pricing",
+              "url": "https://www.bidscout.co.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "AI bid writing and a document evidence library are included on Professional; the pricing page does not include them in Starter.",
+          "evidence": [
+            {
+              "label": "AI Bid Writer",
+              "url": "https://www.bidscout.co.uk/features/ai-bid-writer"
+            },
+            {
+              "label": "Document Library",
+              "url": "https://www.bidscout.co.uk/features/document-library"
+            },
+            {
+              "label": "BidScout pricing",
+              "url": "https://www.bidscout.co.uk/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Named in the provider's Tender Search coverage and homepage service description.",
+          "evidence": [
+            {
+              "label": "Tender Search",
+              "url": "https://www.bidscout.co.uk/features/tender-search"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Named in the provider's Tender Search coverage and homepage service description.",
+          "evidence": [
+            {
+              "label": "Tender Search",
+              "url": "https://www.bidscout.co.uk/features/tender-search"
+            }
+          ]
+        },
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "Named as TED/TED Europa in the provider's UK and EU coverage; OJEU records are also referenced.",
+          "evidence": [
+            {
+              "label": "Tender Search",
+              "url": "https://www.bidscout.co.uk/features/tender-search"
+            },
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Explicitly named in the provider's homepage coverage description.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Explicitly named in the provider's homepage coverage description.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Explicitly named in the provider's homepage coverage description.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Crown Commercial Service",
+          "detail": "Crown Commercial Service is explicitly named as a covered UK source in the homepage service description.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider states coverage of 50+ official UK and EU procurement portals, 28,800+ live tenders, 8,200+ contracting authorities and 64 countries.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            },
+            {
+              "label": "Tender Search",
+              "url": "https://www.bidscout.co.uk/features/tender-search"
+            }
+          ]
+        },
+        {
+          "claim": "The provider broadly references additional official portals and country portals in France, Germany, Norway, Spain, Italy and elsewhere without naming individual portal products.",
+          "evidence": [
+            {
+              "label": "BidScout product",
+              "url": "https://www.bidscout.co.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "No numeric paid pricing, seat entitlement, currency or VAT treatment is shown on the checked pricing page despite its 'transparent pricing' description.",
+        "First-party pages conflict on trial length: the pricing page says 7 days, while another marketing page says 14 days.",
+        "Only explicitly named portals are normalized above; the broader claim of 50+ sources was not expanded into unnamed portals.",
+        "Feature, coverage, volume, scoring and renewal claims are provider-stated and were not independently tested by Civensa."
+      ],
+      "sourceUrls": [
+        "https://www.bidscout.co.uk/",
+        "https://www.bidscout.co.uk/pricing",
+        "https://www.bidscout.co.uk/features/tender-search",
+        "https://www.bidscout.co.uk/features/smart-alerts",
+        "https://www.bidscout.co.uk/features/renewal-tracker",
+        "https://www.bidscout.co.uk/features/bid-no-bid-scoring",
+        "https://www.bidscout.co.uk/features/market-intelligence",
+        "https://www.bidscout.co.uk/features/document-library",
+        "https://www.bidscout.co.uk/features/ai-bid-writer",
+        "https://www.bidscout.co.uk/features/evaluation-criteria",
+        "https://www.bidscout.co.uk/integrations",
+        "https://www.bidscout.co.uk/competitor-intel",
+        "https://www.bidscout.co.uk/suppliers/bae-systems-applied-intelligence-limited",
+        "https://www.bidscout.co.uk/best-uk-bid-writer-platform"
+      ]
+    },
+    {
+      "slug": "bidskim-alerts",
+      "name": "BidSkim",
+      "officialUrl": "https://bidskim.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Free £0 forever. Monitor £79/month or £780/year (£65/month effective). Predict £189/month or £1,860/year (£155/month effective).",
+        "seatDetail": "Monitor and Predict can send alerts to the subscriber and up to three teammates. No additional-seat price is published, and the provider directs large bid teams needing seats toward enterprise platforms.",
+        "vatDetail": "BidSkim Limited states that it is not VAT registered, so no VAT is charged and displayed prices are final.",
+        "trialDetail": "The Free plan requires no card and includes browsing, a one-off match scan and a 12-month report. No paid-plan trial is stated; annual plans have a 30-day money-back guarantee.",
+        "evidence": [
+          {
+            "label": "BidSkim pricing",
+            "url": "https://bidskim.com/pricing"
+          },
+          {
+            "label": "BidSkim terms",
+            "url": "https://bidskim.com/terms"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "The provider positions its profile-based scoring as a replacement for keyword alerts; the reviewed pages do not establish a saved keyword-alert feature.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "partial",
+          "detail": "A free account receives one profile-based scan; ongoing daily 0–100 scoring against services, region, value and certifications is included in Monitor and Predict.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "Predict includes buyer profiles with requirements, spend/award history, top suppliers, contacts and researched notes; it is not included in Monitor.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "Predict includes supplier and incumbent intelligence; supplier profiles show wins, buyers, regions, categories, awarded values and renewal exposure.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim terms",
+              "url": "https://bidskim.com/terms"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "Predict provides renewal radar based on published contract end dates and extension options, ranked against the subscriber's profile; it is not included in Monitor.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            },
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "partial",
+          "detail": "Predict surfaces comparable historical awards matched by scope, including winners, values, terms, bid counts and SME status where published.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "partial",
+          "detail": "Buyer requirement signals are described as being pulled from public policy pages and documents, but the provider does not document a separate searchable buyer-document library.",
+          "evidence": [
+            {
+              "label": "BidSkim product",
+              "url": "https://bidskim.com/"
+            },
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Predict buyer profiles organize insurance, certifications, social value, local preferences and pass/fail gates; the feature is not included in Monitor.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Predict is positioned for preparing certifications, evidence and answers before a tender goes live using buyer requirements and likely renewals; no separate task-based readiness workflow is described.",
+          "evidence": [
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            },
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Free signup includes a one-off 12-month matched-award report, while paid intelligence uses up to five years of buyer and award history and comparable awards.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            },
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "BidSkim badges frameworks, DPS and dynamic markets, filters out non-joinable call-offs and modifications, and shows application/end dates, supplier caps and route-in information.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "Predict can track named suppliers and show their wins, buyers and contracts nearing expiry; it is not included in Monitor.",
+          "evidence": [
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            },
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "No CSV/Excel export, API, webhook or CRM integration is documented on the reviewed pages; the pricing page says large teams needing exports may be better served by enterprise platforms.",
+          "evidence": [
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Monitor and Predict can deliver alerts to up to three teammates and include a pipeline, but no multi-user seats, assignments, comments or shared-workspace permissions are documented.",
+          "evidence": [
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            },
+            {
+              "label": "BidSkim features",
+              "url": "https://bidskim.com/features"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "no",
+          "detail": "The pricing FAQ explicitly says BidSkim does not write bids and focuses on finding, qualifying and researching opportunities before the bid.",
+          "evidence": [
+            {
+              "label": "BidSkim pricing",
+              "url": "https://bidskim.com/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "BidSkim states that it scans this official source in full and links to the official source page.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "BidSkim states that it scans this official source in full and links to the official source page.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "BidSkim states that it scans this official source in full and links to the official source page.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "BidSkim states that it scans this official source in full and links to the official source page.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider states 800,000+ notices, 10,000+ buyers, five years of award history and daily checks across four official British sources.",
+          "evidence": [
+            {
+              "label": "BidSkim data coverage",
+              "url": "https://bidskim.com/data"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Civensa is operated by BidSkim Limited, so this listing requires a prominent ownership disclosure and the same evidence standard used for competitors.",
+        "The provider's stated British coverage names four portals and does not include eTendersNI.",
+        "Renewal dates, buyer requirements, contacts, bid counts and other enriched fields depend on what public sources publish; the provider says sparse source data is left sparse rather than guessed.",
+        "The matching, history, coverage and intelligence claims are provider-stated and were not independently tested by Civensa."
+      ],
+      "sourceUrls": [
+        "https://bidskim.com/",
+        "https://bidskim.com/pricing",
+        "https://bidskim.com/terms",
+        "https://bidskim.com/features",
+        "https://bidskim.com/data"
+      ]
+    },
+    {
+      "slug": "bidstats",
+      "name": "BidStats",
+      "officialUrl": "https://bidstats.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "mixed",
+        "currency": "GBP",
+        "plansText": "Free £0. Standard £350/year. Pro £800/year with three seats. Insights starts from £5,000/year. Rolling monthly options are advertised for Standard and Pro, but monthly figures were not visible on the checked page.",
+        "seatDetail": "Pro includes three seats. Extra users are £150 plus VAT each. Included users for Free, Standard and Insights are not publicly stated.",
+        "vatDetail": "Extra users are explicitly priced at £150 plus VAT; the VAT treatment of base plan prices is not stated on the checked page.",
+        "trialDetail": "No trial or payment-card requirement is publicly stated on the checked pricing page.",
+        "evidence": [
+          {
+            "label": "BidStats pricing",
+            "url": "https://app.bidstats.uk/pricing"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "partial",
+          "detail": "Paid plans provide tailored daily email alerts; the official terms say users can set keyword searches that send tender and award details to their inbox. Standard has one notifier and Pro/Insights have unlimited notifiers.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            },
+            {
+              "label": "BidStats terms",
+              "url": "https://app.bidstats.uk/static/docs/bidstats-terms.pdf"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "No semantic, machine-learning or profile-based relevance matching feature was established on the reviewed pages.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "BidStats publishes structured buyer reports and buyer analyses connected to tender and award records.",
+          "evidence": [
+            {
+              "label": "BidStats home",
+              "url": "https://app.bidstats.uk/"
+            },
+            {
+              "label": "Buyer reports",
+              "url": "https://bidstats.uk/analysis/buyers/"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "yes",
+          "detail": "BidStats publishes supplier reports with award counts, sectors, values, locations, buyers and related award records.",
+          "evidence": [
+            {
+              "label": "BidStats home",
+              "url": "https://app.bidstats.uk/"
+            },
+            {
+              "label": "Supplier reports",
+              "url": "https://bidstats.uk/analysis/suppliers/"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "An expiring-contract pipeline is included in Standard, Pro and Insights, with two, five or ten years of awarded-contract coverage respectively; it is not listed for Free.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Search and analysis pages expose historical notices, but no feature that deliberately surfaces comparable historical contracts against a notice or profile was established.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "A Knowledge Hub is named on paid plans, but the reviewed pages do not establish that it contains buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "No normalized extraction of certifications, participation conditions, policies or evaluation criteria was established.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "No readiness, requirements-gap or evidence-planning workflow was established.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Paid plans show awardees and values with two, five or ten years of history depending on tier; public supplier and tender pages also expose award records, but plan depth varies materially.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            },
+            {
+              "label": "Supplier reports",
+              "url": "https://bidstats.uk/analysis/suppliers/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Frameworks data is listed only for the Insights tier.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "Supplier reports provide competitor research, but no named-supplier monitoring or competitor alert feature was established.",
+          "evidence": [
+            {
+              "label": "Supplier reports",
+              "url": "https://bidstats.uk/analysis/suppliers/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Pro includes tender and contract export; Insights includes exports plus CRM connectivity through an API. These are not listed for Free or Standard.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Pro includes three seats and extra users can be purchased, but no assignments, shared pipeline, comments or team workflow was established.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "No bid drafting, response library, document analysis, compliance matrix or managed writing service was established.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "The public site names TED/OJEU as a source for its UK tender search.",
+          "evidence": [
+            {
+              "label": "BidStats tender search",
+              "url": "https://bidstats.uk/tenders/search"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "The public site names Contracts Finder as a source for its UK tender search.",
+          "evidence": [
+            {
+              "label": "BidStats tender search",
+              "url": "https://bidstats.uk/tenders/search"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "The public site names Find a Tender as a source for its UK tender search.",
+          "evidence": [
+            {
+              "label": "BidStats tender search",
+              "url": "https://bidstats.uk/tenders/search"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Pro and Insights are described as sourced from more than 3,000 buyers; the application homepage separately says more than 3,600 buyers.",
+          "evidence": [
+            {
+              "label": "BidStats pricing",
+              "url": "https://app.bidstats.uk/pricing"
+            },
+            {
+              "label": "BidStats home",
+              "url": "https://app.bidstats.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Source count, history depth, alert capacity, exports, frameworks and renewal coverage differ materially by plan.",
+        "The site currently uses both 3,000+ and 3,600+ buyer-count claims on first-party pages; neither was independently verified by Civensa.",
+        "The explicitly named source list on the public search page is narrower than the 3,000+ buyer coverage claim and does not name devolved portals individually.",
+        "Pricing, data coverage and feature claims are provider-stated and were not independently tested by Civensa."
+      ],
+      "sourceUrls": [
+        "https://bidstats.uk/",
+        "https://app.bidstats.uk/",
+        "https://app.bidstats.uk/pricing",
+        "https://app.bidstats.uk/static/docs/bidstats-terms.pdf",
+        "https://bidstats.uk/tenders/search",
+        "https://bidstats.uk/analysis/buyers/",
+        "https://bidstats.uk/analysis/suppliers/"
+      ]
+    },
+    {
+      "slug": "bidwell-alerts",
+      "name": "Bidwell",
+      "officialUrl": "https://bidwell.app/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Current homepage pricing: Knowledge base £0/month; Answer any tender £20/month; Answer and discover £30/month. A yearly toggle is shown, but exact annual figures were not visible on the checked page.",
+        "seatDetail": "The current homepage states no per-seat fees. No user cap or additional-seat price is published.",
+        "vatDetail": "VAT inclusion or exclusion is not stated alongside the current plan prices.",
+        "trialDetail": "The knowledge base is free forever without a card, and the first tender response is free. Older live product pages still advertise a 7-day no-card trial, so confirm which onboarding offer applies.",
+        "evidence": [
+          {
+            "label": "Bidwell current pricing",
+            "url": "https://bidwell.app/"
+          },
+          {
+            "label": "Bidwell Discover product page",
+            "url": "https://bidwell.app/product/discover"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "partial",
+          "detail": "The discovery module supports email alerts and matching by CPV, region, value and sector; its live Discover page also advertises smart keyword matching and saved searches. Discovery is limited to the Answer and discover plan/add-on.",
+          "evidence": [
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            },
+            {
+              "label": "Bidwell Discover",
+              "url": "https://bidwell.app/product/discover"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "partial",
+          "detail": "The Discover page advertises AI summaries and fit scores against a company profile, while the current homepage lists sector, CPV, region and value matching; semantic matching is not separately described and discovery is plan-limited.",
+          "evidence": [
+            {
+              "label": "Bidwell Discover",
+              "url": "https://bidwell.app/product/discover"
+            },
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "No structured buyer profile or contracting-authority intelligence feature was established.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "The subscriber's own knowledge base does not establish structured incumbent, winner or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "No public-contract expiry, renewal, re-tender or extension-monitoring feature was established. Certificate renewal reminders in the subscriber knowledge base are not contract-renewal signals.",
+          "evidence": [
+            {
+              "label": "Bidwell Know",
+              "url": "https://bidwell.app/product/know"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "No comparable historical contract or award feature surfaced against a notice or profile was established.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The knowledge base contains the subscriber's own past bids, policies, credentials and case studies; it does not establish a library of buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond tender packs.",
+          "evidence": [
+            {
+              "label": "Bidwell Know",
+              "url": "https://bidwell.app/product/know"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Paid drafting extracts every tender/PQQ question and word limit, matches it to the subscriber's evidence and drafts against the buyer's questions; recurring buyer-level requirements are not documented.",
+          "evidence": [
+            {
+              "label": "Bidwell Draft",
+              "url": "https://bidwell.app/product/draft"
+            },
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Bidwell offers a free readiness checker that scores certifications, track record, case studies and bid capacity, plus a framework eligibility tool that identifies missing certifications/documents. These are separate public tools rather than an established buyer-specific requirements workflow inside the paid product.",
+          "evidence": [
+            {
+              "label": "Tender readiness checker",
+              "url": "https://bidwell.app/tools/tender-readiness"
+            },
+            {
+              "label": "Framework eligibility tool",
+              "url": "https://bidwell.app/tools/framework-eligibility"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The Win module tracks the subscriber's own submissions, decisions and awards and can ingest a related Contracts Finder award into that pipeline; it does not establish a searchable market-wide award-history feature.",
+          "evidence": [
+            {
+              "label": "Bidwell Win",
+              "url": "https://bidwell.app/product/win"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Paid discovery ingests Crown Commercial Service framework supplier lists and names G-Cloud, DOS and RM frameworks; a free framework eligibility tool also scores companies against major framework entry criteria.",
+          "evidence": [
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            },
+            {
+              "label": "Framework eligibility tool",
+              "url": "https://bidwell.app/tools/framework-eligibility"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "No named competitor, incumbent, supplier or winner monitoring feature was established.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "The free knowledge base supports export; paid drafting exports Word and Excel, the Win module exports PDF reports, and an older live Discover page advertises CSV match export. No API or webhook was established.",
+          "evidence": [
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            },
+            {
+              "label": "Bidwell Win",
+              "url": "https://bidwell.app/product/win"
+            },
+            {
+              "label": "Bidwell Discover",
+              "url": "https://bidwell.app/product/discover"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "The knowledge base documents role-based access, and Draft documents comments and reviewer assignments. The current pricing says no per-seat fees, but no user cap or full permission model is published.",
+          "evidence": [
+            {
+              "label": "Bidwell Know",
+              "url": "https://bidwell.app/product/know"
+            },
+            {
+              "label": "Bidwell Draft",
+              "url": "https://bidwell.app/product/draft"
+            },
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "The £20 and £30 plans draft complete tender, PQQ and supplier-questionnaire responses from the subscriber's knowledge base with source citations and Word/Excel export; the free knowledge-base tier does not include ongoing drafting, although the first response is free.",
+          "evidence": [
+            {
+              "label": "Bidwell current product and pricing",
+              "url": "https://bidwell.app/"
+            },
+            {
+              "label": "Bidwell Draft",
+              "url": "https://bidwell.app/product/draft"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Explicitly named in Bidwell's current live source coverage.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Explicitly named in Bidwell's current live source coverage.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Explicitly named as Public Contracts Scotland/PCS in Bidwell's current live source coverage.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Explicitly named in Bidwell's current live source coverage.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Explicitly named in Bidwell's current live source coverage.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Crown Commercial Service framework supplier lists",
+          "detail": "Bidwell says it ingests CCS framework supplier lists and explicitly names G-Cloud 13, DOS, RM6263 Cyber Security Services 4 and RM6098 Technology Products 2.",
+          "evidence": [
+            {
+              "label": "Bidwell current source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The current homepage says Bidwell monitors every UK tender portal daily, while its source panel names five national/devolved portals plus CCS framework lists and describes hourly source updates.",
+          "evidence": [
+            {
+              "label": "Bidwell current product and source coverage",
+              "url": "https://bidwell.app/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Bidwell's current homepage pricing is £0/£20/£30, while older live product pages still show a previous £15/£30/£40 plan set and a 7-day trial; use the homepage figures and confirm at checkout.",
+        "The broad claim of monitoring every UK portal is kept separate from the six source groups explicitly named above.",
+        "Buyer profiles, competitor tracking, public-market award history, contract renewals and buyer-document intelligence were not established on the reviewed pages.",
+        "Feature, source, timing and productivity claims are provider-stated and were not independently tested by Civensa."
+      ],
+      "sourceUrls": [
+        "https://bidwell.app/",
+        "https://bidwell.app/product/discover",
+        "https://bidwell.app/product/know",
+        "https://bidwell.app/product/draft",
+        "https://bidwell.app/product/win",
+        "https://bidwell.app/tools/tender-readiness",
+        "https://bidwell.app/tools/framework-eligibility",
+        "https://bidwell.app/about"
+      ]
+    }
+  ]
+}

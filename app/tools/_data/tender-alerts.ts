@@ -1,6 +1,19 @@
 import { commercialRecord, type VendorRecord } from "./types";
+import { tenderAlertResearchBySlug } from "./tender-alert-research";
 
-export const tenderAlertRecords: readonly VendorRecord[] = [
+const tenderAlertBaseRecords: readonly VendorRecord[] = [
+  commercialRecord({
+    slug: "bidskim-alerts", name: "BidSkim", category: "tender-alerts",
+    providerType: "Commercial alert and qualification platform", officialUrl: "https://bidskim.com/",
+    summary: "BidSkim says it scores public-sector notices against a supplier profile and sends a daily shortlist with reasons.",
+    coverage: "Provider states Britain-wide coverage from Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales.",
+    pricing: "Free: £0. Monitor: £79/month or £780/year. Predict: £189/month or £1,860/year.",
+    pricingCaveat: "Plan names and prices were checked against BidSkim's public pricing page. Civensa and BidSkim have the same operator; see the ownership disclosure.",
+    bestFor: "British suppliers wanting profile-based qualification and links back to official notices.",
+    notFor: "Teams needing managed bid writing or coverage outside Great Britain.",
+    caveat: "The provider says it does not write bids. Its score is a qualification aid, not a buyer decision or award forecast.",
+    evidenceLinks: [{ label: "BidSkim pricing and plan scope", url: "https://bidskim.com/pricing" }],
+  }),
   commercialRecord({
     slug: "bidstats", name: "BidStats", category: "tender-alerts",
     providerType: "Commercial tender search and alert service", officialUrl: "https://bidstats.uk/",
@@ -338,3 +351,9 @@ export const tenderAlertRecords: readonly VendorRecord[] = [
     evidenceLinks: [{ label: "Tender Radar waitlist pricing", url: "https://tenderradar.io/pricing" }],
   }),
 ] as const;
+
+export const tenderAlertRecords: readonly VendorRecord[] = tenderAlertBaseRecords.map((record) => {
+  const normalized = tenderAlertResearchBySlug[record.slug];
+  if (!normalized) throw new Error(`Missing normalized tender-alert research for ${record.slug}`);
+  return { ...record, normalized, lastChecked: normalized.researchedAt };
+});

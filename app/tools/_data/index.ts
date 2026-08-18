@@ -7,8 +7,23 @@ import { tenderAlertRecords } from "./tender-alerts";
 import type { CategoryDefinition, CategorySlug, VendorRecord } from "./types";
 
 export { categories } from "./categories";
-export { LAST_CHECKED } from "./types";
-export type { CategoryDefinition, CategorySlug, EvidenceBasis, EvidenceLink, VendorRecord } from "./types";
+export { LAST_CHECKED, normalizedFeatureKeys } from "./types";
+export type {
+  BillingBasis,
+  CategoryDefinition,
+  CategorySlug,
+  CoverageClaim,
+  EvidenceBasis,
+  EvidenceLink,
+  ExplicitPortalCoverage,
+  FeatureStatus,
+  NormalizedFeature,
+  NormalizedFeatureKey,
+  NormalizedPricing,
+  NormalizedVendorProfile,
+  PricingAvailability,
+  VendorRecord,
+} from "./types";
 
 export const vendorRecords: readonly VendorRecord[] = [
   ...tenderAlertRecords,

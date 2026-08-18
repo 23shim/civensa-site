@@ -1,0 +1,1370 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "tender-radar",
+      "name": "Tender Radar",
+      "officialUrl": "https://tenderradar.io/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "EUR",
+        "plansText": "Monthly pricing shown as Starter €79/month and Professional €149/month; Enterprise is custom. The annual toggle says it saves two months, but the reviewed page did not expose separate annual totals.",
+        "seatDetail": "User or seat allowances are not publicly stated. Plans instead limit company profiles: 1 on Starter, up to 10 on Professional and unlimited on Enterprise.",
+        "vatDetail": "Prices exclude applicable VAT or other taxes, which are added where required.",
+        "trialDetail": "All paid plans advertise a free trial with no credit card required, but the duration is not stated. The service was also advertising a closed beta and waitlist ahead of public launch.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://tenderradar.io/pricing"
+          },
+          {
+            "label": "Terms of Service",
+            "url": "https://tenderradar.io/terms"
+          },
+          {
+            "label": "Waitlist",
+            "url": "https://tenderradar.io/waitlist"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "Configurable email, Slack and score-threshold alerts are described, but the reviewed pages do not establish saved keyword alerts.",
+          "evidence": []
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "AI builds capability profiles from company websites and semantically scores tenders with an explanation of fit.",
+          "evidence": [
+            {
+              "label": "Pricing and AI matching FAQ",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Public category pages show buyer counts, but the reviewed pages do not establish structured buyer profiles.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "Company capability profiles are the customer's own matching configurations, not supplier, incumbent or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "Public CPV category pages display category-level re-tender likelihood, but no contract-specific expiry or renewal monitoring was established.",
+          "evidence": [
+            {
+              "label": "Example CPV category page",
+              "url": "https://tenderradar.io/cpv/30000000-9"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish similar historical contracts surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement documents.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Professional advertises AI document summaries, while the shipped roadmap item says uploaded documents can yield requirements, deadlines and evaluation criteria. This is plan-limited.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish readiness, evidence-gap or requirements-planning workflow.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Public CPV pages report notice history and awarded-contract counts, but no dedicated award-history search or winner-intelligence feature was established.",
+          "evidence": [
+            {
+              "label": "Example CPV category page",
+              "url": "https://tenderradar.io/cpv/30000000-9"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "Tender Radar says it flags DPS opportunities and both initial framework notices and call-off notices.",
+          "evidence": [
+            {
+              "label": "DPS glossary",
+              "url": "https://tenderradar.io/glossary/dynamic-purchasing-system"
+            },
+            {
+              "label": "Framework glossary",
+              "url": "https://tenderradar.io/fi/glossary/framework-agreement"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Enterprise advertises API access, but the roadmap separately labels REST API access as coming soon; customer availability is therefore unclear.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "The shipped roadmap describes multi-tenant workspaces with role-based access, multiple profiles and shared opportunity feeds; Professional also advertises Slack alerts.",
+          "evidence": [
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "no",
+          "detail": "Tender response drafting is explicitly listed as coming soon rather than shipped.",
+          "evidence": [
+            {
+              "label": "Product roadmap",
+              "url": "https://tenderradar.io/roadmap"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Listed in the pricing coverage FAQ as a monitored UK source; current public CPV pages also identify contracts_finder in source counts.",
+          "evidence": [
+            {
+              "label": "Pricing coverage FAQ",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Example CPV source counts",
+              "url": "https://tenderradar.io/cpv/30000000-9"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Current public CPV pages explicitly identify find_a_tender as a source, although the coverage FAQ does not list it among the 14 monitored sources.",
+          "evidence": [
+            {
+              "label": "Example CPV source counts",
+              "url": "https://tenderradar.io/cpv/73100000-3"
+            }
+          ]
+        },
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily (TED)",
+          "detail": "Coverage page names TED as the EU-wide official-journal source.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "EU Funding & Tenders",
+          "detail": "Named as an EU-wide European Commission source.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "BOAMP",
+          "detail": "Named as a dedicated French national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Vergabe.de",
+          "detail": "Named as a dedicated German national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "PLACSP",
+          "detail": "Named as a dedicated Spanish national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "ANAC",
+          "detail": "Named as an Italian procurement source using its open API.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "TenderNed",
+          "detail": "Named as a dedicated Dutch national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Hilma",
+          "detail": "Named as a dedicated Finnish national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "AcinGov",
+          "detail": "Named as a dedicated Portuguese national-portal integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Diário da República",
+          "detail": "Named as a dedicated Portuguese official-gazette integration.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "UNGM",
+          "detail": "Named as a monitored international United Nations procurement portal.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "SAM.gov",
+          "detail": "Named as a monitored United States federal procurement source.",
+          "evidence": [
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Council of Europe",
+          "detail": "Named in the pricing coverage FAQ as a monitored source.",
+          "evidence": [
+            {
+              "label": "Pricing coverage FAQ",
+              "url": "https://tenderradar.io/pricing"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "NATO NSPA",
+          "detail": "Named in the pricing coverage FAQ as a monitored source.",
+          "evidence": [
+            {
+              "label": "Pricing coverage FAQ",
+              "url": "https://tenderradar.io/pricing"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "NATO NCIA",
+          "detail": "Named in the pricing coverage FAQ as a monitored source.",
+          "evidence": [
+            {
+              "label": "Pricing coverage FAQ",
+              "url": "https://tenderradar.io/pricing"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Pricing says every plan includes all portal coverage and the coverage page says 14 data sources across 27 countries, with seven countries having dedicated national scrapers plus TED.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderradar.io/pricing"
+            },
+            {
+              "label": "Portals and coverage",
+              "url": "https://tenderradar.io/coverage"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Provider claims only; Civensa has not independently tested coverage, matching or alert delivery.",
+        "The waitlist page described Tender Radar as a closed beta with a summer 2026 public launch, and pricing calls to action still said Join Waitlist on the reviewed date.",
+        "Provider pages conflict on UK readiness: pricing lists Contracts Finder as monitored, public CPV pages show UK source data, while the roadmap still labels dedicated UK coverage as coming soon.",
+        "Enterprise pricing advertises API access while the roadmap separately lists REST API access as coming soon."
+      ],
+      "sourceUrls": [
+        "https://tenderradar.io/",
+        "https://tenderradar.io/pricing",
+        "https://tenderradar.io/coverage",
+        "https://tenderradar.io/roadmap",
+        "https://tenderradar.io/demo",
+        "https://tenderradar.io/waitlist",
+        "https://tenderradar.io/terms",
+        "https://tenderradar.io/glossary/dynamic-purchasing-system",
+        "https://tenderradar.io/fi/glossary/framework-agreement",
+        "https://tenderradar.io/cpv/30000000-9",
+        "https://tenderradar.io/cpv/73100000-3"
+      ]
+    },
+    {
+      "slug": "tenderai",
+      "name": "TenderAI",
+      "officialUrl": "https://tenderai.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "£99/month per business profile with unlimited opportunities. A free weekly digest is also advertised.",
+        "seatDetail": "One business profile is included; user or seat limits are not publicly stated.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed page.",
+        "trialDetail": "First month free and cancel anytime. The page says no card is charged for 30 days, but does not clearly state whether a card is required for the paid-plan trial; the separate weekly digest says no credit card is needed.",
+        "evidence": [
+          {
+            "label": "Product and pricing",
+            "url": "https://tenderai.uk/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "partial",
+          "detail": "Profiles can include keywords, sectors and CPV codes, but changes are handled by email and a provider-managed daily brief rather than a documented self-serve saved-keyword alert workflow.",
+          "evidence": [
+            {
+              "label": "Product and FAQ",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Every tender is scored 0-100 against a personalised business profile using claimed semantic understanding, with BID, FLAG or SKIP rationale.",
+          "evidence": [
+            {
+              "label": "Product and pricing",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Buyer names appear in briefs, but the reviewed pages do not establish structured buyer-intelligence profiles.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "The customer's own business profile does not establish supplier, incumbent, winner or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish contract expiry, renewal, extension or re-tender monitoring.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The provider says it validates profiles against past tenders a customer would have won, but does not establish a user-facing similar-contract feature.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, pipelines, budgets or other buyer-authored documents.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "Match rationales are described, but the reviewed pages do not establish extracted participation conditions, evaluation criteria or recurring buyer requirements.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish readiness actions, evidence planning or a requirements gap workflow.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The reviewed pages describe live tender opportunities, not historical awards, winners or award search.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "Example briefs include DPS opportunities, but the reviewed pages do not establish dedicated framework, DPS or dynamic-market discovery or intelligence.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish CSV, spreadsheet, API, webhook, CRM or other data export or integration.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish multiple users, assignments, comments or a shared team pipeline.",
+          "evidence": []
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "TenderAI says it finds and scores opportunities for the customer to decide on, but the reviewed pages do not expressly establish or exclude bid-writing functionality.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender Service",
+          "detail": "Explicitly named as one of the two currently integrated data sources.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Explicitly named as one of the two currently integrated data sources.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider claims the two sources together represent about 100,000 notices per year across the UK public sector, with more sources to be added.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderai.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Provider claims only; Civensa has not independently tested source completeness, semantic scoring or delivery.",
+        "The page labels Find a Tender as all UK contracts over £10K and Contracts Finder as MOD plus wider public sector; these characterisations should not be treated as official portal rules.",
+        "Self-serve profile editing was described as coming soon; profile changes currently require replying to a brief or emailing the provider.",
+        "The page does not clearly state whether a payment card is required to start the free first month, only that no card is charged for 30 days."
+      ],
+      "sourceUrls": [
+        "https://tenderai.uk/",
+        "https://tenderai.uk/daily/"
+      ]
+    },
+    {
+      "slug": "tenderbase",
+      "name": "Tenderbase",
+      "officialUrl": "https://tenderbase.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Local (up to 3 regions) £25/month or £300/year; Regional Plus (up to 5 regions) £33/month or £396/year; UK Wide £42/month or £504/year; UK + Ireland £55/month or £660/year. Add-ons include tender-document requests at £10/month for five requests, bid-service quote requests at £10/month for five requests, Bid-Ready Package £599 and a strategy session £350.",
+        "seatDetail": "Local says no additional users; Regional Plus says add 1 additional user; UK Wide and UK + Ireland each say add 3 additional users. Pricing does not separately state the base user count or extra-seat price.",
+        "vatDetail": "The checkout displays a VAT line, but the reviewed public pricing page does not state whether listed prices include or exclude VAT or the applicable rate.",
+        "trialDetail": "14-day free trial. Valid payment details are required, including a temporary refundable £0.50 card-verification hold; it converts to the selected paid plan unless cancelled before the trial ends.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://tenderbase.co.uk/pricing"
+          },
+          {
+            "label": "Signup and subscription terms",
+            "url": "https://tenderbase.co.uk/signup"
+          },
+          {
+            "label": "REST API registration and subscription terms",
+            "url": "https://tenderbase.co.uk/restapi-registration"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Customers can create unlimited saved searches and daily tailored alerts using CPV codes, keywords, location, business type and contract value.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Saved searches and alerts",
+              "url": "https://tenderbase.co.uk/services/tender-management/saved-search-tenders-alert"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Tenderbase advertises AI-powered search plus a scoring system that analyses notices against a business profile.",
+          "evidence": [
+            {
+              "label": "Advanced AI tender search",
+              "url": "https://tenderbase.co.uk/services/tender-management/advanced-tender-search"
+            },
+            {
+              "label": "Tender scoring system",
+              "url": "https://tenderbase.co.uk/services/tender-management/tender-scoring-system"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "Structured buyer dashboards include tender and award counts, values, publication trends, supplier history, categories, historical tender lists and decision makers.",
+          "evidence": [
+            {
+              "label": "Complete buyer intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel"
+            },
+            {
+              "label": "Buyer tracker",
+              "url": "https://tenderbase.co.uk/buyer/tracker"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "yes",
+          "detail": "Supplier and competitor intelligence profiles include awarded values, buyers, sectors, regional footprint and filtered award history.",
+          "evidence": [
+            {
+              "label": "Complete supplier intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            },
+            {
+              "label": "Supplier tracker",
+              "url": "https://tenderbase.co.uk/supplier/tracker"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "PIN and pipeline tracking maps contract, framework and DPS start/end dates, estimated renewal dates and user-configured expiry reminders.",
+          "evidence": [
+            {
+              "label": "PIN and pipeline tracking",
+              "url": "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline"
+            },
+            {
+              "label": "Pipeline feature article",
+              "url": "https://tenderbase.co.uk/resources/introducing-tenderbase-pipeline-your-proactive-edge-in-public-procurement/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Buyer comparison and historical lists are described, but the reviewed pages do not establish similar historical contracts surfaced against a notice or supplier profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "Tender-document access is described, but the reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement materials.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "A paid add-on supplies available ITT, RFP, RFQ, PQQ and SQ documents containing requirements, specifications and evaluation details, but automated extraction or normalized buyer-requirement intelligence was not established.",
+          "evidence": [
+            {
+              "label": "Pricing and document-request add-on",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Supplier intelligence workflow",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Expiry countdowns and PIN-to-live alerts give advance preparation time, and managed strategy/bid services can assist planning, but no self-serve evidence-gap plan was established.",
+          "evidence": [
+            {
+              "label": "PIN and pipeline tracking",
+              "url": "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline"
+            },
+            {
+              "label": "Pricing and add-ons",
+              "url": "https://tenderbase.co.uk/pricing"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Plans include open, awarded and expired tenders; buyer and supplier intelligence exposes historical awards, winners, dates and values.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Complete supplier intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            },
+            {
+              "label": "Complete buyer intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "All listed plans include DPS and framework pipeline tenders, with visual deadline dashboards, start/end dates and expiry reminders.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "PIN and pipeline tracking",
+              "url": "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Plans include possible-competitor discovery and regional or UK-wide competitor tracking and alerts; supplier intelligence also exposes competitor award history.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Complete supplier intelligence",
+              "url": "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Tenderbase documents an authenticated search/notice REST API and Google Sheets tender export, while standard plans advertise PDF downloads and integrations. API pricing and customer entitlement are not stated on the normal pricing page.",
+          "evidence": [
+            {
+              "label": "API help",
+              "url": "https://tenderbase.co.uk/api-integration"
+            },
+            {
+              "label": "REST API registration and Google Sheets terms",
+              "url": "https://tenderbase.co.uk/restapi-registration"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "Regional Plus and wider plans add users and allow tender/task assignment; the platform also advertises team folders and Teams, HubSpot, Salesforce, WhatsApp, Monday and Slack integrations.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Tender management",
+              "url": "https://tenderbase.co.uk/services/tender-management"
+            },
+            {
+              "label": "Signup and Slack terms",
+              "url": "https://tenderbase.co.uk/signup"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "Tenderbase offers human end-to-end bid writing, editing and compliance review plus paid quote-request add-ons; the reviewed pages do not establish automated response drafting in the platform.",
+          "evidence": [
+            {
+              "label": "Bid writing service",
+              "url": "https://tenderbase.co.uk/services/bid-services/bid-writing-service"
+            },
+            {
+              "label": "Pricing and add-ons",
+              "url": "https://tenderbase.co.uk/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Tenderbase public notice and buyer pages explicitly name and link Public Contracts Scotland as the source/registration portal. This demonstrates included records, not a source-wide completeness guarantee.",
+          "evidence": [
+            {
+              "label": "Example Tenderbase notice",
+              "url": "https://tenderbase.co.uk/tender/grounds-maintenance-and-landscaping-contract/862991"
+            },
+            {
+              "label": "Example buyer profile",
+              "url": "https://tenderbase.co.uk/buyer/glasgow-city-council/3411"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Tenderbase public notice pages explicitly name and link Sell2Wales as the source/registration portal. This demonstrates included records, not a source-wide completeness guarantee.",
+          "evidence": [
+            {
+              "label": "Example Tenderbase notice",
+              "url": "https://tenderbase.co.uk/tender/the-wye-tour-heritage-trail-app-development-for-wye-valley-aonb/725821"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Tenderbase repeatedly claims a centralised feed pulled from every portal on the market or thousands of public-sector portals across the UK and Ireland, without publishing a normalized source list on the reviewed pages.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderbase.co.uk/pricing"
+            },
+            {
+              "label": "Tender management",
+              "url": "https://tenderbase.co.uk/services/tender-management"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Provider claims only; Civensa has not independently tested portal completeness, AI matching, analytics or alert delivery.",
+        "Broad every-portal and thousands-of-portals claims are not a substitute for an explicit portal inventory.",
+        "The public pricing page advertises a 14-day zero-cost trial, but subscription terms require valid card details, apply a temporary refundable £0.50 verification hold and auto-convert unless cancelled.",
+        "The API documentation primarily describes approved external notice publishers and an inbound interface; normal customer entitlement and API price are unclear.",
+        "Tender documents, bid writing and strategy support are separately priced add-ons or managed services, not necessarily included software features."
+      ],
+      "sourceUrls": [
+        "https://tenderbase.co.uk/",
+        "https://tenderbase.co.uk/pricing",
+        "https://tenderbase.co.uk/signup",
+        "https://tenderbase.co.uk/services/tender-management",
+        "https://tenderbase.co.uk/services/tender-management/advanced-tender-search",
+        "https://tenderbase.co.uk/services/tender-management/tender-scoring-system",
+        "https://tenderbase.co.uk/services/tender-management/saved-search-tenders-alert",
+        "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline",
+        "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel",
+        "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel",
+        "https://tenderbase.co.uk/services/bid-services/bid-writing-service",
+        "https://tenderbase.co.uk/resources/introducing-tenderbase-pipeline-your-proactive-edge-in-public-procurement/",
+        "https://tenderbase.co.uk/restapi-registration",
+        "https://tenderbase.co.uk/api-integration",
+        "https://tenderbase.co.uk/buyer/tracker",
+        "https://tenderbase.co.uk/supplier/tracker",
+        "https://tenderbase.co.uk/tender/grounds-maintenance-and-landscaping-contract/862991",
+        "https://tenderbase.co.uk/tender/the-wye-tour-heritage-trail-app-development-for-wye-valley-aonb/725821"
+      ]
+    },
+    {
+      "slug": "tenderlake",
+      "name": "Tenderlake",
+      "officialUrl": "https://www.tenderlake.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_team",
+        "currency": "GBP",
+        "plansText": "UK+IE is £325/month on a monthly plan or £249/month paid annually. Europe/UK/Int+ is £546/month on a monthly plan or £396/month paid annually. Bespoke expansions are available by contacting the provider.",
+        "seatDetail": "UK+IE includes 2 Primary/Admin and 5 Pro user licences; Europe/UK/Int+ includes 2 Primary/Admin and 7 Pro licences. Additional users are available by discussion; no public extra-seat price is stated.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
+        "trialDetail": "Seven-day free trial with no credit card required for all listed plans.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://www.tenderlake.com/pricing/index"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "UK+IE includes 10 keyword searches of up to 10 elements each plus daily email alerts and folder subscriptions.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Tenderlake Academy feature index",
+              "url": "https://www.tenderlake.com/blog/index?tag=New+Feature"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Users describe products and services in natural language; Tenderlake evaluates meaning and capability alignment, explains fit and learns from feedback.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Pricing and AI FAQ",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "Public procurement-profile pages show buyer tender history, category mix, similar organisations, awards and top suppliers.",
+          "evidence": [
+            {
+              "label": "Example buyer procurement profile",
+              "url": "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "Users can create tracked contractor organisations and analyse competitor award reports, but the reviewed pages do not establish broad structured supplier-profile pages equivalent to buyer profiles.",
+          "evidence": [
+            {
+              "label": "Monitor competitors and buyers",
+              "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
+            },
+            {
+              "label": "Contract awards report",
+              "url": "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "Tenderlake shows relevant contracts coming to an end in the next 24 months and alerts on previously awarded contracts nearing expiry.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Tenderlake Academy feature index",
+              "url": "https://www.tenderlake.com/blog/index?tag=New+Feature"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "yes",
+          "detail": "Notice Similarity Search finds opportunities semantically similar to ideal opportunities or previous wins, across countries and languages.",
+          "evidence": [
+            {
+              "label": "Why Tenderlake",
+              "url": "https://www.tenderlake.com/Home/Why-Tenderlake"
+            },
+            {
+              "label": "Find a Tender alternative",
+              "url": "https://www.tenderlake.com/Alternatives/Find-a-Tender-Alternative"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Capability assessments explain fit and flag potential requirement risks, but the reviewed pages do not establish a normalized register of participation conditions, certifications or recurring buyer requirements.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "Qualification workflow is described, but the reviewed pages do not establish evidence-gap, readiness or requirement-by-requirement planning before bid submission.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Plans include more than ten years of history, award update subscriptions and industry contract-awards reports showing winners and other award intelligence.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Contract awards report",
+              "url": "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "UK+IE explicitly includes frameworks and Dynamic Purchasing Systems.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Pricing includes competitor tracking, and users can monitor awards to named competitors plus contracts from selected buyers or buyer groups.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Monitor competitors and buyers",
+              "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "yes",
+          "detail": "Plans include API access; Tenderlake also documents a remote MCP connector for customer-scoped access from AI assistants.",
+          "evidence": [
+            {
+              "label": "Pricing and connector FAQ",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Why Tenderlake",
+              "url": "https://www.tenderlake.com/Home/Why-Tenderlake"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "Included users can coordinate bid interest, qualification stages and distributions through folders, email lists, Microsoft Teams and Slack channels.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            },
+            {
+              "label": "Why Tenderlake",
+              "url": "https://www.tenderlake.com/Home/Why-Tenderlake"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "no",
+          "detail": "Tenderlake explicitly says it does not write bids and is focused on supplier-side tender intelligence.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Tenderlake's Find a Tender alternative page explicitly compares its dataset with Find a Tender and says Tenderlake includes UK notices beyond that portal.",
+          "evidence": [
+            {
+              "label": "Find a Tender alternative",
+              "url": "https://www.tenderlake.com/Alternatives/Find-a-Tender-Alternative"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Public Tenderlake buyer and notice pages explicitly name and link Contracts Finder records. This demonstrates included records, not a source-wide completeness guarantee.",
+          "evidence": [
+            {
+              "label": "Example buyer procurement profile",
+              "url": "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420"
+            },
+            {
+              "label": "Example notice source link",
+              "url": "https://www.tenderlake.com/Notice/Tender/1dac79ea-cdae-4c51-bc77-43a041cea6ad/human-in-the-loop-triage-exploration/f7e709d6-9401-47b5-b5b9-967600d88689?lg=en"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Public Tenderlake notice pages explicitly link back to Public Contracts Scotland. This demonstrates included records, not a source-wide completeness guarantee.",
+          "evidence": [
+            {
+              "label": "Example Scotland notice",
+              "url": "https://www.tenderlake.com/notice/tender/7c2b304a-f562-4784-8d02-923b0d2092a3/macduff-harbour-fishmarket-pier-concrete-repairs-and-other-remedial-works/f13a4a1f-9920-46be-800c-41c1778fc020?lg=EN"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Public Tenderlake notice pages explicitly link back to Sell2Wales, and the Find a Tender comparison page names Sell2Wales among lower-value UK sources. This does not establish source-wide completeness.",
+          "evidence": [
+            {
+              "label": "Example Wales notice",
+              "url": "https://www.tenderlake.com/Notice/Tender/7C1FA801-F5B4-4F88-849B-83480187A247/business-case-author-and-advisor-for-the-national-library-of-wales/f13a4a1f-9920-46be-800c-41c1778fc020?lg=EN"
+            },
+            {
+              "label": "Find a Tender alternative",
+              "url": "https://www.tenderlake.com/Alternatives/Find-a-Tender-Alternative"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "UK+IE claims lower- and higher-value contracts, including OJEU, across the UK and Ireland. Europe/UK/Int+ adds the UK, EU, Norway, Switzerland, World Bank and other sources, with below-threshold national notices in EU countries.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        },
+        {
+          "claim": "The product page claims full UK/EU/EEA coverage, 192 countries and more than 200,000 buying organisations; the higher plan claims more than 250,000 buying organisations.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.tenderlake.com/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.tenderlake.com/pricing/index"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Provider claims only; Civensa has not independently tested source completeness, AI matching, renewal signals or alert delivery.",
+        "The reviewed pages make broad full-coverage claims but do not publish one normalized, exhaustive portal inventory.",
+        "The published buyer profiles and example notice links demonstrate records from named portals but do not prove complete ingestion of each source.",
+        "Annual prices are displayed as monthly equivalents paid annually; invoice billing at the undiscounted monthly-plan rate is described separately.",
+        "The provider explicitly says it does not write bids."
+      ],
+      "sourceUrls": [
+        "https://www.tenderlake.com/",
+        "https://www.tenderlake.com/pricing/index",
+        "https://www.tenderlake.com/Home/Why-Tenderlake",
+        "https://www.tenderlake.com/Alternatives/Find-a-Tender-Alternative",
+        "https://www.tenderlake.com/blog/index?tag=New+Feature",
+        "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers",
+        "https://www.tenderlake.com/blog/article/61/find-partners-customers-and-track-competitors-with-tenderlake-contract-awards-report",
+        "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420",
+        "https://www.tenderlake.com/Notice/Tender/1dac79ea-cdae-4c51-bc77-43a041cea6ad/human-in-the-loop-triage-exploration/f7e709d6-9401-47b5-b5b9-967600d88689?lg=en",
+        "https://www.tenderlake.com/notice/tender/7c2b304a-f562-4784-8d02-923b0d2092a3/macduff-harbour-fishmarket-pier-concrete-repairs-and-other-remedial-works/f13a4a1f-9920-46be-800c-41c1778fc020?lg=EN",
+        "https://www.tenderlake.com/Notice/Tender/7C1FA801-F5B4-4F88-849B-83480187A247/business-case-author-and-advisor-for-the-national-library-of-wales/f13a4a1f-9920-46be-800c-41c1778fc020?lg=EN"
+      ]
+    },
+    {
+      "slug": "tenderlead",
+      "name": "TenderLead",
+      "officialUrl": "https://tenderlead.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "One free Preview brief; Starter £29/month; Pro £79/month; Team custom. Starter and Pro are billed monthly with no annual lock-in, and one subscription covers one company profile.",
+        "seatDetail": "Starter and Pro cover one company profile, but their user count is not publicly stated. Team pricing is custom for multiple users, profiles, brands or departments.",
+        "vatDetail": "No VAT is currently charged; the provider says VAT may be added if it becomes VAT-registered.",
+        "trialDetail": "One personalised Pro-style preview brief is free with no card, followed by a seven-day Pro trial with no card required.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://tenderlead.co.uk/pricing"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "Saved-search scope and saved fit rules are described, but the reviewed pages do not establish saved keyword alerts.",
+          "evidence": []
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "TenderLead scores notices against a company profile, services, buyers, routes, evidence, compliance signals, no-bid rules and feedback, with BID/SKIP reasoning.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Buyer context and named-buyer market watch are described, but the reviewed pages do not establish structured buyer profiles.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "The customer's own company profile does not establish supplier, winner, incumbent or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "Pipeline and market watch are described, but the reviewed pages do not establish contract-expiry, renewal, extension or re-tender signals.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Starter and Pro include an unspecified history, but the reviewed pages do not establish similar historical contracts surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Pro surfaces compliance signals, proof gaps and clarification questions and keeps route and likely answer burden visible; this is plan-limited and no recurring buyer-requirements profile was established.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            },
+            {
+              "label": "University tender-alert guide",
+              "url": "https://tenderlead.co.uk/universities-it-tenders"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Pro provides deadline risks, clarification questions, evidence gaps and a first next task, but this is a lightweight qualification workflow rather than a documented full requirements plan.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish historical award notices, winners, values or award search.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "TenderLead checks procurement route and framework context during qualification, but the reviewed pages do not establish a dedicated framework or dynamic-market database.",
+          "evidence": [
+            {
+              "label": "Product overview and sample",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "University tender-alert guide",
+              "url": "https://tenderlead.co.uk/universities-it-tenders"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Team accounts can discuss custom integrations or delivery routes, but CRM integration and bid-library exports are explicitly not normal self-serve features.",
+          "evidence": [
+            {
+              "label": "Product FAQ",
+              "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Custom Team accounts support multiple users, profiles or departments; Starter and Pro user limits and collaborative assignments/comments are not publicly stated.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "no",
+          "detail": "TenderLead explicitly says it sits before bid writing and that drafting is not sold as a normal self-serve feature.",
+          "evidence": [
+            {
+              "label": "Product FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Explicitly named as an ingested source, polled hourly and deduplicated overnight.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Explicitly named as an ingested source, polled hourly and deduplicated overnight.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Explicitly named as an ingested source, polled hourly and deduplicated overnight.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Explicitly named as not directly ingested while its API is unavailable; TenderLead says Welsh notices are instead covered through Find a Tender.",
+          "evidence": [
+            {
+              "label": "Product coverage FAQ",
+              "url": "https://tenderlead.co.uk/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider describes the product as a weekday UK source-linked briefing; weekend notices roll into Monday.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://tenderlead.co.uk/pricing"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Provider claims only; Civensa has not independently tested portal completeness, scoring, source polling or alert delivery.",
+        "Sell2Wales is explicitly not directly ingested while its API is unavailable; the provider says Welsh notices are covered through Find a Tender.",
+        "Starter omits BID/SKIP reasoning, proof-gap checks and pipeline workflow; the more advanced qualification features are Pro or custom Team features.",
+        "The provider explicitly positions TenderLead before bid writing and does not sell drafting, CRM integration or bid-library exports as normal self-serve features."
+      ],
+      "sourceUrls": [
+        "https://tenderlead.co.uk/",
+        "https://tenderlead.co.uk/pricing",
+        "https://tenderlead.co.uk/universities-it-tenders",
+        "https://tenderlead.co.uk/uk-it-tender-alerts"
+      ]
+    }
+  ]
+}

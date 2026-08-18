@@ -1,0 +1,1256 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "psip-alerts",
+      "name": "PSIP",
+      "officialUrl": "https://psip.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Essential: £199/month or £169/month billed annually. Growth: £599/month or £499/month billed annually. Professional: £1,199/month or £992/month billed annually. Bid Agency and Enterprise: custom pricing.",
+        "seatDetail": "Bid Agency and Enterprise advertise unlimited users and team or multi-client workspaces. Included users and additional-seat pricing for Essential, Growth and Professional are not publicly stated.",
+        "vatDetail": "All prices exclude VAT.",
+        "trialDetail": "14-day Growth-plan trial; no credit card required. The pricing table does not list a trial for Essential or Professional.",
+        "evidence": [
+          {
+            "label": "PSIP pricing",
+            "url": "https://psip.co.uk/pricing"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Saved alerts accept keywords and CPV codes, with optional buyer, value, portal and geography filters. Frequency is daily on Essential, every four hours on Growth and hourly on Professional.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Every plan includes explainable 1-10 AI relevance scoring against a business profile; the provider says it matches capabilities even when a buyer uses different terminology.",
+          "evidence": [
+            {
+              "label": "PSIP AI relevance scoring",
+              "url": "https://psip.co.uk/features/ai-relevance-scoring"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "Buyer profiles show published spend, suppliers, incumbent payment history and upcoming renewals. Depth is Basic on Essential, Full on Growth and Advanced on Professional.",
+          "evidence": [
+            {
+              "label": "PSIP buyer and spend intelligence",
+              "url": "https://psip.co.uk/features/buyer-intelligence"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "Growth and higher plans provide competitor and supplier tracking. Users can search a supplier to see award history and, where covered, payments across buyers; the feature is not included on Essential.",
+          "evidence": [
+            {
+              "label": "PSIP competitor tracking",
+              "url": "https://psip.co.uk/features/competitor-tracking"
+            },
+            {
+              "label": "PSIP buyer and spend intelligence",
+              "url": "https://psip.co.uk/features/buyer-intelligence"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "The Contract Expiry Tracker surfaces published contract end dates in 30, 90, 180 and 365-day windows with buyer, incumbent and value; it is listed on every standard plan.",
+          "evidence": [
+            {
+              "label": "PSIP contract expiry tracker",
+              "url": "https://psip.co.uk/features/contract-expiry-tracker"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The reviewed pages establish award history and incumbent context but do not state that comparable historical contracts are automatically surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages mention tender documents and official spend publications, but not buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement records.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Growth and higher plans extract mandatory requirements into a compliance checklist and structure drafting against tender requirements and evaluation criteria; this is not included on Essential.",
+          "evidence": [
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Growth and higher plans provide a bid/no-bid scorecard, compliance checklist, strengths and red flags, clarification questions, missing-evidence placeholders and a staged bid pipeline. Essential does not include this workflow.",
+          "evidence": [
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Supplier searches show public-sector award history including buyers, values, dates, durations and categories. Standard-plan data history is six months on Essential, twelve months on Growth and full on Professional.",
+          "evidence": [
+            {
+              "label": "PSIP competitor tracking",
+              "url": "https://psip.co.uk/features/competitor-tracking"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "All standard plans list Crown Commercial Service and Scottish framework tracking. The framework tool covers framework names, references, lots, expiry dates, competition windows and call-off monitoring.",
+          "evidence": [
+            {
+              "label": "PSIP framework tracker",
+              "url": "https://psip.co.uk/features/ccs-frameworks"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "Growth and higher plans track named suppliers, their wins and approaching expiries and can alert on those events; Essential excludes competitor and supplier tracking.",
+          "evidence": [
+            {
+              "label": "PSIP competitor tracking",
+              "url": "https://psip.co.uk/features/competitor-tracking"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Growth includes CSV export. Professional adds API export, CRM integrations for Salesforce and HubSpot, and Zapier or Make delivery; Essential has none of these listed.",
+          "evidence": [
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            },
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Bid Agency and Enterprise include unlimited users, team management and team or multi-client workspaces. Standard-plan user counts and shared-workspace access are not publicly stated.",
+          "evidence": [
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "Growth and higher plans include evidence-gated drafting for executive summaries, method statements, win themes, compliance checklists and clarification questions. Essential excludes the bid workspace and drafting.",
+          "evidence": [
+            {
+              "label": "PSIP bid workspace",
+              "url": "https://psip.co.uk/features/bid-workspace"
+            },
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender Service",
+          "detail": "Named as one of the five official UK procurement portals searched by every PSIP alert.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Named as one of the five official UK procurement portals searched by every PSIP alert.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Named as PCS Scotland on the tender-alert page and as Public Contracts Scotland in the FAQ.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Named as one of the five official UK procurement portals searched by every PSIP alert.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Named as one of the five official UK procurement portals searched by every PSIP alert.",
+          "evidence": [
+            {
+              "label": "PSIP tender alerts",
+              "url": "https://psip.co.uk/features/tender-alerts"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "PSIP says tender data is sourced from the five named official UK government procurement APIs and portals and updated daily.",
+          "evidence": [
+            {
+              "label": "PSIP features",
+              "url": "https://psip.co.uk/features"
+            }
+          ]
+        },
+        {
+          "claim": "The pricing table lists Procurement Act pipeline notices on all three standard plans.",
+          "evidence": [
+            {
+              "label": "PSIP pricing",
+              "url": "https://psip.co.uk/pricing"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature, coverage, corpus-size, scoring and latency statements are provider claims and were not independently tested by Civensa.",
+        "Buyer spend coverage is narrower than tender coverage: PSIP publishes a changing list of covered public bodies and says deeper buyer intelligence is plan-dependent.",
+        "Award and spend intelligence depends on what official buyers publish; the provider advises source traceability but underlying records can still be incomplete.",
+        "The standard-plan pages do not state included user counts or additional-seat prices. Unlimited users are stated only for Bid Agency and Enterprise.",
+        "AI and generated bid material still require human verification against the original notice and the supplier's evidence."
+      ],
+      "sourceUrls": [
+        "https://psip.co.uk/",
+        "https://psip.co.uk/features",
+        "https://psip.co.uk/pricing",
+        "https://psip.co.uk/features/tender-alerts",
+        "https://psip.co.uk/features/ai-relevance-scoring",
+        "https://psip.co.uk/features/buyer-intelligence",
+        "https://psip.co.uk/features/contract-expiry-tracker",
+        "https://psip.co.uk/features/competitor-tracking",
+        "https://psip.co.uk/features/ccs-frameworks",
+        "https://psip.co.uk/features/bid-workspace",
+        "https://psip.co.uk/coverage"
+      ]
+    },
+    {
+      "slug": "scrymint",
+      "name": "Scrymint",
+      "officialUrl": "https://scrymint.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Free: £0 forever. Pro: £49/month, billed monthly and cancel anytime. Intelligence: £149/month.",
+        "seatDetail": "Included users and additional-seat pricing are not publicly stated on the reviewed pages.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
+        "trialDetail": "No paid-plan trial is stated. Users start on the permanent free plan and may upgrade later.",
+        "evidence": [
+          {
+            "label": "Scrymint pricing",
+            "url": "https://scrymint.com/pricing"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Free includes one daily email alert. Pro adds unlimited alerts and saved searches; Scrymint describes niche or trade-based matching and filters beyond keywords.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed pages advertise filters and AI bid/no-bid scoring, but do not establish semantic or AI relevance matching for tender discovery or alerts.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "Pro includes buyer profiles and spend history. Public buyer pages list live tenders, awards and tracked value; deeper profiles are plan-limited.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint buyers",
+              "url": "https://scrymint.com/buyers"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "yes",
+          "detail": "Public supplier pages rank suppliers by tracked award value and link to supplier views showing what they won, which buyers awarded them work and renewal timing.",
+          "evidence": [
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "Pro includes contract expiry and renewal signals. The public supplier directory also describes finding where supplier contracts are up for renewal.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Searchable historical awards are established, but the reviewed pages do not say that comparable past contracts are automatically surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish access to buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond notices and awards.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not state that requirements, certifications, policies or evaluation criteria are extracted into a structured view.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "AI bid/no-bid scoring is advertised, but the reviewed pages do not establish a gap, evidence or readiness-planning workflow.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "All plans can search tenders and awards and see who won past contracts. Buyer and supplier pages expose historical winners, buyers and tracked values.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint how it works",
+              "url": "https://scrymint.com/how-it-works"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "Forward pipeline notices are stated, but a framework, DPS, dynamic-market or route-to-market discovery feature is not established on the reviewed product pages.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "The Intelligence plan includes competitor and incumbent tracking. Public supplier profiles provide incumbent research, but named monitoring behavior is not described in detail.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint suppliers",
+              "url": "https://scrymint.com/suppliers"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "yes",
+          "detail": "Pro includes CSV export. Scrymint also documents a JSON API for tenders, awards, buyers, suppliers and trends, with a stated free allowance of 1,000 requests per day.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            },
+            {
+              "label": "Scrymint developers API",
+              "url": "https://scrymint.com/developers"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not state multiple users, assignments, comments, a shared team pipeline or another collaboration workflow.",
+          "evidence": []
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "The Intelligence plan advertises AI-drafted first-pass responses. Scrymint separately offers introductions to vetted bid writers; scope and usage limits are not publicly detailed.",
+          "evidence": [
+            {
+              "label": "Scrymint pricing",
+              "url": "https://scrymint.com/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender Service",
+          "detail": "Named as a daily official open-data feed.",
+          "evidence": [
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Named as a daily official open-data feed.",
+          "evidence": [
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Named as one of the devolved procurement portals ingested daily.",
+          "evidence": [
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Named as one of the devolved procurement portals ingested daily.",
+          "evidence": [
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Scrymint says it searches every UK government tender and award and uses official open-data feeds updated daily.",
+          "evidence": [
+            {
+              "label": "Scrymint home",
+              "url": "https://scrymint.com/"
+            },
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        },
+        {
+          "claim": "Scrymint says Procurement Act 2023 forward pipeline notices expose planned contracts up to 18 months ahead.",
+          "evidence": [
+            {
+              "label": "Scrymint data sources",
+              "url": "https://scrymint.com/how-it-works"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature, coverage, corpus-size, scoring and pricing statements are provider claims and were not independently tested by Civensa.",
+        "The dedicated data-source page explicitly names Find a Tender, Contracts Finder, Public Contracts Scotland and Sell2Wales but does not name eTendersNI; broad 'every UK feed' wording is therefore not recorded as explicit Northern Ireland portal coverage.",
+        "Pricing does not state VAT treatment, included users, additional-seat pricing or a paid trial.",
+        "AI bid/no-bid scoring, drafting, competitor tracking and pipeline forecasts are restricted to the £149/month Intelligence plan.",
+        "API commercial licensing and bulk-feed terms require contact despite the advertised free request allowance."
+      ],
+      "sourceUrls": [
+        "https://scrymint.com/",
+        "https://scrymint.com/how-it-works",
+        "https://scrymint.com/pricing",
+        "https://scrymint.com/buyers",
+        "https://scrymint.com/suppliers",
+        "https://scrymint.com/developers"
+      ]
+    },
+    {
+      "slug": "supply2gov",
+      "name": "Supply2Gov",
+      "officialUrl": "https://www.supply2govtenders.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Free Local Area: £0. Country: from £25/month, £140 per six months or £270/year. UK Wide: from £80/month, £455 per six months or £799/year. UK and Ireland: from £95/month, £540 per six months or £899/year.",
+        "seatDetail": "Included users and additional-seat pricing are not publicly stated on the reviewed pricing and FAQ pages.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
+        "trialDetail": "No time-limited trial is stated. A permanent free Local Area plan is advertised and can be upgraded.",
+        "evidence": [
+          {
+            "label": "Supply2Gov pricing",
+            "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Daily Email Alert profiles use keywords or phrases and CPV codes. Provider guidance also describes region, buyer type, value, category and exclusion filters; alerts are sent on working days.",
+          "evidence": [
+            {
+              "label": "Supply2Gov FAQ",
+              "url": "https://www.supply2govtenders.co.uk/faqs/"
+            },
+            {
+              "label": "Supply2Gov daily alert guidance",
+              "url": "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/"
+            },
+            {
+              "label": "Supply2Gov terms",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed pages establish keyword, phrase, category and CPV matching but do not establish semantic, machine-learning or AI relevance matching.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Buyer-type filters and buyer names are discussed, but the reviewed Supply2Gov pages do not establish structured buyer profiles or buyer intelligence pages.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "A user's own alert profile is documented, but structured profiles for winning or incumbent suppliers are not established for Supply2Gov.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "Provider editorial guidance recommends studying cycles and pipeline notices, but the reviewed pages do not establish a Supply2Gov expiry, extension or re-tender monitoring feature.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Past awards can be searched, but the reviewed pages do not say that similar historical contracts are automatically surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored document intelligence beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "The reviewed pages discuss common certifications and evaluation criteria as general guidance but do not establish structured extraction of buyer requirements inside Supply2Gov.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Plans include a Tender Ready Toolkit and general guides intended to help SMEs become ready to tender, but no per-opportunity requirements gap or evidence-planning workflow is established.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            },
+            {
+              "label": "Supply2Gov terms",
+              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Supply2Gov says its database publishes UK and Ireland contract and award notices; provider guidance describes searching past awards to identify winners, lots and indicative values.",
+          "evidence": [
+            {
+              "label": "Supply2Gov FAQ",
+              "url": "https://www.supply2govtenders.co.uk/faqs/"
+            },
+            {
+              "label": "Supply2Gov council tenders",
+              "url": "https://www.supply2govtenders.co.uk/contract-opportunities/council-tenders/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Provider guidance describes framework, DPS and call-off notices and buyer, lot and keyword alerts for them, but a dedicated framework intelligence or route-to-market module is not established.",
+          "evidence": [
+            {
+              "label": "Supply2Gov CCS monitoring guide",
+              "url": "https://www.supply2govtenders.co.uk/best-way-to-monitor-crown-commercial-service-activity/"
+            },
+            {
+              "label": "Supply2Gov daily alert guidance",
+              "url": "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "Past award research is described, but named competitor or incumbent monitoring is not established for Supply2Gov. The FAQ directs broader competitor intelligence to the separate Tracker service.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not document CSV or Excel export, an API, webhooks, CRM integrations or another data export for Supply2Gov.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "not_stated",
+          "detail": "Opportunity tracking is described, but multiple users, assignments, comments or a shared team pipeline are not established on the reviewed Supply2Gov pages.",
+          "evidence": []
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "Supply2Gov provides tendering guidance and a Tender Ready Toolkit, but the reviewed pages do not establish drafting software, an answer library, document analysis or managed writing as part of the product.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "compete_for",
+          "portalName": "CompeteFor",
+          "detail": "Every published Supply2Gov plan says it includes access to CompeteFor supply-chain opportunities.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Supply2Gov says it monitors more than 3,000 public sources across the UK and Ireland, including high-value and local notices.",
+          "evidence": [
+            {
+              "label": "Supply2Gov lower-value tender guide",
+              "url": "https://www.supply2govtenders.co.uk/whats-the-best-way-to-find-sub-ojeu-and-lower-value-tenders-in-the-uk/"
+            },
+            {
+              "label": "Supply2Gov government tenders",
+              "url": "https://www.supply2govtenders.co.uk/contract-opportunities/the-public-sector-market/"
+            }
+          ]
+        },
+        {
+          "claim": "The UK Wide plan claims access to over 90% of UK and Republic of Ireland contracts and more than 200% more notices than national government portals.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            }
+          ]
+        },
+        {
+          "claim": "Coverage is sold geographically: one free local area, one paid country, UK Wide, or UK and Republic of Ireland.",
+          "evidence": [
+            {
+              "label": "Supply2Gov pricing",
+              "url": "https://www.supply2govtenders.co.uk/pricing-3/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature, source-count and coverage statements are provider claims and were not independently tested by Civensa.",
+        "Paid prices are displayed as 'from'; VAT, included users and additional-seat prices are not stated on the reviewed pricing page.",
+        "The checked product pages explicitly name CompeteFor but do not publish a complete portal-by-portal source list for the claimed 3,000-plus sources.",
+        "Alerts are stated as available each working day, excluding UK bank holidays, rather than continuously.",
+        "Geographic access is plan-dependent; the free tier covers one chosen local area rather than nationwide records.",
+        "The provider points customers who need deeper buyer, competitor and spend intelligence to its separate Tracker product; those Tracker features are not attributed to Supply2Gov here."
+      ],
+      "sourceUrls": [
+        "https://www.supply2govtenders.co.uk/",
+        "https://www.supply2govtenders.co.uk/pricing-3/",
+        "https://www.supply2govtenders.co.uk/how-s2g-works/",
+        "https://www.supply2govtenders.co.uk/faqs/",
+        "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html",
+        "https://www.supply2govtenders.co.uk/whats-the-best-way-to-find-sub-ojeu-and-lower-value-tenders-in-the-uk/",
+        "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/",
+        "https://www.supply2govtenders.co.uk/contract-opportunities/council-tenders/",
+        "https://www.supply2govtenders.co.uk/contract-opportunities/the-public-sector-market/",
+        "https://www.supply2govtenders.co.uk/best-way-to-monitor-crown-commercial-service-activity/"
+      ]
+    },
+    {
+      "slug": "tendarix",
+      "name": "Tendarix",
+      "officialUrl": "https://tendarix.com/",
+      "pricing": {
+        "availability": "free_only",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Tendarix Member: free. The provider says the service is free for everyone, with no card and no trial.",
+        "seatDetail": "Team and multi-profile features are advertised, but user limits and any future additional-seat pricing are not publicly stated.",
+        "vatDetail": "Not applicable to the currently advertised free service; future VAT treatment is not stated.",
+        "trialDetail": "No trial: the provider says the current service is free and requires no payment card.",
+        "evidence": [
+          {
+            "label": "Tendarix home and pricing",
+            "url": "https://tendarix.com/"
+          },
+          {
+            "label": "Tendarix terms",
+            "url": "https://tendarix.com/terms"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Tendarix advertises hybrid keyword and semantic search, unlimited saved alerts, and email and Slack delivery.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Each tender is scored against a company profile, geography, capacity and past performance using advertised hybrid keyword and semantic matching.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "A full buyer profile is said to include award history, top suppliers, average deal size, SME share and renewal timing.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "Buyer profiles show top suppliers and competitor tracking is advertised, but structured standalone supplier, incumbent or winner profiles are not established on the reviewed public pages.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "Renewal Radar is advertised on buyer profiles and is said to flag likely rebid windows six to nine months before a subsequent notice.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Past performance influences matching and buyer award histories are available, but the reviewed pages do not say that comparable historical contracts are surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored document intelligence beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "A limited free tender summariser advertises an eligibility checklist, key dates, complexity rating and bid/no-bid score from a supplied tender URL; platform-wide structured requirements coverage is not described.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "The eligibility checklist, bid/no-bid score and pipeline support basic qualification and preparation, but no full requirements-gap or evidence-planning workflow is documented.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Buyer profiles include award history and suppliers; the service also advertises buyer award history for renewal research.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Tendarix says it watches framework call-offs, but the reviewed pages do not document a dedicated framework, DPS or dynamic-market intelligence module.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Competitor tracking is listed in the free plan, alongside buyer top-supplier and award-history data.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "yes",
+          "detail": "The free plan lists CSV export and API access; consultancy workspaces also advertise webhooks and an API.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "The service advertises saved searches per client, shared comments, a pipeline board, assignments, multi-profile workspaces and Slack alerts.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "yes",
+          "detail": "The free plan advertises unlimited bid drafts and AI summaries and bid scoring.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Named as a national feed pulled directly into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Named as a national feed pulled directly into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Named as a national feed pulled directly into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Named as a national feed pulled directly into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Named as a national feed pulled directly into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "Named as the EU-wide notice feed pulled into Tendarix.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "portalId": "in_tend",
+          "portalName": "In-tend",
+          "detail": "The coverage page identifies In-tend as the portal vendor for 18 listed council sources.",
+          "evidence": [
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "procontract",
+          "portalName": "ProContract",
+          "detail": "The coverage page identifies ProContract as the portal vendor for eight listed council sources.",
+          "evidence": [
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Bravo",
+          "detail": "The coverage page identifies Bravo as the portal vendor for twelve listed council sources.",
+          "evidence": [
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The homepage claims six national feeds plus more than 400 buyer portals, updated every 12 hours.",
+          "evidence": [
+            {
+              "label": "Tendarix home",
+              "url": "https://tendarix.com/"
+            }
+          ]
+        },
+        {
+          "claim": "The live coverage page names 394 councils across England, Scotland, Wales and Northern Ireland and identifies each listed council's portal vendor and refresh status.",
+          "evidence": [
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        },
+        {
+          "claim": "The coverage page explicitly links named local systems including London Tenders Portal, NEPO North East Procurement Organisation, Supply Hertfordshire, SE Shared Services eSourcing Portal and the Coventry, Solihull and Warwickshire Joint eTendering System.",
+          "evidence": [
+            {
+              "label": "Tendarix council coverage",
+              "url": "https://tendarix.com/coverage"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All features, source counts, matching results, latency and coverage statements are provider claims and were not independently tested by Civensa.",
+        "The provider's live coverage page materially qualifies the '400+ buyer portals' headline: at research time it reported 394 councils tracked but only 31 active, with many displayed rows marked Broken or Pending.",
+        "The coverage page reported only four contracts indexed and 52 successful scrapes in the preceding 30 days at research time; this live status can change and should be rechecked before publication.",
+        "The homepage uses both 'updated every 12 hours' and 'every hour' language; the actual refresh cadence by source is not independently established.",
+        "The service is currently free, but its terms allow features to be added, changed or removed. No paid service level or future commercial model is published.",
+        "The terms say underlying notice details may be incomplete, outdated or erroneous and direct users to verify every opportunity against its official source.",
+        "User and fair-use limits for the advertised unlimited drafts, API, team workspaces and alerts are not publicly detailed."
+      ],
+      "sourceUrls": [
+        "https://tendarix.com/",
+        "https://tendarix.com/coverage",
+        "https://tendarix.com/terms",
+        "https://tendarix.com/privacy"
+      ]
+    },
+    {
+      "slug": "tender-alerts-uk",
+      "name": "Tender Alerts UK",
+      "officialUrl": "https://tenderalerts.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "GBP",
+        "plansText": "Monthly: £109/month. Yearly: £1,099/year. Both advertise full access to all features.",
+        "seatDetail": "One user only. The provider says multiple-user functionality is not currently supported.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed page.",
+        "trialDetail": "Seven-day trial for new customers. The provider says it converts to a charge after the trial unless cancelled; card requirement is not explicitly stated.",
+        "evidence": [
+          {
+            "label": "Tender Alerts UK home and pricing",
+            "url": "https://tenderalerts.uk/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "A saved free-text search automatically creates an email alert sent Monday to Friday. Search can use title and description text plus region, deadline, category, source, framework and lot filters; up to 50 alerts are supported.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed page documents free-text and structured filters but does not establish semantic, machine-learning or AI relevance matching.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish structured buyer profiles or buyer intelligence.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish structured supplier, incumbent, winner or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish contract-expiry, extension, renewal or re-tender monitoring.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not state that comparable historical opportunities or awards are surfaced against a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not state that participation conditions, certifications, policies or evaluation criteria are extracted into a structured view.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish gap planning, readiness actions, evidence planning or a requirements-preparation workflow.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The reviewed pages describe tender opportunities but do not establish historical award search, winners, values or award profiles.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Framework is available as a search filter, but no dedicated framework, DPS, dynamic-market or route-to-market intelligence is described.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not document CSV or Excel export, an API, webhooks, CRM integrations or another data export.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "no",
+          "detail": "The provider explicitly says only one user is supported and that multiple-user functionality may be added in future.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK FAQ",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "The reviewed pages do not establish drafting, an answer library, document analysis, a compliance matrix or managed bid-writing support.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Named as a source retrieved each day.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Named as a source retrieved each day.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Named as a source retrieved each day.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Named as a source retrieved each day.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Tender Alerts UK says it combines daily notices from the four explicitly named portals into one search and weekday email alerts.",
+          "evidence": [
+            {
+              "label": "Tender Alerts UK home",
+              "url": "https://tenderalerts.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature and coverage statements are provider claims and were not independently tested by Civensa.",
+        "eTendersNI is not named on the reviewed source list, so Northern Ireland national-portal coverage is not established.",
+        "The service currently supports one user and up to 50 alerts.",
+        "The seven-day trial converts to a paid subscription unless cancelled during the trial.",
+        "VAT treatment, exports, integrations and historical data depth are not stated on the reviewed public pages.",
+        "The product describes keyword and structured filtering; no semantic or AI matching claim is attributed."
+      ],
+      "sourceUrls": [
+        "https://tenderalerts.uk/",
+        "https://tenderalerts.uk/legal"
+      ]
+    }
+  ]
+}

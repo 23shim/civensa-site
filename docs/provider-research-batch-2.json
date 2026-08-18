@@ -1,0 +1,1186 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "buzz-tender-alert",
+      "name": "Buzz Tender Alert",
+      "officialUrl": "https://www.buzztenderalert.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Monthly: £9.99/month. Annual: £49.99/year. Both plans include up to 100 keywords and five email recipients.",
+        "seatDetail": "The subscription includes up to five email recipients. The provider does not describe these recipients as user licences or publish an additional-recipient price.",
+        "vatDetail": "VAT treatment is not publicly stated.",
+        "trialDetail": "14-day free trial. The provider says charging starts when the trial ends; whether a payment card is required at signup is not publicly stated.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://www.buzztenderalert.co.uk/pricing"
+          },
+          {
+            "label": "Terms of Service",
+            "url": "https://www.buzztenderalert.co.uk/terms"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Users choose up to 100 keywords and receive matching tender emails; keywords can be changed after signup.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.buzztenderalert.co.uk/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.buzztenderalert.co.uk/pricing"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed pages describe keyword matching, not semantic, machine-learning or profile-based relevance matching.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Structured buyer profiles or buyer intelligence are not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "Structured supplier, incumbent, winner or competitor profiles are not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "Contract expiry, renewal, extension or re-tender monitoring is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "Historical or similar-contract discovery is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "Buyer plans, strategies, pipelines or other buyer-authored documents beyond the notice are not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "Extraction or organisation of participation conditions, evaluation criteria or buyer requirements is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "Readiness, requirement-gap or evidence-planning functionality is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "Award history, winner or historical award search is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "Dedicated framework, DPS or dynamic-market discovery is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "Named competitor, incumbent, supplier or winner monitoring is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "Data export, API, webhook, CRM or other integration support is not stated on the reviewed pages.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Up to five email recipients can receive alerts, but shared pipelines, assignments, notes or other collaboration workflow are not stated.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.buzztenderalert.co.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "Bid drafting, answer libraries, compliance matrices or managed writing support are not stated on the reviewed pages.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "The provider lists Contracts Finder among the government procurement portals it aggregates.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "The provider lists Find a Tender among the government procurement portals it aggregates.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "The provider lists Public Contracts Scotland among the government procurement portals it aggregates.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "The provider lists Sell2Wales among the government procurement portals it aggregates.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "Proactis portals",
+          "detail": "The provider lists Proactis portals as an aggregated source; it does not publish a portal-by-portal Proactis list.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        },
+        {
+          "portalId": "in_tend",
+          "portalName": "In-Tend portals",
+          "detail": "The provider lists In-Tend portals as an aggregated source; it does not publish a portal-by-portal In-Tend list.",
+          "evidence": [
+            {
+              "label": "Terms of Service",
+              "url": "https://www.buzztenderalert.co.uk/terms"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The homepage describes coverage as all major UK sources.",
+          "evidence": [
+            {
+              "label": "Product overview",
+              "url": "https://www.buzztenderalert.co.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The source and feature statements are provider claims and have not been independently tested by Civensa.",
+        "No Northern Ireland portal is named on the reviewed source list.",
+        "The homepage says daily alerts at 8am; the Terms describe a best-efforts weekday 8am service and warn that completeness, accuracy and uninterrupted delivery are not guaranteed.",
+        "The provider names portal families for Proactis and In-Tend rather than the individual buyer portals covered."
+      ],
+      "sourceUrls": [
+        "https://www.buzztenderalert.co.uk/",
+        "https://www.buzztenderalert.co.uk/pricing",
+        "https://www.buzztenderalert.co.uk/faq",
+        "https://www.buzztenderalert.co.uk/terms"
+      ]
+    },
+    {
+      "slug": "cleantender",
+      "name": "CleanTender",
+      "officialUrl": "https://cleantender.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Radar: free forever. Pro: £99/month or £990/year. Pro includes 30 AI compliance evaluations per month, unlimited AI bid drafting subject to fair-use rate limits, the Social Value Generator, Compliance Vault and matching email alerts.",
+        "seatDetail": "Pro is priced per company. One subscription covers the whole bid team and the provider says it does not gate seats; no additional-seat price is stated.",
+        "vatDetail": "All prices exclude VAT.",
+        "trialDetail": "The ongoing Radar free tier serves as the trial, includes one AI compliance scan per month, requires no card and has no time limit.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://cleantender.co.uk/pricing"
+          },
+          {
+            "label": "Terms",
+            "url": "https://cleantender.co.uk/terms"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "Alerts are documented as profile-based filters using sectors, regions, value bands and a match-score threshold; user-defined keyword alerts are not stated.",
+          "evidence": []
+        },
+        "semanticAiMatching": {
+          "status": "partial",
+          "detail": "Pro alerts are scored against a stored company profile and threshold, while the AI evaluator compares contract packs with more than 30 profile fields. Alert access and scan volume vary by plan.",
+          "evidence": [
+            {
+              "label": "Features",
+              "url": "https://cleantender.co.uk/features"
+            },
+            {
+              "label": "Compliance evaluator",
+              "url": "https://cleantender.co.uk/features/compliance-evaluator"
+            },
+            {
+              "label": "Terms",
+              "url": "https://cleantender.co.uk/terms"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "Structured contracting-authority profiles or buyer intelligence are not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "no",
+          "detail": "The product has a user's own company compliance profile, which does not meet this schema's supplier-profile definition. A public Verified Supplier Directory is explicitly marked coming soon rather than available.",
+          "evidence": [
+            {
+              "label": "Features",
+              "url": "https://cleantender.co.uk/features"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://cleantender.co.uk/pricing"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "The Compliance Vault tracks the customer's certificate and policy expiry dates, but contract expiry, renewal or re-tender monitoring is not stated.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "yes",
+          "detail": "Public contract records include a Browse similar tenders route and surface other open opportunities in the same sector or from the same buyer.",
+          "evidence": [
+            {
+              "label": "Example contract record",
+              "url": "https://cleantender.co.uk/contracts/window-cleaning-services-d17a6c"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "partial",
+          "detail": "The AI evaluator loads and reads the selected tender's full contract pack. Wider buyer-authored plans, strategies, minutes, budgets or pipelines are not stated.",
+          "evidence": [
+            {
+              "label": "Compliance evaluator",
+              "url": "https://cleantender.co.uk/features/compliance-evaluator"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "The plan-limited compliance evaluator reads tender requirements and organises insurance, accreditation, policy, experience and other gaps by severity.",
+          "evidence": [
+            {
+              "label": "Compliance evaluator",
+              "url": "https://cleantender.co.uk/features/compliance-evaluator"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://cleantender.co.uk/pricing"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "The compliance evaluator produces a structured gap list and submission checklist, but scans are limited by plan and month.",
+          "evidence": [
+            {
+              "label": "Compliance evaluator",
+              "url": "https://cleantender.co.uk/features/compliance-evaluator"
+            },
+            {
+              "label": "Terms",
+              "url": "https://cleantender.co.uk/terms"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "Historical award notices, supplier winners, award values or a dedicated award search are not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "The tender directory contains individual framework opportunities, but a dedicated framework, DPS or dynamic-market intelligence tool is not stated.",
+          "evidence": [
+            {
+              "label": "Example framework record",
+              "url": "https://cleantender.co.uk/contracts/framework-agreement-for-pest-control-and-environmental-services-032026"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "Named competitor, incumbent, supplier or winner monitoring is not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Pro bid drafts can be exported to Word, PDF, Markdown or plain text. Tender-data export, API, webhook and CRM integration are not stated.",
+          "evidence": [
+            {
+              "label": "AI bid drafts",
+              "url": "https://cleantender.co.uk/features/bid-drafts"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "One Pro company subscription covers the whole bid team and the company profile and documents are shared. Assignments, comments and a shared bid pipeline are not stated.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://cleantender.co.uk/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "Pro generates editable, exportable Selection Questionnaire and Social Value drafts using the company profile and contract pack; the free tier does not include bid drafting.",
+          "evidence": [
+            {
+              "label": "AI bid drafts",
+              "url": "https://cleantender.co.uk/features/bid-drafts"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://cleantender.co.uk/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "CleanTender's live contract records explicitly identify Find a Tender Service as their source.",
+          "evidence": [
+            {
+              "label": "Example Find a Tender record",
+              "url": "https://cleantender.co.uk/contracts/statutory-servicing-reactive-and-remedial-works-framework-232026"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "CleanTender's live contract records explicitly identify Contracts Finder as their source.",
+          "evidence": [
+            {
+              "label": "Example Contracts Finder record",
+              "url": "https://cleantender.co.uk/contracts/mrwa-food-waste-prevention-campaign-26-27-043134"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider describes a real-time UK public-sector Soft FM directory covering cleaning, security, grounds, waste, catering, pest control, laundry, reception and integrated-FM bundles, curated from official UK sources.",
+          "evidence": [
+            {
+              "label": "Terms",
+              "url": "https://cleantender.co.uk/terms"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The source, AI scoring and drafting claims are provider-stated and have not been independently tested by Civensa.",
+        "Coverage is intentionally limited to Soft FM and adjacent categories rather than all procurement sectors.",
+        "Only Find a Tender and Contracts Finder were explicitly evidenced as product sources in the reviewed first-party records; educational articles that merely describe other portals were not counted as product coverage.",
+        "AI evaluations and generated drafts are decision-support outputs, not buyer decisions or a substitute for reading the tender documents."
+      ],
+      "sourceUrls": [
+        "https://cleantender.co.uk/",
+        "https://cleantender.co.uk/pricing",
+        "https://cleantender.co.uk/features",
+        "https://cleantender.co.uk/features/compliance-evaluator",
+        "https://cleantender.co.uk/features/bid-drafts",
+        "https://cleantender.co.uk/terms",
+        "https://cleantender.co.uk/contracts/statutory-servicing-reactive-and-remedial-works-framework-232026",
+        "https://cleantender.co.uk/contracts/mrwa-food-waste-prevention-campaign-26-27-043134",
+        "https://cleantender.co.uk/contracts/window-cleaning-services-d17a6c",
+        "https://cleantender.co.uk/contracts/framework-agreement-for-pest-control-and-environmental-services-032026"
+      ]
+    },
+    {
+      "slug": "contract-finder-pro-alerts",
+      "name": "Contract Finder Pro",
+      "officialUrl": "https://www.contractfinderpro.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_team",
+        "currency": "GBP",
+        "plansText": "Core Platform yearly prices: Basic £690/year; Professional £990/year; Enterprise from £1,960/year. Analytics and Tender Ninja pricing is quote-only.",
+        "seatDetail": "Professional is described for teams and Enterprise includes 3+ user licences. The Basic user allowance and additional-user price are not publicly stated.",
+        "vatDetail": "Core Platform prices are stated as plus VAT.",
+        "trialDetail": "A 14-day Core trial with full platform access is advertised. Payment-card requirement is not publicly stated.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://www.contractfinderpro.com/pricing"
+          },
+          {
+            "label": "Core product",
+            "url": "https://www.contractfinderpro.com/products/core"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Core provides tailored daily alerts, urgent flash emails, unlimited searches and CPV-code and keyword filtering.",
+          "evidence": [
+            {
+              "label": "Core product",
+              "url": "https://www.contractfinderpro.com/products/core"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed pages document keyword, CPV and natural-language search, but do not establish semantic or profile-based automatic relevance matching.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "Professional includes Buyer Behaviour Analysis, while the separately priced Analytics buyer dashboard covers pipelines, procurement methods, supplier relationships, tender windows, durations and contacts.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "The separately priced Analytics supplier dashboard provides supplier activity, award history, buyer relationships and Companies House context for competitors or potential partners.",
+          "evidence": [
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "The separately priced Analytics Opportunities dashboard includes upcoming renewals and supports a forward pipeline.",
+          "evidence": [
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "partial",
+          "detail": "The provider offers a multi-million-record historical database and Analytics search across lifecycle stage, source, value, duration, location, CPV and natural-language queries. Automatic similar-contract surfacing beside each notice is not stated.",
+          "evidence": [
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            },
+            {
+              "label": "Core product",
+              "url": "https://www.contractfinderpro.com/products/core"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "partial",
+          "detail": "Tender Ninja can ingest uploaded ITT, PQQ or RFP documents and extract their questions. Wider buyer plans, strategies, minutes, budgets or pipelines as documents are not stated.",
+          "evidence": [
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "Tender Ninja extracts questions from buyer tender documents, creates an estimated scoring rubric and assesses responses against evaluation criteria; it is a separately priced module.",
+          "evidence": [
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Tender Ninja storyboards complex answers, flags weak attribution and identifies response gaps against its scoring rubric; it is a separately priced module rather than a Core feature.",
+          "evidence": [
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Professional includes a weekly awards email, and Analytics exposes contract-award history and supplier-buyer relationships.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Professional includes a Framework and DPS Tracker, and Analytics search includes framework and DPS records.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "Professional includes Competitor Analysis; Analytics can research supplier activity, buyer relationships and award history.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "CFP Analytics",
+              "url": "https://www.contractfinderpro.com/products/analytics"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Enterprise advertises custom integrations and Tender Ninja can export a full bid. A public tender-data API or standard Core CSV/Excel export is not stated.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Tender Ninja supports multiple people collaborating on storyboards and responses. Team licences and custom integrations vary by plan.",
+          "evidence": [
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "Separately priced Tender Ninja uploads tender documents, extracts questions, drafts from a company knowledge base, storyboards, source-traces, scores and exports responses.",
+          "evidence": [
+            {
+              "label": "Tender Ninja",
+              "url": "https://www.contractfinderpro.com/products/tender-ninja"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "The current pricing FAQ names Find a Tender and says another 200-plus local-authority and sector portals are covered.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "The provider's first-party beta product page names Contracts Finder alongside Find a Tender as an example of the UK portals searched.",
+          "evidence": [
+            {
+              "label": "First-party beta product page",
+              "url": "https://beta.contractfinderpro.com/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider claims all UK and Ireland public-sector portals and more than 200 additional local-authority and sector-specific portals.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://www.contractfinderpro.com/pricing"
+            },
+            {
+              "label": "Live tenders",
+              "url": "https://www.contractfinderpro.com/live-tenders"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The coverage, database-size, analytics and AI claims are provider-stated and have not been independently tested by Civensa.",
+        "Only Find a Tender and Contracts Finder were explicitly named in the reviewed first-party pages; the remaining 200-plus claimed portals are not listed source by source.",
+        "Analytics and Tender Ninja are modular products with quote-only pricing and should not be treated as included in every Core subscription.",
+        "The provider uses both 2 million-plus and 5 million-plus database-size claims across current pages; the exact corpus definition should be confirmed."
+      ],
+      "sourceUrls": [
+        "https://www.contractfinderpro.com/",
+        "https://www.contractfinderpro.com/pricing",
+        "https://www.contractfinderpro.com/products/core",
+        "https://www.contractfinderpro.com/products/analytics",
+        "https://www.contractfinderpro.com/products/tender-ninja",
+        "https://www.contractfinderpro.com/live-tenders",
+        "https://beta.contractfinderpro.com/"
+      ]
+    },
+    {
+      "slug": "contracts-advance",
+      "name": "Contracts Advance",
+      "officialUrl": "https://contractsadvance.co.uk/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Current software pricing: Search £1,399 for 1 year, £2,599 for 2 years or £3,799 for 3 years; Discover £2,099, £3,699 or £5,099 respectively; Explore £2,999, £4,999 or £7,299 respectively. Separate bid reviews: £750 for one day or £1,495 for two days.",
+        "seatDetail": "A detailed live software page says unlimited users, while the current pricing page does not state a user allowance or additional-seat price. Confirm the unlimited-user term because the detailed page also displays older plan prices.",
+        "vatDetail": "Prices exclude VAT.",
+        "trialDetail": "A free-trial link is present, but trial length and payment-card requirement are not publicly stated on the reviewed pages.",
+        "evidence": [
+          {
+            "label": "Current pricing",
+            "url": "https://contractsadvance.co.uk/pricing/"
+          },
+          {
+            "label": "Detailed software page",
+            "url": "https://contractsadvance.co.uk/our-services/software/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "The provider documents tailored daily tender emails and powerful searches, but does not explicitly state that alerts are configured by saved keywords.",
+          "evidence": []
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "Semantic, machine-learning, AI or supplier-profile relevance matching is not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "Explore includes Buyer Analysis with named contacts, previous suppliers, financial values and procurement-market insight; lower plans do not list it.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            },
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "Explore provides competitor analysis with prior awardees, current public contracts and comparative market context. Lower plans do not list competitor analysis.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            },
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "Discover and Explore include Active Contracts and identify likely re-tenders using current holder, supplied goods or services, financial value and expected date to market.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            },
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "partial",
+          "detail": "Explore's Market Analysis displays award notices for products or services similar to the customer's offering and the competitors awarded them.",
+          "evidence": [
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "partial",
+          "detail": "The detailed live product page lists integrated FOI requesting on Discover and Explore. It does not state a ready-made library of buyer plans, strategies, minutes, budgets or other buyer documents.",
+          "evidence": [
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "Extraction or organisation of participation conditions, certifications, policies, evaluation criteria or recurring buyer requirements is not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The product supports pipeline and resource planning for likely re-tenders, but a requirements-readiness, evidence-gap or compliance-planning workflow is not stated.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Explore's Market Analysis displays contract award notices and previous suppliers; lower plans do not list this analysis.",
+          "evidence": [
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "Dedicated framework, DPS or dynamic-market discovery or intelligence is not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "Explore includes Competitor Analysis showing current contract holders and prior awardees, while lower plans do not list it.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            },
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "yes",
+          "detail": "The current pricing table lists Fully Exportable Data on Search, Discover and Explore. Export format, API, webhook and CRM support are not publicly specified.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "A detailed live software page states unlimited user access for the whole team. Assignments, shared notes and other in-product collaboration mechanics are not stated.",
+          "evidence": [
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "Bid reviews, bid writing and bespoke consultancy are offered separately through a trusted partner rather than described as included software functionality.",
+          "evidence": [
+            {
+              "label": "Current pricing",
+              "url": "https://contractsadvance.co.uk/pricing/"
+            },
+            {
+              "label": "Product overview",
+              "url": "https://contractsadvance.co.uk/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider says its software provides complete visibility of public-sector opportunities from every available source and all tenders published on an open-sourced procurement portal.",
+          "evidence": [
+            {
+              "label": "Detailed software page",
+              "url": "https://contractsadvance.co.uk/our-services/software/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The coverage, relevance, re-tender, buyer and competitor claims are provider-stated and have not been independently tested by Civensa.",
+        "No complete named portal list is published on the reviewed product pages; the provider offers a free portal audit for customer-supplied mission-critical portal lists.",
+        "The detailed live software page displays older plan prices than the current pricing page. Current pricing was used, while its unlimited-user and feature details should be reconfirmed before publication.",
+        "Likely re-tender dates are signals derived from active-contract information, not confirmed future procurements."
+      ],
+      "sourceUrls": [
+        "https://contractsadvance.co.uk/",
+        "https://contractsadvance.co.uk/pricing/",
+        "https://contractsadvance.co.uk/our-services/software/",
+        "https://contractsadvance.co.uk/the-insight-hub/insights/insight-paper-the-provider-selection-regime/"
+      ]
+    },
+    {
+      "slug": "d3-tenders-alerts",
+      "name": "D3 Tenders",
+      "officialUrl": "https://d3tenders.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_team",
+        "currency": "GBP",
+        "plansText": "Free: £0/month for registered charities, VCSEs, CICs and suppliers before their first public-sector win, with Scale access. Paid annual-billing rates: Essentials £79/month (£948/year), Growth £240/month (£2,880/year), Scale £360/month (£4,320/year), Managed from £840/month (£10,080/year). Monthly billing is available, but the non-annual prices are not shown on the main pricing table.",
+        "seatDetail": "Every displayed plan includes up to 25 team licences with no per-seat fees. Custom Enterprise terms are mentioned in comparison copy but no public Enterprise price is shown.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
+        "trialDetail": "Premium advertises a 7-day free trial with no commitment. A payment-card requirement is not publicly stated. The eligibility-based Free plan is separate and continues until the first win or while eligible as a charity, VCSE or CIC.",
+        "evidence": [
+          {
+            "label": "Pricing",
+            "url": "https://d3tenders.com/pricing/"
+          },
+          {
+            "label": "Premium",
+            "url": "https://d3tenders.com/premium/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Feed Builder supports editable keywords, smart filters, saved searches and daily or weekly email digests configurable by team member.",
+          "evidence": [
+            {
+              "label": "Feed Builder",
+              "url": "https://d3tenders.com/premium/feed-builder/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "partial",
+          "detail": "Feed Builder analyses a website or plain-English business description, extracts capabilities and matching criteria, and expands keywords with AI synonyms. The pricing comparison lists the advanced Trained Search Model only on Free-eligible Scale access, Scale and Managed.",
+          "evidence": [
+            {
+              "label": "Feed Builder",
+              "url": "https://d3tenders.com/premium/feed-builder/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "Buyer Intelligence provides buyer-level metrics, annual spend, supplier count, live opportunities, award details, supplier relationships and purchasing patterns.",
+          "evidence": [
+            {
+              "label": "Know Your Market",
+              "url": "https://d3tenders.com/premium/know-your-market/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "yes",
+          "detail": "Supplier intelligence includes league tables, award volume and value, buyer relationships, engagement and churn indicators, and contract history for competitors or partners.",
+          "evidence": [
+            {
+              "label": "Know Your Market",
+              "url": "https://d3tenders.com/premium/know-your-market/"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "The platform advertises Upcoming Contracts, forward pipeline, planning-stage notices and ten years of history for trends and recompetes.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "yes",
+          "detail": "Know Your Market supports finding who won similar work before and analysing ten years of contract and award history by buyer, supplier, sector and value.",
+          "evidence": [
+            {
+              "label": "Know Your Market",
+              "url": "https://d3tenders.com/premium/know-your-market/"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "Buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices are not stated on the reviewed product pages.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "partial",
+          "detail": "The separately delivered bid-writing service analyses tender requirements, evaluation criteria and buyer priorities. Comparable structured extraction is not stated as a self-serve Premium feature.",
+          "evidence": [
+            {
+              "label": "Bid Writing service",
+              "url": "https://d3tenders.com/services/bid-writing/"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "Separate Readiness Audits and consultancy identify gaps in policies, insurance, certifications and documentation; this is an expert service rather than a stated self-serve Premium workflow.",
+          "evidence": [
+            {
+              "label": "Public Sector Readiness",
+              "url": "https://d3tenders.com/services/public-sector-readiness/"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "Find Tenders includes award-stage records, and Know Your Market exposes every contract award with date, value and supplier filtering plus buyer and supplier histories.",
+          "evidence": [
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            },
+            {
+              "label": "Know Your Market",
+              "url": "https://d3tenders.com/premium/know-your-market/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "The search product includes framework agreements, framework call-offs and dynamic-market notices across procurement stages.",
+          "evidence": [
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Competitor Analysis researches and benchmarks suppliers by sector, location, contract type, award volume and value, buyer relationships and contract history.",
+          "evidence": [
+            {
+              "label": "Know Your Market",
+              "url": "https://d3tenders.com/premium/know-your-market/"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "The separately scoped Data Hub offers per-record JSON, bulk delivery, custom APIs, real-time feeds, custom enrichment, webhooks and flexible enterprise formats; these are not stated as included in every subscription plan.",
+          "evidence": [
+            {
+              "label": "Data Hub",
+              "url": "https://d3tenders.com/data-hub/"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "Plans include up to 25 team members. Users can collaborate on shortlists, share notes, assign opportunities, comment, track activity and work in shared pipelines and calendars.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Bid Pipeline",
+              "url": "https://d3tenders.com/premium/bid-pipeline/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "D3 offers professional tender analysis, bid writing, review and full bid-management services. Self-serve AI response drafting or an answer library is not stated as a Premium software feature.",
+          "evidence": [
+            {
+              "label": "Bid Writing service",
+              "url": "https://d3tenders.com/services/bid-writing/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "The provider explicitly says it aggregates Contracts Finder data.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "The provider explicitly says it aggregates Find a Tender, also labelled FTS.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "The provider explicitly says it aggregates Public Contracts Scotland data.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "The provider explicitly says it aggregates Sell2Wales data.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Find Tenders",
+              "url": "https://d3tenders.com/premium/find-tenders/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "The provider describes coverage as every UK portal, all major UK procurement portals and complete UK data, unified from four UK sources.",
+          "evidence": [
+            {
+              "label": "Pricing",
+              "url": "https://d3tenders.com/pricing/"
+            },
+            {
+              "label": "Data Hub",
+              "url": "https://d3tenders.com/data-hub/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The coverage, matching, intelligence and service claims are provider-stated and have not been independently tested by Civensa.",
+        "Although the provider says every UK portal, its reviewed source list names four portals and does not name eTendersNI or individual local, sector and buyer portals.",
+        "Free access is eligibility-based rather than a universally available permanent free plan: charities, VCSEs, CICs and suppliers before their first public-sector win qualify.",
+        "Readiness audits, bid writing and Data Hub/API delivery are separate services and should not be presented as included in every Premium subscription.",
+        "Upcoming contracts and recompete signals are forward-looking intelligence, not confirmed future procurements."
+      ],
+      "sourceUrls": [
+        "https://d3tenders.com/",
+        "https://d3tenders.com/pricing/",
+        "https://d3tenders.com/premium/",
+        "https://d3tenders.com/premium/feed-builder/",
+        "https://d3tenders.com/premium/find-tenders/",
+        "https://d3tenders.com/premium/bid-pipeline/",
+        "https://d3tenders.com/premium/know-your-market/",
+        "https://d3tenders.com/data-hub/",
+        "https://d3tenders.com/services/public-sector-readiness/",
+        "https://d3tenders.com/services/bid-writing/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1372 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "jorpex",
+      "name": "Jorpex",
+      "officialUrl": "https://jorpex.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "unknown",
+        "currency": "USD",
+        "plansText": "Starter: $49/month. Pro: $149/month. Enterprise: custom. The pricing page advertises a 35% saving for yearly billing but does not show the resulting annual amounts in the reviewed text.",
+        "seatDetail": "User or seat allowances and additional-seat pricing are not publicly stated. Starter includes one notification profile and one Slack channel; Pro includes five profiles and unlimited Slack channels; Enterprise includes unlimited profiles.",
+        "vatDetail": "Tax treatment is not publicly stated.",
+        "trialDetail": "14-day free trial; the page says $0 is due today, but does not explicitly state whether a card is required.",
+        "evidence": [
+          {
+            "label": "Jorpex pricing",
+            "url": "https://jorpex.com/pricing/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Notification profiles can use keywords, regions, categories, contract-value ranges and disqualifier terms, with real-time or digest delivery depending on plan.",
+          "evidence": [
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            },
+            {
+              "label": "Government contractor alerts",
+              "url": "https://jorpex.com/use-cases/government-contractors/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Jorpex says it AI-matches opportunities to an organisation; its public demo analyses a company website to build a matching profile and show scored tenders.",
+          "evidence": [
+            {
+              "label": "Jorpex home",
+              "url": "https://jorpex.com/"
+            },
+            {
+              "label": "AI matching demo",
+              "url": "https://jorpex.com/demo/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish structured contracting-authority profiles or buyer intelligence pages.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish structured incumbent, winner or competitor profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish contract-expiry, renewal or re-tender monitoring as a product feature.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish a feature that surfaces comparable historical opportunities or awards beside a notice or profile.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish monitoring of buyer plans, strategies, minutes, budgets or other buyer-authored documents outside procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish extracted or organised participation conditions, evaluation criteria or recurring buyer requirements.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish readiness, gap, evidence or requirements-planning workflows.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Jorpex explicitly says BOAMP monitoring can include award notices for competitive tracking and describes award-notice content on other covered sources, but the reviewed pages did not establish a cross-source historical-awards search product.",
+          "evidence": [
+            {
+              "label": "BOAMP source coverage",
+              "url": "https://jorpex.com/sources/boamp/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "Jorpex says it monitors framework agreements, dynamic purchasing systems and other multi-award vehicles, and specifically delivers matching UK framework call-offs from Contracts Finder and Find a Tender.",
+          "evidence": [
+            {
+              "label": "Government contractor use case",
+              "url": "https://jorpex.com/use-cases/government-contractors/"
+            },
+            {
+              "label": "UK procurement frameworks guide",
+              "url": "https://jorpex.com/guides/uk-procurement-frameworks-g-cloud-guide/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "Jorpex says users can include award notices for competitive tracking, but the reviewed pages did not establish a named-competitor watchlist or dedicated competitor profile workflow.",
+          "evidence": [
+            {
+              "label": "BOAMP source coverage",
+              "url": "https://jorpex.com/sources/boamp/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Enterprise advertises custom integrations. The reviewed pages do not publicly document a standard API, CSV/Excel export or webhook.",
+          "evidence": [
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "partial",
+          "detail": "Alerts can be routed to Slack channels, email and Microsoft Teams; Pro includes unlimited Slack channels. No assignments, comments or shared opportunity pipeline were established on the reviewed pages.",
+          "evidence": [
+            {
+              "label": "Jorpex terms",
+              "url": "https://jorpex.com/terms/"
+            },
+            {
+              "label": "Jorpex pricing",
+              "url": "https://jorpex.com/pricing/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "The reviewed first-party pages did not establish bid-response drafting, an answer library, compliance matrix or managed bid-writing support.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Jorpex says it continuously ingests Find a Tender notices and delivers matching opportunities.",
+          "evidence": [
+            {
+              "label": "Find a Tender source page",
+              "url": "https://jorpex.com/sources/find-a-tender/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Jorpex says it continuously ingests Contracts Finder publications and delivers matching opportunities.",
+          "evidence": [
+            {
+              "label": "Contracts Finder source page",
+              "url": "https://jorpex.com/sources/contracts-finder/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Jorpex explicitly says its UK coverage includes Public Contracts Scotland.",
+          "evidence": [
+            {
+              "label": "UK local authority tenders guide",
+              "url": "https://jorpex.com/guides/uk-local-authority-tenders-guide/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Jorpex explicitly says its UK coverage includes Sell2Wales.",
+          "evidence": [
+            {
+              "label": "UK local authority tenders guide",
+              "url": "https://jorpex.com/guides/uk-local-authority-tenders-guide/"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Jorpex explicitly says its UK coverage includes eTendersNI.",
+          "evidence": [
+            {
+              "label": "UK local authority tenders guide",
+              "url": "https://jorpex.com/guides/uk-local-authority-tenders-guide/"
+            }
+          ]
+        },
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "Jorpex says it monitors TED and delivers matches by Slack or email.",
+          "evidence": [
+            {
+              "label": "TED source page",
+              "url": "https://jorpex.com/sources/ted/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "SAM.gov",
+          "detail": "Jorpex says it continuously monitors SAM.gov.",
+          "evidence": [
+            {
+              "label": "SAM.gov source page",
+              "url": "https://jorpex.com/sources/sam-gov/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "BOAMP",
+          "detail": "Jorpex says it ingests BOAMP notice types and applies configured filters.",
+          "evidence": [
+            {
+              "label": "BOAMP source page",
+              "url": "https://jorpex.com/sources/boamp/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "United Nations Global Marketplace",
+          "detail": "Jorpex says it continuously monitors UNGM and delivers AI-matched opportunities.",
+          "evidence": [
+            {
+              "label": "UNGM source page",
+              "url": "https://jorpex.com/sources/ungm/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Jorpex claims monitoring of more than 50 public procurement sources worldwide.",
+          "evidence": [
+            {
+              "label": "Tender sources",
+              "url": "https://jorpex.com/sources/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature and coverage statements are provider claims and were not independently tested by Civensa.",
+        "The pricing page does not state user allowances, additional-seat prices, taxes or exact yearly totals.",
+        "Jorpex publishes a large editorial source library; a source article was treated as product coverage only where it explicitly said Jorpex monitors or ingests that source.",
+        "A source portal carrying awards does not by itself establish a full cross-source award-history or renewal-intelligence product."
+      ],
+      "sourceUrls": [
+        "https://jorpex.com/",
+        "https://jorpex.com/pricing/",
+        "https://jorpex.com/terms/",
+        "https://jorpex.com/demo/",
+        "https://jorpex.com/sources/",
+        "https://jorpex.com/sources/contracts-finder/",
+        "https://jorpex.com/sources/find-a-tender/",
+        "https://jorpex.com/sources/ted/",
+        "https://jorpex.com/sources/sam-gov/",
+        "https://jorpex.com/sources/boamp/",
+        "https://jorpex.com/sources/ungm/",
+        "https://jorpex.com/use-cases/government-contractors/",
+        "https://jorpex.com/guides/uk-local-authority-tenders-guide/",
+        "https://jorpex.com/guides/uk-procurement-frameworks-g-cloud-guide/"
+      ]
+    },
+    {
+      "slug": "kimonbids-alerts",
+      "name": "KimonBids",
+      "officialUrl": "https://kimonbids.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_organisation",
+        "currency": "GBP",
+        "plansText": "Free: £0 forever. Pro: £79/month. Growth: £179/month. Scale: £399/month. Annual billing is 20% below the monthly rate; the page explicitly gives the discounted Pro example as £758/year. Exact discounted Growth and Scale annual checkout amounts were not transcribed in the reviewed page text.",
+        "seatDetail": "Free includes 1 user; Pro supports up to 3; Growth up to 5; Scale up to 10. Role-based access and a shared organisation workspace are included. No additional-seat price is stated.",
+        "vatDetail": "VAT treatment is not publicly stated.",
+        "trialDetail": "A free plan is available without a credit card. It includes one lifetime, watermarked, read-only AI bid-draft trial; paid monthly draft limits are 5, 10 and 25 on Pro, Growth and Scale respectively.",
+        "evidence": [
+          {
+            "label": "KimonBids pricing",
+            "url": "https://kimonbids.com/pricing"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "KimonBids supports saved keyword and sector searches with email alerts. The free plan includes one alert; paid plans advertise unlimited alerts with daily or weekly delivery, while the help centre also documents an Immediate option.",
+          "evidence": [
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "The platform says it scores each opportunity against a company profile using CPV, sector, region, company-size and value-range factors, with document-enhanced and lot-level matching also listed.",
+          "evidence": [
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            },
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "yes",
+          "detail": "Buyer history on tender detail pages includes previous contracts, incumbent suppliers, typical values, procurement frequency and methods; paid tiers list buyer spending and procurement-behaviour intelligence.",
+          "evidence": [
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            },
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "The product surfaces incumbent suppliers through buyer history and advertises competitor contract-win and framework-position intelligence. The reviewed pages did not establish standalone structured competitor or supplier profile pages.",
+          "evidence": [
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            },
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "partial",
+          "detail": "The provider's comparison page lists expiring-contract tracking for competitor awards due for renewal, and tender details include contract start/end dates. The reviewed dedicated feature/help pages do not explain the renewal workflow or tier availability.",
+          "evidence": [
+            {
+              "label": "KimonBids comparison",
+              "url": "https://kimonbids.com/compare"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "yes",
+          "detail": "Tender detail pages show a buyer's previous contracts in the user's sector, with historical values, incumbent suppliers and procurement frequency.",
+          "evidence": [
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "KimonBids documents tender specifications, buyer-issued bid documents and procurement notices, but the reviewed pages did not establish collection of buyer strategies, minutes, budgets or other non-notice buyer-authored documents.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "yes",
+          "detail": "Tender records include specification text and published evaluation-criteria weightings; AI drafting reads tender questions and evaluation criteria, while the PA2023 checklist organises conditions of participation and evidence requirements.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "yes",
+          "detail": "Pipeline opportunities can generate preparation checklists for relationship building, evidence gathering, accreditation renewals and financial documents; the compliance centre provides readiness scoring and evidence-expiry alerts.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "KimonBids shows buyer award history, previous winning suppliers and values, and advertises award-history pricing benchmarks and supplier award portfolios built from public data.",
+          "evidence": [
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            },
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "KimonBids says it monitors framework tender notices and call-off opportunities across its four UK procurement portals and provides lot-level matching for multi-lot frameworks.",
+          "evidence": [
+            {
+              "label": "Frameworks guide",
+              "url": "https://kimonbids.com/frameworks"
+            },
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "Paid-tier competitor intelligence is described as monitoring competitor contract wins and framework positions; buyer history also exposes incumbents.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "Tender Intelligence help",
+              "url": "https://kimonbids.com/help/using-tender-intelligence"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "partial",
+          "detail": "Bid drafts and generated compliance documents can be exported to DOCX/PDF. The reviewed pages did not establish tender-data CSV export, an API, webhook or CRM integration.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "All plans support multi-user organisations with role-based access and a shared workspace; bid workspaces support review, comments, version history and tracked changes.",
+          "evidence": [
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            },
+            {
+              "label": "Bid-writing software",
+              "url": "https://kimonbids.com/bid-writing-software"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "yes",
+          "detail": "KimonBids provides structured AI first drafts, tender-specific bid workspaces, a reusable PSQ response bank, section editing, version history and Word export. Monthly draft allowances vary by plan.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            },
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "KimonBids says it indexes Find a Tender opportunities.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "KimonBids says it indexes Contracts Finder opportunities, including lower-value and post-award notices.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "KimonBids says it indexes Sell2Wales opportunities.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "KimonBids says it indexes Public Contracts Scotland opportunities.",
+          "evidence": [
+            {
+              "label": "KimonBids features",
+              "url": "https://kimonbids.com/features"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "KimonBids describes these four named portals as its complete UK portal coverage; eTendersNI is not named on the reviewed coverage pages.",
+          "evidence": [
+            {
+              "label": "KimonBids pricing",
+              "url": "https://kimonbids.com/pricing"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All feature, portal and performance statements are provider claims and were not independently tested by Civensa.",
+        "Some intelligence, saved-search and pipeline features are restricted to paid tiers; the provider's tables should be checked at purchase.",
+        "The reviewed coverage pages name four UK portals and do not name eTendersNI.",
+        "The comparison page references expiring-contract tracking, but the dedicated feature/help pages reviewed do not document its workflow or tier, so renewal signals are marked partial.",
+        "No additional-seat price or VAT treatment is publicly stated."
+      ],
+      "sourceUrls": [
+        "https://kimonbids.com/",
+        "https://kimonbids.com/pricing",
+        "https://kimonbids.com/features",
+        "https://kimonbids.com/help/using-tender-intelligence",
+        "https://kimonbids.com/frameworks",
+        "https://kimonbids.com/compare",
+        "https://kimonbids.com/bid-writing-software"
+      ]
+    },
+    {
+      "slug": "mercell-tender-discovery",
+      "name": "Mercell Tender Discovery",
+      "officialUrl": "https://info.mercell.com/en-gb/suppliers/tender-discovery/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "per_team",
+        "currency": "GBP",
+        "plansText": "National: from £150/month. Business Plus: from £250/month. Both are shown for the UK; no annual total or contract term is stated on the reviewed pricing page.",
+        "seatDetail": "National includes 1 licence; Business Plus includes 2 licences. Additional-seat pricing is not publicly stated.",
+        "vatDetail": "VAT treatment is not publicly stated.",
+        "trialDetail": "14-day Business Plus trial; the trial page says no credit card is required.",
+        "evidence": [
+          {
+            "label": "Mercell Bidding UK pricing",
+            "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+          },
+          {
+            "label": "Mercell trial",
+            "url": "https://info.mercell.com/en-gb/suppliers/start-a-free-trial/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Mercell describes tailored monitoring with daily alerts; its supplier guidance says alerts can be filtered by keywords, CPV codes, sectors and geographies. Both UK plans list unlimited monitoring profiles.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Bidding UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            },
+            {
+              "label": "Where to find public tenders",
+              "url": "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Tender Discovery uses an AI profile builder, AI-matched tenders, tailored recommendations and AI summaries. Business Plus explicitly lists AI Profile Builder and AI Summary & AI Matching.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Bidding UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "The connected Market Intelligence module provides buyer behaviour, spend, purchasing frequency, incumbent and contact insights. The reviewed pages do not establish that these are included in base Tender Discovery plans.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "The connected Market Intelligence module shows who wins, incumbent visibility and competitor public-sales history. The reviewed pages do not establish standalone structured supplier profile pages or inclusion in base Tender Discovery.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Mercell for suppliers",
+              "url": "https://info.mercell.com/en/procurement-insights/mercell-for-suppliers/"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "Tender Discovery explicitly says it shows expiring contracts where demand is likely to reopen; Mercell also documents automatic expiry tracking and renewal alerts from award data.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell versus manual searching",
+              "url": "https://info.mercell.com/en/procurement-insights/manual-tender-searching/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "partial",
+          "detail": "Mercell says suppliers can see who won similar contracts and at what price through its market/competitor intelligence. The reviewed Tender Discovery pricing page does not establish which UK plan includes this.",
+          "evidence": [
+            {
+              "label": "Mercell for suppliers",
+              "url": "https://info.mercell.com/en/procurement-insights/mercell-for-suppliers/"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "yes",
+          "detail": "Tender Discovery says it tracks early sales signals from public municipality meeting minutes and budget plans, as well as tender documents.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            }
+          ]
+        },
+        "buyerRequirements": {
+          "status": "yes",
+          "detail": "Tender Discovery says AI summaries highlight scope, deadlines and key requirements, and that tender documents, buyer information, deadlines and requirements are gathered in one place.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            }
+          ]
+        },
+        "requirementsPlanning": {
+          "status": "partial",
+          "detail": "The connected Bid Delivery module centralises dates, updates and requirements and supports compliance-oriented workflow. It is a separate connected module, and inclusion in Tender Discovery pricing was not established.",
+          "evidence": [
+            {
+              "label": "Mercell Bid Delivery",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-delivery/"
+            }
+          ]
+        },
+        "awardHistory": {
+          "status": "partial",
+          "detail": "Historical tenders are listed in the UK plan comparison and the connected Market Intelligence module provides years of enriched award data by buyer, region, category and framework. The reviewed table extraction does not establish exact UK-tier inclusion for award intelligence.",
+          "evidence": [
+            {
+              "label": "Mercell Bidding UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            },
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "partial",
+          "detail": "Mercell says its supplier discovery spans frameworks and Market Intelligence can analyse award history by framework. The reviewed UK plan page does not separately state framework coverage or tier inclusion.",
+          "evidence": [
+            {
+              "label": "Where to find public tenders",
+              "url": "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/"
+            },
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "partial",
+          "detail": "The connected Market Intelligence module provides competitor visibility, incumbent data and public-sales history. Inclusion and limits for the two UK Tender Discovery plans were not established on the reviewed pricing page.",
+          "evidence": [
+            {
+              "label": "Mercell Market Intelligence",
+              "url": "https://info.mercell.com/en/for-suppliers/sales-intelligence"
+            },
+            {
+              "label": "Mercell for suppliers",
+              "url": "https://info.mercell.com/en/procurement-insights/mercell-for-suppliers/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "The reviewed UK Tender Discovery, pricing and connected-module pages did not establish a supplier-facing CSV/Excel export, API, webhook or CRM integration.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "Tender Discovery lets users save, organise, comment on and share opportunities with colleagues. Business Plus includes two licences, while Bid Delivery adds a shared workspace, files, comments, updates, roles and permissions.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Bidding UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            },
+            {
+              "label": "Mercell Bid Delivery",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-delivery/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "partial",
+          "detail": "The connected Bid Excellence product advertises templates, guides, learning, certification and bid-support tools, but it is marked coming soon and the reviewed pages do not establish AI response drafting or an answer library.",
+          "evidence": [
+            {
+              "label": "Mercell Bid Excellence",
+              "url": "https://info.mercell.com/en-gb/suppliers/bid-excellence/"
+            }
+          ]
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "Mercell's supplier-discovery guidance explicitly says suppliers using Mercell access tenders from national portals, TED, regional sites and frameworks.",
+          "evidence": [
+            {
+              "label": "Where to find public tenders",
+              "url": "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Tender Discovery claims coverage of official sources, below-threshold tenders, Mercell-only tenders and early signals from public meeting minutes and budget plans, but its reviewed UK pages do not publish a named UK source list.",
+          "evidence": [
+            {
+              "label": "Mercell Tender Discovery",
+              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
+            },
+            {
+              "label": "Mercell Bidding UK pricing",
+              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All pricing, feature, coverage and performance statements are provider claims and were not independently tested by Civensa.",
+        "The reviewed UK pages do not name Contracts Finder, Find a Tender, Public Contracts Scotland, Sell2Wales or eTendersNI as Tender Discovery ingestion sources; broad claims such as all official tenders were not converted into explicit portal records.",
+        "Market Intelligence, Bid Delivery and Bid Excellence are connected Mercell Bidding modules. Features sourced only from those pages are marked partial unless Tender Discovery itself also states them.",
+        "Prices are advertised from £150 and £250 per month; contract term, VAT, additional licences and module/add-on charges are not publicly stated.",
+        "Bid Excellence is marked coming soon on the reviewed first-party page."
+      ],
+      "sourceUrls": [
+        "https://info.mercell.com/en-gb/suppliers/tender-discovery/",
+        "https://info.mercell.com/en-gb/mercell-bidding/",
+        "https://info.mercell.com/en-gb/suppliers/start-a-free-trial/",
+        "https://info.mercell.com/en/for-suppliers/sales-intelligence",
+        "https://info.mercell.com/en-gb/suppliers/bid-delivery/",
+        "https://info.mercell.com/en-gb/suppliers/bid-excellence/",
+        "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/",
+        "https://info.mercell.com/en/procurement-insights/mercell-for-suppliers/",
+        "https://info.mercell.com/en/procurement-insights/manual-tender-searching/"
+      ]
+    },
+    {
+      "slug": "mytenders-supplier",
+      "name": "myTenders",
+      "officialUrl": "https://www.mytenders.co.uk/",
+      "pricing": {
+        "availability": "free_only",
+        "billingBasis": "unknown",
+        "currency": "unknown",
+        "plansText": "Supplier registration and access to notices published through myTenders are free. No paid supplier alert plan or supplier add-on price was established on the reviewed myTenders pages.",
+        "seatDetail": "Supplier user limits are not publicly stated. The unlimited user licences described on myTenders PRO apply to the paid buyer-side procurement product, not the free supplier opportunity search.",
+        "vatDetail": "Not applicable to the stated free supplier registration; no paid supplier price or VAT treatment was found.",
+        "trialDetail": "No trial is stated; supplier registration and access to notices published through myTenders are free.",
+        "evidence": [
+          {
+            "label": "myTenders home",
+            "url": "https://www.mytenders.co.uk/"
+          },
+          {
+            "label": "Supplier registration",
+            "url": "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages establish free opportunity search but do not establish saved keyword alerts. The homepage directs users to the separate Tenders Direct service for wider emailed alerts.",
+          "evidence": [
+            {
+              "label": "myTenders home",
+              "url": "https://www.mytenders.co.uk/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish AI, semantic or profile-based opportunity matching.",
+          "evidence": []
+        },
+        "buyerProfiles": {
+          "status": "not_stated",
+          "detail": "The reviewed supplier pages did not establish structured buyer intelligence profiles. Buyer-side PRO can sell an optional branded notice page, which is not the same as buyer intelligence.",
+          "evidence": []
+        },
+        "supplierProfiles": {
+          "status": "not_stated",
+          "detail": "Supplier registration collects the user's own organisation details, but the reviewed pages did not establish structured competitor, incumbent or winner profiles.",
+          "evidence": []
+        },
+        "renewalSignals": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish contract-expiry, renewal or re-tender monitoring.",
+          "evidence": []
+        },
+        "similarContracts": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish surfacing of comparable historical contracts or awards.",
+          "evidence": []
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "Buyer-side PRO can attach tender documents to notices, but the reviewed supplier pages did not establish plans, strategies, minutes, budgets or other buyer documents beyond procurement notices.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish extracted or organised participation conditions, evaluation criteria or recurring buyer requirements.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish supplier readiness, gap, evidence or requirements-planning workflows.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish historical award search, winners or award-value intelligence.",
+          "evidence": []
+        },
+        "frameworks": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish framework, DPS, dynamic-market or route-to-market intelligence.",
+          "evidence": []
+        },
+        "competitorTracking": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish competitor, incumbent, supplier or winner monitoring.",
+          "evidence": []
+        },
+        "exportsApi": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish CSV/Excel export, an API, webhook, CRM or another supplier-data integration.",
+          "evidence": []
+        },
+        "collaboration": {
+          "status": "not_stated",
+          "detail": "The reviewed supplier pages did not establish multiple supplier users, assignments, comments or a shared bid pipeline. Buyer-side PRO has separate multi-user and procurement-management features.",
+          "evidence": []
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "The reviewed myTenders supplier pages did not establish bid-response drafting, an answer library, document analysis or managed writing support.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "mytenders",
+          "portalName": "myTenders",
+          "detail": "The free supplier opportunity search is explicitly limited to notices that public buyers publish through myTenders.",
+          "evidence": [
+            {
+              "label": "myTenders home",
+              "url": "https://www.mytenders.co.uk/"
+            }
+          ]
+        },
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "myTenders PRO has a buyer-side publishing integration to send notices created in myTenders to Find a Tender; this does not establish ingestion of all Find a Tender notices into the supplier search.",
+          "evidence": [
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "myTenders PRO has a buyer-side publishing integration to send notices created in myTenders to Contracts Finder; this does not establish ingestion of all Contracts Finder notices into the supplier search.",
+          "evidence": [
+            {
+              "label": "myTenders PRO",
+              "url": "https://www.mytenders.co.uk/pro_service"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "myTenders explicitly says many tenders are published through other sources and directs suppliers wanting broader UK and Republic of Ireland alerts to the separate Tenders Direct service.",
+          "evidence": [
+            {
+              "label": "myTenders home",
+              "url": "https://www.mytenders.co.uk/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "myTenders is primarily an e-procurement publication and procedure-management portal; this record evaluates its free supplier opportunity search, not the buyer-side myTenders PRO product.",
+        "Supplier coverage is limited to notices published through myTenders; the site explicitly points to the separate Tenders Direct product for wider aggregation and inbox alerts.",
+        "Find a Tender and Contracts Finder are buyer-side publication integrations, not evidence that myTenders supplier search ingests every notice from those portals.",
+        "A logged-in account would be required to test search filters, notice types and any unadvertised supplier functions."
+      ],
+      "sourceUrls": [
+        "https://www.mytenders.co.uk/",
+        "https://www.mytenders.co.uk/pro_service",
+        "https://www.mytenders.co.uk/Register_V2/Supplier_Register.aspx"
+      ]
+    },
+    {
+      "slug": "open-opportunities-alerts",
+      "name": "Open Opportunities",
+      "officialUrl": "https://openopps.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "mixed",
+        "currency": "mixed",
+        "plansText": "Yearly-billed Solo: £120/€140/$160 per user per month (£1,440/€1,680/$1,920 annually). Yearly-billed Team: £259/€300/$342 per team per month (£3,108/€3,600/$4,104 annually). API: from £5,000/€5,800/$6,700 per year. The pricing page also offers a monthly toggle, but the reviewed text did not expose its monthly-billed amounts.",
+        "seatDetail": "Solo includes 1 user. Team includes unlimited users. The API section says unlimited users. No additional-seat price applies to the stated Team allowance.",
+        "vatDetail": "VAT or other tax treatment is not publicly stated.",
+        "trialDetail": "7-day free trial with no credit card. Annual website subscriptions also advertise a 30-day money-back guarantee. The API offers a small anonymised sandbox on request.",
+        "evidence": [
+          {
+            "label": "Open Opportunities pricing",
+            "url": "https://openopps.com/pricing/"
+          }
+        ]
+      },
+      "features": {
+        "keywordAlerts": {
+          "status": "yes",
+          "detail": "Saved-search alerts can use fine-tuned keywords and other criteria. Current pricing lists one daily alert for Solo and three daily alerts per user for Team; the user guide also documents daily, weekly or monthly saved-search delivery.",
+          "evidence": [
+            {
+              "label": "Tender alert features",
+              "url": "https://openopps.com/product/"
+            },
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Search user guide",
+              "url": "https://openopps.com/blog/user-guide-making-tender-search-easier/"
+            }
+          ]
+        },
+        "semanticAiMatching": {
+          "status": "yes",
+          "detail": "Intent Search uses Open Opportunities' own AI model to score and rank results across geographies, languages and currencies, and is described as assessing document meaning rather than only keyword occurrence.",
+          "evidence": [
+            {
+              "label": "Intent Search",
+              "url": "https://openopps.com/introducing-intent-search-enhanced-multilingual-search-that-understands-intent"
+            },
+            {
+              "label": "AI for bid writers guide",
+              "url": "https://openopps.com/wp-content/uploads/2025/08/AI-for-Bid-Writers-White-paper-Reduced-size.pdf"
+            }
+          ]
+        },
+        "buyerProfiles": {
+          "status": "partial",
+          "detail": "Users can search or monitor named buyers and inspect what they bought before, previous winners, values and buying patterns. The reviewed pages do not establish standalone structured buyer profile pages.",
+          "evidence": [
+            {
+              "label": "Sales strategy",
+              "url": "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/"
+            },
+            {
+              "label": "Search user guide",
+              "url": "https://openopps.com/blog/user-guide-making-tender-search-easier/"
+            }
+          ]
+        },
+        "supplierProfiles": {
+          "status": "partial",
+          "detail": "The contract database can be searched by supplier to show contracts won, and competitor contracts can be examined. The reviewed pages do not establish standalone structured supplier profile pages.",
+          "evidence": [
+            {
+              "label": "Search by supplier",
+              "url": "https://www.openopps.com/help/how-to-search-by-supplier/"
+            }
+          ]
+        },
+        "renewalSignals": {
+          "status": "yes",
+          "detail": "Open Opportunities supports alerts for expiring contracts and competitor tracking; current pricing lists expiring contracts awarded in the last five years, and its data includes contract start/end dates.",
+          "evidence": [
+            {
+              "label": "Open Opportunities home",
+              "url": "https://openopps.com/"
+            },
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Coverage and data fields",
+              "url": "https://openopps.com/coverage/"
+            }
+          ]
+        },
+        "similarContracts": {
+          "status": "yes",
+          "detail": "Open Opportunities' documented sales workflow explicitly tells users to search for similar contracts, review similar past tenders and inspect buyer history and previous values.",
+          "evidence": [
+            {
+              "label": "Sales strategy",
+              "url": "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/"
+            }
+          ]
+        },
+        "buyerDocuments": {
+          "status": "not_stated",
+          "detail": "The platform gathers notice attachments and planning notices, but the reviewed pages did not establish buyer strategies, minutes, budgets or other non-notice buyer-authored document collections.",
+          "evidence": []
+        },
+        "buyerRequirements": {
+          "status": "not_stated",
+          "detail": "Records and attachments expose source notice content, but the reviewed pages did not establish extracted or organised participation conditions, certifications, policies or evaluation criteria.",
+          "evidence": []
+        },
+        "requirementsPlanning": {
+          "status": "not_stated",
+          "detail": "The provider publishes strategic planning guidance and offers planning notices, but the reviewed pages did not establish an in-product gap, readiness, evidence or requirements-planning workflow.",
+          "evidence": []
+        },
+        "awardHistory": {
+          "status": "yes",
+          "detail": "The platform includes historic tenders and contract awards, including supplier, buyer, value and award dates; users can search suppliers and inspect previous winners and prices.",
+          "evidence": [
+            {
+              "label": "Data feature breakdown",
+              "url": "https://openopps.com/data-a-breakdown-of-the-data-features-in-open-opportunities/"
+            },
+            {
+              "label": "Search by supplier",
+              "url": "https://www.openopps.com/help/how-to-search-by-supplier/"
+            },
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            }
+          ]
+        },
+        "frameworks": {
+          "status": "yes",
+          "detail": "Open Opportunities says it tracks central-government frameworks, supports analysis of framework award terms and reopening windows, and includes framework records in its historical procurement data.",
+          "evidence": [
+            {
+              "label": "Data feature breakdown",
+              "url": "https://openopps.com/data-a-breakdown-of-the-data-features-in-open-opportunities/"
+            },
+            {
+              "label": "SME Procurement Act guide",
+              "url": "https://openopps.com/blog/how-smes-can-find-and-win-public-sector-contracts-uk-procurement-act-2023/"
+            }
+          ]
+        },
+        "competitorTracking": {
+          "status": "yes",
+          "detail": "The product page advertises tracking of competitors, buyers and categories; users can alert on competitors and search awards by supplier to see who has won contracts.",
+          "evidence": [
+            {
+              "label": "Tender alert features",
+              "url": "https://openopps.com/product/"
+            },
+            {
+              "label": "Open Opportunities home",
+              "url": "https://openopps.com/"
+            },
+            {
+              "label": "Search by supplier",
+              "url": "https://www.openopps.com/help/how-to-search-by-supplier/"
+            }
+          ]
+        },
+        "exportsApi": {
+          "status": "yes",
+          "detail": "Team includes CSV downloads of up to 100 rows. A separately priced REST API returns structured JSON, documents and daily updates and supports CRM, dashboard and alert-routing integrations.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Open Opportunities API",
+              "url": "https://openopps.com/api/"
+            }
+          ]
+        },
+        "collaboration": {
+          "status": "yes",
+          "detail": "The Team plan includes unlimited users; provider guidance describes sharing opportunities and insights with colleagues and setting up team members. The API can route alerts to Teams or Slack.",
+          "evidence": [
+            {
+              "label": "Open Opportunities pricing",
+              "url": "https://openopps.com/pricing/"
+            },
+            {
+              "label": "Sales strategy",
+              "url": "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/"
+            },
+            {
+              "label": "Open Opportunities API",
+              "url": "https://openopps.com/api/"
+            }
+          ]
+        },
+        "bidWriting": {
+          "status": "not_stated",
+          "detail": "Open Opportunities publishes guidance about using AI for bid writing, but the reviewed product pages did not establish response drafting, an answer library, compliance matrix or managed writing as a platform feature.",
+          "evidence": []
+        }
+      },
+      "explicitPortals": [
+        {
+          "portalId": "find_a_tender",
+          "portalName": "Find a Tender",
+          "detail": "Open Opportunities lists Find a Tender among the UK sources it monitors and offers source-specific alerts.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            },
+            {
+              "label": "Find a Tender source page",
+              "url": "https://openopps.com/sources/find-a-tender/"
+            }
+          ]
+        },
+        {
+          "portalId": "contracts_finder",
+          "portalName": "Contracts Finder",
+          "detail": "Open Opportunities lists Contracts Finder among the UK sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "public_contracts_scotland",
+          "portalName": "Public Contracts Scotland",
+          "detail": "Open Opportunities lists Public Contracts Scotland among the UK sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "sell2wales",
+          "portalName": "Sell2Wales",
+          "detail": "Open Opportunities lists Sell2Wales among the UK sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "etendersni",
+          "portalName": "eTendersNI",
+          "detail": "Open Opportunities lists eTendersNI among the UK sources it monitors and says it monitors the source daily.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            },
+            {
+              "label": "eTendersNI source page",
+              "url": "https://openopps.com/sources/etendersni/"
+            }
+          ]
+        },
+        {
+          "portalId": "ted",
+          "portalName": "Tenders Electronic Daily",
+          "detail": "Open Opportunities lists TED among the European sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            },
+            {
+              "label": "TED source page",
+              "url": "https://openopps.com/sources/ted/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "SAM.gov",
+          "detail": "Open Opportunities lists SAM.gov among the North American sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "United Nations Global Marketplace",
+          "detail": "Open Opportunities lists UNGM among the international-organisation sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "AusTender",
+          "detail": "Open Opportunities lists AusTender among the Asia-Pacific sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        },
+        {
+          "portalId": "other",
+          "portalName": "CanadaBuys",
+          "detail": "Open Opportunities lists CanadaBuys among the North American sources it monitors.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        }
+      ],
+      "otherCoverageClaims": [
+        {
+          "claim": "Open Opportunities claims more than 900 government procurement sources across more than 180 countries, updated twice daily; its public source directory shows 100 named examples.",
+          "evidence": [
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            },
+            {
+              "label": "Coverage",
+              "url": "https://openopps.com/coverage/"
+            }
+          ]
+        },
+        {
+          "claim": "Open Opportunities claims 198 UK sources for tenders and contracts, but the reviewed public source directory names five UK portals rather than publishing all 198.",
+          "evidence": [
+            {
+              "label": "Coverage",
+              "url": "https://openopps.com/coverage/"
+            },
+            {
+              "label": "Data sources",
+              "url": "https://openopps.com/sources/"
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "All pricing, data-volume, coverage, AI-accuracy and feature statements are provider claims and were not independently tested by Civensa.",
+        "The current pricing page shows Solo and Team at £120 and £259 per month when billed annually, while the current homepage says plans start at £55/month and older indexed page copy shows £2,699/year. The pricing page was treated as canonical, but the inconsistency should be checked before publication or purchase.",
+        "Feature-table icons were not represented in the text extraction for some yes/no cells; descriptions and separate first-party pages were used where they explicitly established availability.",
+        "The public sources directory names 100 examples, not all claimed 900+ sources; only a selected set of explicitly named portals is normalised here, with the full directory retained in sourceUrls.",
+        "Solo and Team alert, history, export and user allowances differ materially; the API is separately priced."
+      ],
+      "sourceUrls": [
+        "https://openopps.com/",
+        "https://openopps.com/pricing/",
+        "https://openopps.com/product/",
+        "https://openopps.com/coverage/",
+        "https://openopps.com/sources/",
+        "https://openopps.com/sources/find-a-tender/",
+        "https://openopps.com/sources/etendersni/",
+        "https://openopps.com/sources/ted/",
+        "https://openopps.com/api/",
+        "https://openopps.com/introducing-intent-search-enhanced-multilingual-search-that-understands-intent",
+        "https://openopps.com/blog/user-guide-making-tender-search-easier/",
+        "https://www.openopps.com/help/how-to-search-by-supplier/",
+        "https://openopps.com/data-a-breakdown-of-the-data-features-in-open-opportunities/",
+        "https://openopps.com/open-opportunities-your-partner-for-strategic-and-tactical-sales/",
+        "https://openopps.com/blog/how-smes-can-find-and-win-public-sector-contracts-uk-procurement-act-2023/",
+        "https://openopps.com/wp-content/uploads/2025/08/AI-for-Bid-Writers-White-paper-Reduced-size.pdf"
+      ]
+    }
+  ]
+}

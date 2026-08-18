@@ -1,5 +1,13 @@
 import { PageIntro, SiteFooter, SiteHeader } from "../../_components/site-chrome";
-import { categories, getCategory, getRecords, type CategorySlug, type VendorRecord } from "../_data";
+import {
+  categories,
+  getCategory,
+  getRecords,
+  type CategorySlug,
+  type FeatureStatus,
+  type NormalizedFeatureKey,
+  type VendorRecord,
+} from "../_data";
 
 const internationalProcurementSlugs = new Set([
   "civant",
@@ -9,6 +17,165 @@ const internationalProcurementSlugs = new Set([
   "highergov",
   "tenderalpha",
 ]);
+
+const featureLabels: Record<NormalizedFeatureKey, string> = {
+  keywordAlerts: "Keyword alerts",
+  semanticAiMatching: "AI or semantic matching",
+  buyerProfiles: "Buyer profiles",
+  supplierProfiles: "Supplier profiles",
+  renewalSignals: "Renewals",
+  similarContracts: "Similar contracts",
+  buyerDocuments: "Buyer documents",
+  buyerRequirements: "Buyer requirements",
+  requirementsPlanning: "Requirements planning",
+  awardHistory: "Award history",
+  frameworks: "Frameworks",
+  competitorTracking: "Competitor tracking",
+  exportsApi: "Exports or API",
+  collaboration: "Team workflow",
+  bidWriting: "Bid writing",
+};
+
+const matrixFeatureKeys: readonly NormalizedFeatureKey[] = [
+  "keywordAlerts",
+  "semanticAiMatching",
+  "buyerProfiles",
+  "supplierProfiles",
+  "renewalSignals",
+  "similarContracts",
+  "buyerDocuments",
+  "buyerRequirements",
+  "requirementsPlanning",
+  "awardHistory",
+];
+
+const statusLabels: Record<FeatureStatus, string> = {
+  yes: "Yes",
+  partial: "Partial",
+  no: "No",
+  not_stated: "Not stated",
+};
+
+const pricingAvailabilityLabels = {
+  public_numeric: "Public numeric price",
+  free_only: "Free offer only",
+  quote_only: "Quote only",
+  not_found: "Not found",
+} as const;
+
+const portalColumns = [
+  { id: "find_a_tender", label: "Find a Tender" },
+  { id: "contracts_finder", label: "Contracts Finder" },
+  { id: "public_contracts_scotland", label: "Public Contracts Scotland" },
+  { id: "sell2wales", label: "Sell2Wales" },
+  { id: "etendersni", label: "eTendersNI" },
+  { id: "ted", label: "TED" },
+] as const;
+
+const ownershipDisclosure = (
+  <div className="disclosure">
+    <strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, the company that develops BidSkim. BidSkim is included where relevant using the same fields and provider-source standard as other entries. Civensa has not independently tested or ranked any listed product. This directory has no affiliate links or paid rankings.
+  </div>
+);
+
+function formatCheckedDate(value: string): string {
+  const date = new Date(`${value}T12:00:00Z`);
+  if (Number.isNaN(date.valueOf())) return value;
+  return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(date);
+}
+
+function FeatureStatusLabel({ status }: { status: FeatureStatus }) {
+  return <span className={`feature-status feature-status-${status}`}>{statusLabels[status]}</span>;
+}
+
+function NormalizedFeatureMatrix({ records }: { records: readonly VendorRecord[] }) {
+  const normalizedRecords = records.filter((record) => record.normalized);
+  if (normalizedRecords.length === 0) return null;
+  return <section className="feature-matrix-section" aria-labelledby="feature-matrix-title">
+    <div className="section-kicker">Normalized comparison</div>
+    <h2 id="feature-matrix-title">Features described on provider pages</h2>
+    <p>Yes and partial mean the provider explicitly describes the capability. Not stated means the reviewed public pages did not establish it. This is not an independent product test.</p>
+    <div className="feature-matrix-scroll" role="region" aria-label="Scrollable normalized feature comparison">
+      <table className="feature-matrix">
+        <thead><tr><th scope="col">Service</th><th scope="col">Pricing basis</th>{matrixFeatureKeys.map((key) => <th scope="col" key={key}>{featureLabels[key]}</th>)}</tr></thead>
+        <tbody>{normalizedRecords.map((record) => <tr key={record.slug}>
+          <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
+          <td>{record.normalized?.pricing.billingBasis.replaceAll("_", " ")}</td>
+          {matrixFeatureKeys.map((key) => <td key={key}><FeatureStatusLabel status={record.normalized!.features[key].status} /></td>)}
+        </tr>)}</tbody>
+      </table>
+    </div>
+  </section>;
+}
+
+function NormalizedPricingMatrix({ records }: { records: readonly VendorRecord[] }) {
+  const normalizedRecords = records.filter((record) => record.normalized);
+  if (normalizedRecords.length === 0) return null;
+  return <section className="feature-matrix-section" aria-labelledby="pricing-matrix-title">
+    <div className="section-kicker">Pricing comparison</div>
+    <h2 id="pricing-matrix-title">Public pricing and seat basis</h2>
+    <p>Prices are transcribed from provider pages. Seat basis stays unknown unless the reviewed source makes it clear.</p>
+    <div className="feature-matrix-scroll" role="region" aria-label="Scrollable normalized pricing comparison">
+      <table className="feature-matrix pricing-matrix">
+        <thead><tr><th scope="col">Service</th><th scope="col">Availability</th><th scope="col">Billing basis</th><th scope="col">Public plans</th><th scope="col">Seats or users</th><th scope="col">Trial</th></tr></thead>
+        <tbody>{normalizedRecords.map((record) => {
+          const pricing = record.normalized!.pricing;
+          return <tr key={record.slug}>
+            <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
+            <td>{pricingAvailabilityLabels[pricing.availability]}</td>
+            <td>{pricing.billingBasis.replaceAll("_", " ")}</td>
+            <td>{pricing.plansText}</td>
+            <td>{pricing.seatDetail}</td>
+            <td>{pricing.trialDetail}</td>
+          </tr>;
+        })}</tbody>
+      </table>
+    </div>
+  </section>;
+}
+
+function PortalCoverageMatrix({ records }: { records: readonly VendorRecord[] }) {
+  const normalizedRecords = records.filter((record) => record.normalized);
+  if (normalizedRecords.length === 0) return null;
+  return <section className="feature-matrix-section" aria-labelledby="portal-matrix-title">
+    <div className="section-kicker">Named sources</div>
+    <h2 id="portal-matrix-title">Portals explicitly named by each provider</h2>
+    <p>Listed means the provider&apos;s reviewed page names that portal. Not stated is not evidence that the service lacks coverage. Generic claims such as “all UK portals” stay outside this matrix.</p>
+    <div className="feature-matrix-scroll" role="region" aria-label="Scrollable explicit portal coverage comparison">
+      <table className="feature-matrix portal-matrix">
+        <thead><tr><th scope="col">Service</th>{portalColumns.map((portal) => <th scope="col" key={portal.id}>{portal.label}</th>)}<th scope="col">Other named portals</th></tr></thead>
+        <tbody>{normalizedRecords.map((record) => {
+          const explicitPortals = record.normalized!.explicitPortals;
+          const otherPortals = explicitPortals.filter((portal) => !portalColumns.some((column) => column.id === portal.portalId));
+          return <tr key={record.slug}>
+            <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
+            {portalColumns.map((column) => {
+              const portal = explicitPortals.find((item) => item.portalId === column.id);
+              const evidence = portal?.evidenceLinks[0];
+              return <td key={column.id}>{portal ? <span className="portal-listed">{evidence ? <a href={evidence.url} rel="noopener noreferrer">Listed ↗</a> : "Listed"}</span> : <span className="portal-not-stated">Not stated</span>}</td>;
+            })}
+            <td>{otherPortals.length > 0 ? otherPortals.map((portal) => portal.portalName).join(", ") : <span className="portal-not-stated">None named</span>}</td>
+          </tr>;
+        })}</tbody>
+      </table>
+    </div>
+  </section>;
+}
+
+function latestChecked(records: readonly VendorRecord[]): string {
+  return records.reduce((latest, record) => record.lastChecked > latest ? record.lastChecked : latest, "0000-00-00");
+}
+
+function NormalizedEvidence({ record }: { record: VendorRecord }) {
+  const normalized = record.normalized;
+  if (!normalized) return null;
+  const researchNotes = [...normalized.caveats, ...normalized.otherCoverageClaims.map((item) => item.claim)].slice(0, 2);
+  if (researchNotes.length === 0) return null;
+  return <div className="normalized-evidence">
+    <h3>Research notes</h3>
+    <ul>{researchNotes.map((note) => <li key={note}>{note}</li>)}</ul>
+  </div>;
+}
 
 function BreadcrumbSchema({ category }: { category?: { name: string; slug: string } }) {
   const elements = [
@@ -37,6 +204,8 @@ function ItemListSchema({ name, records }: { name: string; records: readonly Ven
 }
 
 function DirectoryEntry({ record }: { record: VendorRecord }) {
+  const evidenceLinks = [...(record.normalized?.pricing.evidenceLinks ?? []), ...record.evidenceLinks]
+    .filter((link, index, links) => links.findIndex((candidate) => candidate.url === link.url) === index);
   return <article className="directory-entry" id={record.slug}>
     <div>
       <div className="entry-type">{record.providerType}</div>
@@ -52,12 +221,14 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
         <li><strong>Not for:</strong> {record.notFor}</li>
         <li><strong>Caveat:</strong> {record.caveat}</li>
       </ul>
+      <NormalizedEvidence record={record} />
     </div>
     <div className="entry-meta">
-      <div><small>Public pricing</small><span>{record.pricing}</span></div>
+      <div><small>Public pricing</small><span>{record.normalized?.pricing.plansText ?? record.pricing}</span></div>
+      {record.normalized ? <div><small>Normalized pricing basis</small><span>{record.normalized.pricing.billingBasis.replaceAll("_", " ")}. {record.normalized.pricing.seatDetail}</span></div> : null}
       <div><small>Pricing caveat</small><span>{record.pricingCaveat}</span></div>
-      <div><small>Last checked</small><time dateTime={record.lastChecked}>12 August 2026</time></div>
-      <div><small>Evidence</small>{record.evidenceLinks.map((link) => <a key={link.url} href={link.url} rel="noopener noreferrer">{link.label} ↗</a>)}</div>
+      <div><small>Last checked</small><time dateTime={record.lastChecked}>{formatCheckedDate(record.lastChecked)}</time></div>
+      <div><small>Evidence</small>{evidenceLinks.map((link) => <a key={link.url} href={link.url} rel="noopener noreferrer">{link.label} ↗</a>)}</div>
     </div>
   </article>;
 }
@@ -65,6 +236,8 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
 export function CategoryPage({ slug }: { slug: CategorySlug }) {
   const category = getCategory(slug);
   const records = getRecords(slug);
+  const checkedDate = formatCheckedDate(latestChecked(records));
+  const containsBidSkim = records.some((record) => record.name === "BidSkim");
   const ukIntelligenceRecords = slug === "procurement-intelligence"
     ? records.filter((record) => !internationalProcurementSlugs.has(record.slug))
     : [];
@@ -76,13 +249,13 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
     <PageIntro kicker="Procurement tools directory" title={category.name} lead={category.lead} />
     <section className="shell directory-intro">
       <div>
-        <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>
-        <p>Research desk: Civensa Research. Evidence checked 12 August 2026.</p>
+        {containsBidSkim ? ownershipDisclosure : <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>}
+        <p>Research desk: Civensa Research. Evidence checked {checkedDate}.</p>
         <p><a className="text-link" href="/tools/methodology/">Read the directory methodology and corrections policy →</a></p>
       </div>
       <div className="directory-facts" aria-label="Directory facts">
         <div><span>Listings</span><strong>{records.length}</strong></div>
-        <div><span>Last checked</span><strong>12 August 2026</strong></div>
+        <div><span>Last checked</span><strong>{checkedDate}</strong></div>
         <div><span>Ratings</span><strong>None</strong></div>
       </div>
     </section>
@@ -93,6 +266,7 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
       <nav className="directory-controls" aria-label="Tools categories">
         {categories.map((item) => <a key={item.slug} href={`/tools/${item.slug}/`} aria-current={item.slug === slug ? "page" : undefined}>{item.shortName}</a>)}
       </nav>
+      {slug === "tender-alerts" ? <><NormalizedFeatureMatrix records={records} /><NormalizedPricingMatrix records={records} /><PortalCoverageMatrix records={records} /></> : null}
       {slug === "procurement-intelligence" ? <>
         <section aria-labelledby="uk-intelligence-title">
           <h2 id="uk-intelligence-title">UK-facing procurement intelligence</h2>
@@ -114,6 +288,8 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
 }
 
 export function DirectoryIndex() {
+  const allRecords = categories.flatMap((category) => getRecords(category.slug));
+  const checkedDate = formatCheckedDate(latestChecked(allRecords));
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -126,11 +302,11 @@ export function DirectoryIndex() {
     <SiteHeader />
     <PageIntro kicker="Sourced directory" title="Tools for finding, understanding and bidding for public contracts." lead="A source-linked directory of tender alerts, procurement intelligence, bid-response software, bid-writing services and official portals." />
     <section className="shell directory-intro">
-      <div><div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div><p>Research desk: Civensa Research. Evidence checked 12 August 2026.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
+      <div>{ownershipDisclosure}<p>Research desk: Civensa Research. Evidence checked {checkedDate}.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
       <div className="directory-facts" aria-label="Directory facts">
         <div><span>Listings</span><strong>{getRecords("tender-alerts").length + getRecords("procurement-intelligence").length + getRecords("bid-writing-software").length + getRecords("bid-writing-services").length + getRecords("official-portals").length}</strong></div>
         <div><span>Categories</span><strong>{categories.length}</strong></div>
-        <div><span>Last checked</span><strong>12 August 2026</strong></div>
+        <div><span>Last checked</span><strong>{checkedDate}</strong></div>
       </div>
     </section>
     <section className="content-section shell">
