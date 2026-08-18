@@ -35,8 +35,6 @@ export default function Compare() {
     <SiteHeader />
     <PageIntro kicker="Product comparisons" title="BidSkim versus the market." lead={`Twenty-five provider comparisons use the same 14 features, two pricing benchmarks and disclosed score. BidSkim's current score is ${bidSkimScore.overallScore}/100.`} />
     <div className="page-copy compare-index shell">
-      <p className="comparison-commercial-disclosure"><strong>Commercial disclosure:</strong> Civensa is published by BidSkim Limited, the developer of BidSkim. Scores use Civensa&apos;s <a href="/tools/methodology/">published methodology</a> and source-linked evidence.</p>
-
       <section aria-labelledby="named-comparisons">
         <div className="section-kicker">25 named comparisons</div>
         <h2 id="named-comparisons">Compare BidSkim with every tender-alert provider in the directory</h2>

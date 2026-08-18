@@ -120,8 +120,6 @@ export function TenderAlertProviderAudit({ record }: { record: VendorRecord }) {
     </header>
 
     <section className="provider-audit-body shell">
-      {record.name === "BidSkim" ? <div className="disclosure"><strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, which develops BidSkim. This audit uses the same fields and evidence labels as every other provider.</div> : null}
-
       <section aria-labelledby="provider-at-glance">
         <div className="section-kicker">At a glance</div>
         <h2 id="provider-at-glance">What is publicly established</h2>

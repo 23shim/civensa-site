@@ -132,8 +132,6 @@ export function BidSkimProviderComparison({ bidSkim, provider, related }: { bidS
     </header>
 
     <div className="provider-audit-body comparison-body shell">
-      <p className="comparison-commercial-disclosure"><strong>Commercial disclosure:</strong> Civensa is published by BidSkim Limited, the developer of BidSkim. Scores use Civensa&apos;s <a href="/tools/methodology/">published methodology</a> and source-linked evidence.</p>
-
       <section aria-labelledby="comparison-scores">
         <div className="section-kicker">Scores and prices</div>
         <h2 id="comparison-scores">The two products at a glance</h2>

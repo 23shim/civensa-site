@@ -70,9 +70,9 @@ const portalColumns = [
   { id: "ted", label: "TED" },
 ] as const;
 
-const ownershipDisclosure = (
-  <div className="disclosure">
-    <strong>Ownership disclosure:</strong> Civensa is operated by BidSkim Limited, the company that develops BidSkim. BidSkim uses the same fields, feature weights and provider-source standard as every other entry. Civensa has not independently tested these products. Product classes and scores are mechanical outputs from public evidence. There are no affiliate links or paid placements.
+const evidenceDisclosure = (
+  <div className="directory-note">
+    <strong>Evidence status:</strong> Entries describe public claims from the provider or official body. Civensa has not independently tested these products. Product classes and scores are mechanical outputs from public evidence. There are no affiliate links or paid placements.
   </div>
 );
 
@@ -282,7 +282,7 @@ export function CategoryPage({ slug }: { slug: CategorySlug }) {
     <PageIntro kicker="Procurement tools directory" title={category.name} lead={category.lead} />
     <section className="shell directory-intro">
       <div>
-        {containsBidSkim ? ownershipDisclosure : <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>}
+        {containsBidSkim ? evidenceDisclosure : <div className="directory-note"><strong>Evidence status:</strong> Entries describe public claims from the provider or the official body. Civensa has not independently tested, rated or ranked them. There are no affiliate links or paid rankings.</div>}
         <p>Research desk: Civensa Research. Evidence checked {checkedDate}.</p>
         <p><a className="text-link" href="/tools/methodology/">Read the directory methodology and corrections policy →</a></p>
       </div>
@@ -348,7 +348,7 @@ export function DirectoryIndex() {
     <SiteHeader />
     <PageIntro kicker="Sourced directory" title="Tools for finding, understanding and bidding for public contracts." lead="A source-linked directory of tender alerts, procurement intelligence, bid-response software, bid-writing services and official portals." />
     <section className="shell directory-intro">
-      <div>{ownershipDisclosure}<p>Research desk: Civensa Research. Evidence checked {checkedDate}.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
+      <div>{evidenceDisclosure}<p>Research desk: Civensa Research. Evidence checked {checkedDate}.</p><p>Every listing has a dated source basis, public pricing text where available, coverage, a practical fit note and an explicit limitation.</p></div>
       <div className="directory-facts" aria-label="Directory facts">
         <div><span>Listings</span><strong>{getRecords("tender-alerts").length + getRecords("procurement-intelligence").length + getRecords("bid-writing-software").length + getRecords("bid-writing-services").length + getRecords("official-portals").length}</strong></div>
         <div><span>Categories</span><strong>{categories.length}</strong></div>

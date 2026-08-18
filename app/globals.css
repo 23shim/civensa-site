@@ -331,9 +331,6 @@ blockquote { margin:0 0 46px; max-width:800px; font:500 clamp(36px,4.5vw,67px)/1
 .audit-diligence-grid>div:last-child { border-right:0; }
 .audit-diligence-grid h3 { margin:0 0 18px; font:600 18px/1.3 Georgia,serif; }
 .audit-diligence-grid li,.audit-diligence-grid p { margin-bottom:12px; color:#40564f; font-size:12px; line-height:1.6; }
-.comparison-commercial-disclosure { margin:0 0 58px; padding:13px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); color:#52655e; font-size:11px; line-height:1.55; }
-.comparison-commercial-disclosure strong { color:var(--ink); text-transform:uppercase; letter-spacing:.08em; font-size:9px; }
-.comparison-commercial-disclosure a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
 .comparison-score-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
 .comparison-score-card { min-width:0; padding:28px; border:1px solid var(--line); background:#f7f6ef; box-shadow:0 10px 30px rgba(31,48,41,.045); }
 .comparison-score-card-head { display:grid; grid-template-columns:minmax(0,1fr) 76px; gap:22px; align-items:start; }

@@ -59,7 +59,7 @@ test("authority articles meet the editorial depth and anti-slop gate", async () 
   }
 });
 
-test("renders the procurement tools directory with dated evidence and ownership disclosure", async () => {
+test("renders the procurement tools directory with dated evidence", async () => {
   const routes = [
     "/tools/",
     "/tools/tender-alerts/",
@@ -80,7 +80,6 @@ test("renders the procurement tools directory with dated evidence and ownership 
   }
 
   const alerts = await (await render("/tools/tender-alerts/")).text();
-  assert.match(alerts, /BidSkim Limited/i);
   assert.match(alerts, /Monitor[^<]{0,80}£79|£79[^<]{0,80}Monitor/i);
   assert.match(alerts, /Predict[^<]{0,80}£189|£189[^<]{0,80}Predict/i);
   assert.match(alerts, /provider-stated|Provider-stated/i);
@@ -186,11 +185,10 @@ test("renders deep provider audit pages", async () => {
     assert.match(html, new RegExp(`canonical[^>]+https://civensa\\.com/tools/tender-alerts/${slug}/`, "i"), slug);
   }
   const bidSkim = await (await render("/tools/tender-alerts/bidskim-alerts/")).text();
-  assert.match(bidSkim, /Ownership disclosure/i);
   assert.match(bidSkim, /Buyer profiles[\s\S]{0,400}feature-status-yes|feature-status-yes[\s\S]{0,400}Buyer profiles/i);
 });
 
-test("renders 25 BidSkim comparison pages with verifiable scores and commercial disclosure", async () => {
+test("renders 25 BidSkim comparison pages with verifiable scores", async () => {
   const providerBatches = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
   const providers = providerBatches.flatMap((batch) => batch.providers).filter((provider) => provider.slug !== "bidskim-alerts");
   assert.equal(providers.length, 25);
@@ -199,7 +197,6 @@ test("renders 25 BidSkim comparison pages with verifiable scores and commercial 
   assert.equal(hubResponse.status, 200);
   const hub = await hubResponse.text();
   assert.match(hub, /25 named comparisons/i);
-  assert.match(hub, /Commercial disclosure:[\s\S]{0,250}BidSkim Limited/i);
   assert.match(hub, /"numberOfItems":25/);
   assert.equal((hub.match(/href="\/compare\/bidskim-vs-[^"]+\/"/g) ?? []).length, 25);
 
@@ -210,7 +207,6 @@ test("renders 25 BidSkim comparison pages with verifiable scores and commercial 
     const html = await response.text();
     assert.match(html, new RegExp(`<title>BidSkim vs ${provider.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}: features, pricing and scores \\| Civensa<\\/title>`, "i"), provider.slug);
     assert.match(html, new RegExp(`canonical[^>]+https://civensa\\.com/compare/bidskim-vs-${provider.slug}/`, "i"), provider.slug);
-    assert.match(html, /Commercial disclosure:[\s\S]{0,250}BidSkim Limited/i, provider.slug);
     assert.match(html, /Fourteen capabilities compared/i, provider.slug);
     assert.match(html, /Tender-alert benchmark/i, provider.slug);
     assert.match(html, /Full-package benchmark/i, provider.slug);
@@ -223,6 +219,16 @@ test("renders 25 BidSkim comparison pages with verifiable scores and commercial 
   assert.match(stotles, /£99\/mo[\s\S]{0,100}Sales Studio Basic/i);
   const tussell = await (await render("/compare/bidskim-vs-tussell/")).text();
   assert.match(tussell, /Quote only/);
+});
+
+test("publishes the Civensa and BidSkim relationship on the legal and methodology pages", async () => {
+  for (const route of ["/about/", "/terms/", "/tools/methodology/"]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.match(html, /BidSkim Limited/i, route);
+    assert.match(html, /develops|developer/i, route);
+  }
 });
 
 test("publishes complete discovery files", async () => {
