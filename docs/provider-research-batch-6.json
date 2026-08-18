@@ -13,6 +13,41 @@
         "seatDetail": "Enterprise includes multi-user team access. Included users on Starter and Pro and any additional-seat price are not publicly stated.",
         "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
         "trialDetail": "14-day Starter or Pro trial; cancel anytime. Card requirement is not publicly stated.",
+        "comparablePlans": [
+          {
+            "planName": "Starter",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 99,
+            "annualPrice": 990,
+            "annualMonthlyEquivalent": 82.5,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Up to five saved searches and alerts. VAT treatment and included-user count are not stated."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 249,
+            "annualPrice": 2490,
+            "annualMonthlyEquivalent": 207.5,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Unlimited saved searches and alerts; competitor, incumbent and buyer tracking; renewal signals. VAT treatment and included-user count are not stated."
+          },
+          {
+            "planName": "Enterprise",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Multi-user team access; count not publicly stated",
+            "notes": "Custom price with exports, integrations and onboarding; no numeric billing option is published."
+          }
+        ],
         "evidence": [
           {
             "label": "TenderLedger pricing",
@@ -106,17 +141,17 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish a library of buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "AI summaries and qualification are advertised, but the reviewed pages did not establish structured extraction of participation conditions, certifications, policies or evaluation criteria.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Bid/no-bid qualification support is advertised, but no requirements-gap, readiness-action or evidence-planning workflow was established on the reviewed pages.",
           "evidence": []
         },
@@ -187,7 +222,7 @@
           ]
         },
         "bidWriting": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "The provider explicitly states that TenderLedger is not bid-writing software.",
           "evidence": [
             {
@@ -294,6 +329,63 @@
         "seatDetail": "All three paid plans state unlimited users. The seven-day trial states one user. No additional-seat price is applicable on the published unlimited-user plans.",
         "vatDetail": "VAT treatment is not publicly stated beside the reviewed subscription prices.",
         "trialDetail": "Seven-day free trial. Payment-card requirement is not publicly stated.",
+        "comparablePlans": [
+          {
+            "planName": "7-day Free Trial",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "1 user",
+            "notes": "Published as £0 for seven days; it is not a monthly or annual billing schedule. Card requirement is not stated."
+          },
+          {
+            "planName": "Basic",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 1359,
+            "annualMonthlyEquivalent": 113.25,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "Price shown with the one-year billing selection. One saved search. VAT treatment is not stated."
+          },
+          {
+            "planName": "Core",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 2044,
+            "annualMonthlyEquivalent": 170.33,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "Price shown with the one-year billing selection. Five saved searches. VAT treatment is not stated."
+          },
+          {
+            "planName": "Premium",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 2319,
+            "annualMonthlyEquivalent": 193.25,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "Price shown with the one-year billing selection. 100 saved searches. VAT treatment is not stated."
+          },
+          {
+            "planName": "Bespoke",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Bespoke packages are offered for unique requirements; no numeric price or billing basis is published."
+          }
+        ],
         "evidence": [
           {
             "label": "Tenders Direct subscriptions and features",
@@ -331,12 +423,12 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer activity can be analysed in the historical database, but the reviewed pages did not establish structured buyer profile pages.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The product tracks competitor wins, awardees and market share, but the reviewed pages did not establish structured supplier or competitor profile pages.",
           "evidence": []
         },
@@ -351,7 +443,7 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider offers more than ten years of searchable notices, but the reviewed pages did not establish comparable past contracts surfaced automatically against a current notice or profile.",
           "evidence": []
         },
@@ -400,7 +492,7 @@
           ]
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Framework notices may be present in the broad notice corpus, but the reviewed product pages did not establish a dedicated framework, DPS or route-to-market discovery feature.",
           "evidence": []
         },
@@ -528,6 +620,7 @@
       ],
       "caveats": [
         "The subscription prices were displayed under the one-year billing selection; prices for two- and three-year commitments were not established from the rendered page.",
+        "A current official Procurement Act guidance page says subscriptions start at £1,395, while the live subscription table and homepage show Basic/from £1,359. Comparable pricing uses the live subscription table's £1,359 figure and preserves this contradiction.",
         "VAT treatment and whether the trial requires a payment card are not stated beside the reviewed prices.",
         "Matching is described as human specialist review and profile matching, not AI or machine-learning matching.",
         "Bid writing and bid management are separately priced managed services, not included software features in the alert subscription.",
@@ -558,6 +651,52 @@
         "seatDetail": "A multi-seat Agency tier is described as coming soon. Current plan seat allowance and additional-seat pricing are not publicly stated.",
         "vatDetail": "Prices exclude VAT; UK VAT at 20% is added at checkout.",
         "trialDetail": "Every new account starts with a 14-day Pro trial with no payment card required, then keeps the Free tier.",
+        "comparablePlans": [
+          {
+            "planName": "Free",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Described as £0 forever. No annual billing schedule or included-user count is published."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 29,
+            "annualPrice": 290,
+            "annualMonthlyEquivalent": 24.17,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Prices exclude VAT; UK VAT at 20% is added. Includes unlimited saved searches, daily alerts and AI relevance scoring."
+          },
+          {
+            "planName": "Business",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 59,
+            "annualPrice": 590,
+            "annualMonthlyEquivalent": 49.17,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Prices exclude VAT; UK VAT at 20% is added. Adds renewals, competitor intelligence, bid tracker and CSV export."
+          },
+          {
+            "planName": "Agency (coming soon)",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Multi-seat; number not publicly stated",
+            "notes": "Not currently offered for purchase; provider invites users to join a waitlist. No price is published."
+          }
+        ],
         "evidence": [
           {
             "label": "TenderSignal pricing",
@@ -591,13 +730,13 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The product provides buyer filters and, on paid plans, buyer contact details, but the reviewed pages did not establish structured buyer intelligence profiles.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "yes",
-          "detail": "Award history and competitor profiles are listed on Free, Pro and Business, and award history can be searched by supplier.",
+          "status": "partial",
+          "detail": "Award history and competitor profiles are listed on Free, Pro and Business, and award history can be searched by supplier. The reviewed pages do not establish supplier-name canonicalisation, deduplication or entity resolution.",
           "evidence": [
             {
               "label": "TenderSignal pricing",
@@ -624,22 +763,22 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Award history and re-tender spotting are available, but the reviewed pages did not establish comparable past contracts surfaced automatically against a notice or profile.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages did not establish buyer plans, strategies, minutes, budgets or a buyer-authored document library beyond procurement notices.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "AI relevance reasoning and summaries are advertised, but the reviewed pages did not establish structured extraction of participation conditions, certifications, policies or evaluation criteria.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "A bid tracker is available on Business, but the reviewed pages did not establish requirements-gap, readiness-action or evidence-planning functionality.",
           "evidence": []
         },
@@ -658,7 +797,7 @@
           ]
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Framework notices appear in the provider's examples, but the reviewed pages did not establish a dedicated framework, DPS or route-to-market discovery feature.",
           "evidence": []
         },
@@ -687,7 +826,7 @@
           ]
         },
         "collaboration": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "The provider explicitly says a multi-seat Agency tier is coming soon; current multi-user collaboration is therefore not established on the reviewed plans.",
           "evidence": [
             {
@@ -697,7 +836,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages did not establish response drafting, an answer library, a compliance matrix or managed bid-writing support.",
           "evidence": []
         }
@@ -812,12 +951,58 @@
       "officialUrl": "https://www.trackerintelligence.com/",
       "pricing": {
         "availability": "quote_only",
-        "billingBasis": "unknown",
+        "billingBasis": "per_team",
         "currency": "unknown",
         "plansText": "Named plans are IconIQ, LogIQ, DynamIQ and AnalytIQ. The reviewed official plan pages publish feature matrices but no numeric subscription prices; users are directed to get started, request a demo or start a trial.",
         "seatDetail": "The published plan matrix shows included licence counts of 1, 3, 5 and 5 across the four plans. Additional-seat prices are not publicly stated.",
         "vatDetail": "VAT treatment is not publicly stated on the reviewed plan page.",
         "trialDetail": "Three-day free trial is advertised. Payment-card requirement is not publicly stated.",
+        "comparablePlans": [
+          {
+            "planName": "IconIQ",
+            "currency": "unknown",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "1 licence",
+            "notes": "Quote-only. Standard UK and Republic of Ireland coverage; no numeric price, billing period or VAT treatment is published."
+          },
+          {
+            "planName": "LogIQ",
+            "currency": "unknown",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "3 licences",
+            "notes": "Quote-only. Standard UK and Republic of Ireland coverage; no numeric price, billing period or VAT treatment is published."
+          },
+          {
+            "planName": "DynamIQ",
+            "currency": "unknown",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "5 licences",
+            "notes": "Quote-only. Includes Frameworks and deeper analytics; no numeric price, billing period or VAT treatment is published."
+          },
+          {
+            "planName": "AnalytIQ",
+            "currency": "unknown",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "5 licences",
+            "notes": "Quote-only. Includes Open API; page labels a limited-time offer but publishes no numeric price, billing period or VAT treatment."
+          }
+        ],
         "evidence": [
           {
             "label": "Tracker plans",
@@ -1047,7 +1232,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Aria provides summaries, qualification insights and preparation guidance, but the reviewed pages did not establish response drafting, an answer library, a compliance matrix or a managed bid-writing service.",
           "evidence": []
         }

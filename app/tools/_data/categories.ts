@@ -6,7 +6,7 @@ export const categories: readonly CategoryDefinition[] = [
     name: "Tender alerts and discovery",
     shortName: "Tender alerts",
     description: "Services that collect notices, run searches or send opportunity alerts.",
-    lead: "Compare source coverage, alert logic, workflow and published price before replacing direct checks of official notices.",
+    lead: "Compare strict feature evidence, named-source coverage, users, monthly prices and annual prices before replacing direct checks of official notices.",
     questions: [
       "Which official sources are included, and which are omitted?",
       "Are alerts based on keywords, categories, a company profile or a stated scoring method?",

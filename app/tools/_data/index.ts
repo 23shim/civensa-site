@@ -20,6 +20,7 @@ export type {
   NormalizedFeature,
   NormalizedFeatureKey,
   NormalizedPricing,
+  NormalizedPricePlan,
   NormalizedVendorProfile,
   PricingAvailability,
   VendorRecord,

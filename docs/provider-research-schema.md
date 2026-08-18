@@ -6,8 +6,8 @@ Research date: 18 August 2026
 
 - Use first-party provider pages, help centres, pricing pages, terms, or official product documentation.
 - Record a portal only when the provider explicitly names or links it. A broad claim such as "all UK portals" belongs in `otherCoverageClaims`, not `explicitPortals`.
-- `not_stated` means the reviewed provider pages did not establish the feature. It does not mean the product lacks it.
-- `no` requires an explicit provider statement that the feature is unavailable or excluded.
+- `not_offered` is the default when the reviewed first-party pages do not establish the feature. For this directory, an undocumented capability is treated as not offered to a buyer evaluating the public product.
+- Do not infer a capability from generic marketing language, screenshots without an identifiable workflow, a search filter, or a raw notice field.
 - Plan-limited or indirect functionality is `partial`.
 - Keep provider claims separate from Civensa testing. This research does not constitute an independent product test.
 - Preserve direct evidence URLs beside each material fact.
@@ -16,13 +16,13 @@ Research date: 18 August 2026
 
 - `keywordAlerts`: saved keyword searches or keyword-based notifications.
 - `semanticAiMatching`: semantic, profile-based, machine-learning, or AI relevance matching. Generic AI copy without matching is not enough.
-- `buyerProfiles`: structured pages or intelligence about contracting authorities.
-- `supplierProfiles`: structured supplier, incumbent, winner, or competitor profiles. A user's own company profile alone is not enough.
+- `buyerProfiles`: `yes` only for a deliberately built buyer entity with structured cross-notice intelligence and evidence of canonicalisation, deduplication, entity resolution, or comparable investment. A buyer filter, buyer name on a notice, spend chart, contact list, or unverified page is not enough. Use `partial` for structured buyer pages where the provider does not establish robust identity handling.
+- `supplierProfiles`: `yes` only for deliberately built supplier entities that aggregate awards, incumbency, relationships, competitor history, or other cross-notice intelligence with evidence of canonicalisation, deduplication, entity resolution, or comparable investment. The user's own matching profile, a winner field, supplier search, or a flat directory is not enough. Use `partial` for structured pages without established identity handling.
 - `renewalSignals`: contract expiry, renewal, re-tender, or extension monitoring.
 - `similarContracts`: comparable historical opportunities or awards surfaced against a notice or profile.
 - `buyerDocuments`: buyer plans, strategies, minutes, pipelines, budgets, or other buyer-authored documents beyond procurement notices.
 - `buyerRequirements`: extracted or organized participation conditions, certifications, policies, evaluation criteria, or recurring buyer requirements.
-- `requirementsPlanning`: gap planning, readiness actions, evidence planning, or a workflow for preparing against requirements before bid submission.
+- `requirementsPlanning`: `yes` only for a durable workflow that turns requirements into gaps, evidence needs, owners, actions, deadlines, or tracked readiness before bid submission. Extracted requirements, a checklist, fit score, bid/no-bid explanation, compliance matrix, or drafting assistant alone is at most `partial`.
 - `awardHistory`: historical award notices, winners, values, or award search.
 - `frameworks`: framework, DPS, dynamic-market, or route-to-market discovery/intelligence.
 - `competitorTracking`: named competitor, incumbent, supplier, or winner monitoring.
@@ -34,7 +34,7 @@ Each feature uses:
 
 ```json
 {
-  "status": "yes | partial | no | not_stated",
+  "status": "yes | partial | not_offered",
   "detail": "Short factual explanation",
   "evidence": [{ "label": "Page label", "url": "https://..." }]
 }
@@ -51,9 +51,33 @@ Each feature uses:
   "seatDetail": "Included users and additional-seat pricing, or not publicly stated",
   "vatDetail": "VAT treatment when stated",
   "trialDetail": "Trial length, card requirement, or not publicly stated",
+  "comparablePlans": [
+    {
+      "planName": "Published plan name",
+      "currency": "GBP | EUR | USD | mixed | unknown",
+      "billingBasis": "per_seat | per_organisation | per_team | mixed | unknown",
+      "monthlyPrice": 79,
+      "annualPrice": 780,
+      "annualMonthlyEquivalent": 65,
+      "annualPriceCalculation": "published_total | calculated_from_annual_monthly_rate | not_available",
+      "includedUsers": "Published user or recipient allowance",
+      "notes": "Material limits, VAT, introductory pricing, or calculation caveat"
+    }
+  ],
   "evidence": [{ "label": "Pricing", "url": "https://..." }]
 }
 ```
+
+Comparable-pricing rules:
+
+- One entry per publicly described plan, including free and custom plans.
+- Store numeric prices without currency symbols. Use `null` when that billing option is not published; never estimate it.
+- `monthlyPrice` is the price paid for one month on a monthly billing schedule.
+- `annualPrice` is the total price paid for one year on an annual billing schedule. Use a published total where available. If the provider instead publishes an annual-billing monthly rate, calculate the total as that rate multiplied by 12 and label it with `calculated_from_annual_monthly_rate`.
+- `annualMonthlyEquivalent` is `annualPrice / 12`, rounded to two decimal places, or the provider's explicitly published annual-billing monthly rate.
+- `annualPriceCalculation` is `published_total` for a provider-published yearly total, `calculated_from_annual_monthly_rate` when the yearly total is arithmetic from an explicitly published annual-billing monthly rate, and `not_available` when no annual schedule is established.
+- Do not multiply a month-to-month price by 12 and present it as an annual plan. Only an explicitly labelled annual-billing monthly rate supports the calculated yearly total.
+- Preserve per-seat, per-organisation, per-team and mixed pricing distinctions. Record included users and extra-seat charges where stated.
 
 ## Canonical portal identifiers
 

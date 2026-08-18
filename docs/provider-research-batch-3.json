@@ -13,6 +13,41 @@
         "seatDetail": "User or seat allowances and additional-seat pricing are not publicly stated. Starter includes one notification profile and one Slack channel; Pro includes five profiles and unlimited Slack channels; Enterprise includes unlimited profiles.",
         "vatDetail": "Tax treatment is not publicly stated.",
         "trialDetail": "14-day free trial; the page says $0 is due today, but does not explicitly state whether a card is required.",
+        "comparablePlans": [
+          {
+            "planName": "Starter",
+            "currency": "USD",
+            "billingBasis": "unknown",
+            "monthlyPrice": 49,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "One notification profile, real-time alerts and one Slack channel. A yearly toggle advertises a 35% saving, but no annual total is published in the reviewed page text."
+          },
+          {
+            "planName": "Pro",
+            "currency": "USD",
+            "billingBasis": "unknown",
+            "monthlyPrice": 149,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Five notification profiles and unlimited Slack channels. A yearly toggle advertises a 35% saving, but no annual total is published in the reviewed page text."
+          },
+          {
+            "planName": "Enterprise",
+            "currency": "USD",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Custom price; unlimited notification profiles, custom integrations and SLA guarantees are advertised."
+          }
+        ],
         "evidence": [
           {
             "label": "Jorpex pricing",
@@ -50,37 +85,37 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish structured contracting-authority profiles or buyer intelligence pages.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish structured incumbent, winner or competitor profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish contract-expiry, renewal or re-tender monitoring as a product feature.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish a feature that surfaces comparable historical opportunities or awards beside a notice or profile.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish monitoring of buyer plans, strategies, minutes, budgets or other buyer-authored documents outside procurement notices.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish extracted or organised participation conditions, evaluation criteria or recurring buyer requirements.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish readiness, gap, evidence or requirements-planning workflows.",
           "evidence": []
         },
@@ -143,7 +178,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed first-party pages did not establish bid-response drafting, an answer library, compliance matrix or managed bid-writing support.",
           "evidence": []
         }
@@ -291,14 +326,64 @@
         "availability": "public_numeric",
         "billingBasis": "per_organisation",
         "currency": "GBP",
-        "plansText": "Free: £0 forever. Pro: £79/month. Growth: £179/month. Scale: £399/month. Annual billing is 20% below the monthly rate; the page explicitly gives the discounted Pro example as £758/year. Exact discounted Growth and Scale annual checkout amounts were not transcribed in the reviewed page text.",
+        "plansText": "Free: £0 forever. Monthly Pro: £79, Growth: £179, Scale: £399. The annual pricing view publishes Pro at £758.40/year (£63.20/month equivalent), Growth at £1,718.40/year (£143.20/month equivalent), and Scale at £3,830.40/year (£319.20/month equivalent).",
         "seatDetail": "Free includes 1 user; Pro supports up to 3; Growth up to 5; Scale up to 10. Role-based access and a shared organisation workspace are included. No additional-seat price is stated.",
         "vatDetail": "VAT treatment is not publicly stated.",
         "trialDetail": "A free plan is available without a credit card. It includes one lifetime, watermarked, read-only AI bid-draft trial; paid monthly draft limits are 5, 10 and 25 on Pro, Growth and Scale respectively.",
+        "comparablePlans": [
+          {
+            "planName": "Free",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "1 user",
+            "notes": "Free forever; one alert and one lifetime watermarked, read-only AI bid-draft trial."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 79,
+            "annualPrice": 758.4,
+            "annualMonthlyEquivalent": 63.2,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Up to 3 users",
+            "notes": "Five AI bid drafts per month. Annual price is published in the annual billing view."
+          },
+          {
+            "planName": "Growth",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 179,
+            "annualPrice": 1718.4,
+            "annualMonthlyEquivalent": 143.2,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Up to 5 users",
+            "notes": "Ten AI bid drafts per month. Annual price is published in the annual billing view."
+          },
+          {
+            "planName": "Scale",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 399,
+            "annualPrice": 3830.4,
+            "annualMonthlyEquivalent": 319.2,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Up to 10 users",
+            "notes": "Twenty-five AI bid drafts per month. Annual price is published in the annual billing view."
+          }
+        ],
         "evidence": [
           {
             "label": "KimonBids pricing",
             "url": "https://kimonbids.com/pricing"
+          },
+          {
+            "label": "KimonBids annual pricing",
+            "url": "https://kimonbids.com/pricing?billing=annual"
           }
         ]
       },
@@ -332,8 +417,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "yes",
-          "detail": "Buyer history on tender detail pages includes previous contracts, incumbent suppliers, typical values, procurement frequency and methods; paid tiers list buyer spending and procurement-behaviour intelligence.",
+          "status": "partial",
+          "detail": "Buyer history on tender detail pages aggregates previous contracts, incumbent suppliers, typical values, procurement frequency and methods. The reviewed pages do not establish buyer-name canonicalisation, deduplication or entity resolution, so this does not qualify as a fully resolved buyer profile.",
           "evidence": [
             {
               "label": "Tender Intelligence help",
@@ -346,8 +431,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "The product surfaces incumbent suppliers through buyer history and advertises competitor contract-win and framework-position intelligence. The reviewed pages did not establish standalone structured competitor or supplier profile pages.",
+          "status": "not_offered",
+          "detail": "The product surfaces incumbent names through buyer history and advertises competitor contract-win and framework-position intelligence, but the reviewed pages do not establish deliberately built cross-notice supplier entities or structured supplier profile pages.",
           "evidence": [
             {
               "label": "Tender Intelligence help",
@@ -384,7 +469,7 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "KimonBids documents tender specifications, buyer-issued bid documents and procurement notices, but the reviewed pages did not establish collection of buyer strategies, minutes, budgets or other non-notice buyer-authored documents.",
           "evidence": []
         },
@@ -551,11 +636,13 @@
         "Some intelligence, saved-search and pipeline features are restricted to paid tiers; the provider's tables should be checked at purchase.",
         "The reviewed coverage pages name four UK portals and do not name eTendersNI.",
         "The comparison page references expiring-contract tracking, but the dedicated feature/help pages reviewed do not document its workflow or tier, so renewal signals are marked partial.",
+        "Some pricing copy describes Scale as £399/month or £4,788 over twelve monthly payments, while the annual-billing view publishes £3,830.40/year. Civensa records these as different billing schedules rather than treating £4,788 as the annual-plan price.",
         "No additional-seat price or VAT treatment is publicly stated."
       ],
       "sourceUrls": [
         "https://kimonbids.com/",
         "https://kimonbids.com/pricing",
+        "https://kimonbids.com/pricing?billing=annual",
         "https://kimonbids.com/features",
         "https://kimonbids.com/help/using-tender-intelligence",
         "https://kimonbids.com/frameworks",
@@ -575,6 +662,30 @@
         "seatDetail": "National includes 1 licence; Business Plus includes 2 licences. Additional-seat pricing is not publicly stated.",
         "vatDetail": "VAT treatment is not publicly stated.",
         "trialDetail": "14-day Business Plus trial; the trial page says no credit card is required.",
+        "comparablePlans": [
+          {
+            "planName": "National",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 150,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "1 licence",
+            "notes": "Published as from £150/month. Contract term, annual total, VAT and additional-licence price are not stated."
+          },
+          {
+            "planName": "Business Plus",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 250,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "2 licences",
+            "notes": "Published as from £250/month. Contract term, annual total, VAT and additional-licence price are not stated."
+          }
+        ],
         "evidence": [
           {
             "label": "Mercell Bidding UK pricing",
@@ -620,8 +731,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "partial",
-          "detail": "The connected Market Intelligence module provides buyer behaviour, spend, purchasing frequency, incumbent and contact insights. The reviewed pages do not establish that these are included in base Tender Discovery plans.",
+          "status": "not_offered",
+          "detail": "The connected Market Intelligence module analyses award history and purchasing behaviour by buyer, but the reviewed pages do not establish structured buyer profile pages, buyer canonicalisation, deduplication or entity resolution. It is also not established as part of base Tender Discovery.",
           "evidence": [
             {
               "label": "Mercell Market Intelligence",
@@ -630,8 +741,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "The connected Market Intelligence module shows who wins, incumbent visibility and competitor public-sales history. The reviewed pages do not establish standalone structured supplier profile pages or inclusion in base Tender Discovery.",
+          "status": "not_offered",
+          "detail": "The connected Market Intelligence module can filter and analyse winners, incumbents and competitor public-sales history, but the reviewed pages do not establish deliberately built cross-notice supplier entities or structured supplier profile pages.",
           "evidence": [
             {
               "label": "Mercell Market Intelligence",
@@ -740,7 +851,7 @@
           ]
         },
         "exportsApi": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed UK Tender Discovery, pricing and connected-module pages did not establish a supplier-facing CSV/Excel export, API, webhook or CRM integration.",
           "evidence": []
         },
@@ -832,6 +943,19 @@
         "seatDetail": "Supplier user limits are not publicly stated. The unlimited user licences described on myTenders PRO apply to the paid buyer-side procurement product, not the free supplier opportunity search.",
         "vatDetail": "Not applicable to the stated free supplier registration; no paid supplier price or VAT treatment was found.",
         "trialDetail": "No trial is stated; supplier registration and access to notices published through myTenders are free.",
+        "comparablePlans": [
+          {
+            "planName": "Free supplier registration",
+            "currency": "unknown",
+            "billingBasis": "unknown",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Free access is limited to notices that buyers publish through myTenders. The separately marketed buyer-side myTenders PRO product is not a supplier alert plan and is excluded from this comparison."
+          }
+        ],
         "evidence": [
           {
             "label": "myTenders home",
@@ -845,7 +969,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages establish free opportunity search but do not establish saved keyword alerts. The homepage directs users to the separate Tenders Direct service for wider emailed alerts.",
           "evidence": [
             {
@@ -855,72 +979,72 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish AI, semantic or profile-based opportunity matching.",
           "evidence": []
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed supplier pages did not establish structured buyer intelligence profiles. Buyer-side PRO can sell an optional branded notice page, which is not the same as buyer intelligence.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Supplier registration collects the user's own organisation details, but the reviewed pages did not establish structured competitor, incumbent or winner profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish contract-expiry, renewal or re-tender monitoring.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish surfacing of comparable historical contracts or awards.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer-side PRO can attach tender documents to notices, but the reviewed supplier pages did not establish plans, strategies, minutes, budgets or other buyer documents beyond procurement notices.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish extracted or organised participation conditions, evaluation criteria or recurring buyer requirements.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish supplier readiness, gap, evidence or requirements-planning workflows.",
           "evidence": []
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish historical award search, winners or award-value intelligence.",
           "evidence": []
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish framework, DPS, dynamic-market or route-to-market intelligence.",
           "evidence": []
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish competitor, incumbent, supplier or winner monitoring.",
           "evidence": []
         },
         "exportsApi": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish CSV/Excel export, an API, webhook, CRM or another supplier-data integration.",
           "evidence": []
         },
         "collaboration": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed supplier pages did not establish multiple supplier users, assignments, comments or a shared bid pipeline. Buyer-side PRO has separate multi-user and procurement-management features.",
           "evidence": []
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish bid-response drafting, an answer library, document analysis or managed writing support.",
           "evidence": []
         }
@@ -995,6 +1119,107 @@
         "seatDetail": "Solo includes 1 user. Team includes unlimited users. The API section says unlimited users. No additional-seat price applies to the stated Team allowance.",
         "vatDetail": "VAT or other tax treatment is not publicly stated.",
         "trialDetail": "7-day free trial with no credit card. Annual website subscriptions also advertise a 30-day money-back guarantee. The API offers a small anonymised sandbox on request.",
+        "comparablePlans": [
+          {
+            "planName": "Solo (GBP annual billing)",
+            "currency": "GBP",
+            "billingBasis": "per_seat",
+            "monthlyPrice": null,
+            "annualPrice": 1440,
+            "annualMonthlyEquivalent": 120,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "1 user",
+            "notes": "The page shows £120 per user/month only in its yearly-billing view and an annual payment of £1,440. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "Solo (EUR annual billing)",
+            "currency": "EUR",
+            "billingBasis": "per_seat",
+            "monthlyPrice": null,
+            "annualPrice": 1680,
+            "annualMonthlyEquivalent": 140,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "1 user",
+            "notes": "The page shows €140 per user/month only in its yearly-billing view and an annual payment of €1,680. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "Solo (USD annual billing)",
+            "currency": "USD",
+            "billingBasis": "per_seat",
+            "monthlyPrice": null,
+            "annualPrice": 1920,
+            "annualMonthlyEquivalent": 160,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "1 user",
+            "notes": "The page shows $160 per user/month only in its yearly-billing view and an annual payment of $1,920. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "Team (GBP annual billing)",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 3108,
+            "annualMonthlyEquivalent": 259,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "The page shows £259 per team/month only in its yearly-billing view and an annual payment of £3,108. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "Team (EUR annual billing)",
+            "currency": "EUR",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 3600,
+            "annualMonthlyEquivalent": 300,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "The page shows €300 per team/month only in its yearly-billing view and an annual payment of €3,600. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "Team (USD annual billing)",
+            "currency": "USD",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 4104,
+            "annualMonthlyEquivalent": 342,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "The page shows $342 per team/month only in its yearly-billing view and an annual payment of $4,104. The numeric month-to-month price is not exposed in the reviewed text."
+          },
+          {
+            "planName": "API (GBP)",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 5000,
+            "annualMonthlyEquivalent": 416.67,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "From price for standard yearly usage; high-volume pricing is agreed separately. The page says monthly billing can be chosen but publishes no numeric monthly amount."
+          },
+          {
+            "planName": "API (EUR)",
+            "currency": "EUR",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 5800,
+            "annualMonthlyEquivalent": 483.33,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "From price for standard yearly usage; high-volume pricing is agreed separately. The page says monthly billing can be chosen but publishes no numeric monthly amount."
+          },
+          {
+            "planName": "API (USD)",
+            "currency": "USD",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 6700,
+            "annualMonthlyEquivalent": 558.33,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users",
+            "notes": "From price for standard yearly usage; high-volume pricing is agreed separately. The page says monthly billing can be chosen but publishes no numeric monthly amount."
+          }
+        ],
         "evidence": [
           {
             "label": "Open Opportunities pricing",
@@ -1036,8 +1261,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "partial",
-          "detail": "Users can search or monitor named buyers and inspect what they bought before, previous winners, values and buying patterns. The reviewed pages do not establish standalone structured buyer profile pages.",
+          "status": "not_offered",
+          "detail": "Users can search or monitor buyer names and inspect past records, winners, values and buying patterns. The provider documents notice-level deduplication and field validation, but not buyer-entity resolution or structured cross-notice buyer profiles.",
           "evidence": [
             {
               "label": "Sales strategy",
@@ -1046,12 +1271,16 @@
             {
               "label": "Search user guide",
               "url": "https://openopps.com/blog/user-guide-making-tender-search-easier/"
+            },
+            {
+              "label": "Data quality reports",
+              "url": "https://openopps.com/data-quality-reports/"
             }
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "The contract database can be searched by supplier to show contracts won, and competitor contracts can be examined. The reviewed pages do not establish standalone structured supplier profile pages.",
+          "status": "not_offered",
+          "detail": "The contract database can be filtered by supplier name to find awards, but the reviewed pages do not establish deliberately built cross-notice supplier entities, identity resolution or structured supplier profile pages.",
           "evidence": [
             {
               "label": "Search by supplier",
@@ -1088,17 +1317,17 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The platform gathers notice attachments and planning notices, but the reviewed pages did not establish buyer strategies, minutes, budgets or other non-notice buyer-authored document collections.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Records and attachments expose source notice content, but the reviewed pages did not establish extracted or organised participation conditions, certifications, policies or evaluation criteria.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider publishes strategic planning guidance and offers planning notices, but the reviewed pages did not establish an in-product gap, readiness, evidence or requirements-planning workflow.",
           "evidence": []
         },
@@ -1185,7 +1414,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Open Opportunities publishes guidance about using AI for bid writing, but the reviewed product pages did not establish response drafting, an answer library, compliance matrix or managed writing as a platform feature.",
           "evidence": []
         }
@@ -1354,6 +1583,8 @@
         "https://openopps.com/pricing/",
         "https://openopps.com/product/",
         "https://openopps.com/coverage/",
+        "https://openopps.com/about/",
+        "https://openopps.com/data-quality-reports/",
         "https://openopps.com/sources/",
         "https://openopps.com/sources/find-a-tender/",
         "https://openopps.com/sources/etendersni/",

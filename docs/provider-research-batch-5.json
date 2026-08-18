@@ -13,6 +13,41 @@
         "seatDetail": "User or seat allowances are not publicly stated. Plans instead limit company profiles: 1 on Starter, up to 10 on Professional and unlimited on Enterprise.",
         "vatDetail": "Prices exclude applicable VAT or other taxes, which are added where required.",
         "trialDetail": "All paid plans advertise a free trial with no credit card required, but the duration is not stated. The service was also advertising a closed beta and waitlist ahead of public launch.",
+        "comparablePlans": [
+          {
+            "planName": "Starter",
+            "currency": "EUR",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 79,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; includes 1 company profile",
+            "notes": "Annual toggle says Save 2 months but no annual total is published. Prices exclude applicable VAT. Join Waitlist was the active call to action."
+          },
+          {
+            "planName": "Professional",
+            "currency": "EUR",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 149,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; includes up to 10 company profiles",
+            "notes": "Annual toggle says Save 2 months but no annual total is published. Prices exclude applicable VAT. Join Waitlist was the active call to action."
+          },
+          {
+            "planName": "Enterprise",
+            "currency": "EUR",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; includes unlimited company profiles",
+            "notes": "Custom price; advertised API access conflicts with the roadmap's Coming Soon REST API item."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -30,7 +65,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Configurable email, Slack and score-threshold alerts are described, but the reviewed pages do not establish saved keyword alerts.",
           "evidence": []
         },
@@ -49,12 +84,12 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Public category pages show buyer counts, but the reviewed pages do not establish structured buyer profiles.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Company capability profiles are the customer's own matching configurations, not supplier, incumbent or competitor profiles.",
           "evidence": []
         },
@@ -69,12 +104,12 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish similar historical contracts surfaced against a notice or profile.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement documents.",
           "evidence": []
         },
@@ -93,7 +128,7 @@
           ]
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish readiness, evidence-gap or requirements-planning workflow.",
           "evidence": []
         },
@@ -122,7 +157,7 @@
           ]
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
           "evidence": []
         },
@@ -155,7 +190,7 @@
           ]
         },
         "bidWriting": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "Tender response drafting is explicitly listed as coming soon rather than shipped.",
           "evidence": [
             {
@@ -405,6 +440,30 @@
         "seatDetail": "One business profile is included; user or seat limits are not publicly stated.",
         "vatDetail": "VAT treatment is not publicly stated on the reviewed page.",
         "trialDetail": "First month free and cancel anytime. The page says no card is charged for 30 days, but does not clearly state whether a card is required for the paid-plan trial; the separate weekly digest says no credit card is needed.",
+        "comparablePlans": [
+          {
+            "planName": "Free weekly digest",
+            "currency": "unknown",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Free weekly digest; no credit card required. This is a digest rather than the personalised daily paid profile."
+          },
+          {
+            "planName": "Paid profile (unnamed)",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 99,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; one business profile",
+            "notes": "The page publishes no formal plan name and prices per profile. First month is free; annual billing and VAT treatment are not published."
+          }
+        ],
         "evidence": [
           {
             "label": "Product and pricing",
@@ -434,67 +493,67 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer names appear in briefs, but the reviewed pages do not establish structured buyer-intelligence profiles.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The customer's own business profile does not establish supplier, incumbent, winner or competitor profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish contract expiry, renewal, extension or re-tender monitoring.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider says it validates profiles against past tenders a customer would have won, but does not establish a user-facing similar-contract feature.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, pipelines, budgets or other buyer-authored documents.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Match rationales are described, but the reviewed pages do not establish extracted participation conditions, evaluation criteria or recurring buyer requirements.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish readiness actions, evidence planning or a requirements gap workflow.",
           "evidence": []
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages describe live tender opportunities, not historical awards, winners or award search.",
           "evidence": []
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Example briefs include DPS opportunities, but the reviewed pages do not establish dedicated framework, DPS or dynamic-market discovery or intelligence.",
           "evidence": []
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
           "evidence": []
         },
         "exportsApi": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish CSV, spreadsheet, API, webhook, CRM or other data export or integration.",
           "evidence": []
         },
         "collaboration": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish multiple users, assignments, comments or a shared team pipeline.",
           "evidence": []
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "TenderAI says it finds and scores opportunities for the customer to decide on, but the reviewed pages do not expressly establish or exclude bid-writing functionality.",
           "evidence": []
         }
@@ -557,6 +616,63 @@
         "seatDetail": "Local says no additional users; Regional Plus says add 1 additional user; UK Wide and UK + Ireland each say add 3 additional users. Pricing does not separately state the base user count or extra-seat price.",
         "vatDetail": "The checkout displays a VAT line, but the reviewed public pricing page does not state whether listed prices include or exclude VAT or the applicable rate.",
         "trialDetail": "14-day free trial. Valid payment details are required, including a temporary refundable £0.50 card-verification hold; it converts to the selected paid plan unless cancelled before the trial ends.",
+        "comparablePlans": [
+          {
+            "planName": "Local (Regional)",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 25,
+            "annualPrice": 300,
+            "annualMonthlyEquivalent": 25,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "No additional users; base user count is not separately stated",
+            "notes": "Covers up to 3 regions. VAT treatment is not stated."
+          },
+          {
+            "planName": "Regional Plus",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 33,
+            "annualPrice": 396,
+            "annualMonthlyEquivalent": 33,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Add 1 additional user; base user count is not separately stated",
+            "notes": "Covers up to 5 selected regions. VAT treatment is not stated."
+          },
+          {
+            "planName": "UK Wide",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 42,
+            "annualPrice": 504,
+            "annualMonthlyEquivalent": 42,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Add 3 additional users; base user count is not separately stated",
+            "notes": "UK-wide coverage. VAT treatment is not stated."
+          },
+          {
+            "planName": "UK + Ireland",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 55,
+            "annualPrice": 660,
+            "annualMonthlyEquivalent": 55,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Add 3 additional users; base user count is not separately stated",
+            "notes": "UK and Ireland coverage. VAT treatment is not stated."
+          },
+          {
+            "planName": "Rest Api",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "A separate REST API subscription and payment flow is published, but no numeric API price or billing basis is visible before registration."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -602,8 +718,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "yes",
-          "detail": "Structured buyer dashboards include tender and award counts, values, publication trends, supplier history, categories, historical tender lists and decision makers.",
+          "status": "partial",
+          "detail": "Structured buyer dashboards include tender and award counts, values, publication trends, supplier history, categories, historical tender lists and decision makers, but the reviewed pages do not establish canonicalisation, deduplication or entity resolution.",
           "evidence": [
             {
               "label": "Complete buyer intelligence",
@@ -616,8 +732,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "yes",
-          "detail": "Supplier and competitor intelligence profiles include awarded values, buyers, sectors, regional footprint and filtered award history.",
+          "status": "partial",
+          "detail": "Supplier and competitor intelligence profiles include awarded values, buyers, sectors, regional footprint and filtered award history, but the reviewed pages do not establish canonicalisation, deduplication or entity resolution.",
           "evidence": [
             {
               "label": "Complete supplier intelligence",
@@ -644,12 +760,12 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer comparison and historical lists are described, but the reviewed pages do not establish similar historical contracts surfaced against a notice or supplier profile.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Tender-document access is described, but the reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement materials.",
           "evidence": []
         },
@@ -669,15 +785,15 @@
         },
         "requirementsPlanning": {
           "status": "partial",
-          "detail": "Expiry countdowns and PIN-to-live alerts give advance preparation time, and managed strategy/bid services can assist planning, but no self-serve evidence-gap plan was established.",
+          "detail": "The separately priced Bid-Ready Package produces a saved questionnaire, RAG-rated gaps report and personalised 90-day action plan with sequenced actions and target dates. This is a managed add-on rather than a demonstrated self-serve per-tender readiness workflow.",
           "evidence": [
             {
-              "label": "PIN and pipeline tracking",
-              "url": "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline"
+              "label": "Bid-Ready Package",
+              "url": "https://tenderbase.co.uk/services/bid-services/bid-ready-package"
             },
             {
-              "label": "Pricing and add-ons",
-              "url": "https://tenderbase.co.uk/pricing"
+              "label": "Tenderbase workflow",
+              "url": "https://tenderbase.co.uk/workflow"
             }
           ]
         },
@@ -839,7 +955,9 @@
         "https://tenderbase.co.uk/services/tender-management/track-pin-pipeline",
         "https://tenderbase.co.uk/services/tender-management/complete-buyer-intel",
         "https://tenderbase.co.uk/services/tender-management/complete-supplier-intel",
+        "https://tenderbase.co.uk/services/bid-services/bid-ready-package",
         "https://tenderbase.co.uk/services/bid-services/bid-writing-service",
+        "https://tenderbase.co.uk/workflow",
         "https://tenderbase.co.uk/resources/introducing-tenderbase-pipeline-your-proactive-edge-in-public-procurement/",
         "https://tenderbase.co.uk/restapi-registration",
         "https://tenderbase.co.uk/api-integration",
@@ -861,6 +979,41 @@
         "seatDetail": "UK+IE includes 2 Primary/Admin and 5 Pro user licences; Europe/UK/Int+ includes 2 Primary/Admin and 7 Pro licences. Additional users are available by discussion; no public extra-seat price is stated.",
         "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
         "trialDetail": "Seven-day free trial with no credit card required for all listed plans.",
+        "comparablePlans": [
+          {
+            "planName": "UK+IE",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 325,
+            "annualPrice": 2988,
+            "annualMonthlyEquivalent": 249,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "2 Primary/Admin and 5 Pro user licences",
+            "notes": "The provider explicitly displays £249/month paid annually; the £2,988 annual total is calculated as £249 × 12 rather than published as a total. VAT treatment is not stated."
+          },
+          {
+            "planName": "Europe/UK/Int+",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 546,
+            "annualPrice": 4752,
+            "annualMonthlyEquivalent": 396,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "2 Primary/Admin and 7 Pro user licences",
+            "notes": "The provider explicitly displays £396/month paid annually; the £4,752 annual total is calculated as £396 × 12 rather than published as a total. VAT treatment is not stated."
+          },
+          {
+            "planName": "Bespoke plan",
+            "currency": "unknown",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Custom; additional users, emails, AI Searches, Keyword Searches and Teams channels are available by discussion",
+            "notes": "Custom quote. The pricing FAQ says bespoke plans and invoice payment are available but does not publish currency, billing basis or prices."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -899,17 +1052,21 @@
         },
         "buyerProfiles": {
           "status": "yes",
-          "detail": "Public procurement-profile pages show buyer tender history, category mix, similar organisations, awards and top suppliers.",
+          "detail": "Buyer procurement profiles aggregate tender history, category mix, similar organisations, awards and suppliers. Tenderlake also models a buyer as a named organisation separate from the multiple aliases users enter to match that buyer across notices, establishing explicit cross-notice identity handling.",
           "evidence": [
             {
               "label": "Example buyer procurement profile",
               "url": "https://www.tenderlake.com/Buyer/ProcurementProfile/crown-commercial-service-22420"
+            },
+            {
+              "label": "Buyer organisation and alias setup",
+              "url": "https://www.tenderlake.com/blog/article/40/monitor-specific-competitors-and-buyers"
             }
           ]
         },
         "supplierProfiles": {
-          "status": "partial",
-          "detail": "Users can create tracked contractor organisations and analyse competitor award reports, but the reviewed pages do not establish broad structured supplier-profile pages equivalent to buyer profiles.",
+          "status": "yes",
+          "detail": "Users create a canonical contractor organisation with multiple name aliases, then monitor awards to that contractor and analyse competitor award reports across notices. Identity handling is user-configured rather than claimed as automatic.",
           "evidence": [
             {
               "label": "Monitor competitors and buyers",
@@ -950,7 +1107,7 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement notices.",
           "evidence": []
         },
@@ -965,7 +1122,7 @@
           ]
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Qualification workflow is described, but the reviewed pages do not establish evidence-gap, readiness or requirement-by-requirement planning before bid submission.",
           "evidence": []
         },
@@ -1036,7 +1193,7 @@
           ]
         },
         "bidWriting": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "Tenderlake explicitly says it does not write bids and is focused on supplier-side tender intelligence.",
           "evidence": [
             {
@@ -1128,6 +1285,7 @@
         "Provider claims only; Civensa has not independently tested source completeness, AI matching, renewal signals or alert delivery.",
         "The reviewed pages make broad full-coverage claims but do not publish one normalized, exhaustive portal inventory.",
         "The published buyer profiles and example notice links demonstrate records from named portals but do not prove complete ingestion of each source.",
+        "Buyer and contractor identity handling uses user-entered aliases on the reviewed feature page; Civensa has not tested automatic entity resolution or duplicate merging.",
         "Annual prices are displayed as monthly equivalents paid annually; invoice billing at the undiscounted monthly-plan rate is described separately.",
         "The provider explicitly says it does not write bids."
       ],
@@ -1157,6 +1315,52 @@
         "seatDetail": "Starter and Pro cover one company profile, but their user count is not publicly stated. Team pricing is custom for multiple users, profiles, brands or departments.",
         "vatDetail": "No VAT is currently charged; the provider says VAT may be added if it becomes VAT-registered.",
         "trialDetail": "One personalised Pro-style preview brief is free with no card, followed by a seven-day Pro trial with no card required.",
+        "comparablePlans": [
+          {
+            "planName": "Preview",
+            "currency": "unknown",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; one company profile",
+            "notes": "One free Pro-style preview email, not an ongoing monthly plan. No card required."
+          },
+          {
+            "planName": "Starter",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 29,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; one company profile",
+            "notes": "Monthly billing with no annual lock-in. No VAT currently charged."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 79,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; one company profile",
+            "notes": "Monthly billing with no annual lock-in. No VAT currently charged."
+          },
+          {
+            "planName": "Team",
+            "currency": "unknown",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Multiple users, profiles, brands or departments; exact allowance is custom",
+            "notes": "Custom quote. No VAT currently charged."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -1166,7 +1370,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Saved-search scope and saved fit rules are described, but the reviewed pages do not establish saved keyword alerts.",
           "evidence": []
         },
@@ -1181,27 +1385,27 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer context and named-buyer market watch are described, but the reviewed pages do not establish structured buyer profiles.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The customer's own company profile does not establish supplier, winner, incumbent or competitor profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Pipeline and market watch are described, but the reviewed pages do not establish contract-expiry, renewal, extension or re-tender signals.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Starter and Pro include an unspecified history, but the reviewed pages do not establish similar historical contracts surfaced against a notice or profile.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish buyer plans, strategies, minutes, budgets or other buyer-authored material beyond procurement notices.",
           "evidence": []
         },
@@ -1225,7 +1429,7 @@
         },
         "requirementsPlanning": {
           "status": "partial",
-          "detail": "Pro provides deadline risks, clarification questions, evidence gaps and a first next task, but this is a lightweight qualification workflow rather than a documented full requirements plan.",
+          "detail": "Pro attaches clarification questions, evidence gaps, deadline risk and a first action to scored tenders; its kickoff template includes a next-review date and owner. The reviewed live pricing does not establish a persistent, requirement-by-requirement owner/evidence readiness workflow, so this remains partial.",
           "evidence": [
             {
               "label": "Product overview",
@@ -1234,11 +1438,15 @@
             {
               "label": "Pricing",
               "url": "https://tenderlead.co.uk/pricing"
+            },
+            {
+              "label": "Clarification questions and evidence gaps",
+              "url": "https://tenderlead.co.uk/tender-clarification-questions-evidence-gaps"
             }
           ]
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish historical award notices, winners, values or award search.",
           "evidence": []
         },
@@ -1257,7 +1465,7 @@
           ]
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages do not establish named competitor, incumbent, supplier or winner monitoring.",
           "evidence": []
         },
@@ -1286,12 +1494,16 @@
           ]
         },
         "bidWriting": {
-          "status": "no",
-          "detail": "TenderLead explicitly says it sits before bid writing and that drafting is not sold as a normal self-serve feature.",
+          "status": "partial",
+          "detail": "A gated sample describes question-led drafting, proof mapping and an evidence vault, but Word export is planned and the live product FAQ says drafting is not sold as a normal self-serve feature. This is therefore a pilot or gated capability, not a standard included feature.",
           "evidence": [
             {
               "label": "Product FAQ",
               "url": "https://tenderlead.co.uk/"
+            },
+            {
+              "label": "Sample bid pack",
+              "url": "https://tenderlead.co.uk/sample-bid-pack"
             }
           ]
         }
@@ -1357,11 +1569,13 @@
         "Provider claims only; Civensa has not independently tested portal completeness, scoring, source polling or alert delivery.",
         "Sell2Wales is explicitly not directly ingested while its API is unavailable; the provider says Welsh notices are covered through Find a Tender.",
         "Starter omits BID/SKIP reasoning, proof-gap checks and pipeline workflow; the more advanced qualification features are Pro or custom Team features.",
-        "The provider explicitly positions TenderLead before bid writing and does not sell drafting, CRM integration or bid-library exports as normal self-serve features."
+        "The normal self-serve product is positioned before bid writing; separate first-party pages describe gated or pilot drafting and evidence-vault workflows with exports still planned."
       ],
       "sourceUrls": [
         "https://tenderlead.co.uk/",
         "https://tenderlead.co.uk/pricing",
+        "https://tenderlead.co.uk/tender-clarification-questions-evidence-gaps",
+        "https://tenderlead.co.uk/sample-bid-pack",
         "https://tenderlead.co.uk/universities-it-tenders",
         "https://tenderlead.co.uk/uk-it-tender-alerts"
       ]

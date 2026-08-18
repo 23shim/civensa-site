@@ -85,12 +85,14 @@ test("renders the procurement tools directory with dated evidence and ownership 
   assert.match(alerts, /Predict[^<]{0,80}£189|£189[^<]{0,80}Predict/i);
   assert.match(alerts, /provider-stated|Provider-stated/i);
   assert.match(alerts, /Features described on provider pages/i);
-  assert.match(alerts, /Public pricing and seat basis/i);
+  assert.match(alerts, /Monthly and annual prices on the same basis/i);
   assert.match(alerts, /Portals explicitly named by each provider/i);
   assert.match(alerts, /Not stated is not evidence that the service lacks coverage/i);
+  assert.match(alerts, /Not offered/i);
+  assert.match(alerts, /Strict profile and planning audit/i);
   assert.match(alerts, /394 councils tracked but only 31 active/i);
   assert.match(alerts, /Knowledge base £0\/month[^<]{0,100}£20\/month[^<]{0,100}£30\/month/i);
-  assert.ok(Buffer.byteLength(alerts) < 600_000, "tender-alert comparison page should stay below 600 kB");
+  assert.ok(Buffer.byteLength(alerts) < 700_000, "tender-alert comparison page should stay below 700 kB");
 
   const hub = await (await render("/tools/")).text();
   assert.match(hub, /"@type":"ItemList"/);
@@ -109,13 +111,22 @@ test("normalized tender-alert research is complete and schema-consistent", async
   for (const provider of providers) {
     assert.deepEqual(Object.keys(provider.features).sort(), [...featureKeys].sort(), provider.slug);
     for (const feature of Object.values(provider.features)) {
-      assert.match(feature.status, /^(yes|partial|no|not_stated)$/);
+      assert.match(feature.status, /^(yes|partial|not_offered)$/);
       assert.equal(typeof feature.detail, "string");
       assert.ok(Array.isArray(feature.evidence));
     }
     assert.ok(Array.isArray(provider.explicitPortals));
     assert.ok(Array.isArray(provider.caveats));
     assert.ok(Array.isArray(provider.sourceUrls));
+    assert.ok(Array.isArray(provider.pricing.comparablePlans));
+    assert.ok(provider.pricing.comparablePlans.length > 0, `${provider.slug}: comparable plans`);
+    for (const plan of provider.pricing.comparablePlans) {
+      assert.match(plan.billingBasis, /^(per_seat|per_organisation|per_team|mixed|unknown)$/);
+      for (const field of ["monthlyPrice", "annualPrice", "annualMonthlyEquivalent"]) assert.ok(plan[field] === null || typeof plan[field] === "number", `${provider.slug}: ${plan.planName} ${field}`);
+      assert.match(plan.annualPriceCalculation, /^(published_total|calculated_from_annual_monthly_rate|not_available)$/);
+      if (plan.annualPrice === null) assert.equal(plan.annualMonthlyEquivalent, null, `${provider.slug}: ${plan.planName} annual equivalent without annual price`);
+      else assert.ok(Math.abs(plan.annualMonthlyEquivalent - Math.round((plan.annualPrice / 12) * 100) / 100) < 0.001, `${provider.slug}: ${plan.planName} annual monthly equivalent`);
+    }
   }
 });
 

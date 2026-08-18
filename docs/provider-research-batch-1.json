@@ -13,6 +13,52 @@
         "seatDetail": "No included-user count or additional-seat price is publicly stated. Plans instead limit capability profiles to 1, 3 or 5.",
         "vatDetail": "Prices exclude VAT, which is added at checkout where applicable.",
         "trialDetail": "No free trial. A no-card sample digest is offered; the provider advertises a first-month satisfaction refund and a 14-day cancellation right.",
+        "comparablePlans": [
+          {
+            "planName": "Starter",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 49,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; 1 capability profile",
+            "notes": "Monthly subscription; up to 50 alerts per month and a weekly digest. Prices exclude VAT. Annual billing is available on request without a published total."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 99,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; 3 capability profiles",
+            "notes": "Monthly subscription; unlimited alerts, CSV export and daily or weekly digest. Prices exclude VAT. Annual billing is available on request without a published total."
+          },
+          {
+            "planName": "Team",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 199,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; 5 capability profiles",
+            "notes": "Monthly subscription; CSV export, API access and webhook delivery. Prices exclude VAT. Annual billing is available on request without a published total."
+          },
+          {
+            "planName": "Custom",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated; offered for more than 5 capability profiles",
+            "notes": "Contact the provider for a custom plan; no numeric price is published."
+          }
+        ],
         "evidence": [
           {
             "label": "BidLens pricing",
@@ -26,7 +72,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages describe capability-profile matching, not saved keyword searches or keyword notifications.",
           "evidence": []
         },
@@ -41,52 +87,52 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No structured buyer-profile or contracting-authority intelligence feature was established on the reviewed pages.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Capability profiles describe the subscriber's own business and do not establish supplier, incumbent or competitor profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No contract-expiry, renewal, re-tender or extension-monitoring feature was established.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No comparable historical contract or award feature was established.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No buyer plans, policies, strategies, minutes, budgets or other buyer-document library was established.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No extracted participation conditions, certifications, policies or evaluation criteria feature was established.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No readiness, evidence-gap or requirements-planning workflow was established.",
           "evidence": []
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider says it processes procurement releases, but the reviewed pages do not establish a searchable historical-award feature.",
           "evidence": []
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No framework, DPS or dynamic-market discovery feature was established.",
           "evidence": []
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No competitor, incumbent, supplier or winner tracking feature was established.",
           "evidence": []
         },
@@ -101,12 +147,12 @@
           ]
         },
         "collaboration": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "A Team plan is named, but the reviewed pages do not state included users, shared workspaces, assignments or comments.",
           "evidence": []
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No bid drafting, answer library, tender-document analysis or managed writing feature was established.",
           "evidence": []
         }
@@ -191,6 +237,41 @@
         "seatDetail": "Included users and additional-seat pricing are not publicly stated.",
         "vatDetail": "VAT treatment is not publicly stated.",
         "trialDetail": "The pricing page advertises a 7-day Starter trial without a credit card. Another first-party comparison page references a 14-day trial, so confirm the current trial at signup.",
+        "comparablePlans": [
+          {
+            "planName": "Starter",
+            "currency": "unknown",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "A 7-day no-card trial is advertised; no post-trial numeric price or billing period is published."
+          },
+          {
+            "planName": "Professional",
+            "currency": "unknown",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Paid tier described publicly, but numeric price and billing period are not published."
+          },
+          {
+            "planName": "Enterprise",
+            "currency": "unknown",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Custom integrations and support are described; contact the provider for a quote."
+          }
+        ],
         "evidence": [
           {
             "label": "BidScout pricing",
@@ -242,8 +323,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "yes",
-          "detail": "Public supplier pages show award counts and values, recent contract awards, top buyers and live opportunities matched to the supplier's win history.",
+          "status": "partial",
+          "detail": "Public supplier pages aggregate award counts, values, buyers and related opportunities, but the reviewed first-party pages do not establish canonicalisation, deduplication or entity-resolution controls.",
           "evidence": [
             {
               "label": "Example supplier profile",
@@ -276,7 +357,7 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The Document Library covers the subscriber's own evidence, policies and case studies; it does not establish a library of buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond notices.",
           "evidence": [
             {
@@ -540,6 +621,41 @@
         "seatDetail": "Monitor and Predict can send alerts to the subscriber and up to three teammates. No additional-seat price is published, and the provider directs large bid teams needing seats toward enterprise platforms.",
         "vatDetail": "BidSkim Limited states that it is not VAT registered, so no VAT is charged and displayed prices are final.",
         "trialDetail": "The Free plan requires no card and includes browsing, a one-off match scan and a 12-month report. No paid-plan trial is stated; annual plans have a 30-day money-back guarantee.",
+        "comparablePlans": [
+          {
+            "planName": "Free",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "One account per person or business; no paid team seats stated",
+            "notes": "Free forever with no card; one match scan and a 12-month report. This is not an annual billing plan."
+          },
+          {
+            "planName": "Monitor",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 79,
+            "annualPrice": 780,
+            "annualMonthlyEquivalent": 65,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Subscriber plus up to 3 additional alert recipients",
+            "notes": "Monthly and annual billing are published. No VAT is charged. Annual plans have a 30-day money-back guarantee."
+          },
+          {
+            "planName": "Predict",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 189,
+            "annualPrice": 1860,
+            "annualMonthlyEquivalent": 155,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Subscriber plus up to 3 additional alert recipients",
+            "notes": "Monthly and annual billing are published. No VAT is charged. Annual plans have a 30-day money-back guarantee."
+          }
+        ],
         "evidence": [
           {
             "label": "BidSkim pricing",
@@ -553,7 +669,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider positions its profile-based scoring as a replacement for keyword alerts; the reviewed pages do not establish a saved keyword-alert feature.",
           "evidence": [
             {
@@ -717,7 +833,7 @@
           ]
         },
         "exportsApi": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No CSV/Excel export, API, webhook or CRM integration is documented on the reviewed pages; the pricing page says large teams needing exports may be better served by enterprise platforms.",
           "evidence": [
             {
@@ -741,7 +857,7 @@
           ]
         },
         "bidWriting": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "The pricing FAQ explicitly says BidSkim does not write bids and focuses on finding, qualifying and researching opportunities before the bid.",
           "evidence": [
             {
@@ -830,10 +946,56 @@
         "availability": "public_numeric",
         "billingBasis": "mixed",
         "currency": "GBP",
-        "plansText": "Free £0. Standard £350/year. Pro £800/year with three seats. Insights starts from £5,000/year. Rolling monthly options are advertised for Standard and Pro, but monthly figures were not visible on the checked page.",
-        "seatDetail": "Pro includes three seats. Extra users are £150 plus VAT each. Included users for Free, Standard and Insights are not publicly stated.",
+        "plansText": "Free £0. Standard £35/month per user or £350/year per user. Pro £80/month for the first three seats or £800/year for the first three seats. Insights starts from £5,000/year.",
+        "seatDetail": "Standard is priced per user. Pro includes the first three seats. Extra users are £150 plus VAT each, but the public text does not state the charge period. Included users for Free and Insights are not publicly stated.",
         "vatDetail": "Extra users are explicitly priced at £150 plus VAT; the VAT treatment of base plan prices is not stated on the checked page.",
         "trialDetail": "No trial or payment-card requirement is publicly stated on the checked pricing page.",
+        "comparablePlans": [
+          {
+            "planName": "BidStats Free",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Free plan with five tender views per day and 90 days of history; this is not an annual billing plan."
+          },
+          {
+            "planName": "BidStats Standard",
+            "currency": "GBP",
+            "billingBasis": "per_seat",
+            "monthlyPrice": 35,
+            "annualPrice": 350,
+            "annualMonthlyEquivalent": 29.17,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "One user at the published per-user price",
+            "notes": "The page's pricing script labels Standard as per user per month or year. Base-plan VAT treatment is not stated."
+          },
+          {
+            "planName": "BidStats Pro",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 80,
+            "annualPrice": 800,
+            "annualMonthlyEquivalent": 66.67,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "First 3 seats included",
+            "notes": "The page labels the monthly and annual prices as covering the first three seats. Extra users are £150 plus VAT each, with the charge period not stated."
+          },
+          {
+            "planName": "Insights",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": 5000,
+            "annualMonthlyEquivalent": 416.67,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Starting price ('from £5,000 per annum'); actual quote may be higher. Extra-user statement explicitly excludes Insights."
+          }
+        ],
         "evidence": [
           {
             "label": "BidStats pricing",
@@ -857,35 +1019,35 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No semantic, machine-learning or profile-based relevance matching feature was established on the reviewed pages.",
           "evidence": []
         },
         "buyerProfiles": {
-          "status": "yes",
-          "detail": "BidStats publishes structured buyer reports and buyer analyses connected to tender and award records.",
+          "status": "partial",
+          "detail": "BidStats publishes cross-notice buyer reports with notices, awards, sectors, suppliers and name-grouping sections. Example reports explicitly list names included and excluded, but can group several distinct departments, so robust canonical buyer identity is not established.",
           "evidence": [
             {
               "label": "BidStats home",
               "url": "https://app.bidstats.uk/"
             },
             {
-              "label": "Buyer reports",
-              "url": "https://bidstats.uk/analysis/buyers/"
+              "label": "Example grouped buyer report",
+              "url": "https://bidstats.uk/analysis/buyers/department"
             }
           ]
         },
         "supplierProfiles": {
-          "status": "yes",
-          "detail": "BidStats publishes supplier reports with award counts, sectors, values, locations, buyers and related award records.",
+          "status": "partial",
+          "detail": "BidStats publishes cross-notice supplier reports with awards, sectors, values, buyers and explicit included/excluded name groups. Example reports group multiple distinct suppliers under a search concept, so robust canonical supplier identity is not established.",
           "evidence": [
             {
               "label": "BidStats home",
               "url": "https://app.bidstats.uk/"
             },
             {
-              "label": "Supplier reports",
-              "url": "https://bidstats.uk/analysis/suppliers/"
+              "label": "Example grouped supplier report",
+              "url": "https://bidstats.uk/analysis/suppliers/insight"
             }
           ]
         },
@@ -900,12 +1062,12 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Search and analysis pages expose historical notices, but no feature that deliberately surfaces comparable historical contracts against a notice or profile was established.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "A Knowledge Hub is named on paid plans, but the reviewed pages do not establish that it contains buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices.",
           "evidence": [
             {
@@ -915,12 +1077,12 @@
           ]
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No normalized extraction of certifications, participation conditions, policies or evaluation criteria was established.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No readiness, requirements-gap or evidence-planning workflow was established.",
           "evidence": []
         },
@@ -949,7 +1111,7 @@
           ]
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Supplier reports provide competitor research, but no named-supplier monitoring or competitor alert feature was established.",
           "evidence": [
             {
@@ -979,7 +1141,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No bid drafting, response library, document analysis, compliance matrix or managed writing service was established.",
           "evidence": []
         }
@@ -1036,6 +1198,7 @@
       ],
       "caveats": [
         "Source count, history depth, alert capacity, exports, frameworks and renewal coverage differ materially by plan.",
+        "Buyer and supplier reports expose included and excluded name groups, but sampled reports can cluster distinct organisations; Civensa therefore records both profile capabilities as partial rather than canonical entity profiles.",
         "The site currently uses both 3,000+ and 3,600+ buyer-count claims on first-party pages; neither was independently verified by Civensa.",
         "The explicitly named source list on the public search page is narrower than the 3,000+ buyer coverage claim and does not name devolved portals individually.",
         "Pricing, data coverage and feature claims are provider-stated and were not independently tested by Civensa."
@@ -1047,7 +1210,9 @@
         "https://app.bidstats.uk/static/docs/bidstats-terms.pdf",
         "https://bidstats.uk/tenders/search",
         "https://bidstats.uk/analysis/buyers/",
-        "https://bidstats.uk/analysis/suppliers/"
+        "https://bidstats.uk/analysis/buyers/department",
+        "https://bidstats.uk/analysis/suppliers/",
+        "https://bidstats.uk/analysis/suppliers/insight"
       ]
     },
     {
@@ -1062,6 +1227,41 @@
         "seatDetail": "The current homepage states no per-seat fees. No user cap or additional-seat price is published.",
         "vatDetail": "VAT inclusion or exclusion is not stated alongside the current plan prices.",
         "trialDetail": "The knowledge base is free forever without a card, and the first tender response is free. Older live product pages still advertise a 7-day no-card trial, so confirm which onboarding offer applies.",
+        "comparablePlans": [
+          {
+            "planName": "Knowledge base",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "No per-seat fee; user cap not publicly stated",
+            "notes": "Free forever with no card. This is not an annual billing plan."
+          },
+          {
+            "planName": "Answer any tender",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 20,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "No per-seat fee; user cap not publicly stated",
+            "notes": "Current homepage monthly price. A yearly toggle is visible, but no annual total was established from the public page; older live product pages contain conflicting prior prices."
+          },
+          {
+            "planName": "Answer and discover",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 30,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "No per-seat fee; user cap not publicly stated",
+            "notes": "Current homepage monthly price, including discovery. A yearly toggle is visible, but no annual total was established; older live product pages contain conflicting prior prices."
+          }
+        ],
         "evidence": [
           {
             "label": "Bidwell current pricing",
@@ -1103,17 +1303,17 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No structured buyer profile or contracting-authority intelligence feature was established.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The subscriber's own knowledge base does not establish structured incumbent, winner or competitor profiles.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No public-contract expiry, renewal, re-tender or extension-monitoring feature was established. Certificate renewal reminders in the subscriber knowledge base are not contract-renewal signals.",
           "evidence": [
             {
@@ -1123,12 +1323,12 @@
           ]
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No comparable historical contract or award feature surfaced against a notice or profile was established.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The knowledge base contains the subscriber's own past bids, policies, credentials and case studies; it does not establish a library of buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond tender packs.",
           "evidence": [
             {
@@ -1166,7 +1366,7 @@
           ]
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The Win module tracks the subscriber's own submissions, decisions and awards and can ingest a related Contracts Finder award into that pipeline; it does not establish a searchable market-wide award-history feature.",
           "evidence": [
             {
@@ -1190,7 +1390,7 @@
           ]
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "No named competitor, incumbent, supplier or winner monitoring feature was established.",
           "evidence": []
         },

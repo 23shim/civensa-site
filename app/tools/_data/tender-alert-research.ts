@@ -31,6 +31,17 @@ type RawProvider = {
     seatDetail: string;
     vatDetail: string;
     trialDetail: string;
+    comparablePlans: readonly {
+      planName: string;
+      currency: "GBP" | "EUR" | "USD" | "mixed" | "unknown";
+      billingBasis: BillingBasis;
+      monthlyPrice: number | null;
+      annualPrice: number | null;
+      annualMonthlyEquivalent: number | null;
+      annualPriceCalculation: "published_total" | "calculated_from_annual_monthly_rate" | "not_available";
+      includedUsers: string;
+      notes: string;
+    }[];
     evidence: readonly RawEvidence[];
   };
   features: Record<NormalizedFeatureKey, RawFeature>;
@@ -79,6 +90,17 @@ function normalizeProvider(provider: RawProvider, researchedAt: string): Normali
       seatDetail: cleanText(provider.pricing.seatDetail),
       vatDetail: cleanText(provider.pricing.vatDetail),
       trialDetail: cleanText(provider.pricing.trialDetail),
+      comparablePlans: provider.pricing.comparablePlans.map((plan) => ({
+        planName: cleanText(plan.planName),
+        currency: plan.currency,
+        billingBasis: plan.billingBasis,
+        monthlyPrice: plan.monthlyPrice,
+        annualPrice: plan.annualPrice,
+        annualMonthlyEquivalent: plan.annualMonthlyEquivalent,
+        annualPriceCalculation: plan.annualPriceCalculation,
+        includedUsers: cleanText(plan.includedUsers),
+        notes: cleanText(plan.notes),
+      })),
       evidenceLinks: evidenceLinks(provider.pricing.evidence),
     },
     features,

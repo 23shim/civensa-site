@@ -13,6 +13,30 @@
         "seatDetail": "The subscription includes up to five email recipients. The provider does not describe these recipients as user licences or publish an additional-recipient price.",
         "vatDetail": "VAT treatment is not publicly stated.",
         "trialDetail": "14-day free trial. The provider says charging starts when the trial ends; whether a payment card is required at signup is not publicly stated.",
+        "comparablePlans": [
+          {
+            "planName": "Monthly",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 9.99,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Up to 5 email recipients",
+            "notes": "Includes up to 100 keywords. A separate annual price is published; this monthly-only price has not been multiplied by 12. VAT is not stated."
+          },
+          {
+            "planName": "Annual",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 49.99,
+            "annualMonthlyEquivalent": 4.17,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Up to 5 email recipients",
+            "notes": "Includes up to 100 keywords. The provider calls this the same product as Monthly and advertises a 14-day trial. VAT is not stated."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -40,62 +64,62 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages describe keyword matching, not semantic, machine-learning or profile-based relevance matching.",
           "evidence": []
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Structured buyer profiles or buyer intelligence are not stated on the reviewed pages.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Structured supplier, incumbent, winner or competitor profiles are not stated on the reviewed pages.",
           "evidence": []
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Contract expiry, renewal, extension or re-tender monitoring is not stated on the reviewed pages.",
           "evidence": []
         },
         "similarContracts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Historical or similar-contract discovery is not stated on the reviewed pages.",
           "evidence": []
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer plans, strategies, pipelines or other buyer-authored documents beyond the notice are not stated on the reviewed pages.",
           "evidence": []
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Extraction or organisation of participation conditions, evaluation criteria or buyer requirements is not stated on the reviewed pages.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Readiness, requirement-gap or evidence-planning functionality is not stated on the reviewed pages.",
           "evidence": []
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Award history, winner or historical award search is not stated on the reviewed pages.",
           "evidence": []
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Dedicated framework, DPS or dynamic-market discovery is not stated on the reviewed pages.",
           "evidence": []
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Named competitor, incumbent, supplier or winner monitoring is not stated on the reviewed pages.",
           "evidence": []
         },
         "exportsApi": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Data export, API, webhook, CRM or other integration support is not stated on the reviewed pages.",
           "evidence": []
         },
@@ -110,7 +134,7 @@
           ]
         },
         "bidWriting": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Bid drafting, answer libraries, compliance matrices or managed writing support are not stated on the reviewed pages.",
           "evidence": []
         }
@@ -219,6 +243,30 @@
         "seatDetail": "Pro is priced per company. One subscription covers the whole bid team and the provider says it does not gate seats; no additional-seat price is stated.",
         "vatDetail": "All prices exclude VAT.",
         "trialDetail": "The ongoing Radar free tier serves as the trial, includes one AI compliance scan per month, requires no card and has no time limit.",
+        "comparablePlans": [
+          {
+            "planName": "Radar",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Free forever; one AI compliance evaluation per month, company profile and live tender listings. No annual billing option is published."
+          },
+          {
+            "planName": "Pro",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": 99,
+            "annualPrice": 990,
+            "annualMonthlyEquivalent": 82.5,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Whole bid team; provider says seats are not gated",
+            "notes": "Prices exclude VAT. Includes 30 AI compliance evaluations per month and unlimited bid drafting subject to fair-use rate limits."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -232,7 +280,7 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Alerts are documented as profile-based filters using sectors, regions, value bands and a match-score threshold; user-defined keyword alerts are not stated.",
           "evidence": []
         },
@@ -255,12 +303,12 @@
           ]
         },
         "buyerProfiles": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Structured contracting-authority profiles or buyer intelligence are not stated on the reviewed product pages.",
           "evidence": []
         },
         "supplierProfiles": {
-          "status": "no",
+          "status": "not_offered",
           "detail": "The product has a user's own company compliance profile, which does not meet this schema's supplier-profile definition. A public Verified Supplier Directory is explicitly marked coming soon rather than available.",
           "evidence": [
             {
@@ -274,7 +322,7 @@
           ]
         },
         "renewalSignals": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The Compliance Vault tracks the customer's certificate and policy expiry dates, but contract expiry, renewal or re-tender monitoring is not stated.",
           "evidence": []
         },
@@ -327,7 +375,7 @@
           ]
         },
         "awardHistory": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Historical award notices, supplier winners, award values or a dedicated award search are not stated on the reviewed product pages.",
           "evidence": []
         },
@@ -342,7 +390,7 @@
           ]
         },
         "competitorTracking": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Named competitor, incumbent, supplier or winner monitoring is not stated on the reviewed product pages.",
           "evidence": []
         },
@@ -446,7 +494,64 @@
         "plansText": "Core Platform yearly prices: Basic £690/year; Professional £990/year; Enterprise from £1,960/year. Analytics and Tender Ninja pricing is quote-only.",
         "seatDetail": "Professional is described for teams and Enterprise includes 3+ user licences. The Basic user allowance and additional-user price are not publicly stated.",
         "vatDetail": "Core Platform prices are stated as plus VAT.",
-        "trialDetail": "A 14-day Core trial with full platform access is advertised. Payment-card requirement is not publicly stated.",
+        "trialDetail": "A 14-day Core trial with full platform access is advertised. The first-party registration page requires payment-card details and says the first payment is taken after the trial unless cancelled.",
+        "comparablePlans": [
+          {
+            "planName": "Basic",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 690,
+            "annualMonthlyEquivalent": 57.5,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Not publicly stated",
+            "notes": "Plus VAT. A monthly subscription is referenced, but no numeric monthly price was established on the reviewed first-party pages."
+          },
+          {
+            "planName": "Professional",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 990,
+            "annualMonthlyEquivalent": 82.5,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Described for teams; exact allowance is not publicly stated",
+            "notes": "Plus VAT. The page associates 3+ users with team and enterprise copy but does not publish an additional-seat price."
+          },
+          {
+            "planName": "Enterprise",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 1960,
+            "annualMonthlyEquivalent": 163.33,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "3+ user licences",
+            "notes": "Starting annual price, plus VAT. Custom integrations, onboarding, support and SLA are advertised."
+          },
+          {
+            "planName": "CFP Analytics",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Separately priced modular product; contact the provider for a quote."
+          },
+          {
+            "planName": "Tender Ninja",
+            "currency": "GBP",
+            "billingBasis": "unknown",
+            "monthlyPrice": null,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Not publicly stated",
+            "notes": "Can be bought as a standalone modular product; contact the provider for a quote."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -455,6 +560,10 @@
           {
             "label": "Core product",
             "url": "https://www.contractfinderpro.com/products/core"
+          },
+          {
+            "label": "Registration and trial billing",
+            "url": "https://www.contractfinderpro.com/register.aspx?refcode=ric"
           }
         ]
       },
@@ -470,13 +579,13 @@
           ]
         },
         "semanticAiMatching": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The reviewed pages document keyword, CPV and natural-language search, but do not establish semantic or profile-based automatic relevance matching.",
           "evidence": []
         },
         "buyerProfiles": {
           "status": "partial",
-          "detail": "Professional includes Buyer Behaviour Analysis, while the separately priced Analytics buyer dashboard covers pipelines, procurement methods, supplier relationships, tender windows, durations and contacts.",
+          "detail": "Professional includes Buyer Behaviour Analysis, while the separately priced Analytics buyer dashboard covers pipelines, procurement methods, supplier relationships, tender windows, durations and contacts. Canonicalisation, deduplication or entity-resolution handling is not established.",
           "evidence": [
             {
               "label": "Pricing",
@@ -490,7 +599,7 @@
         },
         "supplierProfiles": {
           "status": "partial",
-          "detail": "The separately priced Analytics supplier dashboard provides supplier activity, award history, buyer relationships and Companies House context for competitors or potential partners.",
+          "detail": "The separately priced Analytics supplier dashboard provides structured supplier activity, award history, buyer relationships and Companies House context for competitors or potential partners. Canonicalisation, deduplication or entity-resolution handling is not established.",
           "evidence": [
             {
               "label": "CFP Analytics",
@@ -693,6 +802,7 @@
         "https://www.contractfinderpro.com/products/analytics",
         "https://www.contractfinderpro.com/products/tender-ninja",
         "https://www.contractfinderpro.com/live-tenders",
+        "https://www.contractfinderpro.com/register.aspx?refcode=ric",
         "https://beta.contractfinderpro.com/"
       ]
     },
@@ -708,6 +818,41 @@
         "seatDetail": "A detailed live software page says unlimited users, while the current pricing page does not state a user allowance or additional-seat price. Confirm the unlimited-user term because the detailed page also displays older plan prices.",
         "vatDetail": "Prices exclude VAT.",
         "trialDetail": "A free-trial link is present, but trial length and payment-card requirement are not publicly stated on the reviewed pages.",
+        "comparablePlans": [
+          {
+            "planName": "Search",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 1399,
+            "annualMonthlyEquivalent": 116.58,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users claimed on a separate live software page; current pricing page does not state user limits",
+            "notes": "Excludes VAT. Current totals: £1,399 for one year, £2,599 for two years and £3,799 for three years. Multi-year totals are preserved here rather than converted into invented annual prices."
+          },
+          {
+            "planName": "Discover",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 2099,
+            "annualMonthlyEquivalent": 174.92,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users claimed on a separate live software page; current pricing page does not state user limits",
+            "notes": "Excludes VAT. Current totals: £2,099 for one year, £3,699 for two years and £5,099 for three years. Multi-year totals are not converted into annual prices."
+          },
+          {
+            "planName": "Explore",
+            "currency": "GBP",
+            "billingBasis": "per_organisation",
+            "monthlyPrice": null,
+            "annualPrice": 2999,
+            "annualMonthlyEquivalent": 249.92,
+            "annualPriceCalculation": "published_total",
+            "includedUsers": "Unlimited users claimed on a separate live software page; current pricing page does not state user limits",
+            "notes": "Excludes VAT. Current totals: £2,999 for one year, £4,999 for two years and £7,299 for three years. Multi-year totals are not converted into annual prices."
+          }
+        ],
         "evidence": [
           {
             "label": "Current pricing",
@@ -721,18 +866,18 @@
       },
       "features": {
         "keywordAlerts": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The provider documents tailored daily tender emails and powerful searches, but does not explicitly state that alerts are configured by saved keywords.",
           "evidence": []
         },
         "semanticAiMatching": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Semantic, machine-learning, AI or supplier-profile relevance matching is not stated on the reviewed product pages.",
           "evidence": []
         },
         "buyerProfiles": {
           "status": "partial",
-          "detail": "Explore includes Buyer Analysis with named contacts, previous suppliers, financial values and procurement-market insight; lower plans do not list it.",
+          "detail": "Explore includes structured Buyer Analysis with named contacts, previous suppliers, financial values and procurement-market insight; lower plans do not list it, and canonicalisation, deduplication or entity-resolution handling is not established.",
           "evidence": [
             {
               "label": "Current pricing",
@@ -746,7 +891,7 @@
         },
         "supplierProfiles": {
           "status": "partial",
-          "detail": "Explore provides competitor analysis with prior awardees, current public contracts and comparative market context. Lower plans do not list competitor analysis.",
+          "detail": "Explore provides structured competitor analysis with prior awardees, current public contracts and comparative market context. Lower plans do not list it, and canonicalisation, deduplication or entity-resolution handling is not established.",
           "evidence": [
             {
               "label": "Current pricing",
@@ -793,12 +938,12 @@
           ]
         },
         "buyerRequirements": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Extraction or organisation of participation conditions, certifications, policies, evaluation criteria or recurring buyer requirements is not stated on the reviewed product pages.",
           "evidence": []
         },
         "requirementsPlanning": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "The product supports pipeline and resource planning for likely re-tenders, but a requirements-readiness, evidence-gap or compliance-planning workflow is not stated.",
           "evidence": []
         },
@@ -813,7 +958,7 @@
           ]
         },
         "frameworks": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Dedicated framework, DPS or dynamic-market discovery or intelligence is not stated on the reviewed product pages.",
           "evidence": []
         },
@@ -903,6 +1048,63 @@
         "seatDetail": "Every displayed plan includes up to 25 team licences with no per-seat fees. Custom Enterprise terms are mentioned in comparison copy but no public Enterprise price is shown.",
         "vatDetail": "VAT treatment is not publicly stated on the reviewed pricing page.",
         "trialDetail": "Premium advertises a 7-day free trial with no commitment. A payment-card requirement is not publicly stated. The eligibility-based Free plan is separate and continues until the first win or while eligible as a charity, VCSE or CIC.",
+        "comparablePlans": [
+          {
+            "planName": "Free",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": 0,
+            "annualPrice": null,
+            "annualMonthlyEquivalent": null,
+            "annualPriceCalculation": "not_available",
+            "includedUsers": "Up to 25 team licences",
+            "notes": "Eligibility-based Scale access for registered charities, VCSEs, CICs and suppliers before their first public-sector win."
+          },
+          {
+            "planName": "Essentials",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 948,
+            "annualMonthlyEquivalent": 79,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "Up to 25 team licences",
+            "notes": "The displayed £79/month is the equivalent for £948 billed annually. Monthly billing is said to be available, but its numeric price is not published on the reviewed page. VAT is not stated."
+          },
+          {
+            "planName": "Growth",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 2880,
+            "annualMonthlyEquivalent": 240,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "Up to 25 team licences",
+            "notes": "The displayed £240/month is the equivalent for £2,880 billed annually. Numeric monthly-billing price and VAT treatment are not published."
+          },
+          {
+            "planName": "Scale",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 4320,
+            "annualMonthlyEquivalent": 360,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "Up to 25 team licences",
+            "notes": "The displayed £360/month is the equivalent for £4,320 billed annually. Numeric monthly-billing price and VAT treatment are not published."
+          },
+          {
+            "planName": "Managed",
+            "currency": "GBP",
+            "billingBasis": "per_team",
+            "monthlyPrice": null,
+            "annualPrice": 10080,
+            "annualMonthlyEquivalent": 840,
+            "annualPriceCalculation": "calculated_from_annual_monthly_rate",
+            "includedUsers": "Up to 25 team licences",
+            "notes": "Starting annual total. The displayed £840/month is the equivalent for £10,080 billed annually. Numeric monthly-billing price and VAT treatment are not published."
+          }
+        ],
         "evidence": [
           {
             "label": "Pricing",
@@ -940,8 +1142,8 @@
           ]
         },
         "buyerProfiles": {
-          "status": "yes",
-          "detail": "Buyer Intelligence provides buyer-level metrics, annual spend, supplier count, live opportunities, award details, supplier relationships and purchasing patterns.",
+          "status": "partial",
+          "detail": "Buyer Intelligence provides structured cross-notice metrics, annual spend, supplier count, live opportunities, award details, supplier relationships and purchasing patterns. The provider does not establish canonicalisation, deduplication or entity resolution for the Premium buyer profiles.",
           "evidence": [
             {
               "label": "Know Your Market",
@@ -954,8 +1156,8 @@
           ]
         },
         "supplierProfiles": {
-          "status": "yes",
-          "detail": "Supplier intelligence includes league tables, award volume and value, buyer relationships, engagement and churn indicators, and contract history for competitors or partners.",
+          "status": "partial",
+          "detail": "Supplier intelligence includes structured league tables, award volume and value, buyer relationships, engagement and churn indicators, and contract history. The provider does not establish canonicalisation, deduplication or entity resolution for these Premium supplier profiles.",
           "evidence": [
             {
               "label": "Know Your Market",
@@ -988,7 +1190,7 @@
           ]
         },
         "buyerDocuments": {
-          "status": "not_stated",
+          "status": "not_offered",
           "detail": "Buyer plans, strategies, minutes, budgets or other buyer-authored documents beyond procurement notices are not stated on the reviewed product pages.",
           "evidence": []
         },
@@ -1052,11 +1254,15 @@
         },
         "exportsApi": {
           "status": "partial",
-          "detail": "The separately scoped Data Hub offers per-record JSON, bulk delivery, custom APIs, real-time feeds, custom enrichment, webhooks and flexible enterprise formats; these are not stated as included in every subscription plan.",
+          "detail": "The separately scoped Data Hub offers per-record JSON, JSON/CSV/XML or custom bulk delivery, REST APIs, real-time feeds, custom enrichment and webhooks; these are not stated as included in every subscription plan.",
           "evidence": [
             {
               "label": "Data Hub",
               "url": "https://d3tenders.com/data-hub/"
+            },
+            {
+              "label": "Custom APIs",
+              "url": "https://d3tenders.com/data-hub/custom-apis/"
             }
           ]
         },
@@ -1167,6 +1373,7 @@
         "Although the provider says every UK portal, its reviewed source list names four portals and does not name eTendersNI or individual local, sector and buyer portals.",
         "Free access is eligibility-based rather than a universally available permanent free plan: charities, VCSEs, CICs and suppliers before their first public-sector win qualify.",
         "Readiness audits, bid writing and Data Hub/API delivery are separate services and should not be presented as included in every Premium subscription.",
+        "The Custom API service can add entity resolution as bespoke enrichment, but the provider does not establish that Premium buyer and supplier profiles use canonicalised or entity-resolved organisations.",
         "Upcoming contracts and recompete signals are forward-looking intelligence, not confirmed future procurements."
       ],
       "sourceUrls": [
@@ -1178,6 +1385,7 @@
         "https://d3tenders.com/premium/bid-pipeline/",
         "https://d3tenders.com/premium/know-your-market/",
         "https://d3tenders.com/data-hub/",
+        "https://d3tenders.com/data-hub/custom-apis/",
         "https://d3tenders.com/services/public-sector-readiness/",
         "https://d3tenders.com/services/bid-writing/"
       ]

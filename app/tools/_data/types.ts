@@ -30,7 +30,7 @@ export const normalizedFeatureKeys = [
 ] as const;
 
 export type NormalizedFeatureKey = (typeof normalizedFeatureKeys)[number];
-export type FeatureStatus = "yes" | "partial" | "no" | "not_stated";
+export type FeatureStatus = "yes" | "partial" | "not_offered";
 
 export type NormalizedFeature = {
   status: FeatureStatus;
@@ -41,6 +41,18 @@ export type NormalizedFeature = {
 export type PricingAvailability = "public_numeric" | "free_only" | "quote_only" | "not_found";
 export type BillingBasis = "per_seat" | "per_organisation" | "per_team" | "mixed" | "unknown";
 
+export type NormalizedPricePlan = {
+  planName: string;
+  currency: "GBP" | "EUR" | "USD" | "mixed" | "unknown";
+  billingBasis: BillingBasis;
+  monthlyPrice: number | null;
+  annualPrice: number | null;
+  annualMonthlyEquivalent: number | null;
+  annualPriceCalculation: "published_total" | "calculated_from_annual_monthly_rate" | "not_available";
+  includedUsers: string;
+  notes: string;
+};
+
 export type NormalizedPricing = {
   availability: PricingAvailability;
   billingBasis: BillingBasis;
@@ -49,6 +61,7 @@ export type NormalizedPricing = {
   seatDetail: string;
   vatDetail: string;
   trialDetail: string;
+  comparablePlans: readonly NormalizedPricePlan[];
   evidenceLinks: readonly EvidenceLink[];
 };
 

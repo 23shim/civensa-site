@@ -49,19 +49,17 @@ const matrixFeatureKeys: readonly NormalizedFeatureKey[] = [
   "awardHistory",
 ];
 
+const strictAuditFeatureKeys: readonly NormalizedFeatureKey[] = [
+  "buyerProfiles",
+  "supplierProfiles",
+  "requirementsPlanning",
+];
+
 const statusLabels: Record<FeatureStatus, string> = {
   yes: "Yes",
   partial: "Partial",
-  no: "No",
-  not_stated: "Not stated",
+  not_offered: "Not offered",
 };
-
-const pricingAvailabilityLabels = {
-  public_numeric: "Public numeric price",
-  free_only: "Free offer only",
-  quote_only: "Quote only",
-  not_found: "Not found",
-} as const;
 
 const portalColumns = [
   { id: "find_a_tender", label: "Find a Tender" },
@@ -88,13 +86,24 @@ function FeatureStatusLabel({ status }: { status: FeatureStatus }) {
   return <span className={`feature-status feature-status-${status}`}>{statusLabels[status]}</span>;
 }
 
+function formatPrice(value: number | null, currency: "GBP" | "EUR" | "USD" | "mixed" | "unknown"): string {
+  if (value === null) return "Not published";
+  if (currency === "mixed" || currency === "unknown") return value.toLocaleString("en-GB", { maximumFractionDigits: 2 });
+  return new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency,
+    minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
 function NormalizedFeatureMatrix({ records }: { records: readonly VendorRecord[] }) {
   const normalizedRecords = records.filter((record) => record.normalized);
   if (normalizedRecords.length === 0) return null;
   return <section className="feature-matrix-section" aria-labelledby="feature-matrix-title">
     <div className="section-kicker">Normalized comparison</div>
     <h2 id="feature-matrix-title">Features described on provider pages</h2>
-    <p>Yes and partial mean the provider explicitly describes the capability. Not stated means the reviewed public pages did not establish it. This is not an independent product test.</p>
+    <p>Yes requires clear first-party evidence of the capability. Partial means the public product covers only part of the definition or limits it by plan. If the reviewed pages do not establish it, Civensa marks it not offered.</p>
     <div className="feature-matrix-scroll" role="region" aria-label="Scrollable normalized feature comparison">
       <table className="feature-matrix">
         <thead><tr><th scope="col">Service</th><th scope="col">Pricing basis</th>{matrixFeatureKeys.map((key) => <th scope="col" key={key}>{featureLabels[key]}</th>)}</tr></thead>
@@ -113,21 +122,23 @@ function NormalizedPricingMatrix({ records }: { records: readonly VendorRecord[]
   if (normalizedRecords.length === 0) return null;
   return <section className="feature-matrix-section" aria-labelledby="pricing-matrix-title">
     <div className="section-kicker">Pricing comparison</div>
-    <h2 id="pricing-matrix-title">Public pricing and seat basis</h2>
-    <p>Prices are transcribed from provider pages. Seat basis stays unknown unless the reviewed source makes it clear.</p>
+    <h2 id="pricing-matrix-title">Monthly and annual prices on the same basis</h2>
+    <p>Monthly is the price charged on a monthly schedule. Annual is the published yearly total, with its effective monthly cost calculated as annual price divided by 12. Unpublished billing options stay unpublished.</p>
     <div className="feature-matrix-scroll" role="region" aria-label="Scrollable normalized pricing comparison">
       <table className="feature-matrix pricing-matrix">
-        <thead><tr><th scope="col">Service</th><th scope="col">Availability</th><th scope="col">Billing basis</th><th scope="col">Public plans</th><th scope="col">Seats or users</th><th scope="col">Trial</th></tr></thead>
+        <thead><tr><th scope="col">Service</th><th scope="col">Plan</th><th scope="col">Pay monthly<br />per month</th><th scope="col">Pay annually<br />per year</th><th scope="col">Annual effective<br />per month</th><th scope="col">Billing basis</th><th scope="col">Included users</th><th scope="col">Notes</th></tr></thead>
         <tbody>{normalizedRecords.map((record) => {
           const pricing = record.normalized!.pricing;
-          return <tr key={record.slug}>
-            <th scope="row"><a href={`#${record.slug}`}>{record.name}</a></th>
-            <td>{pricingAvailabilityLabels[pricing.availability]}</td>
-            <td>{pricing.billingBasis.replaceAll("_", " ")}</td>
-            <td>{pricing.plansText}</td>
-            <td>{pricing.seatDetail}</td>
-            <td>{pricing.trialDetail}</td>
-          </tr>;
+          return pricing.comparablePlans.map((plan, planIndex) => <tr key={`${record.slug}-${plan.planName}`}>
+            {planIndex === 0 ? <th scope="rowgroup" rowSpan={pricing.comparablePlans.length}><a href={`#${record.slug}`}>{record.name}</a></th> : null}
+            <th scope="row">{plan.planName}</th>
+            <td>{formatPrice(plan.monthlyPrice, plan.currency)}</td>
+            <td>{formatPrice(plan.annualPrice, plan.currency)}{plan.annualPriceCalculation === "calculated_from_annual_monthly_rate" ? <small className="calculated-price">Calculated</small> : null}</td>
+            <td>{formatPrice(plan.annualMonthlyEquivalent, plan.currency)}</td>
+            <td>{plan.billingBasis.replaceAll("_", " ")}</td>
+            <td>{plan.includedUsers}</td>
+            <td>{plan.notes}</td>
+          </tr>);
         })}</tbody>
       </table>
     </div>
@@ -177,6 +188,21 @@ function NormalizedEvidence({ record }: { record: VendorRecord }) {
   </div>;
 }
 
+function StrictFeatureAudit({ record }: { record: VendorRecord }) {
+  const normalized = record.normalized;
+  if (!normalized) return null;
+  return <div className="strict-feature-audit">
+    <h3>Strict profile and planning audit</h3>
+    <dl>{strictAuditFeatureKeys.map((key) => {
+      const feature = normalized.features[key];
+      return <div key={key}>
+        <dt>{featureLabels[key]} <FeatureStatusLabel status={feature.status} /></dt>
+        <dd>{feature.detail}{feature.evidenceLinks.map((link) => <a key={link.url} href={link.url} rel="noopener noreferrer">{link.label} ↗</a>)}</dd>
+      </div>;
+    })}</dl>
+  </div>;
+}
+
 function BreadcrumbSchema({ category }: { category?: { name: string; slug: string } }) {
   const elements = [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://civensa.com/" },
@@ -221,6 +247,7 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
         <li><strong>Not for:</strong> {record.notFor}</li>
         <li><strong>Caveat:</strong> {record.caveat}</li>
       </ul>
+      <StrictFeatureAudit record={record} />
       <NormalizedEvidence record={record} />
     </div>
     <div className="entry-meta">
