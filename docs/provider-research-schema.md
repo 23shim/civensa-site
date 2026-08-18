@@ -16,13 +16,12 @@ Research date: 18 August 2026
 
 ## Feature keys
 
-- `keywordAlerts`: saved keyword searches or keyword-based notifications.
 - `semanticAiMatching`: semantic, profile-based, machine-learning, or AI relevance matching. Generic AI copy without matching is not enough.
 - `buyerProfiles`: `yes` only for a deliberately built buyer entity with structured cross-notice intelligence and evidence of canonicalisation, deduplication, entity resolution, or comparable investment. A buyer filter, buyer name on a notice, spend chart, contact list, or unverified page is not enough. Use `partial` for structured buyer pages where the provider does not establish robust identity handling.
 - `supplierProfiles`: `yes` only for deliberately built supplier entities that aggregate awards, incumbency, relationships, competitor history, or other cross-notice intelligence with evidence of canonicalisation, deduplication, entity resolution, or comparable investment. The user's own matching profile, a winner field, supplier search, or a flat directory is not enough. Use `partial` for structured pages without established identity handling.
 - `renewalSignals`: contract expiry, renewal, re-tender, or extension monitoring.
 - `similarContracts`: comparable historical opportunities or awards surfaced against a notice or profile.
-- `buyerDocuments`: buyer plans, strategies, minutes, pipelines, budgets, or other buyer-authored documents beyond procurement notices.
+- `buyerDocuments`: a full searchable corpus of buyer-authored plans, strategies, minutes, budgets, pipelines or comparable documents that can surface upcoming work. Tender packs, isolated linked files or extracted snippets alone do not qualify as `yes`.
 - `buyerRequirements`: extracted or organized participation conditions, certifications, policies, evaluation criteria, or recurring buyer requirements.
 - `requirementsPlanning`: `yes` only for a durable workflow that turns requirements into gaps, evidence needs, owners, actions, deadlines, or tracked readiness before bid submission. Extracted requirements, a checklist, fit score, bid/no-bid explanation, compliance matrix, or drafting assistant alone is at most `partial`.
 - `awardHistory`: historical award notices, winners, values, or award search.

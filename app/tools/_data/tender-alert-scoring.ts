@@ -8,17 +8,16 @@ import {
 } from "./types";
 
 export const tenderAlertFeatureWeights: Readonly<Record<NormalizedFeatureKey, number>> = {
-  keywordAlerts: 3,
-  semanticAiMatching: 11,
+  semanticAiMatching: 12,
   buyerProfiles: 12,
   supplierProfiles: 8,
   renewalSignals: 12,
   similarContracts: 8,
-  buyerDocuments: 5,
+  buyerDocuments: 6,
   buyerRequirements: 8,
   requirementsPlanning: 8,
   awardHistory: 8,
-  frameworks: 4,
+  frameworks: 5,
   competitorTracking: 5,
   exportsApi: 3,
   collaboration: 3,
@@ -58,11 +57,16 @@ export type TenderAlertScore = {
   overallScore: number;
   featureScore: number;
   valueScore: number;
-  groupId: TenderProductGroupId;
+  primaryGroupId: TenderProductGroupId;
+  groupIds: readonly TenderProductGroupId[];
   yesCount: number;
   partialCount: number;
-  minimumMonthlyPrice: number | null;
-  priceCurrency: "GBP" | "EUR" | "USD" | "mixed" | "unknown";
+  alertMonthlyPrice: number | null;
+  alertPlanName: string;
+  alertPriceCurrency: "GBP" | "EUR" | "USD" | "mixed" | "unknown";
+  fullPackageMonthlyPrice: number | null;
+  fullPackagePlanName: string;
+  fullPackagePriceCurrency: "GBP" | "EUR" | "USD" | "mixed" | "unknown";
 };
 
 export type TenderAlertExplorerRecord = {
@@ -107,28 +111,38 @@ function yesCount(record: VendorRecord, keys: readonly NormalizedFeatureKey[]): 
   return keys.filter((key) => record.normalized?.features[key].status === "yes").length;
 }
 
-function productGroup(record: VendorRecord): TenderProductGroupId {
+function productGroups(record: VendorRecord): readonly TenderProductGroupId[] {
   const normalized = record.normalized;
-  if (!normalized) return "lite-alerting";
+  if (!normalized) return ["lite-alerting"];
   const intelligenceDepth = yesCount(record, intelligenceKeys);
   const workflowDepth = yesCount(record, workflowKeys);
   const hasResolvedProfiles = normalized.features.buyerProfiles.status === "yes"
     || normalized.features.supplierProfiles.status === "yes";
+  const groups: TenderProductGroupId[] = [];
 
-  if (intelligenceDepth >= 5 && hasResolvedProfiles) return "full-intelligence";
-  if (workflowDepth >= 2 && (intelligenceDepth >= 2 || normalized.features.requirementsPlanning.status === "yes")) return "workflow-suites";
-  if (normalized.features.semanticAiMatching.status === "yes" || intelligenceDepth >= 2) return "smart-matchers";
-  return "lite-alerting";
+  if (intelligenceDepth >= 5 && hasResolvedProfiles) groups.push("full-intelligence");
+  if (workflowDepth >= 2 && (intelligenceDepth >= 2 || normalized.features.requirementsPlanning.status !== "not_offered")) groups.push("workflow-suites");
+  if (normalized.features.semanticAiMatching.status === "yes" || intelligenceDepth >= 2) groups.push("smart-matchers");
+  if (groups.length === 0) groups.push("lite-alerting");
+  return groups;
 }
 
-function minimumMonthlyPrice(record: VendorRecord): number | null {
+function monthlyEquivalent(plan: NonNullable<VendorRecord["normalized"]>["pricing"]["comparablePlans"][number]): number | null {
+  return plan.annualMonthlyEquivalent ?? plan.monthlyPrice;
+}
+
+function priceBenchmarks(record: VendorRecord) {
   const plans = record.normalized?.pricing.comparablePlans ?? [];
-  const paidPrices = plans
-    .map((plan) => plan.annualMonthlyEquivalent ?? plan.monthlyPrice)
-    .filter((price): price is number => price !== null && price > 0);
-  if (paidPrices.length > 0) return Math.min(...paidPrices);
-  const hasFreePlan = plans.some((plan) => plan.monthlyPrice === 0 || plan.annualMonthlyEquivalent === 0);
-  return hasFreePlan ? 0 : null;
+  const alertPlan = plans[0];
+  const fullPackagePlan = plans.at(-1);
+  return {
+    alertMonthlyPrice: alertPlan ? monthlyEquivalent(alertPlan) : null,
+    alertPlanName: alertPlan?.planName ?? "Not published",
+    alertPriceCurrency: alertPlan?.currency ?? "unknown",
+    fullPackageMonthlyPrice: fullPackagePlan ? monthlyEquivalent(fullPackagePlan) : null,
+    fullPackagePlanName: fullPackagePlan?.planName ?? "Not published",
+    fullPackagePriceCurrency: fullPackagePlan?.currency ?? "unknown",
+  };
 }
 
 function affordabilityScore(price: number | null): number {
@@ -170,33 +184,41 @@ export function scoreTenderAlert(record: VendorRecord): TenderAlertScore {
       overallScore: 0,
       featureScore: 0,
       valueScore: 0,
-      groupId: "lite-alerting",
+      primaryGroupId: "lite-alerting",
+      groupIds: ["lite-alerting"],
       yesCount: 0,
       partialCount: 0,
-      minimumMonthlyPrice: null,
-      priceCurrency: "unknown",
+      alertMonthlyPrice: null,
+      alertPlanName: "Not published",
+      alertPriceCurrency: "unknown",
+      fullPackageMonthlyPrice: null,
+      fullPackagePlanName: "Not published",
+      fullPackagePriceCurrency: "unknown",
     };
   }
 
   const featureScore = Math.round(normalizedFeatureKeys.reduce((score, key) => (
     score + tenderAlertFeatureWeights[key] * statusFactor[normalized.features[key].status]
   ), 0));
-  const price = minimumMonthlyPrice(record);
+  const prices = priceBenchmarks(record);
+  const combinedAffordability = affordabilityScore(prices.alertMonthlyPrice) * 0.45
+    + affordabilityScore(prices.fullPackageMonthlyPrice) * 0.55;
   const valueScore = Math.round(
-    affordabilityScore(price) * 0.55
+    combinedAffordability * 0.55
       + transparencyScore(normalized.pricing.availability) * 0.25
       + inclusivenessScore(normalized.pricing.billingBasis) * 0.2,
   );
+  const groupIds = productGroups(record);
 
   return {
     overallScore: Math.round(featureScore * 0.68 + valueScore * 0.32),
     featureScore,
     valueScore,
-    groupId: productGroup(record),
+    primaryGroupId: groupIds[0],
+    groupIds,
     yesCount: normalizedFeatureKeys.filter((key) => normalized.features[key].status === "yes").length,
     partialCount: normalizedFeatureKeys.filter((key) => normalized.features[key].status === "partial").length,
-    minimumMonthlyPrice: price,
-    priceCurrency: normalized.pricing.currency,
+    ...prices,
   };
 }
 

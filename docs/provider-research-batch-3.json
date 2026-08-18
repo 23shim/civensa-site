@@ -56,20 +56,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Notification profiles can use keywords, regions, categories, contract-value ranges and disqualifier terms, with real-time or digest delivery depending on plan.",
-          "evidence": [
-            {
-              "label": "Jorpex terms",
-              "url": "https://jorpex.com/terms/"
-            },
-            {
-              "label": "Government contractor alerts",
-              "url": "https://jorpex.com/use-cases/government-contractors/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Jorpex says it AI-matches opportunities to an organisation; its public demo analyses a company website to build a matching profile and show scored tenders.",
@@ -637,20 +623,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "KimonBids supports saved keyword and sector searches with email alerts; paid plans advertise unlimited alerts with daily or weekly delivery, while the help centre also documents an Immediate option. First-party pages conflict on whether Free includes one or three alerts.",
-          "evidence": [
-            {
-              "label": "KimonBids pricing",
-              "url": "https://kimonbids.com/pricing"
-            },
-            {
-              "label": "Tender Intelligence help",
-              "url": "https://kimonbids.com/help/using-tender-intelligence"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "The platform says it scores each opportunity against a company profile using CPV, sector, region, company-size and value-range factors, with document-enhanced and lot-level matching also listed.",
@@ -1235,24 +1207,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Mercell describes tailored monitoring with daily alerts; its supplier guidance says alerts can be filtered by keywords, CPV codes, sectors and geographies. Both UK plans list unlimited monitoring profiles.",
-          "evidence": [
-            {
-              "label": "Mercell Tender Discovery",
-              "url": "https://info.mercell.com/en-gb/suppliers/tender-discovery/"
-            },
-            {
-              "label": "Mercell Bidding UK pricing",
-              "url": "https://info.mercell.com/en-gb/mercell-bidding/"
-            },
-            {
-              "label": "Where to find public tenders",
-              "url": "https://info.mercell.com/en/procurement-insights/where-to-find-public-tenders/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Tender Discovery uses an AI profile builder, AI-matched tenders, tailored recommendations and AI summaries. Business Plus explicitly lists AI Profile Builder and AI Summary & AI Matching.",
@@ -1316,8 +1270,8 @@
           ]
         },
         "buyerDocuments": {
-          "status": "yes",
-          "detail": "Tender Discovery says it tracks early sales signals from public municipality meeting minutes and budget plans, as well as tender documents.",
+          "status": "not_offered",
+          "detail": "The reviewed public pages do not establish a full searchable corpus of buyer-authored documents designed to surface upcoming work.",
           "evidence": [
             {
               "label": "Mercell Tender Discovery",
@@ -1783,24 +1737,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "partial",
-          "detail": "The supplier FAQ and buyer terms refer to a myTenders website-based Alerts Service or myTenders Alerts add-on, but do not establish current keyword configuration, price or coverage; the main site directs suppliers to the separate Tenders Direct product for comprehensive emailed alerts.",
-          "evidence": [
-            {
-              "label": "myTenders home",
-              "url": "https://www.mytenders.co.uk/"
-            },
-            {
-              "label": "myTenders supplier FAQ",
-              "url": "https://metaprocurement.mytenders.co.uk/sitehelp/help_faq.aspx"
-            },
-            {
-              "label": "myTenders buyer terms",
-              "url": "https://www.mytenders.co.uk/helpandresources/termsandconditionsbuyers/termsandconditionsforbuyingorganisations"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "The reviewed myTenders supplier pages did not establish AI, semantic or profile-based opportunity matching.",
@@ -2329,24 +2265,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Saved-search alerts can use fine-tuned keywords and other criteria. Current pricing lists one daily alert for Solo and three daily alerts per user for Team; the user guide also documents daily, weekly or monthly saved-search delivery.",
-          "evidence": [
-            {
-              "label": "Tender alert features",
-              "url": "https://openopps.com/product/"
-            },
-            {
-              "label": "Open Opportunities pricing",
-              "url": "https://openopps.com/pricing/"
-            },
-            {
-              "label": "Search user guide",
-              "url": "https://openopps.com/blog/user-guide-making-tender-search-easier/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Intent Search uses Open Opportunities' own AI model to score and rank results across geographies, languages and currencies, and is described as assessing document meaning rather than only keyword occurrence.",

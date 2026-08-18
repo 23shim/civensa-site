@@ -2,437 +2,6 @@
   "researchedAt": "2026-08-18",
   "providers": [
     {
-      "slug": "buzz-tender-alert",
-      "name": "Buzz Tender Alert",
-      "officialUrl": "https://www.buzztenderalert.co.uk/",
-      "pricing": {
-        "availability": "public_numeric",
-        "billingBasis": "per_organisation",
-        "currency": "GBP",
-        "plansText": "Monthly: £9.99/month. Annual: £49.99/year. Both plans include up to 100 keywords and five email recipients.",
-        "seatDetail": "The subscription includes up to five email recipients. The provider does not describe these recipients as user licences or publish an additional-recipient price.",
-        "vatDetail": "VAT treatment is not publicly stated.",
-        "trialDetail": "14-day free trial. The provider says charging starts when the trial ends; whether a payment card is required at signup is not publicly stated.",
-        "comparablePlans": [
-          {
-            "planName": "Monthly",
-            "currency": "GBP",
-            "billingBasis": "per_organisation",
-            "monthlyPrice": 9.99,
-            "annualPrice": null,
-            "annualMonthlyEquivalent": null,
-            "annualPriceCalculation": "not_available",
-            "includedUsers": "Up to 5 email recipients",
-            "notes": "Includes up to 100 keywords. A separate annual price is published; this monthly-only price has not been multiplied by 12. VAT is not stated."
-          },
-          {
-            "planName": "Annual",
-            "currency": "GBP",
-            "billingBasis": "per_organisation",
-            "monthlyPrice": null,
-            "annualPrice": 49.99,
-            "annualMonthlyEquivalent": 4.17,
-            "annualPriceCalculation": "published_total",
-            "includedUsers": "Up to 5 email recipients",
-            "notes": "Includes up to 100 keywords. The provider calls this the same product as Monthly and advertises a 14-day trial. VAT is not stated."
-          }
-        ],
-        "evidence": [
-          {
-            "label": "Pricing",
-            "url": "https://www.buzztenderalert.co.uk/pricing"
-          },
-          {
-            "label": "Terms of Service",
-            "url": "https://www.buzztenderalert.co.uk/terms"
-          }
-        ]
-      },
-      "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Users choose up to 100 keywords and receive matching tender emails; keywords can be changed after signup.",
-          "evidence": [
-            {
-              "label": "Product overview",
-              "url": "https://www.buzztenderalert.co.uk/"
-            },
-            {
-              "label": "Pricing",
-              "url": "https://www.buzztenderalert.co.uk/pricing"
-            }
-          ]
-        },
-        "semanticAiMatching": {
-          "status": "not_offered",
-          "detail": "The reviewed pages describe keyword matching, not semantic, machine-learning or profile-based relevance matching.",
-          "evidence": []
-        },
-        "buyerProfiles": {
-          "status": "not_offered",
-          "detail": "Structured buyer profiles or buyer intelligence are not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "supplierProfiles": {
-          "status": "not_offered",
-          "detail": "Structured supplier, incumbent, winner or competitor profiles are not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "renewalSignals": {
-          "status": "not_offered",
-          "detail": "Contract expiry, renewal, extension or re-tender monitoring is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "similarContracts": {
-          "status": "not_offered",
-          "detail": "Historical or similar-contract discovery is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "buyerDocuments": {
-          "status": "not_offered",
-          "detail": "Buyer plans, strategies, pipelines or other buyer-authored documents beyond the notice are not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "buyerRequirements": {
-          "status": "not_offered",
-          "detail": "Extraction or organisation of participation conditions, evaluation criteria or buyer requirements is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "requirementsPlanning": {
-          "status": "not_offered",
-          "detail": "Readiness, requirement-gap or evidence-planning functionality is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "awardHistory": {
-          "status": "not_offered",
-          "detail": "Award history, winner or historical award search is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "frameworks": {
-          "status": "not_offered",
-          "detail": "Dedicated framework, DPS or dynamic-market discovery is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "competitorTracking": {
-          "status": "not_offered",
-          "detail": "Named competitor, incumbent, supplier or winner monitoring is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "exportsApi": {
-          "status": "not_offered",
-          "detail": "Data export, API, webhook, CRM or other integration support is not stated on the reviewed pages.",
-          "evidence": []
-        },
-        "collaboration": {
-          "status": "partial",
-          "detail": "Up to five email recipients can receive alerts, but shared pipelines, assignments, notes or other collaboration workflow are not stated.",
-          "evidence": [
-            {
-              "label": "Pricing",
-              "url": "https://www.buzztenderalert.co.uk/pricing"
-            }
-          ]
-        },
-        "bidWriting": {
-          "status": "not_offered",
-          "detail": "Bid drafting, answer libraries, compliance matrices or managed writing support are not stated on the reviewed pages.",
-          "evidence": []
-        }
-      },
-      "deepAudit": {
-        "researchSummary": "Buzz Tender Alert is a deliberately narrow, email-first keyword-alert service for SMEs that only occasionally bid. Its defensible position is simplicity and low price rather than AI qualification, market intelligence, workflow or integrations, and the founder describes it as a one-person operation.",
-        "legalAndMaturity": {
-          "evidenceStrength": "weak",
-          "detail": "The About page identifies founder Theo and describes a one-person operation, but the reviewed Terms and Privacy Policy do not name a contracting company, company number or registered address. No authoritative corporate record could therefore be resolved from the public legal pages.",
-          "evidence": [
-            {
-              "label": "About",
-              "url": "https://www.buzztenderalert.co.uk/about"
-            },
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            },
-            {
-              "label": "Privacy Policy",
-              "url": "https://www.buzztenderalert.co.uk/privacy"
-            }
-          ]
-        },
-        "targetCustomerAndUseCase": {
-          "evidenceStrength": "strong",
-          "detail": "The founder explicitly positions the service for SMEs that bid only occasionally and want low-cost keyword alerts without complex tender-platform features. Users choose up to 100 keywords and five recipients and receive a morning email.",
-          "evidence": [
-            {
-              "label": "About",
-              "url": "https://www.buzztenderalert.co.uk/about"
-            },
-            {
-              "label": "Pricing",
-              "url": "https://www.buzztenderalert.co.uk/pricing"
-            }
-          ]
-        },
-        "dataSourcesAndCoverageMethod": {
-          "evidenceStrength": "moderate",
-          "detail": "The Terms name Contracts Finder, Find a Tender, Public Contracts Scotland, Sell2Wales, Proactis portals and In-Tend. The provider does not publish the individual Proactis or In-Tend instances, a Northern Ireland source, or a portal-by-portal coverage and failure-monitoring method.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        "dataIngestionAndFreshness": {
-          "evidenceStrength": "moderate",
-          "detail": "The service commits only on a best-efforts basis to an alert generated at about 08:00 on weekdays. The reviewed pages do not explain ingestion technology, per-source polling intervals, update handling, deduplication, backfills, monitoring or latency before the morning email.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            },
-            {
-              "label": "Product overview",
-              "url": "https://www.buzztenderalert.co.uk/"
-            }
-          ]
-        },
-        "matchingAndQualificationMethod": {
-          "evidenceStrength": "strong",
-          "detail": "Matching is user-supplied keyword matching. The founder expressly says the service omits AI scoring and CPV codes, and the reviewed pages do not document synonyms, negative keywords, semantic relevance, profile scoring or qualification rules.",
-          "evidence": [
-            {
-              "label": "About",
-              "url": "https://www.buzztenderalert.co.uk/about"
-            },
-            {
-              "label": "Product overview",
-              "url": "https://www.buzztenderalert.co.uk/"
-            }
-          ]
-        },
-        "buyerEntityInvestment": {
-          "evidenceStrength": "not_found",
-          "detail": "No buyer entity, cross-notice buyer history, alias handling, canonicalisation, deduplication or entity-resolution investment is established on the reviewed pages.",
-          "evidence": []
-        },
-        "supplierEntityInvestment": {
-          "evidenceStrength": "not_found",
-          "detail": "No supplier entity, award aggregation, incumbent relationship, alias handling, canonicalisation, deduplication or entity-resolution investment is established on the reviewed pages.",
-          "evidence": []
-        },
-        "renewalSignalMethod": {
-          "evidenceStrength": "not_found",
-          "detail": "The reviewed pages do not establish contract-end monitoring, extension evidence, calculated expiry windows, predicted re-tender dates or confirmed forthcoming-procurement signals.",
-          "evidence": []
-        },
-        "requirementsPlanningMethod": {
-          "evidenceStrength": "not_found",
-          "detail": "The reviewed pages do not establish requirement extraction, compliance checks, evidence gaps, owners, actions, deadlines or a tracked readiness state.",
-          "evidence": []
-        },
-        "historicalAndAwardDepth": {
-          "evidenceStrength": "not_found",
-          "detail": "The reviewed pages describe current tender alerts but do not establish a historical tender corpus, award notices, winner/value history, framework intelligence or similar-contract analysis.",
-          "evidence": []
-        },
-        "workflowAndIntegrations": {
-          "evidenceStrength": "strong",
-          "detail": "The workflow is intentionally email-only: up to five recipients receive alerts and can follow the source link. The founder expressly says CRM integrations and dashboard widgets are omitted; no export, API, shared pipeline, assignment or bid-writing workflow is documented.",
-          "evidence": [
-            {
-              "label": "About",
-              "url": "https://www.buzztenderalert.co.uk/about"
-            },
-            {
-              "label": "Pricing",
-              "url": "https://www.buzztenderalert.co.uk/pricing"
-            }
-          ]
-        },
-        "securitySupportAndOnboarding": {
-          "evidenceStrength": "moderate",
-          "detail": "The Privacy Policy documents HTTPS, magic-link authentication, access controls and processors including Stripe, Supabase, Resend and Vercel, with stated retention periods. No DPA, named support SLA, status page, independent certification, MFA, SSO, backup or incident-response detail was found publicly; onboarding is self-serve keyword and recipient setup.",
-          "evidence": [
-            {
-              "label": "Privacy Policy",
-              "url": "https://www.buzztenderalert.co.uk/privacy"
-            },
-            {
-              "label": "FAQ",
-              "url": "https://www.buzztenderalert.co.uk/faq"
-            }
-          ]
-        },
-        "commercialModel": {
-          "evidenceStrength": "strong",
-          "detail": "The dedicated pricing page publishes one product at £9.99 monthly or £49.99 annually, including 100 keywords and five recipients, with a 14-day trial. The Terms state recurring monthly or annual billing, cancellation at period end and no partial refunds, but VAT and card-at-trial requirements are not stated.",
-          "evidence": [
-            {
-              "label": "Pricing",
-              "url": "https://www.buzztenderalert.co.uk/pricing"
-            },
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        "materialLimitations": [
-          {
-            "detail": "The service is a one-person, best-efforts operation and disclaims completeness, accuracy and uninterrupted delivery; no response-time or availability commitment is published.",
-            "evidence": [
-              {
-                "label": "About",
-                "url": "https://www.buzztenderalert.co.uk/about"
-              },
-              {
-                "label": "Terms of Service",
-                "url": "https://www.buzztenderalert.co.uk/terms"
-              }
-            ]
-          },
-          {
-            "detail": "Its intentionally narrow product excludes AI scoring, CPV search, market intelligence, workflow, exports and CRM integration.",
-            "evidence": [
-              {
-                "label": "About",
-                "url": "https://www.buzztenderalert.co.uk/about"
-              }
-            ]
-          }
-        ],
-        "contradictions": [
-          {
-            "detail": "The dedicated Pricing page advertises £49.99 per year, while the About page advertises £79.99 per year. The normalized price uses the dedicated Pricing page but the provider should confirm the live checkout amount.",
-            "evidence": [
-              {
-                "label": "Pricing",
-                "url": "https://www.buzztenderalert.co.uk/pricing"
-              },
-              {
-                "label": "About",
-                "url": "https://www.buzztenderalert.co.uk/about"
-              }
-            ]
-          },
-          {
-            "detail": "The homepage calls the email daily, while the About page and Terms qualify delivery as weekday mornings on a best-efforts basis.",
-            "evidence": [
-              {
-                "label": "Product overview",
-                "url": "https://www.buzztenderalert.co.uk/"
-              },
-              {
-                "label": "Terms of Service",
-                "url": "https://www.buzztenderalert.co.uk/terms"
-              }
-            ]
-          }
-        ],
-        "diligenceQuestions": [
-          "What legal entity contracts with customers, and can it supply a company number, registered address and data-processing agreement?",
-          "Which individual Proactis and In-Tend portals are ingested, and is any Northern Ireland source covered?",
-          "How are source failures, schema changes, duplicates and missed notices detected and backfilled?",
-          "What support and recovery process applies if the 08:00 email is late or absent?",
-          "Which annual price is charged at checkout, is VAT included, and is a card required for the trial?"
-        ]
-      },
-      "explicitPortals": [
-        {
-          "portalId": "contracts_finder",
-          "portalName": "Contracts Finder",
-          "detail": "The provider lists Contracts Finder among the government procurement portals it aggregates.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        {
-          "portalId": "find_a_tender",
-          "portalName": "Find a Tender",
-          "detail": "The provider lists Find a Tender among the government procurement portals it aggregates.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        {
-          "portalId": "public_contracts_scotland",
-          "portalName": "Public Contracts Scotland",
-          "detail": "The provider lists Public Contracts Scotland among the government procurement portals it aggregates.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        {
-          "portalId": "sell2wales",
-          "portalName": "Sell2Wales",
-          "detail": "The provider lists Sell2Wales among the government procurement portals it aggregates.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        {
-          "portalId": "other",
-          "portalName": "Proactis portals",
-          "detail": "The provider lists Proactis portals as an aggregated source; it does not publish a portal-by-portal Proactis list.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        },
-        {
-          "portalId": "in_tend",
-          "portalName": "In-Tend portals",
-          "detail": "The provider lists In-Tend portals as an aggregated source; it does not publish a portal-by-portal In-Tend list.",
-          "evidence": [
-            {
-              "label": "Terms of Service",
-              "url": "https://www.buzztenderalert.co.uk/terms"
-            }
-          ]
-        }
-      ],
-      "otherCoverageClaims": [
-        {
-          "claim": "The homepage describes coverage as all major UK sources.",
-          "evidence": [
-            {
-              "label": "Product overview",
-              "url": "https://www.buzztenderalert.co.uk/"
-            }
-          ]
-        }
-      ],
-      "caveats": [
-        "The source and feature statements are provider claims and have not been independently tested by Civensa.",
-        "No Northern Ireland portal is named on the reviewed source list.",
-        "The homepage says daily alerts at 8am; the Terms describe a best-efforts weekday 8am service and warn that completeness, accuracy and uninterrupted delivery are not guaranteed.",
-        "The provider names portal families for Proactis and In-Tend rather than the individual buyer portals covered."
-      ],
-      "sourceUrls": [
-        "https://www.buzztenderalert.co.uk/",
-        "https://www.buzztenderalert.co.uk/pricing",
-        "https://www.buzztenderalert.co.uk/faq",
-        "https://www.buzztenderalert.co.uk/terms",
-        "https://www.buzztenderalert.co.uk/about",
-        "https://www.buzztenderalert.co.uk/privacy"
-      ]
-    },
-    {
       "slug": "cleantender",
       "name": "CleanTender",
       "officialUrl": "https://cleantender.co.uk/",
@@ -480,11 +49,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "not_offered",
-          "detail": "Alerts are documented as profile-based filters using sectors, regions, value bands and a match-score threshold; user-defined keyword alerts are not stated.",
-          "evidence": []
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Pro provides profile-based matching and AI qualification: alerts use the stored company profile and threshold, and the evaluator compares the full contract pack with more than 30 profile fields. Plan gating and scan caps do not make the implemented capability partial.",
@@ -538,8 +102,8 @@
           ]
         },
         "buyerDocuments": {
-          "status": "yes",
-          "detail": "The Pro evaluator automatically loads and reads the selected tender's full buyer-issued contract pack. The product does not state coverage of wider plans, strategies, minutes, budgets or pipelines.",
+          "status": "not_offered",
+          "detail": "The reviewed public pages do not establish a full searchable corpus of buyer-authored documents designed to surface upcoming work.",
           "evidence": [
             {
               "label": "Compliance evaluator",
@@ -1026,16 +590,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Core provides tailored daily alerts, urgent flash emails, unlimited searches and CPV-code and keyword filtering.",
-          "evidence": [
-            {
-              "label": "Core product",
-              "url": "https://www.contractfinderpro.com/products/core"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "The reviewed pages document keyword, CPV and natural-language search, but do not establish semantic or profile-based automatic relevance matching.",
@@ -1090,8 +644,8 @@
           ]
         },
         "buyerDocuments": {
-          "status": "partial",
-          "detail": "Tender Ninja can ingest uploaded ITT, PQQ or RFP documents and extract their questions. Wider buyer plans, strategies, minutes, budgets or pipelines as documents are not stated.",
+          "status": "not_offered",
+          "detail": "The reviewed public pages do not establish a full searchable corpus of buyer-authored documents designed to surface upcoming work.",
           "evidence": [
             {
               "label": "Tender Ninja",
@@ -1584,16 +1138,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "A customer case study documents searches using keywords and CPV codes with programmable notifications, alongside tailored daily tender emails.",
-          "evidence": [
-            {
-              "label": "Switch2 Energy case study",
-              "url": "https://contractsadvance.co.uk/the-insight-hub/case-studies/case-study-switch2-energy-limited/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "Semantic, machine-learning, AI or supplier-profile relevance matching is not stated on the reviewed product pages.",
@@ -1652,8 +1196,8 @@
           ]
         },
         "buyerDocuments": {
-          "status": "partial",
-          "detail": "The detailed live product page lists integrated FOI requesting on Discover and Explore. It does not state a ready-made library of buyer plans, strategies, minutes, budgets or other buyer documents.",
+          "status": "not_offered",
+          "detail": "The reviewed public pages do not establish a full searchable corpus of buyer-authored documents designed to surface upcoming work.",
           "evidence": [
             {
               "label": "Detailed software page",
@@ -2092,16 +1636,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Feed Builder supports editable keywords, smart filters, saved searches and daily or weekly email digests configurable by team member.",
-          "evidence": [
-            {
-              "label": "Feed Builder",
-              "url": "https://d3tenders.com/premium/feed-builder/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Feed Builder analyses a website or plain-English business description, extracts capabilities and matching criteria, and expands keywords with AI synonyms. The advanced Trained Search Model is plan-gated to Free-eligible Scale access, Scale and Managed but is a complete current capability.",

@@ -1,0 +1,168 @@
+{
+  "researchedAt": "2026-08-18",
+  "providers": [
+    {
+      "slug": "stotles",
+      "name": "Stotles",
+      "officialUrl": "https://www.stotles.com/",
+      "pricing": {
+        "availability": "public_numeric",
+        "billingBasis": "mixed",
+        "currency": "GBP",
+        "plansText": "Sales Studio Free: £0. Sales Studio Basic: from £99/month. Sales Studio Growth: from £475/month. Bid Studio Basic: £0. Bid Studio Growth: from £495/month. B2G Growth Engine: from £873/month. Expert tiers are custom.",
+        "seatDetail": "The reviewed pricing page uses a mixture of plan and user allowances. Confirm included users, additional seats and whether each displayed figure is per user or per workspace in the order form.",
+        "vatDetail": "VAT treatment is not stated beside the reviewed headline prices.",
+        "trialDetail": "Free plans are published. Trial terms for paid tiers are not consistently stated on the reviewed pricing page.",
+        "comparablePlans": [
+          { "planName": "Sales Studio Free", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 0, "annualPrice": 0, "annualMonthlyEquivalent": 0, "annualPriceCalculation": "published_total", "includedUsers": "One user", "notes": "Free entry plan; limits apply." },
+          { "planName": "Sales Studio Basic", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 99, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Displayed as from £99/month. The same live page also contains older £50 and £75 references." },
+          { "planName": "Sales Studio Growth", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": 475, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Displayed as from £475/month." },
+          { "planName": "Sales Studio Expert", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Custom", "notes": "Custom price." },
+          { "planName": "Bid Studio Basic", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 0, "annualPrice": 0, "annualMonthlyEquivalent": 0, "annualPriceCalculation": "published_total", "includedUsers": "One user", "notes": "Free entry plan; limits apply." },
+          { "planName": "Bid Studio Growth", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": 495, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Displayed as from £495/month." },
+          { "planName": "Bid Studio Expert", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Custom", "notes": "Custom price." },
+          { "planName": "B2G Growth Engine", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": 873, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Connected Sales Studio and Bid Studio package, displayed as from £873/month." }
+        ],
+        "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }]
+      },
+      "features": {
+        "semanticAiMatching": { "status": "yes", "detail": "Sales Studio scores and explains tender relevance against company context and signal settings, with saved searches and alerts.", "evidence": [{ "label": "Track tenders", "url": "https://www.stotles.com/platform/track-tenders" }] },
+        "buyerProfiles": { "status": "yes", "detail": "Stotles publishes cross-notice buyer profiles combining opportunities, awards, contacts, contracts and intent documents for named authorities.", "evidence": [{ "label": "Sales Studio", "url": "https://www.stotles.com/sales-studio" }, { "label": "Buyer profile guide", "url": "https://help.stotles.com/qualify-and-plan-accounts-or-potential-opportunities-strategically-using-stotles-buyer-profiles" }] },
+        "supplierProfiles": { "status": "yes", "detail": "The data product joins suppliers, awards and buyer relationships and supports competitor and supplier analysis across notices.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "renewalSignals": { "status": "yes", "detail": "The platform publishes more than 100,000 expiring-contract records and exposes expiry views with source contract context.", "evidence": [{ "label": "Sales Studio", "url": "https://www.stotles.com/sales-studio" }, { "label": "Expiring contracts guide", "url": "https://help.stotles.com/how-to-use-expiring-contracts" }] },
+        "similarContracts": { "status": "yes", "detail": "Users can inspect prior awards, incumbents, values and comparable buyer activity when qualifying an opportunity.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "buyerDocuments": { "status": "yes", "detail": "Stotles documents a searchable corpus of more than 400,000 buyer-intent documents, including budgets, board minutes, strategies and policy documents, with relevant passages surfaced for upcoming work.", "evidence": [{ "label": "Sales Studio document corpus", "url": "https://www.stotles.com/sales-studio" }, { "label": "Find buying signals", "url": "https://help.stotles.com/find-buying-signals" }] },
+        "buyerRequirements": { "status": "partial", "detail": "Tender documents, summaries and qualification context are available, but the reviewed pages do not establish a complete reusable cross-tender requirements layer for each buyer.", "evidence": [{ "label": "Track tenders", "url": "https://www.stotles.com/platform/track-tenders" }] },
+        "requirementsPlanning": { "status": "partial", "detail": "Bid Studio supports qualification, projects and answer-library workflows, but a durable pre-tender readiness record joining requirement gaps, evidence, owners and dates was not fully established.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+        "awardHistory": { "status": "yes", "detail": "Stotles publishes more than 375,000 awards with buyer, supplier, value and relationship context.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "frameworks": { "status": "yes", "detail": "The platform includes frameworks and call-offs in its connected public-procurement data.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "competitorTracking": { "status": "yes", "detail": "Supplier and award intelligence supports competitor, incumbent and buyer-relationship tracking.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "exportsApi": { "status": "yes", "detail": "Growth and Expert packages advertise CRM integrations and data delivery options, with availability varying by plan.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }, { "label": "Stotles homepage", "url": "https://www.stotles.com/" }] },
+        "collaboration": { "status": "yes", "detail": "Paid team plans support shared searches, pipelines and connected sales and bid workflows.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+        "bidWriting": { "status": "yes", "detail": "Bid Studio provides tender-document analysis, qualification and AI-assisted bid-response workflow on current plans.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] }
+      },
+      "explicitPortals": [
+        { "portalId": "contracts_finder", "portalName": "Contracts Finder", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "find_a_tender", "portalName": "Find a Tender", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "public_contracts_scotland", "portalName": "Public Contracts Scotland", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "sell2wales", "portalName": "Sell2Wales", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "etendersni", "portalName": "eTendersNI", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "ted", "portalName": "Tenders Electronic Daily", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] },
+        { "portalId": "other", "portalName": "Digital Marketplace", "detail": "Named in the current source documentation.", "evidence": [{ "label": "Stotles data sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }] }
+      ],
+      "otherCoverageClaims": [{ "claim": "Stotles says it connects data from more than 100 portals and refreshes signals daily.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] }],
+      "deepAudit": {
+        "researchSummary": "Stotles is a connected UK public-sector sales and bid platform with unusually broad buyer-intent document coverage, resolved buyer and supplier context, awards, expiries and workflow. Public plan architecture is visible, but the live pricing page contains conflicting entry-price copy and many advanced limits require an order form.",
+        "legalAndMaturity": { "evidenceStrength": "strong", "detail": "The current terms identify Stotle Ltd, company number 10912358, and set the legal basis for the subscription service.", "evidence": [{ "label": "Stotles terms", "url": "https://www.stotles.com/terms-and-conditions" }] },
+        "targetCustomerAndUseCase": { "evidenceStrength": "strong", "detail": "Separate Sales Studio and Bid Studio products target public-sector sales, account planning, tender qualification and response production, with a connected B2G package.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+        "dataSourcesAndCoverageMethod": { "evidenceStrength": "strong", "detail": "The provider names the national UK portals, TED and Digital Marketplace and describes a wider 100-plus-portal data layer spanning tenders, awards, frameworks, contracts and buyer documents.", "evidence": [{ "label": "Stotles sources", "url": "https://help.stotles.com/where-does-stotles-capture-data-from" }, { "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "dataIngestionAndFreshness": { "evidenceStrength": "moderate", "detail": "Daily signal refresh is stated, but per-source latency, amendment reconciliation, failed-ingestion monitoring and historical backfill controls are not publicly quantified.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "matchingAndQualificationMethod": { "evidenceStrength": "moderate", "detail": "AI signal scores, company context, saved searches and explanations are documented. Public precision, recall, calibration and model-change evaluation are not.", "evidence": [{ "label": "Track tenders", "url": "https://www.stotles.com/platform/track-tenders" }] },
+        "buyerEntityInvestment": { "evidenceStrength": "strong", "detail": "Buyer profiles connect opportunities, awards, contracts, contacts and intent documents into authority-level views used for account planning.", "evidence": [{ "label": "Buyer profile guide", "url": "https://help.stotles.com/qualify-and-plan-accounts-or-potential-opportunities-strategically-using-stotles-buyer-profiles" }] },
+        "supplierEntityInvestment": { "evidenceStrength": "moderate", "detail": "Supplier and competitor relationships are joined across awards and buyers, although public documentation does not disclose identity-resolution error rates or group-company treatment.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "renewalSignalMethod": { "evidenceStrength": "strong", "detail": "Expiring-contract records expose prior contract context and dates as sales signals. They are planning indicators rather than confirmed re-procurements.", "evidence": [{ "label": "Expiring contracts guide", "url": "https://help.stotles.com/how-to-use-expiring-contracts" }] },
+        "requirementsPlanningMethod": { "evidenceStrength": "moderate", "detail": "Bid Studio supports qualification, projects and answer reuse, but public material does not establish one durable pre-tender readiness model joining every gap, evidence item, owner and deadline.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+        "historicalAndAwardDepth": { "evidenceStrength": "strong", "detail": "The data page publishes more than 375,000 awards alongside contracts, frameworks, call-offs and buyer-supplier relationships.", "evidence": [{ "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "workflowAndIntegrations": { "evidenceStrength": "strong", "detail": "Current plans combine shared sales and bid workflow with CRM integrations and data-delivery options on higher tiers.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }, { "label": "Stotles homepage", "url": "https://www.stotles.com/" }] },
+        "securitySupportAndOnboarding": { "evidenceStrength": "moderate", "detail": "The provider publishes GDPR, privacy and MFA material, while enterprise security, retention, recovery and support commitments require contractual confirmation.", "evidence": [{ "label": "Stotles privacy", "url": "https://www.stotles.com/privacy-policy" }, { "label": "Stotles data", "url": "https://www.stotles.com/data" }] },
+        "commercialModel": { "evidenceStrength": "moderate", "detail": "Free, Basic, Growth and custom tiers are published across Sales Studio and Bid Studio, plus a combined package. Conflicting legacy figures remain visible on the current pricing page.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+        "materialLimitations": [
+          { "detail": "Most higher-tier prices are displayed as from, so users, entitlements and implementation costs need a dated order form.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] },
+          { "detail": "AI scores and renewal signals are decision aids; public validation metrics are not published.", "evidence": [{ "label": "Track tenders", "url": "https://www.stotles.com/platform/track-tenders" }] }
+        ],
+        "contradictions": [{ "detail": "The live pricing page displays current Sales Studio Basic copy at from £99/month while older sections on the same page retain £75 and £50 figures.", "evidence": [{ "label": "Stotles pricing", "url": "https://www.stotles.com/pricing" }] }],
+        "diligenceQuestions": [
+          "Provide a dated plan matrix showing the exact alert, buyer-document, CRM, export, user and usage limits at each price.",
+          "How are buyer and supplier identities canonicalised and quality-checked across portals and corporate groups?",
+          "What percentage of the 400,000-plus buyer documents is searchable as full text, how often is it refreshed, and which document classes are excluded?",
+          "What historical accuracy does the relevance score and expiring-contract workflow achieve on customer-defined markets?",
+          "Provide the DPA, subprocessor list, retention schedule, security controls, service levels and recovery targets."
+        ]
+      },
+      "caveats": [
+        "The current pricing page contains conflicting entry-price figures; use the current headline package copy only as a starting point.",
+        "The free alert price and combined full-package price cover materially different products and limits.",
+        "Public corpus and coverage counts are provider-stated and have not been independently tested by Civensa."
+      ],
+      "sourceUrls": ["https://www.stotles.com/", "https://www.stotles.com/pricing", "https://www.stotles.com/sales-studio", "https://www.stotles.com/data", "https://www.stotles.com/platform/track-tenders", "https://help.stotles.com/where-does-stotles-capture-data-from", "https://help.stotles.com/find-buying-signals", "https://help.stotles.com/how-to-use-expiring-contracts", "https://help.stotles.com/qualify-and-plan-accounts-or-potential-opportunities-strategically-using-stotles-buyer-profiles", "https://www.stotles.com/terms-and-conditions", "https://www.stotles.com/privacy-policy"]
+    },
+    {
+      "slug": "tussell",
+      "name": "Tussell",
+      "officialUrl": "https://www.tussell.com/",
+      "pricing": {
+        "availability": "quote_only",
+        "billingBasis": "per_organisation",
+        "currency": "unknown",
+        "plansText": "Starter, Plus and Pro are sold as annual subscriptions with no public numeric price. Early Opportunities is included in Pro and can be purchased on lower tiers. API, Salesforce and analyst services are premium add-ons.",
+        "seatDetail": "Public plan comparison describes tiered access but does not publish included users or additional-seat prices.",
+        "vatDetail": "VAT treatment is not publicly stated on the reviewed plan page.",
+        "trialDetail": "No standardized public trial term was found on the reviewed plan page.",
+        "comparablePlans": [
+          { "planName": "Starter", "currency": "unknown", "billingBasis": "per_organisation", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Not publicly stated", "notes": "Annual subscription; numeric price not published." },
+          { "planName": "Plus", "currency": "unknown", "billingBasis": "per_organisation", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Not publicly stated", "notes": "Annual subscription; numeric price not published. Early Opportunities can be added." },
+          { "planName": "Pro", "currency": "unknown", "billingBasis": "per_organisation", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Not publicly stated", "notes": "Annual subscription; full Early Opportunities access is included. API, Salesforce and analyst services may still be add-ons." }
+        ],
+        "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }]
+      },
+      "features": {
+        "semanticAiMatching": { "status": "partial", "detail": "Tussell provides filters, alerts and AI-assisted early-opportunity classification, but public pages do not establish semantic tender matching against a supplier capability profile.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }, { "label": "Early Opportunities", "url": "https://www.tussell.com/products/tussell-early-opportunities" }] },
+        "buyerProfiles": { "status": "yes", "detail": "The platform builds connected buyer views from spend, awards, notices, contracts, contacts and relationships across the procurement cycle.", "evidence": [{ "label": "Tussell Insight", "url": "https://www.tussell.com/products/tussell-insight" }, { "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "supplierProfiles": { "status": "yes", "detail": "Tussell deduplicates and enriches supplier and award records to support competitor, customer and market analysis.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }, { "label": "Data transparency", "url": "https://www.tussell.com/data-transparency-statement" }] },
+        "renewalSignals": { "status": "yes", "detail": "The bid-team product explicitly supports upcoming-renewal exports and contract-expiry monitoring.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "similarContracts": { "status": "yes", "detail": "Users can inspect similar contract price history, prior awards, incumbents and buyer-supplier context.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "buyerDocuments": { "status": "partial", "detail": "Early Opportunities scans thousands of buyer minutes, strategies and pipelines and turns verified passages into searchable structured signals with source links, but public pages do not establish a complete full-text document corpus available for direct search.", "evidence": [{ "label": "Early Opportunities", "url": "https://www.tussell.com/products/tussell-early-opportunities" }] },
+        "buyerRequirements": { "status": "partial", "detail": "Tender, pre-market and early-opportunity context supports qualification, but a complete structured cross-tender requirements layer is not publicly established.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "requirementsPlanning": { "status": "partial", "detail": "The platform supports bid or no-bid qualification and pipeline planning, but not a fully documented requirements-readiness workflow with gaps, evidence, owners and deadlines.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "awardHistory": { "status": "yes", "detail": "Awards, values, buyers, suppliers, spend and historical relationships are central to Tussell Insight.", "evidence": [{ "label": "Tussell Insight", "url": "https://www.tussell.com/products/tussell-insight" }] },
+        "frameworks": { "status": "yes", "detail": "Tussell offers framework discovery and manually links call-offs to parent frameworks.", "evidence": [{ "label": "Frameworks Finder", "url": "https://www.tussell.com/frameworksfinder" }, { "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "competitorTracking": { "status": "yes", "detail": "Supplier profiles, award history and buyer relationships support competitor and incumbent monitoring.", "evidence": [{ "label": "Tussell Insight", "url": "https://www.tussell.com/products/tussell-insight" }] },
+        "exportsApi": { "status": "yes", "detail": "API, Salesforce and export delivery are documented, with API and Salesforce sold as premium add-ons.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }, { "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "collaboration": { "status": "partial", "detail": "Organisation subscriptions and shared data delivery are available, but public pages do not establish a complete collaborative opportunity workflow with assignments and comments.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "bidWriting": { "status": "not_offered", "detail": "Tussell explicitly states that it is not bid-management or AI bid-writing software.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] }
+      },
+      "explicitPortals": [
+        { "portalId": "find_a_tender", "portalName": "Find a Tender", "detail": "Named in Tussell's official portal guidance.", "evidence": [{ "label": "Find a Tender guidance", "url": "https://www.tussell.com/insights/find-a-tender-are-you-prepared" }] },
+        { "portalId": "contracts_finder", "portalName": "Contracts Finder", "detail": "Named in Tussell's official portal guidance.", "evidence": [{ "label": "Find a Tender guidance", "url": "https://www.tussell.com/insights/find-a-tender-are-you-prepared" }] },
+        { "portalId": "public_contracts_scotland", "portalName": "Public Contracts Scotland", "detail": "Named in Tussell's official portal guidance.", "evidence": [{ "label": "Find a Tender guidance", "url": "https://www.tussell.com/insights/find-a-tender-are-you-prepared" }] },
+        { "portalId": "sell2wales", "portalName": "Sell2Wales", "detail": "Named in Tussell's official portal guidance.", "evidence": [{ "label": "Find a Tender guidance", "url": "https://www.tussell.com/insights/find-a-tender-are-you-prepared" }] }
+      ],
+      "otherCoverageClaims": [{ "claim": "Tussell says its tender and early-opportunity monitoring spans more than 600 portals and the full UK procurement cycle.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }, { "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] }],
+      "deepAudit": {
+        "researchSummary": "Tussell is a mature UK procurement-intelligence product focused on resolved buyer, supplier, award, spend, framework, renewal and pre-procurement signals. It has strong data curation and analyst-supported early-opportunity coverage, but keeps all subscription prices behind a quote and is not a bid-writing platform.",
+        "legalAndMaturity": { "evidenceStrength": "strong", "detail": "Website terms identify Tussell Ltd, company number 09454393, providing a clear UK contracting entity and operating history.", "evidence": [{ "label": "Tussell terms", "url": "https://www.tussell.com/website-terms-conditions" }] },
+        "targetCustomerAndUseCase": { "evidenceStrength": "strong", "detail": "The product is positioned for public-sector sales, bid, strategy and market-intelligence teams that need tenders, renewals, competitors and early buyer intent.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "dataSourcesAndCoverageMethod": { "evidenceStrength": "strong", "detail": "Tussell states full-cycle UK procurement coverage, deduplication, enrichment and manual framework call-off linkage, plus more than 600 monitored portals.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }, { "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "dataIngestionAndFreshness": { "evidenceStrength": "moderate", "detail": "Ongoing monitoring and human verification are described, but a current per-source refresh register, amendment latency and failed-ingestion service levels are not public.", "evidence": [{ "label": "Early Opportunities", "url": "https://www.tussell.com/products/tussell-early-opportunities" }] },
+        "matchingAndQualificationMethod": { "evidenceStrength": "moderate", "detail": "Users filter and alert on tenders and receive AI-flagged, human-verified early signals. A semantic supplier-profile match model and public validation metrics are not established.", "evidence": [{ "label": "Early Opportunities", "url": "https://www.tussell.com/products/tussell-early-opportunities" }] },
+        "buyerEntityInvestment": { "evidenceStrength": "strong", "detail": "Buyer intelligence connects procurement, spend, awards, contracts, contacts and early intent into organisation-level analysis.", "evidence": [{ "label": "Tussell Insight", "url": "https://www.tussell.com/products/tussell-insight" }] },
+        "supplierEntityInvestment": { "evidenceStrength": "strong", "detail": "Supplier records are deduplicated and enriched for competitor, customer and market-share analysis, supported by data curation beyond raw notice display.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }, { "label": "Data transparency", "url": "https://www.tussell.com/data-transparency-statement" }] },
+        "renewalSignalMethod": { "evidenceStrength": "moderate", "detail": "Upcoming renewals and contract expiry are exposed, but public pages do not publish the exact treatment of extensions, modifications, termination or historical forecast accuracy.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "requirementsPlanningMethod": { "evidenceStrength": "weak", "detail": "Qualification and pipeline planning are present, while a durable requirements, gaps, evidence, owner and deadline workflow is not publicly documented.", "evidence": [{ "label": "Bid and tender teams", "url": "https://www.tussell.com/solutions-bid-tender-coordinators" }] },
+        "historicalAndAwardDepth": { "evidenceStrength": "strong", "detail": "Historical awards, spend, buyer-supplier relationships, frameworks and manually linked call-offs form the core intelligence product.", "evidence": [{ "label": "Tussell Insight", "url": "https://www.tussell.com/products/tussell-insight" }, { "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "workflowAndIntegrations": { "evidenceStrength": "strong", "detail": "Exports, API and Salesforce delivery are documented, although API and Salesforce are premium add-ons and bid production is outside product scope.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "securitySupportAndOnboarding": { "evidenceStrength": "moderate", "detail": "Privacy and data-transparency statements are public. Contract-specific access controls, retention, recovery, certifications and support commitments need confirmation.", "evidence": [{ "label": "Tussell privacy", "url": "https://www.tussell.com/privacy-cookies" }, { "label": "Data transparency", "url": "https://www.tussell.com/data-transparency-statement" }] },
+        "commercialModel": { "evidenceStrength": "moderate", "detail": "Starter, Plus and Pro are annual quote-only subscriptions; Early Opportunities varies by tier, and API, Salesforce and analyst services are separate premium options.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+        "materialLimitations": [
+          { "detail": "No numeric price, included-user count or add-on price is publicly available, so alert and full-package affordability cannot be compared without a quote.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] },
+          { "detail": "Early Opportunities exposes structured, source-linked signals but the public page does not establish direct search across a complete full-text buyer-document corpus.", "evidence": [{ "label": "Early Opportunities", "url": "https://www.tussell.com/products/tussell-early-opportunities" }] },
+          { "detail": "Tussell is not a bid-management or AI bid-writing tool.", "evidence": [{ "label": "Tussell plans", "url": "https://www.tussell.com/plans" }] }
+        ],
+        "contradictions": [],
+        "diligenceQuestions": [
+          "Quote Starter, Plus and Pro separately with users, alert profiles, Early Opportunities, Frameworks Finder, API, Salesforce, onboarding and renewal uplifts itemised.",
+          "Provide the current named source register, refresh schedule, amendment handling and measured coverage gaps.",
+          "How are buyer and supplier entities resolved, and how are incorrect merges and splits audited?",
+          "Can users search full buyer documents or only extracted Early Opportunities signals, and what is the corpus retention period?",
+          "How are extensions and modifications used in renewal forecasts, and what historical accuracy is measured?"
+        ]
+      },
+      "caveats": [
+        "All subscription tiers require a quote, so both alert price and full-package price remain unpublished.",
+        "The more-than-600-portal claim is not accompanied by a complete current public source register.",
+        "Early Opportunities combines AI flagging with human verification but is not the same as a full searchable buyer-document library."
+      ],
+      "sourceUrls": ["https://www.tussell.com/", "https://www.tussell.com/plans", "https://www.tussell.com/products/tussell-early-opportunities", "https://www.tussell.com/solutions-bid-tender-coordinators", "https://www.tussell.com/products/tussell-insight", "https://www.tussell.com/frameworksfinder", "https://www.tussell.com/website-terms-conditions", "https://www.tussell.com/privacy-cookies", "https://www.tussell.com/data-transparency-statement", "https://www.tussell.com/insights/find-a-tender-are-you-prepared"]
+    }
+  ]
+}

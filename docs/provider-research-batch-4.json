@@ -78,16 +78,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Saved alerts accept keywords and CPV codes, with optional buyer, value, portal and geography filters. Frequency is daily on Essential, every four hours on Growth and hourly on Professional.",
-          "evidence": [
-            {
-              "label": "PSIP tender alerts",
-              "url": "https://psip.co.uk/features/tender-alerts"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Every plan includes explainable 1-10 AI relevance scoring against a business profile; the provider says it matches capabilities even when a buyer uses different terminology.",
@@ -716,20 +706,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Free includes one daily email alert. Pro adds unlimited alerts and saved searches; Scrymint describes niche or trade-based matching and filters beyond keywords.",
-          "evidence": [
-            {
-              "label": "Scrymint pricing",
-              "url": "https://scrymint.com/pricing"
-            },
-            {
-              "label": "Scrymint how it works",
-              "url": "https://scrymint.com/how-it-works"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "The reviewed pages advertise filters and AI bid/no-bid scoring, but do not establish semantic or AI relevance matching for tender discovery or alerts.",
@@ -1291,24 +1267,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Daily Email Alert profiles use keywords or phrases and CPV codes. Provider guidance also describes region, buyer type, value, category and exclusion filters; alerts are sent on working days.",
-          "evidence": [
-            {
-              "label": "Supply2Gov FAQ",
-              "url": "https://www.supply2govtenders.co.uk/faqs/"
-            },
-            {
-              "label": "Supply2Gov daily alert guidance",
-              "url": "https://www.supply2govtenders.co.uk/how-do-daily-tender-alerts-improve-win-rates-in-public-procurement/"
-            },
-            {
-              "label": "Supply2Gov terms",
-              "url": "https://www.supply2govtenders.co.uk/business/subscriptions/supply_terms.html"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "The reviewed pages establish keyword, phrase, category and CPV matching but do not establish semantic, machine-learning or AI relevance matching.",
@@ -1780,16 +1738,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "Tendarix advertises hybrid keyword and semantic search, unlimited saved alerts, and email and Slack delivery.",
-          "evidence": [
-            {
-              "label": "Tendarix home",
-              "url": "https://tendarix.com/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "yes",
           "detail": "Each tender is scored against a company profile, geography, capacity and past performance using advertised hybrid keyword and semantic matching.",
@@ -2375,16 +2323,6 @@
         ]
       },
       "features": {
-        "keywordAlerts": {
-          "status": "yes",
-          "detail": "A saved free-text search automatically creates an email alert sent Monday to Friday. Search can use title and description text plus region, deadline, category, source, framework and lot filters; up to 50 alerts are supported.",
-          "evidence": [
-            {
-              "label": "Tender Alerts UK home",
-              "url": "https://tenderalerts.uk/"
-            }
-          ]
-        },
         "semanticAiMatching": {
           "status": "not_offered",
           "detail": "The reviewed page documents free-text and structured filters but does not establish semantic, machine-learning or AI relevance matching.",

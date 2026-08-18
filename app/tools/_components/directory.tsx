@@ -21,13 +21,12 @@ const internationalProcurementSlugs = new Set([
 ]);
 
 const featureLabels: Record<NormalizedFeatureKey, string> = {
-  keywordAlerts: "Keyword alerts",
   semanticAiMatching: "AI or semantic matching",
   buyerProfiles: "Buyer profiles",
   supplierProfiles: "Supplier profiles",
   renewalSignals: "Renewals",
   similarContracts: "Similar contracts",
-  buyerDocuments: "Buyer documents",
+  buyerDocuments: "Buyer document corpus",
   buyerRequirements: "Buyer requirements",
   requirementsPlanning: "Requirements planning",
   awardHistory: "Award history",
@@ -39,7 +38,6 @@ const featureLabels: Record<NormalizedFeatureKey, string> = {
 };
 
 const matrixFeatureKeys: readonly NormalizedFeatureKey[] = [
-  "keywordAlerts",
   "semanticAiMatching",
   "buyerProfiles",
   "supplierProfiles",

@@ -182,18 +182,6 @@ export const bidWritingSoftwareRecords: readonly VendorRecord[] = [
     evidenceLinks: [{ label: "Tendium pricing and BidFlow features", url: "https://tendium.com/pricing" }],
   }),
   commercialRecord({
-    slug: "bidwell-writing", name: "Bidwell", category: "bid-writing-software",
-    providerType: "UK tender discovery and writing suite", officialUrl: "https://bidwell.app/",
-    summary: "Bidwell combines opportunity matching with tender analysis, drafting, a knowledge base and document export.",
-    coverage: "The provider positions the writing tools for UK public-sector bids and connects them to its discovery module.",
-    pricing: "Discover: £15/month. Draft: £30/month. Full Suite: £40/month. A seven-day trial is advertised.",
-    pricingCaveat: "Confirm current module limits, users, model usage, VAT, export formats and annual billing before purchase.",
-    bestFor: "UK SMEs wanting discovery and assisted drafting in one low-cost account.",
-    notFor: "Large proposal teams that need complex permissions, approvals and enterprise integrations.",
-    caveat: "Generated answers, fit scores and source coverage are provider claims. Review every response against the tender pack and approved evidence.",
-    evidenceLinks: [{ label: "Bidwell product suite", url: "https://bidwell.app/" }, { label: "Bidwell discovery module", url: "https://bidwell.app/product/discover" }],
-  }),
-  commercialRecord({
     slug: "tenderdraft", name: "TenderDraft", category: "bid-writing-software",
     providerType: "Prelaunch UK AI tender-writing software", officialUrl: "https://tenderdraft.overpass.co.uk/",
     summary: "TenderDraft advertises document analysis, response drafting, a company profile vault, a content library and DOCX export.",

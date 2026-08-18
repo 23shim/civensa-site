@@ -94,13 +94,19 @@ test("renders the procurement tools directory with dated evidence and ownership 
   assert.match(alerts, /Intelligence \+ workflow/i);
   assert.match(alerts, /Smart matchers/i);
   assert.match(alerts, /Lite alerting/i);
-  assert.match(alerts, /Maximum monthly cost/i);
+  assert.match(alerts, /Maximum alert price/i);
+  assert.match(alerts, /Maximum full-package price/i);
   assert.match(alerts, /Must offer/i);
   assert.match(alerts, /Add to compare/i);
+  assert.match(alerts, /Tender-alert price/i);
+  assert.match(alerts, /Full-package price/i);
+  assert.match(alerts, /Stotles/i);
+  assert.match(alerts, /Tussell/i);
+  assert.doesNotMatch(alerts, /Buzz Tender Alert|TenderSignal|TenderLead|Tenderbase|Bidwell/i);
   assert.match(alerts, /68%<\/strong>\s*features/i);
   assert.match(alerts, /32%<\/strong>\s*value/i);
   const renderedScores = [...alerts.matchAll(/class="overall-score"[^>]*>[\s\S]*?<strong>(\d+)<\/strong>/g)].map((match) => Number(match[1]));
-  assert.equal(renderedScores.length, 29, "one combined score per provider");
+  assert.equal(renderedScores.length, 26, "one combined score per provider");
   assert.deepEqual(renderedScores, [...renderedScores].sort((left, right) => right - left), "default results should be sorted by combined score");
   assert.ok(renderedScores.every((score) => score >= 0 && score <= 100), "combined scores should stay within 0 to 100");
   assert.ok(Buffer.byteLength(alerts) < 700_000, "tender-alert comparison page should stay below 700 kB");
@@ -108,7 +114,8 @@ test("renders the procurement tools directory with dated evidence and ownership 
   const methodology = await (await render("/tools/methodology/")).text();
   assert.match(methodology, /Product classes and shortlist score/i);
   assert.match(methodology, /68% feature depth and 32% headline value/i);
-  assert.match(methodology, /lowest published plan may not contain every scored feature/i);
+  assert.match(methodology, /entry plan may not contain every scored feature/i);
+  assert.match(methodology, /types overlap/i);
 
   const hub = await (await render("/tools/")).text();
   assert.match(hub, /"@type":"ItemList"/);
@@ -116,14 +123,17 @@ test("renders the procurement tools directory with dated evidence and ownership 
 });
 
 test("normalized tender-alert research is complete and schema-consistent", async () => {
-  const featureKeys = ["keywordAlerts", "semanticAiMatching", "buyerProfiles", "supplierProfiles", "renewalSignals", "similarContracts", "buyerDocuments", "buyerRequirements", "requirementsPlanning", "awardHistory", "frameworks", "competitorTracking", "exportsApi", "collaboration", "bidWriting"];
-  const batches = await Promise.all([1, 2, 3, 4, 5, 6].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  const featureKeys = ["semanticAiMatching", "buyerProfiles", "supplierProfiles", "renewalSignals", "similarContracts", "buyerDocuments", "buyerRequirements", "requirementsPlanning", "awardHistory", "frameworks", "competitorTracking", "exportsApi", "collaboration", "bidWriting"];
+  const batches = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
   const providers = batches.flatMap((batch) => {
     assert.equal(batch.researchedAt, "2026-08-18");
     return batch.providers;
   });
-  assert.equal(providers.length, 29);
-  assert.equal(new Set(providers.map((provider) => provider.slug)).size, 29);
+  assert.equal(providers.length, 26);
+  assert.equal(new Set(providers.map((provider) => provider.slug)).size, 26);
+  for (const removedSlug of ["buzz-tender-alert", "bidwell-alerts", "tendersignal", "tenderlead", "tenderbase"]) {
+    assert.equal(providers.some((provider) => provider.slug === removedSlug), false, removedSlug);
+  }
   const deepAuditFields = ["legalAndMaturity", "targetCustomerAndUseCase", "dataSourcesAndCoverageMethod", "dataIngestionAndFreshness", "matchingAndQualificationMethod", "buyerEntityInvestment", "supplierEntityInvestment", "renewalSignalMethod", "requirementsPlanningMethod", "historicalAndAwardDepth", "workflowAndIntegrations", "securitySupportAndOnboarding", "commercialModel"];
   for (const provider of providers) {
     assert.deepEqual(Object.keys(provider.features).sort(), [...featureKeys].sort(), provider.slug);
@@ -158,10 +168,13 @@ test("normalized tender-alert research is complete and schema-consistent", async
   assert.equal(bidSkim.features.buyerProfiles.status, "yes");
   assert.equal(bidSkim.features.supplierProfiles.status, "yes");
   assert.equal(bidSkim.features.renewalSignals.status, "yes");
+  assert.equal(providers.find((provider) => provider.slug === "stotles").features.buyerDocuments.status, "yes");
+  assert.equal(providers.find((provider) => provider.slug === "tussell").features.buyerDocuments.status, "partial");
+  assert.deepEqual(providers.filter((provider) => provider.features.buyerDocuments.status !== "not_offered").map((provider) => provider.slug).sort(), ["stotles", "tussell"]);
 });
 
 test("renders deep provider audit pages", async () => {
-  for (const slug of ["bidskim-alerts", "psip-alerts", "tenderlake", "kimonbids-alerts"]) {
+  for (const slug of ["bidskim-alerts", "psip-alerts", "tenderlake", "kimonbids-alerts", "stotles", "tussell"]) {
     const response = await render(`/tools/tender-alerts/${slug}/`);
     assert.equal(response.status, 200, slug);
     const html = await response.text();
@@ -186,7 +199,7 @@ test("publishes complete discovery files", async () => {
     assert.match(sitemap, new RegExp(path.replaceAll("/", "\\/")));
   }
   assert.match(llms, /procurement tools directory/i);
-  const providerBatches = await Promise.all([1, 2, 3, 4, 5, 6].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  const providerBatches = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
   for (const provider of providerBatches.flatMap((batch) => batch.providers)) {
     assert.match(sitemap, new RegExp(`tools\\/tender-alerts\\/${provider.slug}\\/`), provider.slug);
     assert.match(llms, new RegExp(`tools/tender-alerts/${provider.slug}/`), provider.slug);

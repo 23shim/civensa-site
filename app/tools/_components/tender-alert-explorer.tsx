@@ -8,17 +8,16 @@ import {
 } from "../_data/tender-alert-scoring";
 import type { NormalizedFeatureKey } from "../_data";
 
-type SortId = "overall" | "features" | "value" | "price" | "group" | "name";
+type SortId = "overall" | "features" | "value" | "alertPrice" | "fullPrice" | "group" | "name";
 type PricingFilter = "all" | "public" | "free" | "quote";
 
 const featureLabels: Readonly<Record<NormalizedFeatureKey, string>> = {
-  keywordAlerts: "Keyword alerts",
   semanticAiMatching: "AI matching",
   buyerProfiles: "Buyer profiles",
   supplierProfiles: "Supplier profiles",
   renewalSignals: "Renewals",
   similarContracts: "Similar contracts",
-  buyerDocuments: "Buyer documents",
+  buyerDocuments: "Buyer document corpus",
   buyerRequirements: "Buyer requirements",
   requirementsPlanning: "Requirements planning",
   awardHistory: "Award history",
@@ -70,23 +69,25 @@ function featureStatusLabel(status: "yes" | "partial" | "not_offered"): string {
   return status === "yes" ? "Yes" : status === "partial" ? "Partial" : "Not offered";
 }
 
-function priceLabel(record: TenderAlertExplorerRecord): string {
+function priceLabel(record: TenderAlertExplorerRecord, kind: "alert" | "full"): string {
   const score = record.score;
-  const price = score.minimumMonthlyPrice;
-  if (price === null) return record.pricingAvailability === "quote_only" ? "Quote only" : "No public price";
-  if (price === 0) return "Free option";
-  const currency = score.priceCurrency;
+  const price = kind === "alert" ? score.alertMonthlyPrice : score.fullPackageMonthlyPrice;
+  const planName = kind === "alert" ? score.alertPlanName : score.fullPackagePlanName;
+  if (price === null) return planName !== "Not published" || record.pricingAvailability === "quote_only" ? `Quote · ${planName}` : "No public price";
+  if (price === 0) return `Free · ${planName}`;
+  const currency = kind === "alert" ? score.alertPriceCurrency : score.fullPackagePriceCurrency;
   const formatted = currency === "mixed" || currency === "unknown"
     ? price.toLocaleString("en-GB", { maximumFractionDigits: 2 })
     : new Intl.NumberFormat("en-GB", { style: "currency", currency, maximumFractionDigits: 2 }).format(price);
-  return `From ${formatted}/mo`;
+  return `${formatted}/mo · ${planName}`;
 }
 
 export function TenderAlertExplorer({ records }: { records: readonly TenderAlertExplorerRecord[] }) {
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState<TenderProductGroupId | "all">("all");
   const [sort, setSort] = useState<SortId>("overall");
-  const [maxPrice, setMaxPrice] = useState("any");
+  const [maxAlertPrice, setMaxAlertPrice] = useState("any");
+  const [maxFullPrice, setMaxFullPrice] = useState("any");
   const [pricingFilter, setPricingFilter] = useState<PricingFilter>("all");
   const [portal, setPortal] = useState("all");
   const [minimumScore, setMinimumScore] = useState("0");
@@ -97,13 +98,13 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
   const scoredRecords = useMemo(() => records.map((record) => ({ record, score: record.score })), [records]);
   const groupCounts = useMemo(() => Object.fromEntries(tenderProductGroups.map((item) => [
     item.id,
-    scoredRecords.filter(({ score }) => score.groupId === item.id).length,
+    scoredRecords.filter(({ score }) => score.groupIds.includes(item.id)).length,
   ])), [scoredRecords]) as Record<TenderProductGroupId, number>;
 
   const visibleRecords = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase("en-GB");
     return scoredRecords
-      .filter(({ score }) => group === "all" || score.groupId === group)
+      .filter(({ score }) => group === "all" || score.groupIds.includes(group))
       .filter(({ record }) => !normalizedQuery || [
         record.name,
         record.summary,
@@ -111,7 +112,8 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
         record.coverage,
       ]
         .some((value) => value.toLocaleLowerCase("en-GB").includes(normalizedQuery)))
-      .filter(({ score }) => maxPrice === "any" || (score.minimumMonthlyPrice !== null && score.minimumMonthlyPrice <= Number(maxPrice)))
+      .filter(({ score }) => maxAlertPrice === "any" || (score.alertMonthlyPrice !== null && score.alertMonthlyPrice <= Number(maxAlertPrice)))
+      .filter(({ score }) => maxFullPrice === "any" || (score.fullPackageMonthlyPrice !== null && score.fullPackageMonthlyPrice <= Number(maxFullPrice)))
       .filter(({ record }) => {
         if (pricingFilter === "all") return true;
         if (pricingFilter === "public") return record.pricingAvailability === "public_numeric";
@@ -124,19 +126,21 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
       .sort((left, right) => {
         if (sort === "features") return right.score.featureScore - left.score.featureScore || left.record.name.localeCompare(right.record.name, "en-GB");
         if (sort === "value") return right.score.valueScore - left.score.valueScore || right.score.featureScore - left.score.featureScore;
-        if (sort === "price") return (left.score.minimumMonthlyPrice ?? Number.POSITIVE_INFINITY) - (right.score.minimumMonthlyPrice ?? Number.POSITIVE_INFINITY);
-        if (sort === "group") return tenderProductGroups.findIndex((item) => item.id === left.score.groupId) - tenderProductGroups.findIndex((item) => item.id === right.score.groupId) || right.score.overallScore - left.score.overallScore;
+        if (sort === "alertPrice") return (left.score.alertMonthlyPrice ?? Number.POSITIVE_INFINITY) - (right.score.alertMonthlyPrice ?? Number.POSITIVE_INFINITY);
+        if (sort === "fullPrice") return (left.score.fullPackageMonthlyPrice ?? Number.POSITIVE_INFINITY) - (right.score.fullPackageMonthlyPrice ?? Number.POSITIVE_INFINITY);
+        if (sort === "group") return tenderProductGroups.findIndex((item) => item.id === left.score.primaryGroupId) - tenderProductGroups.findIndex((item) => item.id === right.score.primaryGroupId) || right.score.overallScore - left.score.overallScore;
         if (sort === "name") return left.record.name.localeCompare(right.record.name, "en-GB");
         return right.score.overallScore - left.score.overallScore || right.score.featureScore - left.score.featureScore;
       });
-  }, [group, maxPrice, minimumScore, portal, pricingFilter, query, requiredFeatures, scoredRecords, sort]);
+  }, [group, maxAlertPrice, maxFullPrice, minimumScore, portal, pricingFilter, query, requiredFeatures, scoredRecords, sort]);
 
   const comparedRecords = comparedSlugs
     .map((slug) => scoredRecords.find(({ record }) => record.slug === slug))
     .filter((item): item is (typeof scoredRecords)[number] => Boolean(item));
   const activeFilterCount = (query ? 1 : 0)
     + (group !== "all" ? 1 : 0)
-    + (maxPrice !== "any" ? 1 : 0)
+    + (maxAlertPrice !== "any" ? 1 : 0)
+    + (maxFullPrice !== "any" ? 1 : 0)
     + (pricingFilter !== "all" ? 1 : 0)
     + (portal !== "all" ? 1 : 0)
     + (minimumScore !== "0" ? 1 : 0)
@@ -146,7 +150,8 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
     setQuery("");
     setGroup("all");
     setSort("overall");
-    setMaxPrice("any");
+    setMaxAlertPrice("any");
+    setMaxFullPrice("any");
     setPricingFilter("all");
     setPortal("all");
     setMinimumScore("0");
@@ -170,7 +175,7 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
       <div>
         <div className="section-kicker">Shortlist builder</div>
         <h2 id="tender-explorer-title">Find the right level of tender intelligence.</h2>
-        <p>Start with the product class, then sort 29 researched services by feature depth, headline value or price.</p>
+        <p>Start with a product type, then sort {records.length} researched services by feature depth, value or either price benchmark.</p>
       </div>
       <div className="score-key">
         <span>Provider-stated public-evidence score</span>
@@ -192,6 +197,7 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
         <small>{item.description}</small>
       </button>)}
     </div>
+    <p className="group-overlap-note">Products can appear in more than one type. Counts show memberships, not mutually exclusive buckets.</p>
 
     <div className="explorer-toolbar">
       <label className="explorer-search">
@@ -204,7 +210,8 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
           <option value="overall">Best combined score</option>
           <option value="features">Feature depth</option>
           <option value="value">Headline value</option>
-          <option value="price">Lowest public price</option>
+          <option value="alertPrice">Lowest tender-alert price</option>
+          <option value="fullPrice">Lowest full-package price</option>
           <option value="group">Product class</option>
           <option value="name">Name A to Z</option>
         </select>
@@ -214,12 +221,19 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
 
     <div className="explorer-filter-panel">
       <div className="explorer-filter-grid">
-        <label><span>Maximum monthly cost</span><select value={maxPrice} onChange={(event) => setMaxPrice(event.target.value)}>
+        <label><span>Maximum alert price</span><select value={maxAlertPrice} onChange={(event) => setMaxAlertPrice(event.target.value)}>
           <option value="any">Any or unpublished</option>
           <option value="50">Up to £50</option>
           <option value="100">Up to £100</option>
           <option value="200">Up to £200</option>
           <option value="500">Up to £500</option>
+        </select></label>
+        <label><span>Maximum full-package price</span><select value={maxFullPrice} onChange={(event) => setMaxFullPrice(event.target.value)}>
+          <option value="any">Any or unpublished</option>
+          <option value="100">Up to £100</option>
+          <option value="250">Up to £250</option>
+          <option value="500">Up to £500</option>
+          <option value="1000">Up to £1,000</option>
         </select></label>
         <label><span>Pricing evidence</span><select value={pricingFilter} onChange={(event) => setPricingFilter(event.target.value as PricingFilter)}>
           <option value="all">Any pricing</option>
@@ -254,7 +268,7 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
       <p aria-live="polite"><strong>{visibleRecords.length}</strong> of {records.length} products {activeFilterCount > 0 ? `· ${activeFilterCount} active filters` : ""}</p>
       <details>
         <summary>How the score works</summary>
-        <p>Feature score uses 15 weighted capabilities: profiles and renewals carry more weight than basic alerts. Value combines the lowest published paid monthly equivalent, pricing transparency and whether pricing is per seat, team or organisation. The lowest price may not include every feature. It is a comparison aid based on public claims, not a product review.</p>
+        <p>Feature score uses 14 weighted capabilities. Buyer and supplier profiles, renewals and AI matching carry the most weight. Value separately measures the entry tender-alert plan and the highest listed package, then adds pricing transparency and whether pricing is per seat, team or organisation. Annual monthly equivalents are used when published. Quote-only prices receive a neutral-low affordability score. This is a comparison aid based on public claims, not a product review.</p>
       </details>
     </div>
 
@@ -270,8 +284,9 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
           <thead><tr><th scope="col">Measure</th>{comparedRecords.map(({ record }) => <th scope="col" key={record.slug}><a href={`/tools/tender-alerts/${record.slug}/`}>{record.name}</a></th>)}</tr></thead>
           <tbody>
             <tr><th scope="row">Combined score</th>{comparedRecords.map(({ record, score }) => <td key={record.slug}><strong>{score.overallScore}/100</strong></td>)}</tr>
-            <tr><th scope="row">Product class</th>{comparedRecords.map(({ record, score }) => <td key={record.slug}>{tenderProductGroups.find((item) => item.id === score.groupId)?.label}</td>)}</tr>
-            <tr><th scope="row">Headline price</th>{comparedRecords.map(({ record }) => <td key={record.slug}>{priceLabel(record)}</td>)}</tr>
+            <tr><th scope="row">Product types</th>{comparedRecords.map(({ record, score }) => <td key={record.slug}>{score.groupIds.map((id) => tenderProductGroups.find((item) => item.id === id)?.label).join(", ")}</td>)}</tr>
+            <tr><th scope="row">Tender-alert price</th>{comparedRecords.map(({ record }) => <td key={record.slug}>{priceLabel(record, "alert")}</td>)}</tr>
+            <tr><th scope="row">Full-package price</th>{comparedRecords.map(({ record }) => <td key={record.slug}>{priceLabel(record, "full")}</td>)}</tr>
             {filterFeatureKeys.slice(0, 10).map((key) => <tr key={key}><th scope="row">{featureLabels[key]}</th>{comparedRecords.map(({ record }) => <td key={record.slug}><span className={`feature-status feature-status-${record.featureStatuses[key]}`}>{featureStatusLabel(record.featureStatuses[key])}</span></td>)}</tr>)}
             <tr><th scope="row">Named portals</th>{comparedRecords.map(({ record }) => <td key={record.slug}>{record.explicitPortalCount || "None"}</td>)}</tr>
           </tbody>
@@ -281,11 +296,11 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
 
     <div className="tender-result-grid">
       {visibleRecords.map(({ record, score }, index) => {
-        const groupInfo = tenderProductGroups.find((item) => item.id === score.groupId)!;
+        const groupLabels = score.groupIds.map((id) => tenderProductGroups.find((item) => item.id === id)!.shortLabel);
         const standouts = standoutKeys.filter((key) => record.featureStatuses[key] === "yes").slice(0, 4);
         return <article className="tender-result-card" key={record.slug}>
           <div className="result-card-topline">
-            <span>{groupInfo.shortLabel}</span>
+            <span>{groupLabels.join(" · ")}</span>
             <span>#{index + 1} in results</span>
           </div>
           <div className="result-card-title">
@@ -303,7 +318,8 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
             <div><span>Value <strong>{score.valueScore}</strong></span><i><b style={{ width: `${score.valueScore}%` }} /></i></div>
           </div>
           <div className="result-facts">
-            <div><span>Headline price</span><strong>{priceLabel(record)}</strong></div>
+            <div><span>Tender-alert price</span><strong>{priceLabel(record, "alert")}</strong></div>
+            <div><span>Full-package price</span><strong>{priceLabel(record, "full")}</strong></div>
             <div><span>Features evidenced</span><strong>{score.yesCount} yes · {score.partialCount} partial</strong></div>
             <div><span>Named portals</span><strong>{record.explicitPortalCount || "None"}</strong></div>
           </div>

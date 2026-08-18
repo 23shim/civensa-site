@@ -4,6 +4,7 @@ import batch3Json from "../../../docs/provider-research-batch-3.json";
 import batch4Json from "../../../docs/provider-research-batch-4.json";
 import batch5Json from "../../../docs/provider-research-batch-5.json";
 import batch6Json from "../../../docs/provider-research-batch-6.json";
+import batch7Json from "../../../docs/provider-research-batch-7.json";
 import {
   normalizedFeatureKeys,
   type BillingBasis,
@@ -87,7 +88,7 @@ type RawProvider = {
 };
 type RawBatch = { researchedAt: string; providers: readonly RawProvider[] };
 
-const rawBatches = [batch1Json, batch2Json, batch3Json, batch4Json, batch5Json, batch6Json] as unknown as readonly RawBatch[];
+const rawBatches = [batch1Json, batch2Json, batch3Json, batch4Json, batch5Json, batch6Json, batch7Json] as unknown as readonly RawBatch[];
 
 function cleanText(value: string): string {
   return value.replaceAll("—", ";").replaceAll("–", "-");
@@ -186,8 +187,8 @@ for (const batch of rawBatches) {
   }
 }
 
-if (Object.keys(profiles).length !== 29) {
-  throw new Error(`Expected 29 normalized tender-alert providers, received ${Object.keys(profiles).length}`);
+if (Object.keys(profiles).length !== 26) {
+  throw new Error(`Expected 26 normalized tender-alert providers, received ${Object.keys(profiles).length}`);
 }
 
 export const tenderAlertResearchBySlug: Readonly<Record<string, NormalizedVendorProfile>> = profiles;

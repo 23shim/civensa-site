@@ -10,7 +10,7 @@ Civensa is a UK public procurement directory. It brings together public evidence
 - [Methodology](https://civensa.com/methodology/): Source hierarchy, evidence standards and limitations.
 - [Compare approaches](https://civensa.com/compare/): Transparent comparison of procurement research approaches.
 - [Procurement tools directory](https://civensa.com/tools/): Dated, source-linked records for tender alerts, procurement intelligence, bid-writing software, services and official portals.
-- [Tender-alert shortlist builder](https://civensa.com/tools/tender-alerts/): Filter 29 providers by product class, price, named portal and must-have features; compare a disclosed 68% feature and 32% headline-value score.
+- [Tender-alert shortlist builder](https://civensa.com/tools/tender-alerts/): Filter 26 providers by overlapping product types, tender-alert and full-package prices, named portal and must-have features; compare a disclosed 68% feature and 32% value score.
 - [Tools directory methodology](https://civensa.com/tools/methodology/): Inclusion rules, evidence labels, pricing checks and corrections.
 - [About](https://civensa.com/about/): Directory purpose and approach.
 
@@ -38,8 +38,6 @@ Deep, source-linked profiles cover normalized features, comparable pricing, name
 - [BidScout](https://civensa.com/tools/tender-alerts/bidscout/)
 - [BidSkim](https://civensa.com/tools/tender-alerts/bidskim-alerts/)
 - [BidStats](https://civensa.com/tools/tender-alerts/bidstats/)
-- [Bidwell](https://civensa.com/tools/tender-alerts/bidwell-alerts/)
-- [Buzz Tender Alert](https://civensa.com/tools/tender-alerts/buzz-tender-alert/)
 - [CleanTender](https://civensa.com/tools/tender-alerts/cleantender/)
 - [Contract Finder Pro](https://civensa.com/tools/tender-alerts/contract-finder-pro-alerts/)
 - [Contracts Advance](https://civensa.com/tools/tender-alerts/contracts-advance/)
@@ -51,18 +49,17 @@ Deep, source-linked profiles cover normalized features, comparable pricing, name
 - [Open Opportunities](https://civensa.com/tools/tender-alerts/open-opportunities-alerts/)
 - [PSIP](https://civensa.com/tools/tender-alerts/psip-alerts/)
 - [Scrymint](https://civensa.com/tools/tender-alerts/scrymint/)
+- [Stotles](https://civensa.com/tools/tender-alerts/stotles/)
 - [Supply2Gov](https://civensa.com/tools/tender-alerts/supply2gov/)
 - [Tendarix](https://civensa.com/tools/tender-alerts/tendarix/)
 - [Tender Alerts UK](https://civensa.com/tools/tender-alerts/tender-alerts-uk/)
 - [Tender Radar](https://civensa.com/tools/tender-alerts/tender-radar/)
 - [TenderAI](https://civensa.com/tools/tender-alerts/tenderai/)
-- [Tenderbase](https://civensa.com/tools/tender-alerts/tenderbase/)
 - [Tenderlake](https://civensa.com/tools/tender-alerts/tenderlake/)
-- [TenderLead](https://civensa.com/tools/tender-alerts/tenderlead/)
 - [TenderLedger](https://civensa.com/tools/tender-alerts/tenderledger-alerts/)
 - [Tenders Direct](https://civensa.com/tools/tender-alerts/tenders-direct-alerts/)
-- [TenderSignal](https://civensa.com/tools/tender-alerts/tendersignal/)
 - [Tracker Intelligence](https://civensa.com/tools/tender-alerts/tracker-intelligence-alerts/)
+- [Tussell](https://civensa.com/tools/tender-alerts/tussell/)
 
 ## Citation and contact
 

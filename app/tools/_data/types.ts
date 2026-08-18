@@ -12,7 +12,6 @@ export type EvidenceBasis = "Provider-stated" | "Official source";
 export type EvidenceLink = { label: string; url: string };
 
 export const normalizedFeatureKeys = [
-  "keywordAlerts",
   "semanticAiMatching",
   "buyerProfiles",
   "supplierProfiles",
