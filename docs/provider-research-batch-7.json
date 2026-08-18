@@ -9,12 +9,12 @@
         "availability": "public_numeric",
         "billingBasis": "mixed",
         "currency": "GBP",
-        "plansText": "Sales Studio Free: £0. Sales Studio Basic: from £99/month. Sales Studio Growth: from £475/month. Bid Studio Basic: £0. Bid Studio Growth: from £495/month. B2G Growth Engine: from £873/month. Expert tiers are custom.",
+        "plansText": "AI tender-tracking benchmark: Sales Studio Basic from £99/month. Sales Studio Free: £0, but not treated as free AI tracking. Sales Studio Growth: from £475/month. Bid Studio Basic: £0. Bid Studio Growth: from £495/month. B2G Growth Engine: from £873/month. Expert tiers are custom.",
         "seatDetail": "The reviewed pricing page uses a mixture of plan and user allowances. Confirm included users, additional seats and whether each displayed figure is per user or per workspace in the order form.",
         "vatDetail": "VAT treatment is not stated beside the reviewed headline prices.",
         "trialDetail": "Free plans are published. Trial terms for paid tiers are not consistently stated on the reviewed pricing page.",
         "comparablePlans": [
-          { "planName": "Sales Studio Free", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 0, "annualPrice": 0, "annualMonthlyEquivalent": 0, "annualPriceCalculation": "published_total", "includedUsers": "One user", "notes": "Free entry plan; limits apply." },
+          { "planName": "Sales Studio Free", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 0, "annualPrice": 0, "annualMonthlyEquivalent": 0, "annualPriceCalculation": "published_total", "includedUsers": "One user", "notes": "Free plan remains listed for completeness but is not the AI tender-tracking price benchmark." },
           { "planName": "Sales Studio Basic", "currency": "GBP", "billingBasis": "per_seat", "monthlyPrice": 99, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Displayed as from £99/month. The same live page also contains older £50 and £75 references." },
           { "planName": "Sales Studio Growth", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": 475, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Confirm with provider", "notes": "Displayed as from £475/month." },
           { "planName": "Sales Studio Expert", "currency": "GBP", "billingBasis": "per_team", "monthlyPrice": null, "annualPrice": null, "annualMonthlyEquivalent": null, "annualPriceCalculation": "not_available", "includedUsers": "Custom", "notes": "Custom price." },
@@ -81,7 +81,7 @@
       },
       "caveats": [
         "The current pricing page contains conflicting entry-price figures; use the current headline package copy only as a starting point.",
-        "The free alert price and combined full-package price cover materially different products and limits.",
+        "The £0 plan is not used as the AI tender-tracking benchmark; the comparison uses Sales Studio Basic at £99/month.",
         "Public corpus and coverage counts are provider-stated and have not been independently tested by Civensa."
       ],
       "sourceUrls": ["https://www.stotles.com/", "https://www.stotles.com/pricing", "https://www.stotles.com/sales-studio", "https://www.stotles.com/data", "https://www.stotles.com/platform/track-tenders", "https://help.stotles.com/where-does-stotles-capture-data-from", "https://help.stotles.com/find-buying-signals", "https://help.stotles.com/how-to-use-expiring-contracts", "https://help.stotles.com/qualify-and-plan-accounts-or-potential-opportunities-strategically-using-stotles-buyer-profiles", "https://www.stotles.com/terms-and-conditions", "https://www.stotles.com/privacy-policy"]

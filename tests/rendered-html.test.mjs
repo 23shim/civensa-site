@@ -102,6 +102,7 @@ test("renders the procurement tools directory with dated evidence and ownership 
   assert.match(alerts, /Full-package price/i);
   assert.match(alerts, /Stotles/i);
   assert.match(alerts, /Tussell/i);
+  assert.match(alerts, /£99\.00\/mo[^<]{0,80}Sales Studio Basic/i);
   assert.doesNotMatch(alerts, /Buzz Tender Alert|TenderSignal|TenderLead|Tenderbase|Bidwell/i);
   assert.match(alerts, /68%<\/strong>\s*features/i);
   assert.match(alerts, /32%<\/strong>\s*value/i);

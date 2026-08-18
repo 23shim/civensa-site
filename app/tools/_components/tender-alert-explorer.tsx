@@ -238,7 +238,7 @@ export function TenderAlertExplorer({ records }: { records: readonly TenderAlert
         <label><span>Pricing evidence</span><select value={pricingFilter} onChange={(event) => setPricingFilter(event.target.value as PricingFilter)}>
           <option value="all">Any pricing</option>
           <option value="public">Public numeric price</option>
-          <option value="free">Has a free option</option>
+          <option value="free">Has free tender tracking</option>
           <option value="quote">Quote only</option>
         </select></label>
         <label><span>Explicitly named portal</span><select value={portal} onChange={(event) => setPortal(event.target.value)}>

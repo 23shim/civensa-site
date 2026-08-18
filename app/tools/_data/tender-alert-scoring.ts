@@ -106,6 +106,10 @@ const workflowKeys: readonly NormalizedFeatureKey[] = [
   "bidWriting",
 ];
 
+const alertBenchmarkPlanNames: Readonly<Record<string, string>> = {
+  stotles: "Sales Studio Basic",
+};
+
 function yesCount(record: VendorRecord, keys: readonly NormalizedFeatureKey[]): number {
   if (!record.normalized) return 0;
   return keys.filter((key) => record.normalized?.features[key].status === "yes").length;
@@ -133,7 +137,8 @@ function monthlyEquivalent(plan: NonNullable<VendorRecord["normalized"]>["pricin
 
 function priceBenchmarks(record: VendorRecord) {
   const plans = record.normalized?.pricing.comparablePlans ?? [];
-  const alertPlan = plans[0];
+  const selectedAlertPlanName = alertBenchmarkPlanNames[record.slug];
+  const alertPlan = plans.find((plan) => plan.planName === selectedAlertPlanName) ?? plans[0];
   const fullPackagePlan = plans.at(-1);
   return {
     alertMonthlyPrice: alertPlan ? monthlyEquivalent(alertPlan) : null,
@@ -225,16 +230,17 @@ export function scoreTenderAlert(record: VendorRecord): TenderAlertScore {
 export function toTenderAlertExplorerRecord(record: VendorRecord): TenderAlertExplorerRecord {
   const normalized = record.normalized;
   if (!normalized) throw new Error(`Tender-alert explorer record is missing normalized research: ${record.slug}`);
+  const score = scoreTenderAlert(record);
   return {
     slug: record.slug,
     name: record.name,
     summary: record.summary,
     coverage: record.coverage,
     bestFor: record.bestFor,
-    score: scoreTenderAlert(record),
+    score,
     featureStatuses: Object.fromEntries(normalizedFeatureKeys.map((key) => [key, normalized.features[key].status])) as Record<NormalizedFeatureKey, FeatureStatus>,
     pricingAvailability: normalized.pricing.availability,
-    hasFreeOption: normalized.pricing.comparablePlans.some((plan) => plan.monthlyPrice === 0 || plan.annualMonthlyEquivalent === 0),
+    hasFreeOption: score.alertMonthlyPrice === 0,
     explicitPortalIds: normalized.explicitPortals.map((portal) => portal.portalId),
     explicitPortalCount: normalized.explicitPortals.length,
   };
