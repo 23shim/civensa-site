@@ -285,7 +285,11 @@ test("every published page marks competitor links nofollow and keeps BidSkim and
   const competitorHosts = [...new Set(sourceUrls.map((url) => new URL(url).hostname.replace(/^www\./, "")))]
     .filter((host) => host !== "bidskim.com" && !isPublicSource(host));
   const sitemap = await readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8");
-  const routes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, url]) => new URL(url).pathname);
+  const routes = [...new Set([
+    ...[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, url]) => new URL(url).pathname),
+    "/privacy/",
+    "/terms/",
+  ])];
   let competitorLinks = 0;
   let bidSkimLinks = 0;
   let officialLinks = 0;
@@ -309,7 +313,7 @@ test("every published page marks competitor links nofollow and keeps BidSkim and
       }
     }
   }
-  assert.ok(routes.length >= 70, "audit the complete published route list");
+  assert.equal(routes.length, 79, "audit the complete published route list, including unindexed legal pages");
   assert.ok(competitorLinks > 500, `audited ${competitorLinks} competitor links`);
   assert.ok(bidSkimLinks >= routes.length, `audited ${bidSkimLinks} followed BidSkim links`);
   assert.ok(officialLinks > 100, `audited ${officialLinks} official source links`);
