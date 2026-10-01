@@ -262,3 +262,67 @@ test("unknown legacy URLs return a non-indexable branded 404", async () => {
   assert.match(html, /This page is not on the map/);
   assert.doesNotMatch(html, /rel="canonical"/i);
 });
+
+function anchorsIn(html) {
+  return [...html.matchAll(/<a\b[^>]*>/gi)].map(([tag]) => ({
+    tag,
+    href: /\bhref="([^"]*)"/i.exec(tag)?.[1].replaceAll("&amp;", "&"),
+    rel: /\brel="([^"]*)"/i.exec(tag)?.[1].split(/\s+/) ?? [],
+  }));
+}
+
+test("every published page marks competitor links nofollow and keeps BidSkim and official sources followed", async () => {
+  // Use the existing provider evidence as the independent audit inventory,
+  // including alternate product hosts and corporate parents.
+  const dataFiles = ["tender-alerts", "procurement-intelligence", "bid-writing-software", "bid-writing-services"];
+  const data = await Promise.all(dataFiles.map((file) => readFile(new URL(`../app/tools/_data/${file}.ts`, import.meta.url), "utf8")));
+  const batches = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(async (number) => JSON.parse(await readFile(new URL(`../docs/provider-research-batch-${number}.json`, import.meta.url), "utf8"))));
+  const sourceUrls = [
+    ...data.flatMap((source) => [...source.matchAll(/https?:\/\/[^"\s]+/g)].map(([url]) => url)),
+    ...batches.flatMap((batch) => batch.providers.flatMap((provider) => provider.sourceUrls)),
+  ];
+  const isPublicSource = (host) => /(?:^|\.)(?:gov\.uk|gov\.wales|brreg\.no)$/.test(host);
+  const competitorHosts = [...new Set(sourceUrls.map((url) => new URL(url).hostname.replace(/^www\./, "")))]
+    .filter((host) => host !== "bidskim.com" && !isPublicSource(host));
+  const sitemap = await readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8");
+  const routes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, url]) => new URL(url).pathname);
+  let competitorLinks = 0;
+  let bidSkimLinks = 0;
+  let officialLinks = 0;
+  for (const route of routes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    for (const anchor of anchorsIn(await response.text())) {
+      if (!anchor.href) continue;
+      const url = new URL(anchor.href, "https://civensa.com/");
+      if (!/^https?:$/.test(url.protocol)) continue;
+      const host = url.hostname;
+      if (competitorHosts.some((competitor) => host === competitor || host.endsWith(`.${competitor}`))) {
+        competitorLinks += 1;
+        assert.ok(anchor.rel.includes("nofollow"), `${route}: followed competitor link: ${anchor.tag}`);
+      } else if (host === "bidskim.com" || host.endsWith(".bidskim.com")) {
+        bidSkimLinks += 1;
+        assert.ok(!anchor.rel.includes("nofollow"), `${route}: BidSkim should stay followed: ${anchor.tag}`);
+      } else if (isPublicSource(host)) {
+        officialLinks += 1;
+        assert.ok(!anchor.rel.includes("nofollow"), `${route}: official source should stay followed: ${anchor.tag}`);
+      }
+    }
+  }
+  assert.ok(routes.length >= 70, "audit the complete published route list");
+  assert.ok(competitorLinks > 500, `audited ${competitorLinks} competitor links`);
+  assert.ok(bidSkimLinks >= routes.length, `audited ${bidSkimLinks} followed BidSkim links`);
+  assert.ok(officialLinks > 100, `audited ${officialLinks} official source links`);
+});
+
+test("BidSkim has contextual followed links in the homepage, ownership statement and comparison pricing", async () => {
+  for (const [route, label, href] of [
+    ["/", "BidSkim", "https://bidskim.com/"],
+    ["/about/", "BidSkim", "https://bidskim.com/"],
+    ["/compare/bidskim-vs-stotles/", "View current BidSkim plans", "https://bidskim.com/pricing"],
+  ]) {
+    const html = await (await render(route)).text();
+    assert.ok(anchorsIn(html).some((anchor) => anchor.href === href && !anchor.rel.includes("nofollow")), route);
+    assert.match(html, new RegExp(`>${label}(?: ↗)?</a>`), route);
+  }
+});

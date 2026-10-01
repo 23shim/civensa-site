@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Static export uses plain anchors to avoid an RSC prefetch runtime. */
 import { SiteFooter, SiteHeader } from "../../_components/site-chrome";
+import { externalRel } from "../../_lib/external-links";
 import {
   normalizedFeatureKeys,
   type DeepEvidenceField,
@@ -84,7 +85,7 @@ function formatPrice(value: number | null, currency: "GBP" | "EUR" | "USD" | "mi
 
 function EvidenceLinks({ links }: { links: readonly { label: string; url: string }[] }) {
   if (links.length === 0) return null;
-  return <span className="audit-links">{links.map((link) => <a key={link.url} href={link.url} rel="noopener noreferrer">{link.label} ↗</a>)}</span>;
+  return <span className="audit-links">{links.map((link) => <a key={link.url} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</span>;
 }
 
 function DeepField({ label, field }: { label: string; field: DeepEvidenceField }) {
@@ -127,7 +128,7 @@ export function TenderAlertProviderAudit({ record }: { record: VendorRecord }) {
           <div><small>Public pricing</small><strong>{normalized.pricing.plansText}</strong></div>
           <div><small>Billing basis</small><strong>{normalized.pricing.billingBasis.replaceAll("_", " ")}</strong></div>
           <div><small>Named portals</small><strong>{normalized.explicitPortals.length}</strong></div>
-          <div><small>Official product</small><a href={record.officialUrl} rel="noopener noreferrer">Open provider site ↗</a></div>
+          <div><small>Official product</small><a href={record.officialUrl} rel={externalRel(record.officialUrl)}>Open provider site ↗</a></div>
         </div>
         <p className="audit-comparison-link"><a className="button button-dark" href={record.slug === "bidskim-alerts" ? "/compare/" : `/compare/bidskim-vs-${record.slug}/`}>{record.slug === "bidskim-alerts" ? "Browse every BidSkim comparison" : `Compare BidSkim and ${record.name}`} <span aria-hidden="true">↗</span></a></p>
       </section>

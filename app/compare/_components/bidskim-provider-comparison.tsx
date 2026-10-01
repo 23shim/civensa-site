@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Static export uses plain anchors to avoid an RSC prefetch runtime. */
 import { SiteFooter, SiteHeader } from "../../_components/site-chrome";
+import { externalRel } from "../../_lib/external-links";
 import {
   normalizedFeatureKeys,
   type FeatureStatus,
@@ -68,7 +69,7 @@ function priceLabel(record: VendorRecord, score: TenderAlertScore, kind: "alert"
 
 function EvidenceLinks({ links }: { links: readonly { label: string; url: string }[] }) {
   if (links.length === 0) return null;
-  return <span className="audit-links">{links.map((link) => <a key={`${link.url}-${link.label}`} href={link.url} rel="noopener noreferrer">{link.label} ↗</a>)}</span>;
+  return <span className="audit-links">{links.map((link) => <a key={`${link.url}-${link.label}`} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</span>;
 }
 
 function ScoreCard({ record, score }: { record: VendorRecord; score: TenderAlertScore }) {
@@ -182,7 +183,7 @@ export function BidSkimProviderComparison({ bidSkim, provider, related }: { bidS
         <div className="section-kicker">Commercial context</div>
         <h2 id="comparison-commercial-detail">What the headline prices leave out</h2>
         <div className="comparison-verdict-grid">
-          <article><h3>BidSkim pricing context</h3><p>{bidSkim.pricing}</p><p>{bidSkim.pricingCaveat}</p><EvidenceLinks links={bidSkim.normalized.pricing.evidenceLinks} /></article>
+          <article><h3>BidSkim pricing context</h3><p>{bidSkim.pricing}</p><p>{bidSkim.pricingCaveat}</p><EvidenceLinks links={bidSkim.normalized.pricing.evidenceLinks} /><p><a href="https://bidskim.com/pricing" rel={externalRel("https://bidskim.com/pricing")}>View current BidSkim plans ↗</a></p></article>
           <article><h3>{provider.name} pricing context</h3><p>{provider.pricing}</p><p>{provider.pricingCaveat}</p><EvidenceLinks links={provider.normalized.pricing.evidenceLinks} /></article>
         </div>
       </section>

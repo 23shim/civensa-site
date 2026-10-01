@@ -52,6 +52,7 @@ export default function ToolsMethodologyPage() {
       <h2>Change-log standard</h2>
       <p>Material updates use one short line: <strong>date · entry · field changed · source or reason</strong>. We log price, plan, coverage, ownership, product-status and methodology corrections. Routine punctuation and layout edits are not logged.</p>
       <ul>
+        <li>1 October 2026 · outbound links · competitor links marked nofollow and BidSkim links added · publisher&apos;s link policy.</li>
         <li>12 August 2026 · directory · first sourced release · provider and official-portal records checked.</li>
         <li>18 August 2026 · tender-alert directory · normalized feature, pricing and explicit-portal fields added · first-party provider pages checked.</li>
         <li>18 August 2026 · BidSkim · relevant listings and common-ownership disclosure added · public provider pages checked.</li>

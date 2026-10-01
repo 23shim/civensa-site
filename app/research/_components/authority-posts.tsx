@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "../../_components/site-chrome";
+import { externalRel } from "../../_lib/external-links";
 import { authorityPosts, type AuthorityPost } from "./authority-content";
 
 export type { AuthorityPost } from "./authority-content";
@@ -102,7 +103,7 @@ export function AuthorityPostPage({ slug }: { slug: string }) {
                 return (
                   <span key={source.id}>
                     {sourceIndex > 0 ? " · " : ""}
-                    <a href={source.url} rel="external">
+                    <a href={source.url} rel={externalRel(source.url, "external")}>
                       {source.label}
                     </a>
                   </span>
@@ -131,7 +132,7 @@ export function AuthorityPostPage({ slug }: { slug: string }) {
           {post.sources.map((source) => (
             <li key={source.id}>
               <span className="source-kind">{source.kind}</span>{" "}
-              <a href={source.url} rel="external">
+              <a href={source.url} rel={externalRel(source.url, "external")}>
                 {source.label} ↗
               </a>
               {source.note && <small>{source.note}</small>}

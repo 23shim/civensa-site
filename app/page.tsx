@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "./_components/site-chrome";
+import { externalRel } from "./_lib/external-links";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
@@ -60,6 +61,7 @@ export default function Home() {
           <div>
             <p>Most opportunity tools begin when a notice appears. Civensa studies the evidence that accumulates before that moment: expiring contracts, buyer plans, incumbent relationships, evaluation patterns and the requirements that shape who can compete.</p>
             <p>Our work is designed for suppliers, advisers and market teams who need a wider field of view, not more alerts.</p>
+            <p>For matched UK tender alerts, buyer intelligence and renewal signals, explore <a href="https://bidskim.com/" rel={externalRel("https://bidskim.com/")}>BidSkim</a>.</p>
           </div>
         </div>
       </section>
