@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Static export uses plain anchors to avoid an RSC prefetch runtime. */
 import { SiteFooter, SiteHeader } from "../../_components/site-chrome";
 import { externalRel } from "../../_lib/external-links";
+import { SourceLink } from "../../_components/source-link";
 import {
   normalizedFeatureKeys,
   type DeepEvidenceField,
@@ -85,7 +86,7 @@ function formatPrice(value: number | null, currency: "GBP" | "EUR" | "USD" | "mi
 
 function EvidenceLinks({ links }: { links: readonly { label: string; url: string }[] }) {
   if (links.length === 0) return null;
-  return <span className="audit-links">{links.map((link) => <a key={link.url} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</span>;
+  return <span className="audit-links">{links.map((link) => <SourceLink key={link.url} href={link.url} label={link.label} />)}</span>;
 }
 
 function DeepField({ label, field }: { label: string; field: DeepEvidenceField }) {

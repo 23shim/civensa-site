@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "../../_components/site-chrome";
+import { externalRel } from "../../_lib/external-links";
 export const metadata: Metadata = {
   title: "Why renewal signals matter before a tender is published",
   description:
@@ -60,7 +61,12 @@ export default function Page() {
       </ol>
       <p>
         Keeping these layers distinct prevents a calculated date from acquiring
-        false certainty as it passes through a sales pipeline.
+        false certainty as it passes through a sales pipeline. Renewal lists
+        such as{" "}
+        <a href="https://bidskim.com/public-sector-contract-renewals" rel={externalRel("https://bidskim.com/public-sector-contract-renewals")}>
+          BidSkim&apos;s public-sector contract renewals
+        </a>{" "}
+        sit on the second rung: calculated from published awards, not forecasts.
       </p>
       <h2>Prioritise windows, not days</h2>
       <p>

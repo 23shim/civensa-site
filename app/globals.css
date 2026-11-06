@@ -74,7 +74,7 @@ blockquote { margin:0 0 46px; max-width:800px; font:500 clamp(36px,4.5vw,67px)/1
 .site-footer { background:#0b1814; color:var(--white); padding:72px 0 28px; }
 .site-footer .mark { background:var(--lime); color:var(--ink); }.site-footer p { color:rgba(255,255,255,.55); margin:20px 0 0; font-size:13px; }
 .footer-top { display:flex; justify-content:space-between; min-height:220px; }
-.footer-links { display:grid; grid-template-columns:repeat(2,170px); gap:45px; }
+.footer-links { display:grid; grid-template-columns:repeat(3,170px); gap:45px; }
 .footer-links div { display:flex; flex-direction:column; gap:13px; font-size:13px; color:rgba(255,255,255,.68); }
 .footer-links strong { color:var(--lime); text-transform:uppercase; letter-spacing:.14em; font-size:9px; margin-bottom:8px; }
 .footer-links a:hover { color:white; }.footer-bottom { display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,.15); padding-top:22px; font-size:10px; color:rgba(255,255,255,.45); }
@@ -312,6 +312,7 @@ blockquote { margin:0 0 46px; max-width:800px; font:500 clamp(36px,4.5vw,67px)/1
 .provider-feature-grid p,.deep-audit-field p { color:#40564f; font-size:12px; line-height:1.6; }
 .audit-links { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:10px; }
 .audit-links a { font-size:10px; text-decoration:underline; text-underline-offset:2px; }
+.audit-links .source-unlinked { font-size:10px; color:rgba(17,37,31,.62); }
 .provider-price-table th:first-child { min-width:150px; }
 .audit-price-notes { max-width:900px; color:#40564f; font-size:12px; line-height:1.6; }
 .audit-price-notes strong:not(:first-child) { margin-left:18px; }

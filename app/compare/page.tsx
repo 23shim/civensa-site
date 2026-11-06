@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro, SiteFooter, SiteHeader } from "../_components/site-chrome";
+import { externalRel } from "../_lib/external-links";
 import { tenderAlertRecords } from "../tools/_data/tender-alerts";
 import { scoreTenderAlert, tenderProductGroups } from "../tools/_data/tender-alert-scoring";
 
@@ -38,7 +39,7 @@ export default function Compare() {
       <section aria-labelledby="named-comparisons">
         <div className="section-kicker">25 named comparisons</div>
         <h2 id="named-comparisons">Compare BidSkim with every tender-alert provider in the directory</h2>
-        <p>Cards are ordered by the competing provider&apos;s current score, not by a paid placement. Providers can belong to more than one product type.</p>
+        <p>Cards are ordered by the competing provider&apos;s current score, not by a paid placement. Providers can belong to more than one product type. <a href="https://bidskim.com/features" rel={externalRel("https://bidskim.com/features")}>The BidSkim feature list</a> is the first-party source for its side of each comparison.</p>
         <div className="comparison-index-grid">{comparisons.map(({ record, score }) => <a key={record.slug} href={`/compare/bidskim-vs-${record.slug}/`}>
           <div><span>BidSkim vs</span><h3>{record.name}</h3></div>
           <div className="comparison-index-scores"><span>BidSkim <strong>{bidSkimScore.overallScore}</strong></span><span>{record.name} <strong>{score.overallScore}</strong></span></div>

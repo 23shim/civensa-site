@@ -1,5 +1,6 @@
 import { PageIntro, SiteFooter, SiteHeader } from "../../_components/site-chrome";
 import { externalRel } from "../../_lib/external-links";
+import { SourceLink } from "../../_components/source-link";
 import {
   categories,
   getCategory,
@@ -164,7 +165,7 @@ function PortalCoverageMatrix({ records }: { records: readonly VendorRecord[] })
             {portalColumns.map((column) => {
               const portal = explicitPortals.find((item) => item.portalId === column.id);
               const evidence = portal?.evidenceLinks[0];
-              return <td key={column.id}>{portal ? <span className="portal-listed">{evidence ? <a href={evidence.url} rel={externalRel(evidence.url)}>Listed ↗</a> : "Listed"}</span> : <span className="portal-not-stated">Not stated</span>}</td>;
+              return <td key={column.id}>{portal ? <span className="portal-listed">{evidence ? <SourceLink href={evidence.url} label="Listed" /> : "Listed"}</span> : <span className="portal-not-stated">Not stated</span>}</td>;
             })}
             <td>{otherPortals.length > 0 ? otherPortals.map((portal) => portal.portalName).join(", ") : <span className="portal-not-stated">None named</span>}</td>
           </tr>;
@@ -198,7 +199,7 @@ function StrictFeatureAudit({ record }: { record: VendorRecord }) {
       const feature = normalized.features[key];
       return <div key={key}>
         <dt>{featureLabels[key]} <FeatureStatusLabel status={feature.status} /></dt>
-        <dd>{feature.detail}{feature.evidenceLinks.map((link) => <a key={link.url} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</dd>
+        <dd>{feature.detail}{feature.evidenceLinks.map((link) => <SourceLink key={link.url} href={link.url} label={link.label} />)}</dd>
       </div>;
     })}</dl>
   </div>;
@@ -259,7 +260,7 @@ function DirectoryEntry({ record }: { record: VendorRecord }) {
       {record.normalized ? <div><small>Normalized pricing basis</small><span>{record.normalized.pricing.billingBasis.replaceAll("_", " ")}. {record.normalized.pricing.seatDetail}</span></div> : null}
       <div><small>Pricing caveat</small><span>{record.pricingCaveat}</span></div>
       <div><small>Last checked</small><time dateTime={record.lastChecked}>{formatCheckedDate(record.lastChecked)}</time></div>
-      <div><small>Evidence</small>{evidenceLinks.map((link) => <a key={link.url} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</div>
+      <div><small>Evidence</small>{evidenceLinks.map((link) => <SourceLink key={link.url} href={link.url} label={link.label} />)}</div>
     </div>
   </article>;
 }

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Static export uses plain anchors to avoid an RSC prefetch runtime. */
 import { SiteFooter, SiteHeader } from "../../_components/site-chrome";
-import { externalRel } from "../../_lib/external-links";
+import { SourceLink } from "../../_components/source-link";
+import { officialPortalRecords } from "../../tools/_data/official-portals";
 import {
   normalizedFeatureKeys,
   type FeatureStatus,
@@ -69,7 +70,7 @@ function priceLabel(record: VendorRecord, score: TenderAlertScore, kind: "alert"
 
 function EvidenceLinks({ links }: { links: readonly { label: string; url: string }[] }) {
   if (links.length === 0) return null;
-  return <span className="audit-links">{links.map((link) => <a key={`${link.url}-${link.label}`} href={link.url} rel={externalRel(link.url)}>{link.label} ↗</a>)}</span>;
+  return <span className="audit-links">{links.map((link) => <SourceLink key={`${link.url}-${link.label}`} href={link.url} label={link.label} />)}</span>;
 }
 
 function ScoreCard({ record, score }: { record: VendorRecord; score: TenderAlertScore }) {
@@ -183,7 +184,7 @@ export function BidSkimProviderComparison({ bidSkim, provider, related }: { bidS
         <div className="section-kicker">Commercial context</div>
         <h2 id="comparison-commercial-detail">What the headline prices leave out</h2>
         <div className="comparison-verdict-grid">
-          <article><h3>BidSkim pricing context</h3><p>{bidSkim.pricing}</p><p>{bidSkim.pricingCaveat}</p><EvidenceLinks links={bidSkim.normalized.pricing.evidenceLinks} /><p><a href="https://bidskim.com/pricing" rel={externalRel("https://bidskim.com/pricing")}>View current BidSkim plans ↗</a></p></article>
+          <article><h3>BidSkim pricing context</h3><p>{bidSkim.pricing}</p><p>{bidSkim.pricingCaveat}</p><EvidenceLinks links={bidSkim.normalized.pricing.evidenceLinks} /></article>
           <article><h3>{provider.name} pricing context</h3><p>{provider.pricing}</p><p>{provider.pricingCaveat}</p><EvidenceLinks links={provider.normalized.pricing.evidenceLinks} /></article>
         </div>
       </section>
@@ -194,6 +195,12 @@ export function BidSkimProviderComparison({ bidSkim, provider, related }: { bidS
         <div className="comparison-verdict-grid">
           {[bidSkim, provider].map((record) => <article key={record.slug}><h3>{record.name}</h3><p>{record.coverage}</p><p><strong>{record.normalized!.explicitPortals.length} individually named portal{record.normalized!.explicitPortals.length === 1 ? "" : "s"}:</strong> {record.normalized!.explicitPortals.length > 0 ? record.normalized!.explicitPortals.map((portal) => portal.portalName).join(", ") : "none established on the reviewed public pages"}.</p></article>)}
         </div>
+      </section>
+
+      <section aria-labelledby="comparison-official-sources">
+        <div className="section-kicker">Official sources</div>
+        <h2 id="comparison-official-sources">Check the notices at source</h2>
+        <p>Both services repackage notices that UK public bodies publish for free. Before relying on any alert, open the original notice on the official portal: {officialPortalRecords.slice(0, 5).map((portal, index, list) => <span key={portal.slug}>{index > 0 ? (index === list.length - 1 ? " or " : ", ") : ""}<SourceLink href={portal.officialUrl} label={portal.name} arrow={false} /></span>)}.</p>
       </section>
 
       <section aria-labelledby="comparison-questions">

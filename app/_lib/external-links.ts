@@ -33,3 +33,7 @@ export function externalRel(href: string, existing = ""): string {
   if (domain && competitorDomains.has(domain)) tokens.add("nofollow");
   return [...tokens].join(" ");
 }
+
+export function isBidSkimUrl(href: string): boolean {
+  return domainFor(href) === "bidskim.com";
+}

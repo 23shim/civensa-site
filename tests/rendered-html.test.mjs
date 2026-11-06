@@ -315,18 +315,26 @@ test("every published page marks competitor links nofollow and keeps BidSkim and
   }
   assert.equal(routes.length, 79, "audit the complete published route list, including unindexed legal pages");
   assert.ok(competitorLinks > 500, `audited ${competitorLinks} competitor links`);
-  assert.ok(bidSkimLinks >= routes.length, `audited ${bidSkimLinks} followed BidSkim links`);
+  // Civensa shares an operator with BidSkim, so followed BidSkim links stay
+  // hand-placed and few. Sitewide or per-evidence links read as link spam.
+  assert.ok(bidSkimLinks >= 5 && bidSkimLinks <= 12, `expected 5-12 BidSkim links sitewide, found ${bidSkimLinks}`);
   assert.ok(officialLinks > 100, `audited ${officialLinks} official source links`);
 });
 
-test("BidSkim has contextual followed links in the homepage, ownership statement and comparison pricing", async () => {
+test("BidSkim keeps a few contextual followed links and none on comparison pages or in the footer", async () => {
   for (const [route, label, href] of [
     ["/", "BidSkim", "https://bidskim.com/"],
     ["/about/", "BidSkim", "https://bidskim.com/"],
-    ["/compare/bidskim-vs-stotles/", "View current BidSkim plans", "https://bidskim.com/pricing"],
+    ["/compare/", "The BidSkim feature list", "https://bidskim.com/features"],
   ]) {
     const html = await (await render(route)).text();
     assert.ok(anchorsIn(html).some((anchor) => anchor.href === href && !anchor.rel.includes("nofollow")), route);
     assert.match(html, new RegExp(`>${label}(?: ↗)?</a>`), route);
+  }
+  const isBidSkim = (anchor) => anchor.href && /^https?:\/\/([a-z0-9-]+\.)*bidskim\.com/i.test(anchor.href);
+  for (const route of ["/compare/bidskim-vs-stotles/", "/compare/bidskim-vs-tussell/", "/research/", "/contact/"]) {
+    const html = await (await render(route)).text();
+    assert.equal(anchorsIn(html).filter(isBidSkim).length, 0, `${route} should not link to BidSkim`);
+    assert.match(html, /href="https:\/\/www\.find-tender\.service\.gov\.uk\/"/, `${route} footer links Find a Tender`);
   }
 });
